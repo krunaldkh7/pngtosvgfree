@@ -1,2 +1,1 @@
-# After AdSense approval replace XXXXXXXXXXXXXXXX with your publisher ID:
-# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+# Run ./set-adsense.sh ca-pub-XXXXXXXXXXXXXXXX to fill this in with your AdSense publisher ID.
