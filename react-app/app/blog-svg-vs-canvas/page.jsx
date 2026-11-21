@@ -119,7 +119,9 @@ export default function Page() {
           <table>
             <tbody>
               <tr>
-                <th />
+                <th>
+                  {"Feature"}
+                </th>
                 <th>
                   {"SVG"}
                 </th>
@@ -466,7 +468,7 @@ export default function Page() {
         {" "}
       </div>
       {" "}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"SVG vs Canvas: Which Should You Use for Web Graphics?\",\"description\":\"SVG and HTML canvas both draw graphics in the browser but work very differently. Compare performance, interactivity, accessibility and use cases.\",\"datePublished\":\"2026-11-21\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":570,\"articleSection\":\"Technology\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-svg-vs-canvas\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"SVG vs Canvas: Which Should You Use for Web Graphics?\",\"item\":\"https://pngtosvgfree.com/blog-svg-vs-canvas\"}]}]}" }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"SVG vs Canvas: Which Should You Use for Web Graphics?\",\"description\":\"SVG and HTML canvas both draw graphics in the browser but work very differently. Compare performance, interactivity, accessibility and use cases.\",\"datePublished\":\"2026-11-21\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":571,\"articleSection\":\"Technology\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-svg-vs-canvas\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"SVG vs Canvas: Which Should You Use for Web Graphics?\",\"item\":\"https://pngtosvgfree.com/blog-svg-vs-canvas\"}]}]}" }} />
       {" "}
     </>
   );

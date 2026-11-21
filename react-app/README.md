@@ -24,5 +24,6 @@ The pages in `app/` are generated from the `.html` files in the repo root:
 
 ```bash
 node tools/build-blog.js          # only if you changed blog posts in tools/posts/
-node tools/react/convert.js        # regenerate app/ from the HTML pages
+node tools/build-landing.js     # only if you changed tool pages in tools/landing/
+node tools/react/convert.js        # regenerate app/ (pages, schema, lib/pages.json for the sitemap) from the HTML pages
 ```

@@ -66,7 +66,7 @@ h1 em{font-style:normal;background:linear-gradient(90deg,var(--blue),var(--vio))
 .drop:hover,.drop.on{border-color:var(--vio);transform:translateY(-2px);box-shadow:0 18px 40px #8b5cf622}
 .drop .ic{width:64px;height:64px;margin:0 auto 16px;border-radius:18px;background:linear-gradient(135deg,var(--blue),var(--vio));color:#fff;display:grid;place-items:center;font-size:26px;box-shadow:0 12px 28px #6d5dfc55;animation:bob 3s ease-in-out infinite}
 @keyframes bob{50%{transform:translateY(-7px)}}
-.drop h3{font-size:21px;letter-spacing:-.02em;margin-bottom:6px}.drop small{color:var(--mut);line-height:1.7;font-size:13px}
+.drop h3,.drop .dh{font-size:21px;font-weight:700;letter-spacing:-.02em;margin-bottom:6px}.drop small{color:var(--mut);line-height:1.7;font-size:13px}
 .drop .chips{display:flex;gap:6px;justify-content:center;margin-top:14px;flex-wrap:wrap}
 .drop .chips span{background:#fff;border:1px solid var(--line);font-size:11px;font-weight:700;padding:4px 9px;border-radius:7px;color:#4c4f6b}
 .err{background:#fef2f2;border:1px solid #fecaca;color:#b91c1c;padding:12px 16px;border-radius:12px;margin-top:12px;display:none;grid-column:2}
@@ -154,7 +154,7 @@ h2{font-size:clamp(30px,4vw,46px);font-weight:800;letter-spacing:-.04em;line-hei
 .th b{position:absolute;left:14px;top:12px;font-size:17px;font-weight:800;letter-spacing:-.02em;line-height:1.1;max-width:60%;text-align:left}
 .th svg{position:absolute;right:12px;bottom:10px;width:76px;height:76px}
 .cd .bd{padding:12px 6px 6px}.cd .bd b{font-size:15px}.cd .bd p{color:var(--mut);font-size:13px;line-height:1.5;margin-top:4px}
-.cd .bd small{display:inline-block;margin-top:10px;font-size:11px;font-weight:700;color:var(--vio);background:var(--lav);padding:3px 8px;border-radius:6px}
+.cd .bd small{display:inline-block;margin-top:10px;font-size:11px;font-weight:700;color:#6d28d9;background:var(--lav);padding:3px 8px;border-radius:6px}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
 .st{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px;position:relative;transition:.25s}
 .st:hover{transform:translateY(-4px);box-shadow:0 20px 40px -12px #3d4ef52a}
@@ -228,7 +228,7 @@ nav.top{max-width:1180px;margin:18px auto 0;display:flex;justify-content:space-b
 .post .th{height:160px;border-radius:12px;display:grid;place-items:center;color:#fff}
 .post .th svg{width:70px;height:70px}
 .post .bd{padding:14px 8px 8px;display:flex;flex-direction:column;flex:1}
-.post .bd small{color:var(--vio);font-weight:700;font-size:12px}
+.post .bd small{color:#6d28d9;font-weight:700;font-size:12px}
 .post .bd b{font-size:17px;letter-spacing:-.01em;margin-top:6px;line-height:1.35}
 .post .bd p{color:var(--mut);font-size:14px;line-height:1.55;margin-top:8px;flex:1}
 .post .bd span{font-size:12.5px;color:var(--mut);margin-top:12px}
@@ -236,7 +236,7 @@ nav.top{max-width:1180px;margin:18px auto 0;display:flex;justify-content:space-b
 footer.site{max-width:1180px;margin:100px auto 0;padding:46px 4vw 30px;border-top:1px solid var(--line)}
 .fgrid{display:grid;grid-template-columns:1.4fr 1fr 1.3fr 1fr 1fr;gap:30px}
 .fgrid p{color:var(--mut);font-size:14px;line-height:1.6;margin-top:12px;max-width:300px}
-.fgrid h6{font-size:13px;font-weight:700;margin-bottom:12px}
+.fgrid h6,.fgrid .fh{font-size:13px;font-weight:700;margin-bottom:12px}
 .fgrid a.logo{display:flex;color:var(--txt)}.fgrid a:not(.logo){display:block;color:var(--mut);font-size:14px;margin:8px 0;transition:.15s}.fgrid a:hover{color:var(--blue)}
 .fbot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:34px;padding-top:20px;border-top:1px solid var(--line);color:var(--mut);font-size:13px}
 .ad-slot{display:none}
@@ -308,7 +308,7 @@ ol.steps{list-style:none;padding:0}
         <div>
           <div class="drop" id="drop">
             <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4"/><path d="M6 10l6-6 6 6"/><path d="M4 20h16"/></svg></div>
-            <h3>Drop your image here</h3>
+            <p class="dh">Drop your image here</p>
             <small>or click to browse · or paste with Ctrl+V</small>
             <div class="chips"><span>PNG</span><span>JPG</span><span>GIF</span><span>BMP</span><span>WEBP</span><span>AVIF</span></div>
             <input type="file" id="file" accept="image/*" hidden>
@@ -446,7 +446,7 @@ ol.steps{list-style:none;padding:0}
     <h2 style="margin-top:0">PNG vs SVG: what is the difference?</h2>
     <p><strong>PNG is a raster format made of pixels, while SVG is a vector format made of shapes and paths, so SVG stays sharp at any size and PNG does not.</strong> Use PNG for photos and screenshots, and SVG for logos, icons, illustrations and anything you will cut or print at different sizes.</p>
     <table>
-      <tr><th></th><th>PNG (raster)</th><th>SVG (vector)</th></tr>
+      <tr><th>Feature</th><th>PNG (raster)</th><th>SVG (vector)</th></tr>
       <tr><td>Made of</td><td>A fixed grid of pixels</td><td>Mathematical paths and shapes</td></tr>
       <tr><td>Scaling</td><td>Blurs and pixelates when enlarged</td><td>Perfectly sharp at any size</td></tr>
       <tr><td>File size</td><td>Grows with resolution</td><td>Grows with complexity; tiny for logos</td></tr>
@@ -472,7 +472,7 @@ ol.steps{list-style:none;padding:0}
     <h2 id="why">Why choose PNG to SVG Free?</h2>
     <p><strong>PNG to SVG Free gives you full control over colours and detail with no upload, no account and no watermark — features many online converters limit or charge for.</strong></p>
     <table>
-      <tr><th></th><th>PNG to SVG Free</th><th>Typical online converters</th></tr>
+      <tr><th>Feature</th><th>PNG to SVG Free</th><th>Typical online converters</th></tr>
       <tr><td>Price</td><td>Free, no limits</td><td>Often free with daily limits or paid upgrades</td></tr>
       <tr><td>Signup</td><td>Never required</td><td>Sometimes required to download</td></tr>
       <tr><td>Watermark</td><td>None</td><td>Sometimes added on free plans</td></tr>
@@ -492,6 +492,7 @@ ol.steps{list-style:none;padding:0}
     <div class="cd"><div class="th" style="background:linear-gradient(135deg,#06b6d4,#3d4ef5)"><b>Cut-ready shapes</b><svg viewBox="0 0 80 80"><path d="M40 8 C56 24 74 30 70 50 C66 68 46 74 40 62 C34 74 14 68 10 50 C6 30 24 24 40 8Z" fill="#fff"/></svg></div><div class="bd"><b>Silhouettes</b><p>One-colour shapes for laser cutting, vinyl and stencils.</p><small>1 color</small></div></div>
   </div>
 </div>
+
 
 
 

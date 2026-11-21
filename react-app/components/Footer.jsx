@@ -10,13 +10,13 @@ export default function Footer() {
           <p>Free online PNG to SVG converter that turns PNG, JPG and WEBP images into clean, scalable vectors right in your browser.</p>
         </div>
         <div>
-          <h6>Tools</h6>
+          <p className="fh">Tools</p>
           <Link href="/">PNG to SVG Converter</Link>
           <Link href="/bulk-svg-to-png-converter">Bulk SVG to PNG</Link>
           <Link href="/gallery">Free SVG Gallery</Link>
         </div>
         <div>
-          <h6>Converters</h6>
+          <p className="fh">Converters</p>
           <Link href="/jpg-to-svg">JPG to SVG</Link>
           <Link href="/webp-to-svg">WEBP to SVG</Link>
           <Link href="/image-to-svg">Image to SVG</Link>
@@ -27,13 +27,13 @@ export default function Footer() {
           <Link href="/black-and-white-png-to-svg">Black &amp; White PNG to SVG</Link>
         </div>
         <div>
-          <h6>Learn</h6>
+          <p className="fh">Learn</p>
           <Link href="/blog">Blog</Link>
           <Link href="/#flow">How it works</Link>
           <Link href="/#faq">FAQs</Link>
         </div>
         <div>
-          <h6>Company</h6>
+          <p className="fh">Company</p>
           <Link href="/about">About us</Link>
           <Link href="/contact">Contact us</Link>
           <Link href="/privacy-policy">Privacy Policy</Link>

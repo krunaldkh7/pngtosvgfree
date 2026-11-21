@@ -256,7 +256,9 @@ export default function Page() {
           <table>
             <tbody>
               <tr>
-                <th />
+                <th>
+                  {"Feature"}
+                </th>
                 <th>
                   {"Raster"}
                 </th>
@@ -690,7 +692,7 @@ export default function Page() {
         {" "}
       </div>
       {" "}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"Raster vs Vector Images Explained: The Complete Guide\",\"description\":\"Raster and vector are the two ways computers store images. Understand the difference once and you will always know which file format to use.\",\"datePublished\":\"2026-11-21\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":1165,\"articleSection\":\"Basics\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-raster-vs-vector\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Raster vs Vector Images Explained: The Complete Guide\",\"item\":\"https://pngtosvgfree.com/blog-raster-vs-vector\"}]}]}" }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"Raster vs Vector Images Explained: The Complete Guide\",\"description\":\"Raster and vector are the two ways computers store images. Understand the difference once and you will always know which file format to use.\",\"datePublished\":\"2026-11-21\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":1166,\"articleSection\":\"Basics\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-raster-vs-vector\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Raster vs Vector Images Explained: The Complete Guide\",\"item\":\"https://pngtosvgfree.com/blog-raster-vs-vector\"}]}]}" }} />
       {" "}
     </>
   );

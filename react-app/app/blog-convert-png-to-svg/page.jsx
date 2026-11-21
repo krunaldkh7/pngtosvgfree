@@ -119,7 +119,9 @@ export default function Page() {
           <table>
             <tbody>
               <tr>
-                <th />
+                <th>
+                  {"Feature"}
+                </th>
                 <th>
                   {"1. Online tracer"}
                 </th>
@@ -758,7 +760,7 @@ export default function Page() {
         {" "}
       </div>
       {" "}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"How to Convert PNG to SVG (Free, 3 Methods)\",\"description\":\"Three free ways to convert PNG to SVG: an online tracer, Inkscape's Trace Bitmap and Illustrator Image Trace. Step-by-step instructions, settings and tips.\",\"datePublished\":\"2026-11-21\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":1172,\"articleSection\":\"Tutorial\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-convert-png-to-svg\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"How to Convert PNG to SVG (Free, 3 Methods)\",\"item\":\"https://pngtosvgfree.com/blog-convert-png-to-svg\"}]}]}" }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"How to Convert PNG to SVG (Free, 3 Methods)\",\"description\":\"Three free ways to convert PNG to SVG: an online tracer, Inkscape's Trace Bitmap and Illustrator Image Trace. Step-by-step instructions, settings and tips.\",\"datePublished\":\"2026-11-21\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":1173,\"articleSection\":\"Tutorial\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-convert-png-to-svg\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"How to Convert PNG to SVG (Free, 3 Methods)\",\"item\":\"https://pngtosvgfree.com/blog-convert-png-to-svg\"}]}]}" }} />
       {" "}
     </>
   );

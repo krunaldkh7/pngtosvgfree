@@ -65,7 +65,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <Nav />
-        {children}
+        <main id="main">{children}</main>
         <Footer />
         <Cookie />
         <Reveal />
