@@ -7,13 +7,24 @@ export default function Footer() {
       <div className="fgrid">
         <div>
           <Logo style={{ fontSize: "19px" }} />
-          <p>Free online tools to convert PNG, JPG and WEBP images into crisp, scalable SVG vectors — right in your browser.</p>
+          <p>Free online PNG to SVG converter that turns PNG, JPG and WEBP images into clean, scalable vectors right in your browser.</p>
         </div>
         <div>
           <h6>Tools</h6>
           <Link href="/">PNG to SVG Converter</Link>
           <Link href="/bulk-svg-to-png-converter">Bulk SVG to PNG</Link>
           <Link href="/gallery">Free SVG Gallery</Link>
+        </div>
+        <div>
+          <h6>Converters</h6>
+          <Link href="/jpg-to-svg">JPG to SVG</Link>
+          <Link href="/webp-to-svg">WEBP to SVG</Link>
+          <Link href="/image-to-svg">Image to SVG</Link>
+          <Link href="/logo-to-svg">Logo to SVG</Link>
+          <Link href="/png-to-svg-cricut">PNG to SVG for Cricut</Link>
+          <Link href="/png-to-svg-laser-cutting">PNG to SVG for Laser</Link>
+          <Link href="/transparent-png-to-svg">Transparent PNG to SVG</Link>
+          <Link href="/black-and-white-png-to-svg">Black &amp; White PNG to SVG</Link>
         </div>
         <div>
           <h6>Learn</h6>

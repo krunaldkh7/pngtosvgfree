@@ -52,7 +52,7 @@ nav.top{max-width:1180px;margin:18px auto 0;display:flex;justify-content:space-b
 .post .bd span{font-size:12.5px;color:var(--mut);margin-top:12px}
 /* footer */
 footer.site{max-width:1180px;margin:100px auto 0;padding:46px 4vw 30px;border-top:1px solid var(--line)}
-.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1.3fr 1fr 1fr;gap:30px}
 .fgrid p{color:var(--mut);font-size:14px;line-height:1.6;margin-top:12px;max-width:300px}
 .fgrid h6{font-size:13px;font-weight:700;margin-bottom:12px}
 .fgrid a.logo{display:flex;color:var(--txt)}.fgrid a:not(.logo){display:block;color:var(--mut);font-size:14px;margin:8px 0;transition:.15s}.fgrid a:hover{color:var(--blue)}

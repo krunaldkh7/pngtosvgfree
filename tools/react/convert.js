@@ -141,7 +141,7 @@ function schemaFor(slug, html, content, title, desc, url) {
   if (slug !== 'index' && !slug.startsWith('blog-')) {
     graph.push({ '@type': 'BreadcrumbList', itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: SITE + '/' },
-      { '@type': 'ListItem', position: 2, name: PAGE_NAMES[slug] || h1, item: url } ] });
+      { '@type': 'ListItem', position: 2, name: PAGE_NAMES[slug] || title.split(' | ')[0], item: url } ] });
   }
   return graph.length ? { '@context': 'https://schema.org', '@graph': graph } : null;
 }

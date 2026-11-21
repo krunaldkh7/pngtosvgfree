@@ -3,6 +3,8 @@ export default async function init(signal) {
 window.PRE='auto';const HINT={"auto": "We'll detect the best type automatically. You can change it any time after upload.", "logo": "Flat colors & crisp edges \u2014 best for logos, icons and clip art.", "photo": "Many colors & soft gradients \u2014 poster-style vector art.", "sketch": "Line art & two tones \u2014 great for drawings and signatures.", "silhouette": "One solid colour \u2014 ready for laser cutting and vinyl."};
 document.querySelectorAll('#side [data-p]').forEach(el=>el.onclick=()=>{window.PRE=el.dataset.p;document.querySelectorAll('#side [data-p]').forEach(x=>x.classList.toggle('on',x===el));document.getElementById('sideHint').textContent=HINT[el.dataset.p];
  const ic=document.querySelector('.drop .ic');ic.style.transform='scale(1.15)';setTimeout(()=>ic.style.transform='',200)});
+// Landing pages can pre-select an image type with <div id="tool" data-preset="logo">.
+{const pre=document.getElementById('tool')?.dataset.preset;const el=pre&&document.querySelector('#side [data-p="'+pre+'"]');if(el)el.onclick()}
 let wasm;
 
 function isLikeNone(x) {
