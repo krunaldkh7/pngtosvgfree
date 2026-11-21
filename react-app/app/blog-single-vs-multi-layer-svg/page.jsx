@@ -1,15 +1,36 @@
 import Link from "next/link";
 
 export const metadata = {
-  "title": "Single-Layer vs Multi-Layer SVGs for Cutting Machines | PNG TO SVG",
-  "description": "Should your cut file be one colour or many layers? Understand single-layer and layered SVGs, how they cut and how to convert between them.",
+  "title": {
+    "absolute": "Single-Layer vs Multi-Layer SVGs for Cutting Machines"
+  },
+  "description": "Should your cut file be one colour or many layers? Understand single-layer and layered SVGs for Cricut and Silhouette and how to convert them.",
   "alternates": {
-    "canonical": "https://pngtosvgfree.com/blog-single-vs-multi-layer-svg.html"
+    "canonical": "https://pngtosvgfree.com/blog-single-vs-multi-layer-svg"
   },
   "openGraph": {
-    "title": "Single-Layer vs Multi-Layer SVGs for Cutting Machines | PNG TO SVG",
-    "description": "Should your cut file be one colour or many layers? Understand single-layer and layered SVGs, how they cut and how to convert between them.",
-    "type": "article"
+    "title": "Single-Layer vs Multi-Layer SVGs for Cutting Machines",
+    "description": "Should your cut file be one colour or many layers? Understand single-layer and layered SVGs for Cricut and Silhouette and how to convert them.",
+    "type": "article",
+    "url": "https://pngtosvgfree.com/blog-single-vs-multi-layer-svg",
+    "siteName": "PNG to SVG Free",
+    "locale": "en_US",
+    "images": [
+      {
+        "url": "https://pngtosvgfree.com/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "PNG to SVG Free — free online PNG to SVG converter"
+      }
+    ]
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "Single-Layer vs Multi-Layer SVGs for Cutting Machines",
+    "description": "Should your cut file be one colour or many layers? Understand single-layer and layered SVGs for Cricut and Silhouette and how to convert them.",
+    "images": [
+      "https://pngtosvgfree.com/og-image.png"
+    ]
   }
 };
 
@@ -51,7 +72,7 @@ export default function Page() {
               {"3 min read"}
             </span>
             <span>
-              {"By the PNG TO SVG team"}
+              {"By the PNG to SVG Free team"}
             </span>
           </div>
           {" "}
@@ -306,6 +327,18 @@ export default function Page() {
             {"Single-layer SVGs are quick, durable and perfect for decals and stencils. Multi-layer SVGs add colour and depth at the cost of time and alignment. Decide based on the project, then trace your image with the matching setting for a cut-ready file."}
           </p>
           {" "}
+          <div className="author">
+            <img src="logo.svg" alt="" width="44" height="44" />
+            <div>
+              <b>
+                {"Written by the PNG to SVG Free team"}
+              </b>
+              <p>
+                {"We build free, privacy-first tools for converting images to vectors and write practical guides for designers, crafters and developers. Published November 21, 2026."}
+              </p>
+            </div>
+          </div>
+          {" "}
           <div className="inline-cta">
             <p>
               {"Ready to try it? Convert your image to SVG for free."}
@@ -363,7 +396,7 @@ export default function Page() {
                 {"Can You Use SVG Files for Machine Embroidery?"}
               </b>
               <p>
-                {"Embroidery machines do not read SVG directly, but SVG artwork is a great starting point for digitizing. Here is how the two fit together."}
+                {"Embroidery machines do not read SVG directly, but SVG artwork is a great starting point for digitizing. Here is how SVG and stitch files fit together."}
               </p>
               <span>
                 {"November 21, 2026 · 3 min read"}
@@ -398,7 +431,7 @@ export default function Page() {
         {" "}
       </div>
       {" "}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Single-Layer vs Multi-Layer SVGs for Cutting Machines\",\"datePublished\":\"2026-11-21\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://pngtosvgfree.com/logo.svg\"}},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-single-vs-multi-layer-svg.html\",\"description\":\"Should your cut file be one colour or many layers? Understand single-layer and layered SVGs, how they cut and how to convert between them.\"}" }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"Single-Layer vs Multi-Layer SVGs for Cutting Machines\",\"description\":\"Should your cut file be one colour or many layers? Understand single-layer and layered SVGs for Cricut and Silhouette and how to convert them.\",\"datePublished\":\"2026-11-21\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":555,\"articleSection\":\"Crafting\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-single-vs-multi-layer-svg\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Single-Layer vs Multi-Layer SVGs for Cutting Machines\",\"item\":\"https://pngtosvgfree.com/blog-single-vs-multi-layer-svg\"}]}]}" }} />
       {" "}
     </>
   );

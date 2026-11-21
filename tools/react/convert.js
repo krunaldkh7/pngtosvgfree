@@ -113,6 +113,13 @@ function meta(html, re) { const m = html.match(re); return m ? m[1] : null; }
 const decode = s => s && parseDocument(s).children.map(c => c.data).join('');
 
 const routes = [];
+const pages = [];
+const SITE = 'https://pngtosvgfree.com';
+const BRAND = 'PNG to SVG Free';
+const SITE_UPDATED = new Date().toISOString().slice(0, 10);
+const OG_IMAGE = { url: SITE + '/og-image.png', width: 1200, height: 630, alt: 'PNG to SVG Free — free online PNG to SVG converter' };
+// Tool landing pages that embed the converter.
+const LANDING = new Set(['jpg-to-svg', 'jpeg-to-svg', 'webp-to-svg', 'image-to-svg', 'logo-to-svg', 'png-to-svg-cricut', 'png-to-svg-laser-cutting', 'transparent-png-to-svg', 'black-and-white-png-to-svg']);
 for (const file of PAGES) {
   const html = fs.readFileSync(path.join(SRC, file), 'utf8');
   const slug = file.replace(/\.html$/, '');
@@ -130,13 +137,30 @@ for (const file of PAGES) {
   content = content.replace(/<table>\s*(<tr>[\s\S]*?)<\/table>/g, "<table><tbody>$1</tbody></table>");
   const doc = parseDocument(content, { decodeEntities: true });
   const body = doc.children.map(c => jsx(c, file, 3, false)).join('');
-  const pageCss = css.trim() === SHARED.trim() ? '' : css;
-  const script = SCRIPTED[file];
+  const pageCss = css.trim() === SHARED.trim() ? '' : css.replace(/'Inter'/g, 'var(--font-inter)');
+  const script = SCRIPTED[file] || (LANDING.has(slug) ? 'home' : null);
 
   const imports = [];
   if (body.includes('<Link')) imports.push(`import Link from "next/link";`);
   if (script) imports.push(`import PageScript from "@/components/PageScript";`);
-  const md = { title, description: desc, alternates: canon ? { canonical: canon.replace(/\/index\.html$/, '/') } : undefined, openGraph: { title, description: desc, type: ogType } };
+  // Clean, self-referencing canonical URL (e.g. /about instead of /about.html).
+  const route = slug === 'index' ? '/' : '/' + slug;
+  const url = SITE + route;
+  const published = meta(html, /"datePublished":\s*"([^"]+)"/);
+  const md = {
+    title: { absolute: title },
+    description: desc,
+    alternates: slug === '404' ? undefined : { canonical: url },
+    openGraph: { title, description: desc, type: ogType, url, siteName: BRAND, locale: 'en_US', images: [OG_IMAGE] },
+    twitter: { card: 'summary_large_image', title, description: desc, images: [OG_IMAGE.url] },
+    ...(slug === '404' && { robots: { index: false, follow: true } }),
+  };
+  if (slug !== '404') {
+    const d = published && /^\d{4}-\d{2}-\d{2}$/.test(published) ? published : SITE_UPDATED;
+    pages.push({ route, lastmod: d, priority: slug === 'index' ? 1 : LANDING.has(slug) ? 0.9 : slug.startsWith('blog') ? 0.7 : 0.5 });
+  }
+  if (title.length > 60) warn.push(`${file}: title is ${title.length} chars (max 60)`);
+  if (desc && (desc.length < 140 || desc.length > 155)) warn.push(`${file}: description is ${desc.length} chars (want 140-155)`);
 
   const fn = slug === '404' ? 'NotFound' : 'Page';
   const src = `${imports.join('\n')}${imports.length ? '\n\n' : ''}export const metadata = ${JSON.stringify(md, null, 2)};
@@ -153,7 +177,8 @@ ${pageCss ? `      <style dangerouslySetInnerHTML={{ __html: ${js(pageCss)} }} /
   fs.writeFileSync(path.join(OUT, dest), src);
   routes.push(dest);
 }
-fs.writeFileSync(path.join(OUT, 'app/globals.css'), SHARED);
+fs.writeFileSync(path.join(OUT, 'app/globals.css'), SHARED.replace(/'Inter'/g, 'var(--font-inter)'));
+fs.writeFileSync(path.join(OUT, 'lib/pages.json'), JSON.stringify(pages.sort((a, b) => b.priority - a.priority || a.route.localeCompare(b.route)), null, 1));
 
 // Post-fixes: not-found.jsx cannot export metadata; root-relative logo in the homepage diagram.
 const nf = path.join(OUT, 'app/not-found.jsx');
@@ -162,6 +187,6 @@ fs.writeFileSync(nf, fs.readFileSync(nf, 'utf8')
   .replace('<>\n', '<>\n      <title>Page not found | PNG TO SVG</title>\n'));
 const home = path.join(OUT, 'app/page.jsx');
 fs.writeFileSync(home, fs.readFileSync(home, 'utf8').replace('<image href="logo.svg"', '<image href="/logo.svg"'));
-for (const f of ['sitemap.xml', 'robots.txt', 'ads.txt', 'logo.svg']) fs.copyFileSync(path.join(SRC, f), path.join(OUT, 'public', f));
+for (const f of ['robots.txt', 'ads.txt', 'logo.svg', 'llms.txt']) fs.copyFileSync(path.join(SRC, f), path.join(OUT, 'public', f));
 console.log(routes.join('\n'));
 console.log(warn.length ? 'WARN:\n' + [...new Set(warn)].join('\n') : 'no warnings');

@@ -1,15 +1,36 @@
 import Link from "next/link";
 
 export const metadata = {
-  "title": "How to Convert SVG to PDF (Keeping It Vector) | PNG TO SVG",
+  "title": {
+    "absolute": "How to Convert SVG to PDF (Keeping It Vector)"
+  },
   "description": "Printers and clients often ask for PDF. Learn several free ways to convert SVG to PDF while keeping shapes and text as sharp, scalable vectors.",
   "alternates": {
-    "canonical": "https://pngtosvgfree.com/blog-convert-svg-to-pdf.html"
+    "canonical": "https://pngtosvgfree.com/blog-convert-svg-to-pdf"
   },
   "openGraph": {
-    "title": "How to Convert SVG to PDF (Keeping It Vector) | PNG TO SVG",
+    "title": "How to Convert SVG to PDF (Keeping It Vector)",
     "description": "Printers and clients often ask for PDF. Learn several free ways to convert SVG to PDF while keeping shapes and text as sharp, scalable vectors.",
-    "type": "article"
+    "type": "article",
+    "url": "https://pngtosvgfree.com/blog-convert-svg-to-pdf",
+    "siteName": "PNG to SVG Free",
+    "locale": "en_US",
+    "images": [
+      {
+        "url": "https://pngtosvgfree.com/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "PNG to SVG Free — free online PNG to SVG converter"
+      }
+    ]
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "How to Convert SVG to PDF (Keeping It Vector)",
+    "description": "Printers and clients often ask for PDF. Learn several free ways to convert SVG to PDF while keeping shapes and text as sharp, scalable vectors.",
+    "images": [
+      "https://pngtosvgfree.com/og-image.png"
+    ]
   }
 };
 
@@ -51,7 +72,7 @@ export default function Page() {
               {"3 min read"}
             </span>
             <span>
-              {"By the PNG TO SVG team"}
+              {"By the PNG to SVG Free team"}
             </span>
           </div>
           {" "}
@@ -255,6 +276,18 @@ export default function Page() {
             {"Use Inkscape for free, precise SVG to PDF conversion, your browser's Save as PDF for quick proofs, and professional editors when you need CMYK and bleed. Always check the result at high zoom to confirm it stayed vector, and handle fonts deliberately."}
           </p>
           {" "}
+          <div className="author">
+            <img src="logo.svg" alt="" width="44" height="44" />
+            <div>
+              <b>
+                {"Written by the PNG to SVG Free team"}
+              </b>
+              <p>
+                {"We build free, privacy-first tools for converting images to vectors and write practical guides for designers, crafters and developers. Published November 21, 2026."}
+              </p>
+            </div>
+          </div>
+          {" "}
           <div className="inline-cta">
             <p>
               {"Ready to try it? Convert your image to SVG for free."}
@@ -348,7 +381,7 @@ export default function Page() {
         {" "}
       </div>
       {" "}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"How to Convert SVG to PDF (Keeping It Vector)\",\"datePublished\":\"2026-11-21\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://pngtosvgfree.com/logo.svg\"}},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-convert-svg-to-pdf.html\",\"description\":\"Printers and clients often ask for PDF. Learn several free ways to convert SVG to PDF while keeping shapes and text as sharp, scalable vectors.\"}" }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"How to Convert SVG to PDF (Keeping It Vector)\",\"description\":\"Printers and clients often ask for PDF. Learn several free ways to convert SVG to PDF while keeping shapes and text as sharp, scalable vectors.\",\"datePublished\":\"2026-11-21\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":582,\"articleSection\":\"Print\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-convert-svg-to-pdf\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"How to Convert SVG to PDF (Keeping It Vector)\",\"item\":\"https://pngtosvgfree.com/blog-convert-svg-to-pdf\"}]}]}" }} />
       {" "}
     </>
   );

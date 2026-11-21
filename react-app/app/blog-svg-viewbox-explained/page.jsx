@@ -1,15 +1,36 @@
 import Link from "next/link";
 
 export const metadata = {
-  "title": "The SVG viewBox Explained (With Simple Examples) | PNG TO SVG",
+  "title": {
+    "absolute": "The SVG viewBox Explained (With Simple Examples)"
+  },
   "description": "The viewBox attribute is the key to how SVGs scale, crop and zoom. A clear, visual explanation of its four numbers and how they relate to width and height.",
   "alternates": {
-    "canonical": "https://pngtosvgfree.com/blog-svg-viewbox-explained.html"
+    "canonical": "https://pngtosvgfree.com/blog-svg-viewbox-explained"
   },
   "openGraph": {
-    "title": "The SVG viewBox Explained (With Simple Examples) | PNG TO SVG",
+    "title": "The SVG viewBox Explained (With Simple Examples)",
     "description": "The viewBox attribute is the key to how SVGs scale, crop and zoom. A clear, visual explanation of its four numbers and how they relate to width and height.",
-    "type": "article"
+    "type": "article",
+    "url": "https://pngtosvgfree.com/blog-svg-viewbox-explained",
+    "siteName": "PNG to SVG Free",
+    "locale": "en_US",
+    "images": [
+      {
+        "url": "https://pngtosvgfree.com/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "PNG to SVG Free — free online PNG to SVG converter"
+      }
+    ]
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "The SVG viewBox Explained (With Simple Examples)",
+    "description": "The viewBox attribute is the key to how SVGs scale, crop and zoom. A clear, visual explanation of its four numbers and how they relate to width and height.",
+    "images": [
+      "https://pngtosvgfree.com/og-image.png"
+    ]
   }
 };
 
@@ -50,7 +71,7 @@ export default function Page() {
               {"3 min read"}
             </span>
             <span>
-              {"By the PNG TO SVG team"}
+              {"By the PNG to SVG Free team"}
             </span>
           </div>
           {" "}
@@ -284,6 +305,18 @@ export default function Page() {
             {"The viewBox defines which part of the drawing is visible; width and height define how large it appears. Smaller viewBox values zoom in, larger ones zoom out, and min-x and min-y pan around. Add a viewBox to any SVG that will not scale, and you have solved the most common SVG sizing problem."}
           </p>
           {" "}
+          <div className="author">
+            <img src="logo.svg" alt="" width="44" height="44" />
+            <div>
+              <b>
+                {"Written by the PNG to SVG Free team"}
+              </b>
+              <p>
+                {"We build free, privacy-first tools for converting images to vectors and write practical guides for designers, crafters and developers. Published November 21, 2026."}
+              </p>
+            </div>
+          </div>
+          {" "}
           <div className="inline-cta">
             <p>
               {"Ready to try it? Convert your image to SVG for free."}
@@ -344,7 +377,7 @@ export default function Page() {
                 {"SVG Path Commands: A Beginner's Guide to the d Attribute"}
               </b>
               <p>
-                {"M, L, C, Q, A, Z — learn what the letters in an SVG path mean, how curves work, and how to read and tweak path data by hand."}
+                {"M, L, C, Q, A and Z explained: learn what the letters in an SVG path mean, how Bézier curves work, and how to read and tweak path data by hand."}
               </p>
               <span>
                 {"November 21, 2026 · 4 min read"}
@@ -377,7 +410,7 @@ export default function Page() {
         {" "}
       </div>
       {" "}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"The SVG viewBox Explained (With Simple Examples)\",\"datePublished\":\"2026-11-21\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://pngtosvgfree.com/logo.svg\"}},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-svg-viewbox-explained.html\",\"description\":\"The viewBox attribute is the key to how SVGs scale, crop and zoom. A clear, visual explanation of its four numbers and how they relate to width and height.\"}" }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"The SVG viewBox Explained (With Simple Examples)\",\"description\":\"The viewBox attribute is the key to how SVGs scale, crop and zoom. A clear, visual explanation of its four numbers and how they relate to width and height.\",\"datePublished\":\"2026-11-21\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":695,\"articleSection\":\"Technology\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-svg-viewbox-explained\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"The SVG viewBox Explained (With Simple Examples)\",\"item\":\"https://pngtosvgfree.com/blog-svg-viewbox-explained\"}]}]}" }} />
       {" "}
     </>
   );

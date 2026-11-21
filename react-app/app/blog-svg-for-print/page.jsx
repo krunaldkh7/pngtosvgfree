@@ -1,15 +1,36 @@
 import Link from "next/link";
 
 export const metadata = {
-  "title": "Using SVG for Print: Colours, Sizes and Print-Ready Files | PNG TO SVG",
+  "title": {
+    "absolute": "Using SVG for Print: Colours, Sizes and Print-Ready Files"
+  },
   "description": "SVG is perfect for scalable artwork, but print has its own rules. Learn about CMYK, bleed, sizes and how to turn an SVG into a print-ready file.",
   "alternates": {
-    "canonical": "https://pngtosvgfree.com/blog-svg-for-print.html"
+    "canonical": "https://pngtosvgfree.com/blog-svg-for-print"
   },
   "openGraph": {
-    "title": "Using SVG for Print: Colours, Sizes and Print-Ready Files | PNG TO SVG",
+    "title": "Using SVG for Print: Colours, Sizes and Print-Ready Files",
     "description": "SVG is perfect for scalable artwork, but print has its own rules. Learn about CMYK, bleed, sizes and how to turn an SVG into a print-ready file.",
-    "type": "article"
+    "type": "article",
+    "url": "https://pngtosvgfree.com/blog-svg-for-print",
+    "siteName": "PNG to SVG Free",
+    "locale": "en_US",
+    "images": [
+      {
+        "url": "https://pngtosvgfree.com/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "PNG to SVG Free — free online PNG to SVG converter"
+      }
+    ]
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "Using SVG for Print: Colours, Sizes and Print-Ready Files",
+    "description": "SVG is perfect for scalable artwork, but print has its own rules. Learn about CMYK, bleed, sizes and how to turn an SVG into a print-ready file.",
+    "images": [
+      "https://pngtosvgfree.com/og-image.png"
+    ]
   }
 };
 
@@ -51,7 +72,7 @@ export default function Page() {
               {"3 min read"}
             </span>
             <span>
-              {"By the PNG TO SVG team"}
+              {"By the PNG to SVG Free team"}
             </span>
           </div>
           {" "}
@@ -249,6 +270,18 @@ export default function Page() {
             {"SVG gives you limitless sharpness for print, but you still need to handle colour, size, bleed and fonts. Prepare those in a vector editor, export a PDF for the printer, and your artwork will look as crisp on paper as it does on screen."}
           </p>
           {" "}
+          <div className="author">
+            <img src="logo.svg" alt="" width="44" height="44" />
+            <div>
+              <b>
+                {"Written by the PNG to SVG Free team"}
+              </b>
+              <p>
+                {"We build free, privacy-first tools for converting images to vectors and write practical guides for designers, crafters and developers. Published November 21, 2026."}
+              </p>
+            </div>
+          </div>
+          {" "}
           <div className="inline-cta">
             <p>
               {"Ready to try it? Convert your image to SVG for free."}
@@ -343,7 +376,7 @@ export default function Page() {
         {" "}
       </div>
       {" "}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Using SVG for Print: Colours, Sizes and Print-Ready Files\",\"datePublished\":\"2026-11-21\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://pngtosvgfree.com/logo.svg\"}},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-svg-for-print.html\",\"description\":\"SVG is perfect for scalable artwork, but print has its own rules. Learn about CMYK, bleed, sizes and how to turn an SVG into a print-ready file.\"}" }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"Using SVG for Print: Colours, Sizes and Print-Ready Files\",\"description\":\"SVG is perfect for scalable artwork, but print has its own rules. Learn about CMYK, bleed, sizes and how to turn an SVG into a print-ready file.\",\"datePublished\":\"2026-11-21\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":665,\"articleSection\":\"Print\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-svg-for-print\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Using SVG for Print: Colours, Sizes and Print-Ready Files\",\"item\":\"https://pngtosvgfree.com/blog-svg-for-print\"}]}]}" }} />
       {" "}
     </>
   );

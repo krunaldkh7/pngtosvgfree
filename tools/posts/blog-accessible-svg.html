@@ -3,7 +3,7 @@ title: How to Make SVG Graphics Accessible
 category: Web design
 date: 2026-11-21
 icon: shield
-description: Screen readers handle SVG in different ways depending on how it is embedded. Learn how to label meaningful SVGs, hide decorative ones and ensure good contrast.
+description: Screen readers treat SVG differently depending on how it is embedded. Learn to label meaningful SVGs, hide decorative ones and meet contrast rules.
 ---
 <p>SVGs are everywhere in modern interfaces — logos, icons, charts and illustrations. For people who use screen readers, voice control or high-contrast modes, poorly marked-up SVGs can be silent, confusing or invisible. The good news is that making SVG accessible takes only a few attributes.</p>
 <h2>Step 1: Decide whether the graphic is meaningful or decorative</h2>
@@ -15,7 +15,7 @@ description: Screen readers handle SVG in different ways depending on how it is 
 <p>Meaningful graphics need a text alternative. Decorative graphics should be hidden from assistive technology so they do not add noise.</p>
 <h2>SVG in an &lt;img&gt; tag</h2>
 <p>Treat it like any other image:</p>
-<pre><code>&lt;img src="logo.svg" alt="PNG TO SVG home"&gt;   &lt;!-- meaningful --&gt;
+<pre><code>&lt;img src="logo.svg" alt="PNG to SVG Free home"&gt;   &lt;!-- meaningful --&gt;
 &lt;img src="swirl.svg" alt=""&gt;                  &lt;!-- decorative --&gt;</code></pre>
 <p>Some older screen reader and browser combinations did not announce SVG images correctly; adding <code>role="img"</code> to the <code>&lt;img&gt;</code> element is a harmless safeguard.</p>
 <h2>Inline SVG: meaningful</h2>

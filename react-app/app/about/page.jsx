@@ -1,15 +1,36 @@
 import Link from "next/link";
 
 export const metadata = {
-  "title": "About Us | PNG TO SVG",
-  "description": "Learn about PNG TO SVG, the free browser-based PNG to SVG converter, and the people and principles behind it.",
+  "title": {
+    "absolute": "About Us | PNG to SVG Free"
+  },
+  "description": "Learn about PNG to SVG Free, the free browser-based PNG to SVG converter, the privacy-first principles behind it and the team that builds the tools.",
   "alternates": {
-    "canonical": "https://pngtosvgfree.com/about.html"
+    "canonical": "https://pngtosvgfree.com/about"
   },
   "openGraph": {
-    "title": "About Us | PNG TO SVG",
-    "description": "Learn about PNG TO SVG, the free browser-based PNG to SVG converter, and the people and principles behind it.",
-    "type": "website"
+    "title": "About Us | PNG to SVG Free",
+    "description": "Learn about PNG to SVG Free, the free browser-based PNG to SVG converter, the privacy-first principles behind it and the team that builds the tools.",
+    "type": "website",
+    "url": "https://pngtosvgfree.com/about",
+    "siteName": "PNG to SVG Free",
+    "locale": "en_US",
+    "images": [
+      {
+        "url": "https://pngtosvgfree.com/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "PNG to SVG Free — free online PNG to SVG converter"
+      }
+    ]
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "About Us | PNG to SVG Free",
+    "description": "Learn about PNG to SVG Free, the free browser-based PNG to SVG converter, the privacy-first principles behind it and the team that builds the tools.",
+    "images": [
+      "https://pngtosvgfree.com/og-image.png"
+    ]
   }
 };
 
@@ -24,7 +45,7 @@ export default function Page() {
         <h1>
           {"About "}
           <em>
-            {"PNG TO SVG"}
+            {"PNG to SVG Free"}
           </em>
         </h1>
       </header>
@@ -33,7 +54,7 @@ export default function Page() {
         <div className="prose">
           {" "}
           <p>
-            {"PNG TO SVG is a free online toolkit for turning everyday images into clean, scalable vector graphics. We built it because converting a logo, drawing or illustration to SVG should be fast, private and free — without installing heavy software or creating an account."}
+            {"PNG to SVG Free is a free online toolkit for turning everyday images into clean, scalable vector graphics. We built it because converting a logo, drawing or illustration to SVG should be fast, private and free — without installing heavy software or creating an account."}
           </p>
           {" "}
           <h2>
@@ -73,7 +94,7 @@ export default function Page() {
           </p>
           {" "}
           <h2>
-            {"Who uses PNG TO SVG"}
+            {"Who uses PNG to SVG Free"}
           </h2>
           {" "}
           <ul>
@@ -99,7 +120,7 @@ export default function Page() {
           </h2>
           {" "}
           <p>
-            {"PNG TO SVG is supported by advertising. Ads help us cover hosting and development costs so the tools remain free for everyone. We aim to keep ads unobtrusive and never place them inside the converter workspace."}
+            {"PNG to SVG Free is supported by advertising. Ads help us cover hosting and development costs so the tools remain free for everyone. We aim to keep ads unobtrusive and never place them inside the converter workspace."}
           </p>
           {" "}
           <h2>

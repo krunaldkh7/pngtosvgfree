@@ -1,15 +1,36 @@
 import Link from "next/link";
 
 export const metadata = {
-  "title": "Blog — SVG Guides, Tutorials & Tips | PNG TO SVG",
-  "description": "Guides and tutorials about SVG files, image tracing, logo conversion and preparing vectors for Cricut, Silhouette, print and web.",
+  "title": {
+    "absolute": "SVG Guides, Tutorials & Tips | PNG to SVG Free"
+  },
+  "description": "Practical guides on SVG files, image tracing, Cricut and laser cut files, web graphics and print. Learn to convert and use vectors like a pro, free.",
   "alternates": {
-    "canonical": "https://pngtosvgfree.com/blog.html"
+    "canonical": "https://pngtosvgfree.com/blog"
   },
   "openGraph": {
-    "title": "Blog — SVG Guides, Tutorials & Tips | PNG TO SVG",
-    "description": "Guides and tutorials about SVG files, image tracing, logo conversion and preparing vectors for Cricut, Silhouette, print and web.",
-    "type": "website"
+    "title": "SVG Guides, Tutorials & Tips | PNG to SVG Free",
+    "description": "Practical guides on SVG files, image tracing, Cricut and laser cut files, web graphics and print. Learn to convert and use vectors like a pro, free.",
+    "type": "website",
+    "url": "https://pngtosvgfree.com/blog",
+    "siteName": "PNG to SVG Free",
+    "locale": "en_US",
+    "images": [
+      {
+        "url": "https://pngtosvgfree.com/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "PNG to SVG Free — free online PNG to SVG converter"
+      }
+    ]
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "SVG Guides, Tutorials & Tips | PNG to SVG Free",
+    "description": "Practical guides on SVG files, image tracing, Cricut and laser cut files, web graphics and print. Learn to convert and use vectors like a pro, free.",
+    "images": [
+      "https://pngtosvgfree.com/og-image.png"
+    ]
   }
 };
 
@@ -49,7 +70,7 @@ export default function Page() {
                 {"How to Make SVG Graphics Accessible"}
               </b>
               <p>
-                {"Screen readers handle SVG in different ways depending on how it is embedded. Learn how to label meaningful SVGs, hide decorative ones and ensure good contrast."}
+                {"Screen readers treat SVG differently depending on how it is embedded. Learn to label meaningful SVGs, hide decorative ones and meet contrast rules."}
               </p>
               <span>
                 {"November 21, 2026 · 3 min read"}
@@ -71,7 +92,7 @@ export default function Page() {
                 {"How to Clean Up a Traced SVG for Professional Results"}
               </b>
               <p>
-                {"Automatic tracing gets you most of the way. These clean-up techniques — removing fragments, merging shapes, fixing colours and simplifying nodes — finish the job."}
+                {"Automatic tracing gets you most of the way. Remove fragments, merge shapes, fix colours and simplify nodes to turn a traced SVG into a pro file."}
               </p>
               <span>
                 {"November 21, 2026 · 3 min read"}
@@ -142,7 +163,7 @@ export default function Page() {
                 {"How to Turn Your Signature into an SVG"}
               </b>
               <p>
-                {"Create a crisp, transparent vector version of your handwritten signature for documents, email footers, websites, engraving and stamps."}
+                {"Create a crisp, transparent vector version of your handwritten signature for documents, email footers, websites, engraving and custom stamps."}
               </p>
               <span>
                 {"November 21, 2026 · 4 min read"}
@@ -265,7 +286,7 @@ export default function Page() {
                 {"How to Open SVG Files on Windows, Mac, iPhone and Android"}
               </b>
               <p>
-                {"Downloaded an SVG and not sure how to view it? Here are the easiest ways to open, preview and edit SVG files on every major device."}
+                {"Downloaded an SVG and not sure how to view it? The easiest free ways to open, preview and edit SVG files on Windows, Mac, iPhone and Android."}
               </p>
               <span>
                 {"November 21, 2026 · 3 min read"}
@@ -455,7 +476,7 @@ export default function Page() {
                 {"Responsive SVG: Making Vector Graphics Fit Any Screen"}
               </b>
               <p>
-                {"Learn how to make SVGs scale smoothly across phones, tablets and desktops using viewBox, CSS sizing, preserveAspectRatio and media queries."}
+                {"Learn how to make SVGs scale smoothly across phones, tablets and desktops using the viewBox, CSS sizing, preserveAspectRatio and media queries."}
               </p>
               <span>
                 {"November 21, 2026 · 3 min read"}
@@ -479,7 +500,7 @@ export default function Page() {
                 {"Single-Layer vs Multi-Layer SVGs for Cutting Machines"}
               </b>
               <p>
-                {"Should your cut file be one colour or many layers? Understand single-layer and layered SVGs, how they cut and how to convert between them."}
+                {"Should your cut file be one colour or many layers? Understand single-layer and layered SVGs for Cricut and Silhouette and how to convert them."}
               </p>
               <span>
                 {"November 21, 2026 · 3 min read"}
@@ -551,7 +572,7 @@ export default function Page() {
                 {"How to Create and Add an SVG Favicon to Your Website"}
               </b>
               <p>
-                {"SVG favicons stay sharp on every screen and can even adapt to dark mode. Learn how to make one, add it to your site and provide fallbacks."}
+                {"SVG favicons stay sharp on every screen and can even adapt to dark mode. Learn how to make one, add it to your website and provide PNG fallbacks."}
               </p>
               <span>
                 {"November 21, 2026 · 3 min read"}
@@ -575,7 +596,7 @@ export default function Page() {
                 {"Can You Use SVG Files for Machine Embroidery?"}
               </b>
               <p>
-                {"Embroidery machines do not read SVG directly, but SVG artwork is a great starting point for digitizing. Here is how the two fit together."}
+                {"Embroidery machines do not read SVG directly, but SVG artwork is a great starting point for digitizing. Here is how SVG and stitch files fit together."}
               </p>
               <span>
                 {"November 21, 2026 · 3 min read"}
@@ -723,7 +744,7 @@ export default function Page() {
                 {"Working with SVG in Figma: Import, Edit and Export"}
               </b>
               <p>
-                {"Figma handles SVG well, but there are a few quirks. Learn how to import SVGs as editable vectors, recolour them, build icon components and export clean files."}
+                {"Figma handles SVG well, with a few quirks. Learn to import SVGs as editable vectors, recolour them, build icon components and export clean files."}
               </p>
               <span>
                 {"November 21, 2026 · 3 min read"}
@@ -772,7 +793,7 @@ export default function Page() {
                 {"SVG Path Commands: A Beginner's Guide to the d Attribute"}
               </b>
               <p>
-                {"M, L, C, Q, A, Z — learn what the letters in an SVG path mean, how curves work, and how to read and tweak path data by hand."}
+                {"M, L, C, Q, A and Z explained: learn what the letters in an SVG path mean, how Bézier curves work, and how to read and tweak path data by hand."}
               </p>
               <span>
                 {"November 21, 2026 · 4 min read"}
@@ -865,7 +886,7 @@ export default function Page() {
                 {"SVG vs Canvas: Which Should You Use for Web Graphics?"}
               </b>
               <p>
-                {"Both SVG and HTML canvas draw graphics in the browser, but they work very differently. Compare performance, interactivity, accessibility and best use cases."}
+                {"SVG and HTML canvas both draw graphics in the browser but work very differently. Compare performance, interactivity, accessibility and use cases."}
               </p>
               <span>
                 {"November 21, 2026 · 3 min read"}
@@ -961,7 +982,7 @@ export default function Page() {
                 {"5 Ways to Add SVG to a Web Page (and When to Use Each)"}
               </b>
               <p>
-                {"img tag, inline SVG, CSS background, object or sprite? Compare the ways to put SVG on a website, with pros, cons and code examples."}
+                {"img tag, inline SVG, CSS background, object or sprite? Compare the five ways to add SVG to a web page, with pros, cons and simple code examples."}
               </p>
               <span>
                 {"November 21, 2026 · 3 min read"}
@@ -985,7 +1006,7 @@ export default function Page() {
                 {"JPG, PNG, WEBP, AVIF, GIF or SVG? A Guide to Web Image Formats"}
               </b>
               <p>
-                {"Choosing the right image format makes websites faster and sharper. Compare JPG, PNG, WEBP, AVIF, GIF and SVG and learn which to use for every kind of image."}
+                {"Choosing the right image format makes sites faster. Compare JPG, PNG, WEBP, AVIF, GIF and SVG and learn which one to use for every kind of image."}
               </p>
               <span>
                 {"November 21, 2026 · 3 min read"}
@@ -1009,10 +1030,10 @@ export default function Page() {
                 {"What Is an SVG File? A Beginner-Friendly Guide"}
               </b>
               <p>
-                {"SVG files power logos, icons and illustrations across the web. Learn what they are, how they work and when you should use one."}
+                {"SVG files power logos, icons and illustrations across the web. Learn what an SVG file is, how it works, how to open one and when you should use it."}
               </p>
               <span>
-                {"November 10, 2026 · 6 min read"}
+                {"November 10, 2026 · 3 min read"}
               </span>
             </div>
           </Link>
@@ -1033,10 +1054,10 @@ export default function Page() {
                 {"PNG vs SVG: Which Format Should You Use?"}
               </b>
               <p>
-                {"PNG and SVG both support transparency, but they work in completely different ways. Here is a practical comparison to help you choose."}
+                {"PNG and SVG both support transparency, but one is pixels and one is vectors. A practical comparison of quality, file size and editing to help you choose."}
               </p>
               <span>
-                {"November 8, 2026 · 7 min read"}
+                {"November 8, 2026 · 3 min read"}
               </span>
             </div>
           </Link>
@@ -1045,6 +1066,7 @@ export default function Page() {
               <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="9" cy="9" r="5" />
                 <path d="M14 21l4-8 4 8z" />
+                <rect x="2" y="15" width="6" height="6" rx="1" />
               </svg>
             </div>
             {" "}
@@ -1056,10 +1078,10 @@ export default function Page() {
                 {"How to Convert a Logo to SVG (Step-by-Step)"}
               </b>
               <p>
-                {"Lost the original vector file of your logo? Here is how to turn a PNG or JPG logo into a clean, editable SVG in a few minutes."}
+                {"Lost the original vector file of your logo? Learn how to turn a PNG or JPG logo into a clean, editable SVG in minutes, free and without Illustrator."}
               </p>
               <span>
-                {"November 5, 2026 · 6 min read"}
+                {"November 5, 2026 · 3 min read"}
               </span>
             </div>
           </Link>
@@ -1068,7 +1090,7 @@ export default function Page() {
               <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="6" cy="6" r="3" />
                 <circle cx="6" cy="18" r="3" />
-                <path d="M20 4L8.1 15.9M14.5 14.5L20 20M8.1 8.1L12 12" />
+                <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12" />
               </svg>
             </div>
             {" "}
@@ -1080,19 +1102,17 @@ export default function Page() {
                 {"Preparing SVG Files for Cricut and Silhouette Machines"}
               </b>
               <p>
-                {"Cutting machines need clean vector paths. Learn how to turn your artwork into cut-ready SVGs for vinyl, paper and iron-on projects."}
+                {"Cutting machines need clean vector paths. Learn how to turn your artwork into cut-ready SVG files for vinyl, paper and iron-on Cricut projects."}
               </p>
               <span>
-                {"November 1, 2026 · 7 min read"}
+                {"November 1, 2026 · 3 min read"}
               </span>
             </div>
           </Link>
           <Link className="post" href="/blog-how-image-tracing-works">
             <div className="th" style={{ "background": "linear-gradient(135deg,#0f1020,#4c4f6b)" }}>
               <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M3 17c3-8 6 4 9-4s6 2 9-6" />
-                <circle cx="3" cy="17" r="1.5" />
-                <circle cx="21" cy="7" r="1.5" />
+                <path d="M15 4V2M15 16v-2M8 9h2M20 9h2M17.8 11.8L19 13M17.8 6.2L19 5M3 21l9-9M12.2 6.2L11 5" />
               </svg>
             </div>
             {" "}
@@ -1107,7 +1127,7 @@ export default function Page() {
                 {"What actually happens when a converter turns a PNG into an SVG? A plain-English look at colour quantization, region detection and curve fitting."}
               </p>
               <span>
-                {"October 28, 2026 · 8 min read"}
+                {"October 28, 2026 · 3 min read"}
               </span>
             </div>
           </Link>

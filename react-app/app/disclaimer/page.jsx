@@ -1,15 +1,36 @@
 import Link from "next/link";
 
 export const metadata = {
-  "title": "Disclaimer | PNG TO SVG",
-  "description": "Important information about the accuracy of PNG TO SVG tools, content and advertising.",
+  "title": {
+    "absolute": "Disclaimer | PNG to SVG Free"
+  },
+  "description": "Read the disclaimer for PNG to SVG Free: accuracy of converted files, third-party trademarks, advertising, external links and limits of our liability.",
   "alternates": {
-    "canonical": "https://pngtosvgfree.com/disclaimer.html"
+    "canonical": "https://pngtosvgfree.com/disclaimer"
   },
   "openGraph": {
-    "title": "Disclaimer | PNG TO SVG",
-    "description": "Important information about the accuracy of PNG TO SVG tools, content and advertising.",
-    "type": "website"
+    "title": "Disclaimer | PNG to SVG Free",
+    "description": "Read the disclaimer for PNG to SVG Free: accuracy of converted files, third-party trademarks, advertising, external links and limits of our liability.",
+    "type": "website",
+    "url": "https://pngtosvgfree.com/disclaimer",
+    "siteName": "PNG to SVG Free",
+    "locale": "en_US",
+    "images": [
+      {
+        "url": "https://pngtosvgfree.com/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "PNG to SVG Free — free online PNG to SVG converter"
+      }
+    ]
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "Disclaimer | PNG to SVG Free",
+    "description": "Read the disclaimer for PNG to SVG Free: accuracy of converted files, third-party trademarks, advertising, external links and limits of our liability.",
+    "images": [
+      "https://pngtosvgfree.com/og-image.png"
+    ]
   }
 };
 
@@ -52,7 +73,7 @@ export default function Page() {
           </h2>
           {" "}
           <p>
-            {"Converting an image does not give you any rights to it. Product names, logos and brands mentioned on this Site (such as Figma, Adobe Illustrator, Inkscape, Cricut, Silhouette and Canva) belong to their respective owners and are used for identification only. PNG TO SVG is not affiliated with or endorsed by them."}
+            {"Converting an image does not give you any rights to it. Product names, logos and brands mentioned on this Site (such as Figma, Adobe Illustrator, Inkscape, Cricut, Silhouette and Canva) belong to their respective owners and are used for identification only. PNG to SVG Free is not affiliated with or endorsed by them."}
           </p>
           {" "}
           <h2>

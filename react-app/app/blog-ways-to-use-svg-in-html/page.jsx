@@ -1,15 +1,36 @@
 import Link from "next/link";
 
 export const metadata = {
-  "title": "5 Ways to Add SVG to a Web Page (and When to Use Each) | PNG TO SVG",
-  "description": "img tag, inline SVG, CSS background, object or sprite? Compare the ways to put SVG on a website, with pros, cons and code examples.",
+  "title": {
+    "absolute": "5 Ways to Add SVG to a Web Page (and When to Use Each)"
+  },
+  "description": "img tag, inline SVG, CSS background, object or sprite? Compare the five ways to add SVG to a web page, with pros, cons and simple code examples.",
   "alternates": {
-    "canonical": "https://pngtosvgfree.com/blog-ways-to-use-svg-in-html.html"
+    "canonical": "https://pngtosvgfree.com/blog-ways-to-use-svg-in-html"
   },
   "openGraph": {
-    "title": "5 Ways to Add SVG to a Web Page (and When to Use Each) | PNG TO SVG",
-    "description": "img tag, inline SVG, CSS background, object or sprite? Compare the ways to put SVG on a website, with pros, cons and code examples.",
-    "type": "article"
+    "title": "5 Ways to Add SVG to a Web Page (and When to Use Each)",
+    "description": "img tag, inline SVG, CSS background, object or sprite? Compare the five ways to add SVG to a web page, with pros, cons and simple code examples.",
+    "type": "article",
+    "url": "https://pngtosvgfree.com/blog-ways-to-use-svg-in-html",
+    "siteName": "PNG to SVG Free",
+    "locale": "en_US",
+    "images": [
+      {
+        "url": "https://pngtosvgfree.com/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "PNG to SVG Free — free online PNG to SVG converter"
+      }
+    ]
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "5 Ways to Add SVG to a Web Page (and When to Use Each)",
+    "description": "img tag, inline SVG, CSS background, object or sprite? Compare the five ways to add SVG to a web page, with pros, cons and simple code examples.",
+    "images": [
+      "https://pngtosvgfree.com/og-image.png"
+    ]
   }
 };
 
@@ -50,7 +71,7 @@ export default function Page() {
               {"3 min read"}
             </span>
             <span>
-              {"By the PNG TO SVG team"}
+              {"By the PNG to SVG Free team"}
             </span>
           </div>
           {" "}
@@ -398,6 +419,18 @@ export default function Page() {
             {" by default, inline SVG when you need CSS control, sprites for large icon sets, and CSS backgrounds for decoration. Matching the method to the job gives you sharp graphics, good caching and accessible pages."}
           </p>
           {" "}
+          <div className="author">
+            <img src="logo.svg" alt="" width="44" height="44" />
+            <div>
+              <b>
+                {"Written by the PNG to SVG Free team"}
+              </b>
+              <p>
+                {"We build free, privacy-first tools for converting images to vectors and write practical guides for designers, crafters and developers. Published November 21, 2026."}
+              </p>
+            </div>
+          </div>
+          {" "}
           <div className="inline-cta">
             <p>
               {"Ready to try it? Convert your image to SVG for free."}
@@ -429,7 +462,7 @@ export default function Page() {
                 {"How to Make SVG Graphics Accessible"}
               </b>
               <p>
-                {"Screen readers handle SVG in different ways depending on how it is embedded. Learn how to label meaningful SVGs, hide decorative ones and ensure good contrast."}
+                {"Screen readers treat SVG differently depending on how it is embedded. Learn to label meaningful SVGs, hide decorative ones and meet contrast rules."}
               </p>
               <span>
                 {"November 21, 2026 · 3 min read"}
@@ -476,7 +509,7 @@ export default function Page() {
                 {"Responsive SVG: Making Vector Graphics Fit Any Screen"}
               </b>
               <p>
-                {"Learn how to make SVGs scale smoothly across phones, tablets and desktops using viewBox, CSS sizing, preserveAspectRatio and media queries."}
+                {"Learn how to make SVGs scale smoothly across phones, tablets and desktops using the viewBox, CSS sizing, preserveAspectRatio and media queries."}
               </p>
               <span>
                 {"November 21, 2026 · 3 min read"}
@@ -487,7 +520,7 @@ export default function Page() {
         {" "}
       </div>
       {" "}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"5 Ways to Add SVG to a Web Page (and When to Use Each)\",\"datePublished\":\"2026-11-21\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://pngtosvgfree.com/logo.svg\"}},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-ways-to-use-svg-in-html.html\",\"description\":\"img tag, inline SVG, CSS background, object or sprite? Compare the ways to put SVG on a website, with pros, cons and code examples.\"}" }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"5 Ways to Add SVG to a Web Page (and When to Use Each)\",\"description\":\"img tag, inline SVG, CSS background, object or sprite? Compare the five ways to add SVG to a web page, with pros, cons and simple code examples.\",\"datePublished\":\"2026-11-21\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":585,\"articleSection\":\"Web design\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-ways-to-use-svg-in-html\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"5 Ways to Add SVG to a Web Page (and When to Use Each)\",\"item\":\"https://pngtosvgfree.com/blog-ways-to-use-svg-in-html\"}]}]}" }} />
       {" "}
     </>
   );

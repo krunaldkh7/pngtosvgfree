@@ -1,15 +1,36 @@
 import Link from "next/link";
 
 export const metadata = {
-  "title": "SVG vs EPS vs AI vs PDF: Which Vector Format Do You Need? | PNG TO SVG",
+  "title": {
+    "absolute": "SVG vs EPS vs AI vs PDF: Which Vector Format Do You Need?"
+  },
   "description": "Designers, printers and websites all ask for \"vector files\" — but which one? A clear comparison of SVG, EPS, AI and PDF and when to use each.",
   "alternates": {
-    "canonical": "https://pngtosvgfree.com/blog-svg-vs-eps-vs-ai-vs-pdf.html"
+    "canonical": "https://pngtosvgfree.com/blog-svg-vs-eps-vs-ai-vs-pdf"
   },
   "openGraph": {
-    "title": "SVG vs EPS vs AI vs PDF: Which Vector Format Do You Need? | PNG TO SVG",
+    "title": "SVG vs EPS vs AI vs PDF: Which Vector Format Do You Need?",
     "description": "Designers, printers and websites all ask for \"vector files\" — but which one? A clear comparison of SVG, EPS, AI and PDF and when to use each.",
-    "type": "article"
+    "type": "article",
+    "url": "https://pngtosvgfree.com/blog-svg-vs-eps-vs-ai-vs-pdf",
+    "siteName": "PNG to SVG Free",
+    "locale": "en_US",
+    "images": [
+      {
+        "url": "https://pngtosvgfree.com/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "PNG to SVG Free — free online PNG to SVG converter"
+      }
+    ]
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "SVG vs EPS vs AI vs PDF: Which Vector Format Do You Need?",
+    "description": "Designers, printers and websites all ask for \"vector files\" — but which one? A clear comparison of SVG, EPS, AI and PDF and when to use each.",
+    "images": [
+      "https://pngtosvgfree.com/og-image.png"
+    ]
   }
 };
 
@@ -51,7 +72,7 @@ export default function Page() {
               {"4 min read"}
             </span>
             <span>
-              {"By the PNG TO SVG team"}
+              {"By the PNG to SVG Free team"}
             </span>
           </div>
           {" "}
@@ -420,6 +441,18 @@ export default function Page() {
             {"SVG is the modern, open choice for screens and cutting machines. PDF is the safest choice for print. AI is a working file for Illustrator users, and EPS is a legacy format you will still meet occasionally. Keeping an SVG and a PDF of every logo covers almost every request you will receive."}
           </p>
           {" "}
+          <div className="author">
+            <img src="logo.svg" alt="" width="44" height="44" />
+            <div>
+              <b>
+                {"Written by the PNG to SVG Free team"}
+              </b>
+              <p>
+                {"We build free, privacy-first tools for converting images to vectors and write practical guides for designers, crafters and developers. Published November 21, 2026."}
+              </p>
+            </div>
+          </div>
+          {" "}
           <div className="inline-cta">
             <p>
               {"Ready to try it? Convert your image to SVG for free."}
@@ -477,7 +510,7 @@ export default function Page() {
                 {"JPG, PNG, WEBP, AVIF, GIF or SVG? A Guide to Web Image Formats"}
               </b>
               <p>
-                {"Choosing the right image format makes websites faster and sharper. Compare JPG, PNG, WEBP, AVIF, GIF and SVG and learn which to use for every kind of image."}
+                {"Choosing the right image format makes sites faster. Compare JPG, PNG, WEBP, AVIF, GIF and SVG and learn which one to use for every kind of image."}
               </p>
               <span>
                 {"November 21, 2026 · 3 min read"}
@@ -501,10 +534,10 @@ export default function Page() {
                 {"PNG vs SVG: Which Format Should You Use?"}
               </b>
               <p>
-                {"PNG and SVG both support transparency, but they work in completely different ways. Here is a practical comparison to help you choose."}
+                {"PNG and SVG both support transparency, but one is pixels and one is vectors. A practical comparison of quality, file size and editing to help you choose."}
               </p>
               <span>
-                {"November 8, 2026 · 7 min read"}
+                {"November 8, 2026 · 3 min read"}
               </span>
             </div>
           </Link>
@@ -512,7 +545,7 @@ export default function Page() {
         {" "}
       </div>
       {" "}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"SVG vs EPS vs AI vs PDF: Which Vector Format Do You Need?\",\"datePublished\":\"2026-11-21\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://pngtosvgfree.com/logo.svg\"}},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-svg-vs-eps-vs-ai-vs-pdf.html\",\"description\":\"Designers, printers and websites all ask for \\\"vector files\\\" — but which one? A clear comparison of SVG, EPS, AI and PDF and when to use each.\"}" }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"SVG vs EPS vs AI vs PDF: Which Vector Format Do You Need?\",\"description\":\"Designers, printers and websites all ask for \\\"vector files\\\" — but which one? A clear comparison of SVG, EPS, AI and PDF and when to use each.\",\"datePublished\":\"2026-11-21\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":817,\"articleSection\":\"Formats\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-svg-vs-eps-vs-ai-vs-pdf\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"SVG vs EPS vs AI vs PDF: Which Vector Format Do You Need?\",\"item\":\"https://pngtosvgfree.com/blog-svg-vs-eps-vs-ai-vs-pdf\"}]}]}" }} />
       {" "}
     </>
   );

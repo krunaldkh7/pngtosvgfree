@@ -1,0 +1,29 @@
+slug: blog-what-is-an-svg-file
+title: What Is an SVG File? A Beginner-Friendly Guide
+category: Basics
+date: 2026-11-10
+icon: file
+description: SVG files power logos, icons and illustrations across the web. Learn what an SVG file is, how it works, how to open one and when you should use it.
+---
+<p>If you have ever downloaded a logo, used an icon set or prepared a design for a cutting machine, you have probably come across a file ending in <strong>.svg</strong>. SVG stands for <strong>Scalable Vector Graphics</strong>, and it is one of the most useful image formats you can have in your toolkit. In this guide we explain what an SVG file actually is, how it differs from ordinary images, and when it is the right choice.</p>
+<h2>Raster images vs. vector images</h2>
+<p>Most pictures you see every day — photos from your phone, screenshots, JPGs and PNGs — are <strong>raster images</strong>. A raster image is a grid of tiny coloured squares called pixels. A 1000 × 1000 PNG contains exactly one million pixels, and each one stores a single colour. When you enlarge a raster image beyond its original size, the computer has to invent the missing pixels, which is why enlarged photos look blurry or blocky.</p>
+<p>A <strong>vector image</strong> works differently. Instead of storing pixels, it stores instructions: "draw a circle here with this radius", "fill this curved shape with blue", "draw a line from point A to point B". Because these instructions describe geometry rather than fixed dots, the image can be redrawn perfectly at any size. A vector logo looks equally sharp on a business card and on a billboard.</p>
+<h2>What is inside an SVG file?</h2>
+<p>SVG is a vector format based on XML, which means an SVG file is actually plain text. If you open one in a text editor you will see tags such as <code>&lt;svg&gt;</code>, <code>&lt;path&gt;</code>, <code>&lt;circle&gt;</code> and <code>&lt;rect&gt;</code>. The most important element is the <strong>path</strong>, which describes an outline using a compact set of commands — move to a point, draw a line, draw a curve, close the shape. Each path has a fill colour, and stacking several paths creates a complete illustration.</p>
+<p>Because SVG is text, it can be edited in code, compressed very efficiently, searched by search engines and even animated with CSS or JavaScript.</p>
+<h2>Key advantages of SVG</h2>
+<ul>
+<li><strong>Infinite scalability</strong> – edges stay crisp at any size, from a 16-pixel favicon to a large-format print.</li>
+<li><strong>Small file size</strong> – simple graphics such as logos and icons are often much smaller as SVG than as high-resolution PNG.</li>
+<li><strong>Editable</strong> – every shape can be selected, recoloured or reshaped in tools like Figma, Illustrator and Inkscape.</li>
+<li><strong>Transparent backgrounds</strong> – SVG supports transparency natively, ideal for logos and stickers.</li>
+<li><strong>Machine-friendly</strong> – cutting machines, laser cutters, vinyl plotters and embroidery software read vector paths directly.</li>
+</ul>
+<h2>When should you not use SVG?</h2>
+<p>SVG is not ideal for everything. Detailed photographs with millions of subtle colour changes are better stored as JPG or WEBP. Converting a photo to SVG is possible, but the result will look like poster art made of flat colour regions rather than a realistic photo — which can be a great creative effect, but is not a replacement for the original photo.</p>
+<h2>How to get an SVG from a PNG or JPG</h2>
+<p>If you only have a raster version of a logo or drawing, you can convert it with a process called <strong>image tracing</strong> (or vectorization). A tracing tool analyses the colours in your image, groups similar pixels into regions and draws smooth curves around their edges. Our free <a href="index.html">PNG to SVG converter</a> does exactly this in your browser — your image is never uploaded to a server.</p>
+<div class="note"><strong>Tip:</strong> For the cleanest result, start from the largest, sharpest version of your image you can find. Clean edges and flat colours produce the most accurate vectors.</div>
+<h2>Summary</h2>
+<p>SVG is a text-based vector format that describes images as shapes rather than pixels. That makes it perfect for logos, icons, illustrations, web graphics and cutting projects. Whenever you need an image that must stay sharp at any size, SVG is usually the best format to choose.</p>

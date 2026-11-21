@@ -1,15 +1,36 @@
 import Link from "next/link";
 
 export const metadata = {
-  "title": "A Short History of SVG: From 1999 to Today | PNG TO SVG",
+  "title": {
+    "absolute": "A Short History of SVG: From 1999 to Today | PNG to SVG Free"
+  },
   "description": "How did SVG go from an ambitious W3C proposal to the standard format for icons and logos on the web? A brief history of the format and why it won.",
   "alternates": {
-    "canonical": "https://pngtosvgfree.com/blog-history-of-svg.html"
+    "canonical": "https://pngtosvgfree.com/blog-history-of-svg"
   },
   "openGraph": {
-    "title": "A Short History of SVG: From 1999 to Today | PNG TO SVG",
+    "title": "A Short History of SVG: From 1999 to Today | PNG to SVG Free",
     "description": "How did SVG go from an ambitious W3C proposal to the standard format for icons and logos on the web? A brief history of the format and why it won.",
-    "type": "article"
+    "type": "article",
+    "url": "https://pngtosvgfree.com/blog-history-of-svg",
+    "siteName": "PNG to SVG Free",
+    "locale": "en_US",
+    "images": [
+      {
+        "url": "https://pngtosvgfree.com/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "PNG to SVG Free — free online PNG to SVG converter"
+      }
+    ]
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "A Short History of SVG: From 1999 to Today | PNG to SVG Free",
+    "description": "How did SVG go from an ambitious W3C proposal to the standard format for icons and logos on the web? A brief history of the format and why it won.",
+    "images": [
+      "https://pngtosvgfree.com/og-image.png"
+    ]
   }
 };
 
@@ -51,7 +72,7 @@ export default function Page() {
               {"4 min read"}
             </span>
             <span>
-              {"By the PNG TO SVG team"}
+              {"By the PNG to SVG Free team"}
             </span>
           </div>
           {" "}
@@ -227,6 +248,18 @@ export default function Page() {
             {"Born from competing proposals in 1998 and standardised in 2001, SVG waited a decade for universal browser support. The arrival of IE9, HTML5, mobile devices and high-resolution screens turned it into the web's standard vector format — and today it is everywhere."}
           </p>
           {" "}
+          <div className="author">
+            <img src="logo.svg" alt="" width="44" height="44" />
+            <div>
+              <b>
+                {"Written by the PNG to SVG Free team"}
+              </b>
+              <p>
+                {"We build free, privacy-first tools for converting images to vectors and write practical guides for designers, crafters and developers. Published November 21, 2026."}
+              </p>
+            </div>
+          </div>
+          {" "}
           <div className="inline-cta">
             <p>
               {"Ready to try it? Convert your image to SVG for free."}
@@ -260,7 +293,7 @@ export default function Page() {
                 {"How to Open SVG Files on Windows, Mac, iPhone and Android"}
               </b>
               <p>
-                {"Downloaded an SVG and not sure how to view it? Here are the easiest ways to open, preview and edit SVG files on every major device."}
+                {"Downloaded an SVG and not sure how to view it? The easiest free ways to open, preview and edit SVG files on Windows, Mac, iPhone and Android."}
               </p>
               <span>
                 {"November 21, 2026 · 3 min read"}
@@ -318,7 +351,7 @@ export default function Page() {
         {" "}
       </div>
       {" "}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"A Short History of SVG: From 1999 to Today\",\"datePublished\":\"2026-11-21\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://pngtosvgfree.com/logo.svg\"}},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-history-of-svg.html\",\"description\":\"How did SVG go from an ambitious W3C proposal to the standard format for icons and logos on the web? A brief history of the format and why it won.\"}" }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"A Short History of SVG: From 1999 to Today\",\"description\":\"How did SVG go from an ambitious W3C proposal to the standard format for icons and logos on the web? A brief history of the format and why it won.\",\"datePublished\":\"2026-11-21\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":701,\"articleSection\":\"Basics\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-history-of-svg\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"A Short History of SVG: From 1999 to Today\",\"item\":\"https://pngtosvgfree.com/blog-history-of-svg\"}]}]}" }} />
       {" "}
     </>
   );

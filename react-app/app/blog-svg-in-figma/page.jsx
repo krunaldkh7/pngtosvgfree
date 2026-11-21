@@ -1,15 +1,36 @@
 import Link from "next/link";
 
 export const metadata = {
-  "title": "Working with SVG in Figma: Import, Edit and Export | PNG TO SVG",
-  "description": "Figma handles SVG well, but there are a few quirks. Learn how to import SVGs as editable vectors, recolour them, build icon components and export clean files.",
+  "title": {
+    "absolute": "Working with SVG in Figma: Import, Edit and Export"
+  },
+  "description": "Figma handles SVG well, with a few quirks. Learn to import SVGs as editable vectors, recolour them, build icon components and export clean files.",
   "alternates": {
-    "canonical": "https://pngtosvgfree.com/blog-svg-in-figma.html"
+    "canonical": "https://pngtosvgfree.com/blog-svg-in-figma"
   },
   "openGraph": {
-    "title": "Working with SVG in Figma: Import, Edit and Export | PNG TO SVG",
-    "description": "Figma handles SVG well, but there are a few quirks. Learn how to import SVGs as editable vectors, recolour them, build icon components and export clean files.",
-    "type": "article"
+    "title": "Working with SVG in Figma: Import, Edit and Export",
+    "description": "Figma handles SVG well, with a few quirks. Learn to import SVGs as editable vectors, recolour them, build icon components and export clean files.",
+    "type": "article",
+    "url": "https://pngtosvgfree.com/blog-svg-in-figma",
+    "siteName": "PNG to SVG Free",
+    "locale": "en_US",
+    "images": [
+      {
+        "url": "https://pngtosvgfree.com/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "PNG to SVG Free — free online PNG to SVG converter"
+      }
+    ]
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "Working with SVG in Figma: Import, Edit and Export",
+    "description": "Figma handles SVG well, with a few quirks. Learn to import SVGs as editable vectors, recolour them, build icon components and export clean files.",
+    "images": [
+      "https://pngtosvgfree.com/og-image.png"
+    ]
   }
 };
 
@@ -51,7 +72,7 @@ export default function Page() {
               {"3 min read"}
             </span>
             <span>
-              {"By the PNG TO SVG team"}
+              {"By the PNG to SVG Free team"}
             </span>
           </div>
           {" "}
@@ -289,6 +310,18 @@ export default function Page() {
             {"Import SVGs by drag-and-drop or paste, use Selection colors to recolour quickly, turn icons into components with consistent frames, and export with outlined text. With these habits, Figma becomes a smooth bridge between your vector assets and your code."}
           </p>
           {" "}
+          <div className="author">
+            <img src="logo.svg" alt="" width="44" height="44" />
+            <div>
+              <b>
+                {"Written by the PNG to SVG Free team"}
+              </b>
+              <p>
+                {"We build free, privacy-first tools for converting images to vectors and write practical guides for designers, crafters and developers. Published November 21, 2026."}
+              </p>
+            </div>
+          </div>
+          {" "}
           <div className="inline-cta">
             <p>
               {"Ready to try it? Convert your image to SVG for free."}
@@ -347,7 +380,7 @@ export default function Page() {
                 {"How to Turn Your Signature into an SVG"}
               </b>
               <p>
-                {"Create a crisp, transparent vector version of your handwritten signature for documents, email footers, websites, engraving and stamps."}
+                {"Create a crisp, transparent vector version of your handwritten signature for documents, email footers, websites, engraving and custom stamps."}
               </p>
               <span>
                 {"November 21, 2026 · 4 min read"}
@@ -383,7 +416,7 @@ export default function Page() {
         {" "}
       </div>
       {" "}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Working with SVG in Figma: Import, Edit and Export\",\"datePublished\":\"2026-11-21\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://pngtosvgfree.com/logo.svg\"}},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-svg-in-figma.html\",\"description\":\"Figma handles SVG well, but there are a few quirks. Learn how to import SVGs as editable vectors, recolour them, build icon components and export clean files.\"}" }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"Working with SVG in Figma: Import, Edit and Export\",\"description\":\"Figma handles SVG well, with a few quirks. Learn to import SVGs as editable vectors, recolour them, build icon components and export clean files.\",\"datePublished\":\"2026-11-21\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":634,\"articleSection\":\"Tutorial\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-svg-in-figma\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Working with SVG in Figma: Import, Edit and Export\",\"item\":\"https://pngtosvgfree.com/blog-svg-in-figma\"}]}]}" }} />
       {" "}
     </>
   );

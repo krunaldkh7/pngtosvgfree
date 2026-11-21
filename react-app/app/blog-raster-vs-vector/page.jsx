@@ -1,15 +1,36 @@
 import Link from "next/link";
 
 export const metadata = {
-  "title": "Raster vs Vector Graphics: The Complete Guide | PNG TO SVG",
+  "title": {
+    "absolute": "Raster vs Vector Graphics: The Complete Guide"
+  },
   "description": "Raster and vector are the two ways computers store images. Understand the difference once and you will always know which file format to use.",
   "alternates": {
-    "canonical": "https://pngtosvgfree.com/blog-raster-vs-vector.html"
+    "canonical": "https://pngtosvgfree.com/blog-raster-vs-vector"
   },
   "openGraph": {
-    "title": "Raster vs Vector Graphics: The Complete Guide | PNG TO SVG",
+    "title": "Raster vs Vector Graphics: The Complete Guide",
     "description": "Raster and vector are the two ways computers store images. Understand the difference once and you will always know which file format to use.",
-    "type": "article"
+    "type": "article",
+    "url": "https://pngtosvgfree.com/blog-raster-vs-vector",
+    "siteName": "PNG to SVG Free",
+    "locale": "en_US",
+    "images": [
+      {
+        "url": "https://pngtosvgfree.com/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "PNG to SVG Free — free online PNG to SVG converter"
+      }
+    ]
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "Raster vs Vector Graphics: The Complete Guide",
+    "description": "Raster and vector are the two ways computers store images. Understand the difference once and you will always know which file format to use.",
+    "images": [
+      "https://pngtosvgfree.com/og-image.png"
+    ]
   }
 };
 
@@ -51,7 +72,7 @@ export default function Page() {
               {"4 min read"}
             </span>
             <span>
-              {"By the PNG TO SVG team"}
+              {"By the PNG to SVG Free team"}
             </span>
           </div>
           {" "}
@@ -378,6 +399,18 @@ export default function Page() {
             {"Raster images are grids of pixels, ideal for photos but limited by resolution. Vector images are drawing instructions, ideal for graphics and endlessly scalable. Most real-world projects use both: vector masters for brand assets and raster exports for photos and platforms that require them."}
           </p>
           {" "}
+          <div className="author">
+            <img src="logo.svg" alt="" width="44" height="44" />
+            <div>
+              <b>
+                {"Written by the PNG to SVG Free team"}
+              </b>
+              <p>
+                {"We build free, privacy-first tools for converting images to vectors and write practical guides for designers, crafters and developers. Published November 21, 2026."}
+              </p>
+            </div>
+          </div>
+          {" "}
           <div className="inline-cta">
             <p>
               {"Ready to try it? Convert your image to SVG for free."}
@@ -435,7 +468,7 @@ export default function Page() {
                 {"How to Open SVG Files on Windows, Mac, iPhone and Android"}
               </b>
               <p>
-                {"Downloaded an SVG and not sure how to view it? Here are the easiest ways to open, preview and edit SVG files on every major device."}
+                {"Downloaded an SVG and not sure how to view it? The easiest free ways to open, preview and edit SVG files on Windows, Mac, iPhone and Android."}
               </p>
               <span>
                 {"November 21, 2026 · 3 min read"}
@@ -469,7 +502,7 @@ export default function Page() {
         {" "}
       </div>
       {" "}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Raster vs Vector Graphics: The Complete Guide\",\"datePublished\":\"2026-11-21\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://pngtosvgfree.com/logo.svg\"}},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-raster-vs-vector.html\",\"description\":\"Raster and vector are the two ways computers store images. Understand the difference once and you will always know which file format to use.\"}" }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"Raster vs Vector Graphics: The Complete Guide\",\"description\":\"Raster and vector are the two ways computers store images. Understand the difference once and you will always know which file format to use.\",\"datePublished\":\"2026-11-21\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":714,\"articleSection\":\"Basics\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-raster-vs-vector\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Raster vs Vector Graphics: The Complete Guide\",\"item\":\"https://pngtosvgfree.com/blog-raster-vs-vector\"}]}]}" }} />
       {" "}
     </>
   );

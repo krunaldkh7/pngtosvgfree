@@ -31,7 +31,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="fbot">
-        <span>© 2026 PNG TO SVG. All rights reserved.</span>
+        <span>© 2026 PNG to SVG Free. All rights reserved.</span>
         <span>contact@pngtosvgfree.com</span>
       </div>
     </footer>

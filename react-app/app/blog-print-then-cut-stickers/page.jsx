@@ -1,15 +1,36 @@
 import Link from "next/link";
 
 export const metadata = {
-  "title": "How to Make Print-Then-Cut Stickers from Your Images | PNG TO SVG",
+  "title": {
+    "absolute": "How to Make Print-Then-Cut Stickers from Your Images"
+  },
   "description": "Turn your artwork into professional-looking stickers with a home printer and a cutting machine. Covers files, offsets, materials and calibration.",
   "alternates": {
-    "canonical": "https://pngtosvgfree.com/blog-print-then-cut-stickers.html"
+    "canonical": "https://pngtosvgfree.com/blog-print-then-cut-stickers"
   },
   "openGraph": {
-    "title": "How to Make Print-Then-Cut Stickers from Your Images | PNG TO SVG",
+    "title": "How to Make Print-Then-Cut Stickers from Your Images",
     "description": "Turn your artwork into professional-looking stickers with a home printer and a cutting machine. Covers files, offsets, materials and calibration.",
-    "type": "article"
+    "type": "article",
+    "url": "https://pngtosvgfree.com/blog-print-then-cut-stickers",
+    "siteName": "PNG to SVG Free",
+    "locale": "en_US",
+    "images": [
+      {
+        "url": "https://pngtosvgfree.com/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "PNG to SVG Free — free online PNG to SVG converter"
+      }
+    ]
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "How to Make Print-Then-Cut Stickers from Your Images",
+    "description": "Turn your artwork into professional-looking stickers with a home printer and a cutting machine. Covers files, offsets, materials and calibration.",
+    "images": [
+      "https://pngtosvgfree.com/og-image.png"
+    ]
   }
 };
 
@@ -51,7 +72,7 @@ export default function Page() {
               {"3 min read"}
             </span>
             <span>
-              {"By the PNG TO SVG team"}
+              {"By the PNG to SVG Free team"}
             </span>
           </div>
           {" "}
@@ -281,6 +302,18 @@ export default function Page() {
             {"Use high-resolution or vector artwork with a transparent background, add a white offset, stay within your machine's print area, print at full quality without scaling and calibrate once. With these steps, homemade stickers look crisp, cut accurately and last."}
           </p>
           {" "}
+          <div className="author">
+            <img src="logo.svg" alt="" width="44" height="44" />
+            <div>
+              <b>
+                {"Written by the PNG to SVG Free team"}
+              </b>
+              <p>
+                {"We build free, privacy-first tools for converting images to vectors and write practical guides for designers, crafters and developers. Published November 21, 2026."}
+              </p>
+            </div>
+          </div>
+          {" "}
           <div className="inline-cta">
             <p>
               {"Ready to try it? Convert your image to SVG for free."}
@@ -314,7 +347,7 @@ export default function Page() {
                 {"Single-Layer vs Multi-Layer SVGs for Cutting Machines"}
               </b>
               <p>
-                {"Should your cut file be one colour or many layers? Understand single-layer and layered SVGs, how they cut and how to convert between them."}
+                {"Should your cut file be one colour or many layers? Understand single-layer and layered SVGs for Cricut and Silhouette and how to convert them."}
               </p>
               <span>
                 {"November 21, 2026 · 3 min read"}
@@ -338,7 +371,7 @@ export default function Page() {
                 {"Can You Use SVG Files for Machine Embroidery?"}
               </b>
               <p>
-                {"Embroidery machines do not read SVG directly, but SVG artwork is a great starting point for digitizing. Here is how the two fit together."}
+                {"Embroidery machines do not read SVG directly, but SVG artwork is a great starting point for digitizing. Here is how SVG and stitch files fit together."}
               </p>
               <span>
                 {"November 21, 2026 · 3 min read"}
@@ -373,7 +406,7 @@ export default function Page() {
         {" "}
       </div>
       {" "}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"How to Make Print-Then-Cut Stickers from Your Images\",\"datePublished\":\"2026-11-21\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://pngtosvgfree.com/logo.svg\"}},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-print-then-cut-stickers.html\",\"description\":\"Turn your artwork into professional-looking stickers with a home printer and a cutting machine. Covers files, offsets, materials and calibration.\"}" }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"How to Make Print-Then-Cut Stickers from Your Images\",\"description\":\"Turn your artwork into professional-looking stickers with a home printer and a cutting machine. Covers files, offsets, materials and calibration.\",\"datePublished\":\"2026-11-21\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":651,\"articleSection\":\"Crafting\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-print-then-cut-stickers\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"How to Make Print-Then-Cut Stickers from Your Images\",\"item\":\"https://pngtosvgfree.com/blog-print-then-cut-stickers\"}]}]}" }} />
       {" "}
     </>
   );

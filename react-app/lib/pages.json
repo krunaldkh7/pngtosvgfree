@@ -1,0 +1,272 @@
+[
+ {
+  "route": "/",
+  "lastmod": "2026-11-21",
+  "priority": 1
+ },
+ {
+  "route": "/blog",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-accessible-svg",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-clean-up-traced-svg",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-common-svg-errors",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-convert-jpg-to-svg",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-convert-logo-to-svg",
+  "lastmod": "2026-11-05",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-convert-signature-to-svg",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-convert-svg-to-pdf",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-edit-svg-in-inkscape",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-history-of-svg",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-how-image-tracing-works",
+  "lastmod": "2026-10-28",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-how-many-colors-for-tracing",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-how-to-open-svg-files",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-image-resolution-for-tracing",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-logo-file-formats",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-optimize-svg-file-size",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-photo-to-vector-art",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-png-vs-svg",
+  "lastmod": "2026-11-08",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-prepare-image-for-tracing",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-print-then-cut-stickers",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-raster-vs-vector",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-responsive-svg",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-single-vs-multi-layer-svg",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-style-svg-with-css",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-svg-animation-basics",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-svg-favicon",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-svg-files-for-cricut-and-silhouette",
+  "lastmod": "2026-11-01",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-svg-for-embroidery",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-svg-for-print",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-svg-for-tshirt-printing",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-svg-gradients-and-filters",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-svg-icons-vs-icon-fonts",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-svg-in-canva",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-svg-in-figma",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-svg-laser-cutting-engraving",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-svg-path-commands",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-svg-security",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-svg-to-png-social-media-sizes",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-svg-viewbox-explained",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-svg-vs-canvas",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-svg-vs-eps-vs-ai-vs-pdf",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-vectorize-hand-drawing",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-vinyl-decal-design-tips",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-ways-to-use-svg-in-html",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-web-image-formats-guide",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-what-is-an-svg-file",
+  "lastmod": "2026-11-10",
+  "priority": 0.7
+ },
+ {
+  "route": "/about",
+  "lastmod": "2026-11-21",
+  "priority": 0.5
+ },
+ {
+  "route": "/bulk-svg-to-png-converter",
+  "lastmod": "2026-11-21",
+  "priority": 0.5
+ },
+ {
+  "route": "/contact",
+  "lastmod": "2026-11-21",
+  "priority": 0.5
+ },
+ {
+  "route": "/disclaimer",
+  "lastmod": "2026-11-21",
+  "priority": 0.5
+ },
+ {
+  "route": "/gallery",
+  "lastmod": "2026-11-21",
+  "priority": 0.5
+ },
+ {
+  "route": "/privacy-policy",
+  "lastmod": "2026-11-21",
+  "priority": 0.5
+ },
+ {
+  "route": "/terms",
+  "lastmod": "2026-11-21",
+  "priority": 0.5
+ }
+]

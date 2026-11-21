@@ -1,15 +1,36 @@
 import Link from "next/link";
 
 export const metadata = {
-  "title": "Privacy Policy | PNG TO SVG",
-  "description": "How PNG TO SVG handles your data, cookies and advertising, including Google AdSense.",
+  "title": {
+    "absolute": "Privacy Policy | PNG to SVG Free"
+  },
+  "description": "How PNG to SVG Free handles your data: images are converted in your browser and never uploaded. Details on cookies, analytics, ads and your choices.",
   "alternates": {
-    "canonical": "https://pngtosvgfree.com/privacy-policy.html"
+    "canonical": "https://pngtosvgfree.com/privacy-policy"
   },
   "openGraph": {
-    "title": "Privacy Policy | PNG TO SVG",
-    "description": "How PNG TO SVG handles your data, cookies and advertising, including Google AdSense.",
-    "type": "website"
+    "title": "Privacy Policy | PNG to SVG Free",
+    "description": "How PNG to SVG Free handles your data: images are converted in your browser and never uploaded. Details on cookies, analytics, ads and your choices.",
+    "type": "website",
+    "url": "https://pngtosvgfree.com/privacy-policy",
+    "siteName": "PNG to SVG Free",
+    "locale": "en_US",
+    "images": [
+      {
+        "url": "https://pngtosvgfree.com/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "PNG to SVG Free — free online PNG to SVG converter"
+      }
+    ]
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "Privacy Policy | PNG to SVG Free",
+    "description": "How PNG to SVG Free handles your data: images are converted in your browser and never uploaded. Details on cookies, analytics, ads and your choices.",
+    "images": [
+      "https://pngtosvgfree.com/og-image.png"
+    ]
   }
 };
 
@@ -37,7 +58,7 @@ export default function Page() {
           </p>
           {" "}
           <p>
-            {"This Privacy Policy explains how PNG TO SVG (“we”, “us”, “our”) collects, uses and protects information when you visit https://pngtosvgfree.com (the “Site”) and use our tools."}
+            {"This Privacy Policy explains how PNG to SVG Free (“we”, “us”, “our”) collects, uses and protects information when you visit https://pngtosvgfree.com (the “Site”) and use our tools."}
           </p>
           {" "}
           <h2>

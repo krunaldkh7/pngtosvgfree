@@ -1,15 +1,36 @@
 import Link from "next/link";
 
 export const metadata = {
-  "title": "How to Clean Up a Traced SVG for Professional Results | PNG TO SVG",
-  "description": "Automatic tracing gets you most of the way. These clean-up techniques — removing fragments, merging shapes, fixing colours and simplifying nodes — finish the job.",
+  "title": {
+    "absolute": "How to Clean Up a Traced SVG for Professional Results"
+  },
+  "description": "Automatic tracing gets you most of the way. Remove fragments, merge shapes, fix colours and simplify nodes to turn a traced SVG into a pro file.",
   "alternates": {
-    "canonical": "https://pngtosvgfree.com/blog-clean-up-traced-svg.html"
+    "canonical": "https://pngtosvgfree.com/blog-clean-up-traced-svg"
   },
   "openGraph": {
-    "title": "How to Clean Up a Traced SVG for Professional Results | PNG TO SVG",
-    "description": "Automatic tracing gets you most of the way. These clean-up techniques — removing fragments, merging shapes, fixing colours and simplifying nodes — finish the job.",
-    "type": "article"
+    "title": "How to Clean Up a Traced SVG for Professional Results",
+    "description": "Automatic tracing gets you most of the way. Remove fragments, merge shapes, fix colours and simplify nodes to turn a traced SVG into a pro file.",
+    "type": "article",
+    "url": "https://pngtosvgfree.com/blog-clean-up-traced-svg",
+    "siteName": "PNG to SVG Free",
+    "locale": "en_US",
+    "images": [
+      {
+        "url": "https://pngtosvgfree.com/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "PNG to SVG Free — free online PNG to SVG converter"
+      }
+    ]
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "How to Clean Up a Traced SVG for Professional Results",
+    "description": "Automatic tracing gets you most of the way. Remove fragments, merge shapes, fix colours and simplify nodes to turn a traced SVG into a pro file.",
+    "images": [
+      "https://pngtosvgfree.com/og-image.png"
+    ]
   }
 };
 
@@ -49,7 +70,7 @@ export default function Page() {
               {"3 min read"}
             </span>
             <span>
-              {"By the PNG TO SVG team"}
+              {"By the PNG to SVG Free team"}
             </span>
           </div>
           {" "}
@@ -225,6 +246,18 @@ export default function Page() {
             {"Get the trace as close as possible with good settings, then remove fragments, merge same-coloured shapes, fix exact colours, straighten lines, simplify nodes and rebuild text and geometry where it helps. These steps turn a quick automatic trace into a polished vector you can confidently hand to a printer or developer."}
           </p>
           {" "}
+          <div className="author">
+            <img src="logo.svg" alt="" width="44" height="44" />
+            <div>
+              <b>
+                {"Written by the PNG to SVG Free team"}
+              </b>
+              <p>
+                {"We build free, privacy-first tools for converting images to vectors and write practical guides for designers, crafters and developers. Published November 21, 2026."}
+              </p>
+            </div>
+          </div>
+          {" "}
           <div className="inline-cta">
             <p>
               {"Ready to try it? Convert your image to SVG for free."}
@@ -317,7 +350,7 @@ export default function Page() {
         {" "}
       </div>
       {" "}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"How to Clean Up a Traced SVG for Professional Results\",\"datePublished\":\"2026-11-21\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://pngtosvgfree.com/logo.svg\"}},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-clean-up-traced-svg.html\",\"description\":\"Automatic tracing gets you most of the way. These clean-up techniques — removing fragments, merging shapes, fixing colours and simplifying nodes — finish the job.\"}" }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"How to Clean Up a Traced SVG for Professional Results\",\"description\":\"Automatic tracing gets you most of the way. Remove fragments, merge shapes, fix colours and simplify nodes to turn a traced SVG into a pro file.\",\"datePublished\":\"2026-11-21\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":684,\"articleSection\":\"Tips\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-clean-up-traced-svg\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"How to Clean Up a Traced SVG for Professional Results\",\"item\":\"https://pngtosvgfree.com/blog-clean-up-traced-svg\"}]}]}" }} />
       {" "}
     </>
   );

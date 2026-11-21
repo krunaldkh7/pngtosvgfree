@@ -1,15 +1,36 @@
 import Link from "next/link";
 
 export const metadata = {
-  "title": "How to Use SVG Files in Canva | PNG TO SVG",
+  "title": {
+    "absolute": "How to Use SVG Files in Canva | PNG to SVG Free"
+  },
   "description": "Canva can import SVGs and let you recolour them. Learn how to upload SVG files, change their colours, avoid common problems and export your designs.",
   "alternates": {
-    "canonical": "https://pngtosvgfree.com/blog-svg-in-canva.html"
+    "canonical": "https://pngtosvgfree.com/blog-svg-in-canva"
   },
   "openGraph": {
-    "title": "How to Use SVG Files in Canva | PNG TO SVG",
+    "title": "How to Use SVG Files in Canva | PNG to SVG Free",
     "description": "Canva can import SVGs and let you recolour them. Learn how to upload SVG files, change their colours, avoid common problems and export your designs.",
-    "type": "article"
+    "type": "article",
+    "url": "https://pngtosvgfree.com/blog-svg-in-canva",
+    "siteName": "PNG to SVG Free",
+    "locale": "en_US",
+    "images": [
+      {
+        "url": "https://pngtosvgfree.com/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "PNG to SVG Free — free online PNG to SVG converter"
+      }
+    ]
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "How to Use SVG Files in Canva | PNG to SVG Free",
+    "description": "Canva can import SVGs and let you recolour them. Learn how to upload SVG files, change their colours, avoid common problems and export your designs.",
+    "images": [
+      "https://pngtosvgfree.com/og-image.png"
+    ]
   }
 };
 
@@ -53,7 +74,7 @@ export default function Page() {
               {"3 min read"}
             </span>
             <span>
-              {"By the PNG TO SVG team"}
+              {"By the PNG to SVG Free team"}
             </span>
           </div>
           {" "}
@@ -244,6 +265,18 @@ export default function Page() {
             {"Upload SVGs through the Uploads panel, recolour them with the toolbar swatches, and keep files simple: few flat colours, no background, outlined text. Your logos and illustrations will then stay crisp and on-brand in every Canva design."}
           </p>
           {" "}
+          <div className="author">
+            <img src="logo.svg" alt="" width="44" height="44" />
+            <div>
+              <b>
+                {"Written by the PNG to SVG Free team"}
+              </b>
+              <p>
+                {"We build free, privacy-first tools for converting images to vectors and write practical guides for designers, crafters and developers. Published November 21, 2026."}
+              </p>
+            </div>
+          </div>
+          {" "}
           <div className="inline-cta">
             <p>
               {"Ready to try it? Convert your image to SVG for free."}
@@ -302,7 +335,7 @@ export default function Page() {
                 {"How to Turn Your Signature into an SVG"}
               </b>
               <p>
-                {"Create a crisp, transparent vector version of your handwritten signature for documents, email footers, websites, engraving and stamps."}
+                {"Create a crisp, transparent vector version of your handwritten signature for documents, email footers, websites, engraving and custom stamps."}
               </p>
               <span>
                 {"November 21, 2026 · 4 min read"}
@@ -338,7 +371,7 @@ export default function Page() {
         {" "}
       </div>
       {" "}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"How to Use SVG Files in Canva\",\"datePublished\":\"2026-11-21\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://pngtosvgfree.com/logo.svg\"}},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-svg-in-canva.html\",\"description\":\"Canva can import SVGs and let you recolour them. Learn how to upload SVG files, change their colours, avoid common problems and export your designs.\"}" }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"How to Use SVG Files in Canva\",\"description\":\"Canva can import SVGs and let you recolour them. Learn how to upload SVG files, change their colours, avoid common problems and export your designs.\",\"datePublished\":\"2026-11-21\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":606,\"articleSection\":\"Tutorial\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-svg-in-canva\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"How to Use SVG Files in Canva\",\"item\":\"https://pngtosvgfree.com/blog-svg-in-canva\"}]}]}" }} />
       {" "}
     </>
   );

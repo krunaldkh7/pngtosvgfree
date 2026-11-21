@@ -1,15 +1,36 @@
 import Link from "next/link";
 
 export const metadata = {
-  "title": "How to Prepare an Image for the Best Vector Tracing Results | PNG TO SVG",
+  "title": {
+    "absolute": "How to Prepare an Image for the Best Vector Tracing Results"
+  },
   "description": "Better input means a better SVG. Simple preparation steps — cropping, contrast, background removal and resizing — dramatically improve tracing quality.",
   "alternates": {
-    "canonical": "https://pngtosvgfree.com/blog-prepare-image-for-tracing.html"
+    "canonical": "https://pngtosvgfree.com/blog-prepare-image-for-tracing"
   },
   "openGraph": {
-    "title": "How to Prepare an Image for the Best Vector Tracing Results | PNG TO SVG",
+    "title": "How to Prepare an Image for the Best Vector Tracing Results",
     "description": "Better input means a better SVG. Simple preparation steps — cropping, contrast, background removal and resizing — dramatically improve tracing quality.",
-    "type": "article"
+    "type": "article",
+    "url": "https://pngtosvgfree.com/blog-prepare-image-for-tracing",
+    "siteName": "PNG to SVG Free",
+    "locale": "en_US",
+    "images": [
+      {
+        "url": "https://pngtosvgfree.com/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "PNG to SVG Free — free online PNG to SVG converter"
+      }
+    ]
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "How to Prepare an Image for the Best Vector Tracing Results",
+    "description": "Better input means a better SVG. Simple preparation steps — cropping, contrast, background removal and resizing — dramatically improve tracing quality.",
+    "images": [
+      "https://pngtosvgfree.com/og-image.png"
+    ]
   }
 };
 
@@ -51,7 +72,7 @@ export default function Page() {
               {"3 min read"}
             </span>
             <span>
-              {"By the PNG TO SVG team"}
+              {"By the PNG to SVG Free team"}
             </span>
           </div>
           {" "}
@@ -219,6 +240,18 @@ export default function Page() {
             {"Good tracing starts before you upload. Use the largest, cleanest original, crop and straighten it, remove the background, boost contrast and clean up noise. These simple steps make automatic tracing faster, cleaner and far more accurate."}
           </p>
           {" "}
+          <div className="author">
+            <img src="logo.svg" alt="" width="44" height="44" />
+            <div>
+              <b>
+                {"Written by the PNG to SVG Free team"}
+              </b>
+              <p>
+                {"We build free, privacy-first tools for converting images to vectors and write practical guides for designers, crafters and developers. Published November 21, 2026."}
+              </p>
+            </div>
+          </div>
+          {" "}
           <div className="inline-cta">
             <p>
               {"Ready to try it? Convert your image to SVG for free."}
@@ -250,7 +283,7 @@ export default function Page() {
                 {"How to Clean Up a Traced SVG for Professional Results"}
               </b>
               <p>
-                {"Automatic tracing gets you most of the way. These clean-up techniques — removing fragments, merging shapes, fixing colours and simplifying nodes — finish the job."}
+                {"Automatic tracing gets you most of the way. Remove fragments, merge shapes, fix colours and simplify nodes to turn a traced SVG into a pro file."}
               </p>
               <span>
                 {"November 21, 2026 · 3 min read"}
@@ -309,7 +342,7 @@ export default function Page() {
         {" "}
       </div>
       {" "}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"How to Prepare an Image for the Best Vector Tracing Results\",\"datePublished\":\"2026-11-21\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://pngtosvgfree.com/logo.svg\"}},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-prepare-image-for-tracing.html\",\"description\":\"Better input means a better SVG. Simple preparation steps — cropping, contrast, background removal and resizing — dramatically improve tracing quality.\"}" }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"How to Prepare an Image for the Best Vector Tracing Results\",\"description\":\"Better input means a better SVG. Simple preparation steps — cropping, contrast, background removal and resizing — dramatically improve tracing quality.\",\"datePublished\":\"2026-11-21\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":603,\"articleSection\":\"Tips\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-prepare-image-for-tracing\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"How to Prepare an Image for the Best Vector Tracing Results\",\"item\":\"https://pngtosvgfree.com/blog-prepare-image-for-tracing\"}]}]}" }} />
       {" "}
     </>
   );

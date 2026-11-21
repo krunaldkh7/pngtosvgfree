@@ -1,0 +1,32 @@
+slug: blog-how-image-tracing-works
+title: How Image Tracing Works: From Pixels to Paths
+category: Technology
+date: 2026-10-28
+icon: wand
+description: What actually happens when a converter turns a PNG into an SVG? A plain-English look at colour quantization, region detection and curve fitting.
+---
+<p>Image tracing — also called vectorization — feels a little like magic: you drop in a pixel image and get back smooth, editable shapes. Behind the scenes, though, a tracer follows a clear series of steps. Understanding them will help you get better results from any converter, including ours.</p>
+<h2>1. Reading and preparing the pixels</h2>
+<p>First, the image is decoded into a grid of pixels, each with red, green, blue and alpha (transparency) values. Small images are often scaled up slightly and very large ones scaled down, so that edges are detailed enough to trace but processing stays fast. Optional smoothing reduces noise and JPG compression artifacts.</p>
+<h2>2. Detecting the image type</h2>
+<p>A logo with five flat colours needs very different settings from a photograph with thousands of shades. Our converter samples the image and measures things like how many distinct colours there are, how many neighbouring pixels are nearly identical and how many hard edges exist. From this it decides whether the image looks like a logo, a photo, a sketch or a silhouette, and chooses sensible starting settings.</p>
+<h2>3. Colour quantization</h2>
+<p>Vectors are made of flat-coloured shapes, so the next step is to reduce the image to a limited palette. This is called <strong>colour quantization</strong>. A common method is <em>k-means clustering</em>: the algorithm picks a handful of starting colours, assigns every pixel to its nearest colour, recalculates each colour as the average of its pixels and repeats until the palette stops changing.</p>
+<p>A tricky detail is <strong>anti-aliasing</strong> — the soft, in-between pixels along edges. If they are treated as their own colour, you get thin "halo" outlines around every shape. Good tracers detect these in-between shades and merge them into the neighbouring colours.</p>
+<h2>4. Finding regions</h2>
+<p>Once each pixel has a palette colour, connected pixels of the same colour are grouped into <strong>regions</strong>. Tiny regions below a size threshold — specks and noise — are merged into their surroundings. This is what the <em>Speckle removal</em> setting controls.</p>
+<h2>5. Tracing outlines</h2>
+<p>For every region the tracer walks around its boundary pixel by pixel, producing a staircase-like polygon. The polygon is then simplified: points that lie almost on a straight line are removed, and the shape is split at real corners.</p>
+<h2>6. Curve fitting</h2>
+<p>Finally, smooth <strong>Bézier curves</strong> are fitted through the simplified outline. The <em>corner angle</em> threshold decides when a sharp change in direction should stay a crisp corner and when it should be smoothed into a curve. The result is a compact set of path commands that describe each shape.</p>
+<h2>7. Building the SVG</h2>
+<p>Regions are stacked in the right order and written out as SVG <code>&lt;path&gt;</code> elements, grouped by colour. Transparent areas are left empty, and optional extras such as registration marks can be added.</p>
+<div class="note"><strong>Why results vary between tools:</strong> every converter makes different choices in these steps — how colours are picked, how edges are cleaned and how curves are fitted. That is why the same image can look slightly different in different converters.</div>
+<h2>Getting the best results</h2>
+<ul>
+<li>Start with a large, sharp source image.</li>
+<li>Use as few colours as the design really needs.</li>
+<li>Increase smoothing for noisy or blurry images.</li>
+<li>Lower the corner angle for geometric logos; raise it for organic, hand-drawn art.</li>
+</ul>
+<p>Try these ideas in our free <a href="index.html">PNG to SVG converter</a> and watch how each setting changes the traced shapes in real time.</p>

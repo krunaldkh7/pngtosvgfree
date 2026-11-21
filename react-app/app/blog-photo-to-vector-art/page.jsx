@@ -1,15 +1,36 @@
 import Link from "next/link";
 
 export const metadata = {
-  "title": "Photo to Vector Art: What to Expect and How to Get Great Results | PNG TO SVG",
+  "title": {
+    "absolute": "Photo to Vector Art: What to Expect | PNG to SVG Free"
+  },
   "description": "Converting a photo to SVG creates stylised vector art, not a perfect copy. Learn what works, what does not and how to get a striking result.",
   "alternates": {
-    "canonical": "https://pngtosvgfree.com/blog-photo-to-vector-art.html"
+    "canonical": "https://pngtosvgfree.com/blog-photo-to-vector-art"
   },
   "openGraph": {
-    "title": "Photo to Vector Art: What to Expect and How to Get Great Results | PNG TO SVG",
+    "title": "Photo to Vector Art: What to Expect | PNG to SVG Free",
     "description": "Converting a photo to SVG creates stylised vector art, not a perfect copy. Learn what works, what does not and how to get a striking result.",
-    "type": "article"
+    "type": "article",
+    "url": "https://pngtosvgfree.com/blog-photo-to-vector-art",
+    "siteName": "PNG to SVG Free",
+    "locale": "en_US",
+    "images": [
+      {
+        "url": "https://pngtosvgfree.com/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "PNG to SVG Free — free online PNG to SVG converter"
+      }
+    ]
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "Photo to Vector Art: What to Expect | PNG to SVG Free",
+    "description": "Converting a photo to SVG creates stylised vector art, not a perfect copy. Learn what works, what does not and how to get a striking result.",
+    "images": [
+      "https://pngtosvgfree.com/og-image.png"
+    ]
   }
 };
 
@@ -51,7 +72,7 @@ export default function Page() {
               {"3 min read"}
             </span>
             <span>
-              {"By the PNG TO SVG team"}
+              {"By the PNG to SVG Free team"}
             </span>
           </div>
           {" "}
@@ -260,6 +281,18 @@ export default function Page() {
             {"Photo to vector conversion creates stylised art, not a photographic copy. Choose high-contrast images with simple backgrounds, decide on a style through the colour count, use smoothing and speckle removal, and keep an eye on file size. Treated as an artistic process, it can turn ordinary photos into eye-catching vector artwork."}
           </p>
           {" "}
+          <div className="author">
+            <img src="logo.svg" alt="" width="44" height="44" />
+            <div>
+              <b>
+                {"Written by the PNG to SVG Free team"}
+              </b>
+              <p>
+                {"We build free, privacy-first tools for converting images to vectors and write practical guides for designers, crafters and developers. Published November 21, 2026."}
+              </p>
+            </div>
+          </div>
+          {" "}
           <div className="inline-cta">
             <p>
               {"Ready to try it? Convert your image to SVG for free."}
@@ -291,7 +324,7 @@ export default function Page() {
                 {"How to Clean Up a Traced SVG for Professional Results"}
               </b>
               <p>
-                {"Automatic tracing gets you most of the way. These clean-up techniques — removing fragments, merging shapes, fixing colours and simplifying nodes — finish the job."}
+                {"Automatic tracing gets you most of the way. Remove fragments, merge shapes, fix colours and simplify nodes to turn a traced SVG into a pro file."}
               </p>
               <span>
                 {"November 21, 2026 · 3 min read"}
@@ -350,7 +383,7 @@ export default function Page() {
         {" "}
       </div>
       {" "}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Photo to Vector Art: What to Expect and How to Get Great Results\",\"datePublished\":\"2026-11-21\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://pngtosvgfree.com/logo.svg\"}},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-photo-to-vector-art.html\",\"description\":\"Converting a photo to SVG creates stylised vector art, not a perfect copy. Learn what works, what does not and how to get a striking result.\"}" }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"Photo to Vector Art: What to Expect and How to Get Great Results\",\"description\":\"Converting a photo to SVG creates stylised vector art, not a perfect copy. Learn what works, what does not and how to get a striking result.\",\"datePublished\":\"2026-11-21\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":636,\"articleSection\":\"Tips\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-photo-to-vector-art\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Photo to Vector Art: What to Expect and How to Get Great Results\",\"item\":\"https://pngtosvgfree.com/blog-photo-to-vector-art\"}]}]}" }} />
       {" "}
     </>
   );

@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 // Builds blog post pages from tools/posts/*.html, then regenerates blog.html and sitemap.xml.
 // Post source format: "key: value" header lines, a line with "---", then the article body HTML.
+// Header keys: slug, title (H1), category, date (YYYY-MM-DD), icon, description (140-155 chars)
+// Optional: seo_title (<= 60 chars incl. brand), updated (YYYY-MM-DD), tldr (one-paragraph summary).
 // Usage: node tools/build-blog.js
 const fs = require('fs');
 const path = require('path');
@@ -28,6 +30,7 @@ const GRADIENTS = {
   Technology: '#0f1020,#4c4f6b', 'Web design': '#8b5cf6,#ec4899', Print: '#f59e0b,#ef4444', Tips: '#0ea5e9,#22c55e',
 };
 
+const BRAND = 'PNG to SVG Free';
 const esc = s => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
 const fmtDate = d => new Date(d + 'T12:00:00Z').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 
@@ -43,7 +46,11 @@ function parse(file) {
   const words = meta.body.replace(/<[^>]+>/g, ' ').split(/\s+/).filter(Boolean).length;
   meta.words = words;
   meta.mins = Math.max(3, Math.round(words / 200));
+  meta.updated = meta.updated || meta.date;
+  const branded = `${meta.title} | ${BRAND}`;
+  meta.seoTitle = meta.seo_title || (branded.length <= 60 ? branded : meta.title);
   for (const k of ['slug', 'title', 'category', 'date', 'description', 'icon']) if (!meta[k]) throw new Error(`${file}: missing ${k}`);
+  if (meta.description.length < 140 || meta.description.length > 155) console.warn(`  ${meta.slug}: description ${meta.description.length} chars`);
   if (!ICONS[meta.icon]) throw new Error(`${file}: unknown icon ${meta.icon}`);
   if (!GRADIENTS[meta.category]) throw new Error(`${file}: unknown category ${meta.category}`);
   return meta;
@@ -88,11 +95,11 @@ function related(p) {
 
 for (const p of posts) {
   const [a, b] = GRADIENTS[p.category].split(',');
-  const full = `${p.title} | PNG TO SVG`;
+  const full = p.seoTitle;
   let html = TEMPLATE;
   html = html.replace(/<title>[^<]*<\/title>/, `<title>${full}</title>`)
     .replace(/<meta name="description" content="[^"]*">/, `<meta name="description" content="${esc(p.description)}">`)
-    .replace(/<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="${SITE}/${p.slug}.html">`)
+    .replace(/<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="${SITE}/${p.slug}">`)
     .replace(/<meta property="og:title" content="[^"]*"><meta property="og:description" content="[^"]*"><meta property="og:type" content="[^"]*">/,
       `<meta property="og:title" content="${esc(full)}"><meta property="og:description" content="${esc(p.description)}"><meta property="og:type" content="article">`);
   const start = html.indexOf('<article class="prose">');
@@ -100,16 +107,26 @@ for (const p of posts) {
   const article = `<article class="prose">
 <div class="crumbs"><a href="index.html">Home</a> / <a href="blog.html">Blog</a> / ${p.category}</div>
 <div class="cover" style="background:linear-gradient(135deg,${a},${b});color:#fff"><svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">${ICONS[p.icon]}</svg></div>
-<div class="meta"><span>${p.category}</span><span>${fmtDate(p.date)}</span><span>${p.mins} min read</span><span>By the PNG TO SVG team</span></div>
+<div class="meta"><span>${p.category}</span><span>${p.updated !== p.date ? 'Updated ' + fmtDate(p.updated) : fmtDate(p.date)}</span><span>${p.mins} min read</span><span>By the ${BRAND} team</span></div>
 <h1 style="font-size:clamp(28px,4vw,40px);letter-spacing:-.03em;line-height:1.15;margin-top:6px">${p.title}</h1>
-
+${p.tldr ? `<div class="tldr"><b>TL;DR</b><p>${p.tldr}</p></div>\n` : ''}
 ${p.body}
+
+<div class="author"><img src="logo.svg" alt="" width="44" height="44"><div><b>Written by the ${BRAND} team</b><p>We build free, privacy-first tools for converting images to vectors and write practical guides for designers, crafters and developers. Published ${fmtDate(p.date)}${p.updated !== p.date ? ', updated ' + fmtDate(p.updated) : ''}.</p></div></div>
 
 <div class="inline-cta"><p>Ready to try it? Convert your image to SVG for free.</p><a href="index.html#tool">Open the converter</a></div>
 </article>`;
   html = html.slice(0, start) + article + html.slice(end);
   html = html.replace(/<div class="posts">[\s\S]*?<\/a><\/div>\n<\/div>/, `<div class="posts">${related(p)}</div>\n</div>`);
-  const ld = { '@context': 'https://schema.org', '@type': 'BlogPosting', headline: p.title, datePublished: p.date, author: { '@type': 'Organization', name: 'PNG TO SVG' }, publisher: { '@type': 'Organization', name: 'PNG TO SVG', logo: { '@type': 'ImageObject', url: `${SITE}/logo.svg` } }, mainEntityOfPage: `${SITE}/${p.slug}.html`, description: p.description };
+  const url = `${SITE}/${p.slug}`;
+  const ld = { '@context': 'https://schema.org', '@graph': [
+    { '@type': 'BlogPosting', headline: p.title, description: p.description, datePublished: p.date, dateModified: p.updated,
+      image: `${SITE}/og-image.png`, wordCount: p.words, articleSection: p.category, inLanguage: 'en',
+      author: { '@type': 'Organization', name: BRAND, url: SITE }, publisher: { '@id': `${SITE}/#organization` }, mainEntityOfPage: url },
+    { '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE}/blog` },
+      { '@type': 'ListItem', position: 3, name: p.title, item: url } ] } ] };
   html = html.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, `<script type="application/ld+json">${JSON.stringify(ld)}</script>`);
   fs.writeFileSync(path.join(ROOT, p.slug + '.html'), html);
 }
@@ -124,8 +141,8 @@ fs.writeFileSync(blogPath, blog);
 const smPath = path.join(ROOT, 'sitemap.xml');
 const sm = fs.readFileSync(smPath, 'utf8');
 const keep = [...sm.matchAll(/  <url><loc>([^<]+)<\/loc><lastmod>([^<]+)<\/lastmod><\/url>/g)].filter(m => !/\/blog-/.test(m[1])).map(m => m[0]);
-const postUrls = all.map(x => `  <url><loc>${SITE}/${x.slug}.html</loc><lastmod>${x.date}</lastmod></url>`);
+const postUrls = all.map(x => `  <url><loc>${SITE}/${x.slug}</loc><lastmod>${x.date}</lastmod></url>`);
 fs.writeFileSync(smPath, `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${[...keep, ...postUrls].join('\n')}\n</urlset>\n`);
 
 console.log(`Built ${posts.length} posts; blog lists ${all.length}.`);
-for (const p of posts) if (p.words < 700) console.log(`  short: ${p.slug} (${p.words} words)`);
+for (const p of posts) if (p.seoTitle.length > 60) console.log(`  title too long: ${p.slug} (${p.seoTitle.length})`);

@@ -1,15 +1,36 @@
 import Link from "next/link";
 
 export const metadata = {
-  "title": "Image Resolution and DPI: What Matters for Tracing and Print | PNG TO SVG",
+  "title": {
+    "absolute": "Image Resolution and DPI: What Matters for Tracing and Print"
+  },
   "description": "Pixels, DPI and PPI explained in plain English — and how resolution affects tracing quality, print sharpness and when vectors make resolution irrelevant.",
   "alternates": {
-    "canonical": "https://pngtosvgfree.com/blog-image-resolution-for-tracing.html"
+    "canonical": "https://pngtosvgfree.com/blog-image-resolution-for-tracing"
   },
   "openGraph": {
-    "title": "Image Resolution and DPI: What Matters for Tracing and Print | PNG TO SVG",
+    "title": "Image Resolution and DPI: What Matters for Tracing and Print",
     "description": "Pixels, DPI and PPI explained in plain English — and how resolution affects tracing quality, print sharpness and when vectors make resolution irrelevant.",
-    "type": "article"
+    "type": "article",
+    "url": "https://pngtosvgfree.com/blog-image-resolution-for-tracing",
+    "siteName": "PNG to SVG Free",
+    "locale": "en_US",
+    "images": [
+      {
+        "url": "https://pngtosvgfree.com/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "PNG to SVG Free — free online PNG to SVG converter"
+      }
+    ]
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "Image Resolution and DPI: What Matters for Tracing and Print",
+    "description": "Pixels, DPI and PPI explained in plain English — and how resolution affects tracing quality, print sharpness and when vectors make resolution irrelevant.",
+    "images": [
+      "https://pngtosvgfree.com/og-image.png"
+    ]
   }
 };
 
@@ -50,7 +71,7 @@ export default function Page() {
               {"3 min read"}
             </span>
             <span>
-              {"By the PNG TO SVG team"}
+              {"By the PNG to SVG Free team"}
             </span>
           </div>
           {" "}
@@ -247,6 +268,18 @@ export default function Page() {
             {"Pixel dimensions determine detail; DPI only tells you how big those pixels print. For print, aim for about 300 PPI at final size. For tracing, start with an image at least 800 pixels across for best results. And once you have a vector, resolution stops being a problem altogether."}
           </p>
           {" "}
+          <div className="author">
+            <img src="logo.svg" alt="" width="44" height="44" />
+            <div>
+              <b>
+                {"Written by the PNG to SVG Free team"}
+              </b>
+              <p>
+                {"We build free, privacy-first tools for converting images to vectors and write practical guides for designers, crafters and developers. Published November 21, 2026."}
+              </p>
+            </div>
+          </div>
+          {" "}
           <div className="inline-cta">
             <p>
               {"Ready to try it? Convert your image to SVG for free."}
@@ -304,7 +337,7 @@ export default function Page() {
                 {"How to Open SVG Files on Windows, Mac, iPhone and Android"}
               </b>
               <p>
-                {"Downloaded an SVG and not sure how to view it? Here are the easiest ways to open, preview and edit SVG files on every major device."}
+                {"Downloaded an SVG and not sure how to view it? The easiest free ways to open, preview and edit SVG files on Windows, Mac, iPhone and Android."}
               </p>
               <span>
                 {"November 21, 2026 · 3 min read"}
@@ -339,7 +372,7 @@ export default function Page() {
         {" "}
       </div>
       {" "}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Image Resolution and DPI: What Matters for Tracing and Print\",\"datePublished\":\"2026-11-21\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://pngtosvgfree.com/logo.svg\"}},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-image-resolution-for-tracing.html\",\"description\":\"Pixels, DPI and PPI explained in plain English — and how resolution affects tracing quality, print sharpness and when vectors make resolution irrelevant.\"}" }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"Image Resolution and DPI: What Matters for Tracing and Print\",\"description\":\"Pixels, DPI and PPI explained in plain English — and how resolution affects tracing quality, print sharpness and when vectors make resolution irrelevant.\",\"datePublished\":\"2026-11-21\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":645,\"articleSection\":\"Basics\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-image-resolution-for-tracing\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Image Resolution and DPI: What Matters for Tracing and Print\",\"item\":\"https://pngtosvgfree.com/blog-image-resolution-for-tracing\"}]}]}" }} />
       {" "}
     </>
   );

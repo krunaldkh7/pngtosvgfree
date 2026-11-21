@@ -1,15 +1,36 @@
 import Link from "next/link";
 
 export const metadata = {
-  "title": "How to Reduce SVG File Size: 9 Practical Techniques | PNG TO SVG",
+  "title": {
+    "absolute": "How to Reduce SVG File Size: 9 Practical Techniques"
+  },
   "description": "Large SVG files slow down websites and apps. Learn practical ways to shrink SVGs — from smarter tracing settings to removing editor metadata.",
   "alternates": {
-    "canonical": "https://pngtosvgfree.com/blog-optimize-svg-file-size.html"
+    "canonical": "https://pngtosvgfree.com/blog-optimize-svg-file-size"
   },
   "openGraph": {
-    "title": "How to Reduce SVG File Size: 9 Practical Techniques | PNG TO SVG",
+    "title": "How to Reduce SVG File Size: 9 Practical Techniques",
     "description": "Large SVG files slow down websites and apps. Learn practical ways to shrink SVGs — from smarter tracing settings to removing editor metadata.",
-    "type": "article"
+    "type": "article",
+    "url": "https://pngtosvgfree.com/blog-optimize-svg-file-size",
+    "siteName": "PNG to SVG Free",
+    "locale": "en_US",
+    "images": [
+      {
+        "url": "https://pngtosvgfree.com/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "PNG to SVG Free — free online PNG to SVG converter"
+      }
+    ]
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "How to Reduce SVG File Size: 9 Practical Techniques",
+    "description": "Large SVG files slow down websites and apps. Learn practical ways to shrink SVGs — from smarter tracing settings to removing editor metadata.",
+    "images": [
+      "https://pngtosvgfree.com/og-image.png"
+    ]
   }
 };
 
@@ -50,7 +71,7 @@ export default function Page() {
               {"3 min read"}
             </span>
             <span>
-              {"By the PNG TO SVG team"}
+              {"By the PNG to SVG Free team"}
             </span>
           </div>
           {" "}
@@ -259,6 +280,18 @@ export default function Page() {
             {"Most SVG bloat comes from too many shapes and nodes, followed by editor metadata and excessive precision. Fix the first at the tracing stage, clean up the rest with an optimiser, and let your server compress the result. Your pages — and anyone editing the files later — will thank you."}
           </p>
           {" "}
+          <div className="author">
+            <img src="logo.svg" alt="" width="44" height="44" />
+            <div>
+              <b>
+                {"Written by the PNG to SVG Free team"}
+              </b>
+              <p>
+                {"We build free, privacy-first tools for converting images to vectors and write practical guides for designers, crafters and developers. Published November 21, 2026."}
+              </p>
+            </div>
+          </div>
+          {" "}
           <div className="inline-cta">
             <p>
               {"Ready to try it? Convert your image to SVG for free."}
@@ -290,7 +323,7 @@ export default function Page() {
                 {"How to Make SVG Graphics Accessible"}
               </b>
               <p>
-                {"Screen readers handle SVG in different ways depending on how it is embedded. Learn how to label meaningful SVGs, hide decorative ones and ensure good contrast."}
+                {"Screen readers treat SVG differently depending on how it is embedded. Learn to label meaningful SVGs, hide decorative ones and meet contrast rules."}
               </p>
               <span>
                 {"November 21, 2026 · 3 min read"}
@@ -314,7 +347,7 @@ export default function Page() {
                 {"Responsive SVG: Making Vector Graphics Fit Any Screen"}
               </b>
               <p>
-                {"Learn how to make SVGs scale smoothly across phones, tablets and desktops using viewBox, CSS sizing, preserveAspectRatio and media queries."}
+                {"Learn how to make SVGs scale smoothly across phones, tablets and desktops using the viewBox, CSS sizing, preserveAspectRatio and media queries."}
               </p>
               <span>
                 {"November 21, 2026 · 3 min read"}
@@ -351,7 +384,7 @@ export default function Page() {
         {" "}
       </div>
       {" "}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"How to Reduce SVG File Size: 9 Practical Techniques\",\"datePublished\":\"2026-11-21\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://pngtosvgfree.com/logo.svg\"}},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-optimize-svg-file-size.html\",\"description\":\"Large SVG files slow down websites and apps. Learn practical ways to shrink SVGs — from smarter tracing settings to removing editor metadata.\"}" }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"How to Reduce SVG File Size: 9 Practical Techniques\",\"description\":\"Large SVG files slow down websites and apps. Learn practical ways to shrink SVGs — from smarter tracing settings to removing editor metadata.\",\"datePublished\":\"2026-11-21\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":661,\"articleSection\":\"Web design\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-optimize-svg-file-size\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"How to Reduce SVG File Size: 9 Practical Techniques\",\"item\":\"https://pngtosvgfree.com/blog-optimize-svg-file-size\"}]}]}" }} />
       {" "}
     </>
   );

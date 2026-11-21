@@ -1,15 +1,36 @@
 import Link from "next/link";
 
 export const metadata = {
-  "title": "SVG Path Commands: A Beginner's Guide to the d Attribute | PNG TO SVG",
-  "description": "M, L, C, Q, A, Z — learn what the letters in an SVG path mean, how curves work, and how to read and tweak path data by hand.",
+  "title": {
+    "absolute": "SVG Path Commands: A Beginner's Guide to the d Attribute"
+  },
+  "description": "M, L, C, Q, A and Z explained: learn what the letters in an SVG path mean, how Bézier curves work, and how to read and tweak path data by hand.",
   "alternates": {
-    "canonical": "https://pngtosvgfree.com/blog-svg-path-commands.html"
+    "canonical": "https://pngtosvgfree.com/blog-svg-path-commands"
   },
   "openGraph": {
-    "title": "SVG Path Commands: A Beginner's Guide to the d Attribute | PNG TO SVG",
-    "description": "M, L, C, Q, A, Z — learn what the letters in an SVG path mean, how curves work, and how to read and tweak path data by hand.",
-    "type": "article"
+    "title": "SVG Path Commands: A Beginner's Guide to the d Attribute",
+    "description": "M, L, C, Q, A and Z explained: learn what the letters in an SVG path mean, how Bézier curves work, and how to read and tweak path data by hand.",
+    "type": "article",
+    "url": "https://pngtosvgfree.com/blog-svg-path-commands",
+    "siteName": "PNG to SVG Free",
+    "locale": "en_US",
+    "images": [
+      {
+        "url": "https://pngtosvgfree.com/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "PNG to SVG Free — free online PNG to SVG converter"
+      }
+    ]
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "SVG Path Commands: A Beginner's Guide to the d Attribute",
+    "description": "M, L, C, Q, A and Z explained: learn what the letters in an SVG path mean, how Bézier curves work, and how to read and tweak path data by hand.",
+    "images": [
+      "https://pngtosvgfree.com/og-image.png"
+    ]
   }
 };
 
@@ -52,7 +73,7 @@ export default function Page() {
               {"4 min read"}
             </span>
             <span>
-              {"By the PNG TO SVG team"}
+              {"By the PNG to SVG Free team"}
             </span>
           </div>
           {" "}
@@ -328,6 +349,18 @@ export default function Page() {
             {"M moves, L/H/V draw lines, C/S/Q/T draw curves, A draws arcs and Z closes. Uppercase means absolute, lowercase means relative. With those few rules, the cryptic d attribute becomes a readable set of drawing instructions you can inspect and adjust with confidence."}
           </p>
           {" "}
+          <div className="author">
+            <img src="logo.svg" alt="" width="44" height="44" />
+            <div>
+              <b>
+                {"Written by the PNG to SVG Free team"}
+              </b>
+              <p>
+                {"We build free, privacy-first tools for converting images to vectors and write practical guides for designers, crafters and developers. Published November 21, 2026."}
+              </p>
+            </div>
+          </div>
+          {" "}
           <div className="inline-cta">
             <p>
               {"Ready to try it? Convert your image to SVG for free."}
@@ -419,7 +452,7 @@ export default function Page() {
         {" "}
       </div>
       {" "}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"SVG Path Commands: A Beginner's Guide to the d Attribute\",\"datePublished\":\"2026-11-21\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://pngtosvgfree.com/logo.svg\"}},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-svg-path-commands.html\",\"description\":\"M, L, C, Q, A, Z — learn what the letters in an SVG path mean, how curves work, and how to read and tweak path data by hand.\"}" }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"SVG Path Commands: A Beginner's Guide to the d Attribute\",\"description\":\"M, L, C, Q, A and Z explained: learn what the letters in an SVG path mean, how Bézier curves work, and how to read and tweak path data by hand.\",\"datePublished\":\"2026-11-21\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":733,\"articleSection\":\"Technology\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-svg-path-commands\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"SVG Path Commands: A Beginner's Guide to the d Attribute\",\"item\":\"https://pngtosvgfree.com/blog-svg-path-commands\"}]}]}" }} />
       {" "}
     </>
   );

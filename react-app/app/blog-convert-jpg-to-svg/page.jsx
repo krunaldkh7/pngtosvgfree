@@ -1,15 +1,36 @@
 import Link from "next/link";
 
 export const metadata = {
-  "title": "How to Convert JPG to SVG Without Losing Quality | PNG TO SVG",
+  "title": {
+    "absolute": "How to Convert JPG to SVG Without Losing Quality"
+  },
   "description": "JPG files are everywhere, but they blur when you scale them. Learn how to turn a JPG into a clean, scalable SVG and avoid the most common mistakes.",
   "alternates": {
-    "canonical": "https://pngtosvgfree.com/blog-convert-jpg-to-svg.html"
+    "canonical": "https://pngtosvgfree.com/blog-convert-jpg-to-svg"
   },
   "openGraph": {
-    "title": "How to Convert JPG to SVG Without Losing Quality | PNG TO SVG",
+    "title": "How to Convert JPG to SVG Without Losing Quality",
     "description": "JPG files are everywhere, but they blur when you scale them. Learn how to turn a JPG into a clean, scalable SVG and avoid the most common mistakes.",
-    "type": "article"
+    "type": "article",
+    "url": "https://pngtosvgfree.com/blog-convert-jpg-to-svg",
+    "siteName": "PNG to SVG Free",
+    "locale": "en_US",
+    "images": [
+      {
+        "url": "https://pngtosvgfree.com/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "PNG to SVG Free — free online PNG to SVG converter"
+      }
+    ]
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "How to Convert JPG to SVG Without Losing Quality",
+    "description": "JPG files are everywhere, but they blur when you scale them. Learn how to turn a JPG into a clean, scalable SVG and avoid the most common mistakes.",
+    "images": [
+      "https://pngtosvgfree.com/og-image.png"
+    ]
   }
 };
 
@@ -51,7 +72,7 @@ export default function Page() {
               {"5 min read"}
             </span>
             <span>
-              {"By the PNG TO SVG team"}
+              {"By the PNG to SVG Free team"}
             </span>
           </div>
           {" "}
@@ -271,6 +292,18 @@ export default function Page() {
             {"To convert a JPG to SVG cleanly: use the largest original you can find, pick the right image type, limit the colours to what you actually see, remove speckles and delete the background. With those steps, even an old, compressed JPG logo can become a crisp vector you can use anywhere."}
           </p>
           {" "}
+          <div className="author">
+            <img src="logo.svg" alt="" width="44" height="44" />
+            <div>
+              <b>
+                {"Written by the PNG to SVG Free team"}
+              </b>
+              <p>
+                {"We build free, privacy-first tools for converting images to vectors and write practical guides for designers, crafters and developers. Published November 21, 2026."}
+              </p>
+            </div>
+          </div>
+          {" "}
           <div className="inline-cta">
             <p>
               {"Ready to try it? Convert your image to SVG for free."}
@@ -305,7 +338,7 @@ export default function Page() {
                 {"How to Turn Your Signature into an SVG"}
               </b>
               <p>
-                {"Create a crisp, transparent vector version of your handwritten signature for documents, email footers, websites, engraving and stamps."}
+                {"Create a crisp, transparent vector version of your handwritten signature for documents, email footers, websites, engraving and custom stamps."}
               </p>
               <span>
                 {"November 21, 2026 · 4 min read"}
@@ -367,7 +400,7 @@ export default function Page() {
         {" "}
       </div>
       {" "}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"How to Convert JPG to SVG Without Losing Quality\",\"datePublished\":\"2026-11-21\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://pngtosvgfree.com/logo.svg\"}},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-convert-jpg-to-svg.html\",\"description\":\"JPG files are everywhere, but they blur when you scale them. Learn how to turn a JPG into a clean, scalable SVG and avoid the most common mistakes.\"}" }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"How to Convert JPG to SVG Without Losing Quality\",\"description\":\"JPG files are everywhere, but they blur when you scale them. Learn how to turn a JPG into a clean, scalable SVG and avoid the most common mistakes.\",\"datePublished\":\"2026-11-21\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":909,\"articleSection\":\"Tutorial\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-convert-jpg-to-svg\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"How to Convert JPG to SVG Without Losing Quality\",\"item\":\"https://pngtosvgfree.com/blog-convert-jpg-to-svg\"}]}]}" }} />
       {" "}
     </>
   );

@@ -1,15 +1,36 @@
 import Link from "next/link";
 
 export const metadata = {
-  "title": "Preparing SVG Files for Cricut and Silhouette Machines | PNG TO SVG",
-  "description": "Cutting machines need clean vector paths. Learn how to turn your artwork into cut-ready SVGs for vinyl, paper and iron-on projects.",
+  "title": {
+    "absolute": "Preparing SVG Files for Cricut and Silhouette Machines"
+  },
+  "description": "Cutting machines need clean vector paths. Learn how to turn your artwork into cut-ready SVG files for vinyl, paper and iron-on Cricut projects.",
   "alternates": {
-    "canonical": "https://pngtosvgfree.com/blog-svg-files-for-cricut-and-silhouette.html"
+    "canonical": "https://pngtosvgfree.com/blog-svg-files-for-cricut-and-silhouette"
   },
   "openGraph": {
-    "title": "Preparing SVG Files for Cricut and Silhouette Machines | PNG TO SVG",
-    "description": "Cutting machines need clean vector paths. Learn how to turn your artwork into cut-ready SVGs for vinyl, paper and iron-on projects.",
-    "type": "website"
+    "title": "Preparing SVG Files for Cricut and Silhouette Machines",
+    "description": "Cutting machines need clean vector paths. Learn how to turn your artwork into cut-ready SVG files for vinyl, paper and iron-on Cricut projects.",
+    "type": "article",
+    "url": "https://pngtosvgfree.com/blog-svg-files-for-cricut-and-silhouette",
+    "siteName": "PNG to SVG Free",
+    "locale": "en_US",
+    "images": [
+      {
+        "url": "https://pngtosvgfree.com/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "PNG to SVG Free — free online PNG to SVG converter"
+      }
+    ]
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "Preparing SVG Files for Cricut and Silhouette Machines",
+    "description": "Cutting machines need clean vector paths. Learn how to turn your artwork into cut-ready SVG files for vinyl, paper and iron-on Cricut projects.",
+    "images": [
+      "https://pngtosvgfree.com/og-image.png"
+    ]
   }
 };
 
@@ -36,7 +57,7 @@ export default function Page() {
             <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
               <circle cx="6" cy="6" r="3" />
               <circle cx="6" cy="18" r="3" />
-              <path d="M20 4L8.1 15.9M14.5 14.5L20 20M8.1 8.1L12 12" />
+              <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12" />
             </svg>
           </div>
           {" "}
@@ -48,10 +69,10 @@ export default function Page() {
               {"November 1, 2026"}
             </span>
             <span>
-              {"7 min read"}
+              {"3 min read"}
             </span>
             <span>
-              {"By the PNG TO SVG team"}
+              {"By the PNG to SVG Free team"}
             </span>
           </div>
           {" "}
@@ -195,6 +216,18 @@ export default function Page() {
             {"Choose a simple image type, keep colours low, remove unwanted backgrounds and tiny specks, and use registration marks for layers. With those habits your SVGs will cut and weed cleanly every time."}
           </p>
           {" "}
+          <div className="author">
+            <img src="logo.svg" alt="" width="44" height="44" />
+            <div>
+              <b>
+                {"Written by the PNG to SVG Free team"}
+              </b>
+              <p>
+                {"We build free, privacy-first tools for converting images to vectors and write practical guides for designers, crafters and developers. Published November 1, 2026."}
+              </p>
+            </div>
+          </div>
+          {" "}
           <div className="inline-cta">
             <p>
               {"Ready to try it? Convert your image to SVG for free."}
@@ -211,74 +244,75 @@ export default function Page() {
         </h2>
         {" "}
         <div className="posts">
-          <Link className="post" href="/blog-what-is-an-svg-file">
-            <div className="th" style={{ "background": "linear-gradient(135deg,#3d4ef5,#8b5cf6)" }}>
+          <Link className="post" href="/blog-print-then-cut-stickers">
+            <div className="th" style={{ "background": "linear-gradient(135deg,#16a34a,#06b6d4)" }}>
               <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
-                <path d="M14 2v6h6" />
-                <path d="M8 15l2-3 2 2 2-4 2 5" />
+                <circle cx="6" cy="6" r="3" />
+                <circle cx="6" cy="18" r="3" />
+                <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12" />
               </svg>
             </div>
             {" "}
             <div className="bd">
               <small>
-                {"Basics"}
+                {"Crafting"}
               </small>
               <b>
-                {"What Is an SVG File? A Beginner-Friendly Guide"}
+                {"How to Make Print-Then-Cut Stickers from Your Images"}
               </b>
               <p>
-                {"SVG files power logos, icons and illustrations across the web. Learn what they are, how they work and when you should use one."}
+                {"Turn your artwork into professional-looking stickers with a home printer and a cutting machine. Covers files, offsets, materials and calibration."}
               </p>
               <span>
-                {"November 10, 2026 · 6 min read"}
+                {"November 21, 2026 · 3 min read"}
               </span>
             </div>
           </Link>
-          <Link className="post" href="/blog-png-vs-svg">
-            <div className="th" style={{ "background": "linear-gradient(135deg,#ec4899,#f59e0b)" }}>
-              <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="2" y="5" width="8" height="14" rx="2" />
-                <rect x="14" y="5" width="8" height="14" rx="2" />
-                <path d="M10 12h4" />
-              </svg>
-            </div>
-            {" "}
-            <div className="bd">
-              <small>
-                {"Formats"}
-              </small>
-              <b>
-                {"PNG vs SVG: Which Format Should You Use?"}
-              </b>
-              <p>
-                {"PNG and SVG both support transparency, but they work in completely different ways. Here is a practical comparison to help you choose."}
-              </p>
-              <span>
-                {"November 8, 2026 · 7 min read"}
-              </span>
-            </div>
-          </Link>
-          <Link className="post" href="/blog-convert-logo-to-svg">
-            <div className="th" style={{ "background": "linear-gradient(135deg,#06b6d4,#3d4ef5)" }}>
+          <Link className="post" href="/blog-single-vs-multi-layer-svg">
+            <div className="th" style={{ "background": "linear-gradient(135deg,#16a34a,#06b6d4)" }}>
               <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="9" cy="9" r="5" />
                 <path d="M14 21l4-8 4 8z" />
+                <rect x="2" y="15" width="6" height="6" rx="1" />
               </svg>
             </div>
             {" "}
             <div className="bd">
               <small>
-                {"Tutorial"}
+                {"Crafting"}
               </small>
               <b>
-                {"How to Convert a Logo to SVG (Step-by-Step)"}
+                {"Single-Layer vs Multi-Layer SVGs for Cutting Machines"}
               </b>
               <p>
-                {"Lost the original vector file of your logo? Here is how to turn a PNG or JPG logo into a clean, editable SVG in a few minutes."}
+                {"Should your cut file be one colour or many layers? Understand single-layer and layered SVGs for Cricut and Silhouette and how to convert them."}
               </p>
               <span>
-                {"November 5, 2026 · 6 min read"}
+                {"November 21, 2026 · 3 min read"}
+              </span>
+            </div>
+          </Link>
+          <Link className="post" href="/blog-svg-for-embroidery">
+            <div className="th" style={{ "background": "linear-gradient(135deg,#16a34a,#06b6d4)" }}>
+              <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="6" cy="6" r="3" />
+                <circle cx="6" cy="18" r="3" />
+                <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12" />
+              </svg>
+            </div>
+            {" "}
+            <div className="bd">
+              <small>
+                {"Crafting"}
+              </small>
+              <b>
+                {"Can You Use SVG Files for Machine Embroidery?"}
+              </b>
+              <p>
+                {"Embroidery machines do not read SVG directly, but SVG artwork is a great starting point for digitizing. Here is how SVG and stitch files fit together."}
+              </p>
+              <span>
+                {"November 21, 2026 · 3 min read"}
               </span>
             </div>
           </Link>
@@ -286,7 +320,7 @@ export default function Page() {
         {" "}
       </div>
       {" "}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\": \"https://schema.org\", \"@type\": \"BlogPosting\", \"headline\": \"Preparing SVG Files for Cricut and Silhouette Machines\", \"datePublished\": \"November 1, 2026\", \"author\": {\"@type\": \"Organization\", \"name\": \"PNG TO SVG\"}, \"description\": \"Cutting machines need clean vector paths. Learn how to turn your artwork into cut-ready SVGs for vinyl, paper and iron-on projects.\"}" }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"Preparing SVG Files for Cricut and Silhouette Machines\",\"description\":\"Cutting machines need clean vector paths. Learn how to turn your artwork into cut-ready SVG files for vinyl, paper and iron-on Cricut projects.\",\"datePublished\":\"2026-11-01\",\"dateModified\":\"2026-11-01\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":477,\"articleSection\":\"Crafting\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-svg-files-for-cricut-and-silhouette\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Preparing SVG Files for Cricut and Silhouette Machines\",\"item\":\"https://pngtosvgfree.com/blog-svg-files-for-cricut-and-silhouette\"}]}]}" }} />
       {" "}
     </>
   );

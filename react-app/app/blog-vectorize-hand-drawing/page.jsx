@@ -1,15 +1,36 @@
 import Link from "next/link";
 
 export const metadata = {
-  "title": "How to Vectorize a Hand Drawing or Sketch | PNG TO SVG",
+  "title": {
+    "absolute": "How to Vectorize a Hand Drawing or Sketch | PNG to SVG Free"
+  },
   "description": "Turn pencil sketches and ink drawings into clean, scalable SVG line art. A practical guide to scanning, cleaning up and tracing hand-drawn artwork.",
   "alternates": {
-    "canonical": "https://pngtosvgfree.com/blog-vectorize-hand-drawing.html"
+    "canonical": "https://pngtosvgfree.com/blog-vectorize-hand-drawing"
   },
   "openGraph": {
-    "title": "How to Vectorize a Hand Drawing or Sketch | PNG TO SVG",
+    "title": "How to Vectorize a Hand Drawing or Sketch | PNG to SVG Free",
     "description": "Turn pencil sketches and ink drawings into clean, scalable SVG line art. A practical guide to scanning, cleaning up and tracing hand-drawn artwork.",
-    "type": "article"
+    "type": "article",
+    "url": "https://pngtosvgfree.com/blog-vectorize-hand-drawing",
+    "siteName": "PNG to SVG Free",
+    "locale": "en_US",
+    "images": [
+      {
+        "url": "https://pngtosvgfree.com/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "PNG to SVG Free — free online PNG to SVG converter"
+      }
+    ]
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "How to Vectorize a Hand Drawing or Sketch | PNG to SVG Free",
+    "description": "Turn pencil sketches and ink drawings into clean, scalable SVG line art. A practical guide to scanning, cleaning up and tracing hand-drawn artwork.",
+    "images": [
+      "https://pngtosvgfree.com/og-image.png"
+    ]
   }
 };
 
@@ -52,7 +73,7 @@ export default function Page() {
               {"4 min read"}
             </span>
             <span>
-              {"By the PNG TO SVG team"}
+              {"By the PNG to SVG Free team"}
             </span>
           </div>
           {" "}
@@ -304,6 +325,18 @@ export default function Page() {
             {"Ink your lines, scan or photograph them evenly, boost the contrast, then trace with a two-colour line-art setting. Good preparation is what turns a casual sketch into a crisp, professional vector you can print on a T-shirt, cut from vinyl or use as a logo."}
           </p>
           {" "}
+          <div className="author">
+            <img src="logo.svg" alt="" width="44" height="44" />
+            <div>
+              <b>
+                {"Written by the PNG to SVG Free team"}
+              </b>
+              <p>
+                {"We build free, privacy-first tools for converting images to vectors and write practical guides for designers, crafters and developers. Published November 21, 2026."}
+              </p>
+            </div>
+          </div>
+          {" "}
           <div className="inline-cta">
             <p>
               {"Ready to try it? Convert your image to SVG for free."}
@@ -362,7 +395,7 @@ export default function Page() {
                 {"How to Turn Your Signature into an SVG"}
               </b>
               <p>
-                {"Create a crisp, transparent vector version of your handwritten signature for documents, email footers, websites, engraving and stamps."}
+                {"Create a crisp, transparent vector version of your handwritten signature for documents, email footers, websites, engraving and custom stamps."}
               </p>
               <span>
                 {"November 21, 2026 · 4 min read"}
@@ -398,7 +431,7 @@ export default function Page() {
         {" "}
       </div>
       {" "}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"How to Vectorize a Hand Drawing or Sketch\",\"datePublished\":\"2026-11-21\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://pngtosvgfree.com/logo.svg\"}},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-vectorize-hand-drawing.html\",\"description\":\"Turn pencil sketches and ink drawings into clean, scalable SVG line art. A practical guide to scanning, cleaning up and tracing hand-drawn artwork.\"}" }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"How to Vectorize a Hand Drawing or Sketch\",\"description\":\"Turn pencil sketches and ink drawings into clean, scalable SVG line art. A practical guide to scanning, cleaning up and tracing hand-drawn artwork.\",\"datePublished\":\"2026-11-21\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":790,\"articleSection\":\"Tutorial\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-vectorize-hand-drawing\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"How to Vectorize a Hand Drawing or Sketch\",\"item\":\"https://pngtosvgfree.com/blog-vectorize-hand-drawing\"}]}]}" }} />
       {" "}
     </>
   );

@@ -1,15 +1,36 @@
 import Link from "next/link";
 
 export const metadata = {
-  "title": "SVG vs Canvas: Which Should You Use for Web Graphics? | PNG TO SVG",
-  "description": "Both SVG and HTML canvas draw graphics in the browser, but they work very differently. Compare performance, interactivity, accessibility and best use cases.",
+  "title": {
+    "absolute": "SVG vs Canvas: Which Should You Use for Web Graphics?"
+  },
+  "description": "SVG and HTML canvas both draw graphics in the browser but work very differently. Compare performance, interactivity, accessibility and use cases.",
   "alternates": {
-    "canonical": "https://pngtosvgfree.com/blog-svg-vs-canvas.html"
+    "canonical": "https://pngtosvgfree.com/blog-svg-vs-canvas"
   },
   "openGraph": {
-    "title": "SVG vs Canvas: Which Should You Use for Web Graphics? | PNG TO SVG",
-    "description": "Both SVG and HTML canvas draw graphics in the browser, but they work very differently. Compare performance, interactivity, accessibility and best use cases.",
-    "type": "article"
+    "title": "SVG vs Canvas: Which Should You Use for Web Graphics?",
+    "description": "SVG and HTML canvas both draw graphics in the browser but work very differently. Compare performance, interactivity, accessibility and use cases.",
+    "type": "article",
+    "url": "https://pngtosvgfree.com/blog-svg-vs-canvas",
+    "siteName": "PNG to SVG Free",
+    "locale": "en_US",
+    "images": [
+      {
+        "url": "https://pngtosvgfree.com/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "PNG to SVG Free — free online PNG to SVG converter"
+      }
+    ]
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "SVG vs Canvas: Which Should You Use for Web Graphics?",
+    "description": "SVG and HTML canvas both draw graphics in the browser but work very differently. Compare performance, interactivity, accessibility and use cases.",
+    "images": [
+      "https://pngtosvgfree.com/og-image.png"
+    ]
   }
 };
 
@@ -51,7 +72,7 @@ export default function Page() {
               {"3 min read"}
             </span>
             <span>
-              {"By the PNG TO SVG team"}
+              {"By the PNG to SVG Free team"}
             </span>
           </div>
           {" "}
@@ -340,6 +361,18 @@ export default function Page() {
             {"SVG is a scalable, styleable, accessible graphics model built into the DOM — ideal for icons, charts, diagrams and maps. Canvas is a fast pixel surface — ideal for games, huge datasets and image processing. Pick based on object count, interactivity and accessibility needs, and do not hesitate to combine them."}
           </p>
           {" "}
+          <div className="author">
+            <img src="logo.svg" alt="" width="44" height="44" />
+            <div>
+              <b>
+                {"Written by the PNG to SVG Free team"}
+              </b>
+              <p>
+                {"We build free, privacy-first tools for converting images to vectors and write practical guides for designers, crafters and developers. Published November 21, 2026."}
+              </p>
+            </div>
+          </div>
+          {" "}
           <div className="inline-cta">
             <p>
               {"Ready to try it? Convert your image to SVG for free."}
@@ -400,7 +433,7 @@ export default function Page() {
                 {"SVG Path Commands: A Beginner's Guide to the d Attribute"}
               </b>
               <p>
-                {"M, L, C, Q, A, Z — learn what the letters in an SVG path mean, how curves work, and how to read and tweak path data by hand."}
+                {"M, L, C, Q, A and Z explained: learn what the letters in an SVG path mean, how Bézier curves work, and how to read and tweak path data by hand."}
               </p>
               <span>
                 {"November 21, 2026 · 4 min read"}
@@ -433,7 +466,7 @@ export default function Page() {
         {" "}
       </div>
       {" "}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"SVG vs Canvas: Which Should You Use for Web Graphics?\",\"datePublished\":\"2026-11-21\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://pngtosvgfree.com/logo.svg\"}},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-svg-vs-canvas.html\",\"description\":\"Both SVG and HTML canvas draw graphics in the browser, but they work very differently. Compare performance, interactivity, accessibility and best use cases.\"}" }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"SVG vs Canvas: Which Should You Use for Web Graphics?\",\"description\":\"SVG and HTML canvas both draw graphics in the browser but work very differently. Compare performance, interactivity, accessibility and use cases.\",\"datePublished\":\"2026-11-21\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":570,\"articleSection\":\"Technology\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-svg-vs-canvas\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"SVG vs Canvas: Which Should You Use for Web Graphics?\",\"item\":\"https://pngtosvgfree.com/blog-svg-vs-canvas\"}]}]}" }} />
       {" "}
     </>
   );

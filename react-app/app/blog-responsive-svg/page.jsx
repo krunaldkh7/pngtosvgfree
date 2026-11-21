@@ -1,15 +1,36 @@
 import Link from "next/link";
 
 export const metadata = {
-  "title": "Responsive SVG: Making Vector Graphics Fit Any Screen | PNG TO SVG",
-  "description": "Learn how to make SVGs scale smoothly across phones, tablets and desktops using viewBox, CSS sizing, preserveAspectRatio and media queries.",
+  "title": {
+    "absolute": "Responsive SVG: Making Vector Graphics Fit Any Screen"
+  },
+  "description": "Learn how to make SVGs scale smoothly across phones, tablets and desktops using the viewBox, CSS sizing, preserveAspectRatio and media queries.",
   "alternates": {
-    "canonical": "https://pngtosvgfree.com/blog-responsive-svg.html"
+    "canonical": "https://pngtosvgfree.com/blog-responsive-svg"
   },
   "openGraph": {
-    "title": "Responsive SVG: Making Vector Graphics Fit Any Screen | PNG TO SVG",
-    "description": "Learn how to make SVGs scale smoothly across phones, tablets and desktops using viewBox, CSS sizing, preserveAspectRatio and media queries.",
-    "type": "article"
+    "title": "Responsive SVG: Making Vector Graphics Fit Any Screen",
+    "description": "Learn how to make SVGs scale smoothly across phones, tablets and desktops using the viewBox, CSS sizing, preserveAspectRatio and media queries.",
+    "type": "article",
+    "url": "https://pngtosvgfree.com/blog-responsive-svg",
+    "siteName": "PNG to SVG Free",
+    "locale": "en_US",
+    "images": [
+      {
+        "url": "https://pngtosvgfree.com/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "PNG to SVG Free — free online PNG to SVG converter"
+      }
+    ]
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "Responsive SVG: Making Vector Graphics Fit Any Screen",
+    "description": "Learn how to make SVGs scale smoothly across phones, tablets and desktops using the viewBox, CSS sizing, preserveAspectRatio and media queries.",
+    "images": [
+      "https://pngtosvgfree.com/og-image.png"
+    ]
   }
 };
 
@@ -51,7 +72,7 @@ export default function Page() {
               {"3 min read"}
             </span>
             <span>
-              {"By the PNG TO SVG team"}
+              {"By the PNG to SVG Free team"}
             </span>
           </div>
           {" "}
@@ -321,6 +342,18 @@ export default function Page() {
             {" for control over fit and cropping, simplify detail for small screens, and test text and strokes on a real phone before publishing."}
           </p>
           {" "}
+          <div className="author">
+            <img src="logo.svg" alt="" width="44" height="44" />
+            <div>
+              <b>
+                {"Written by the PNG to SVG Free team"}
+              </b>
+              <p>
+                {"We build free, privacy-first tools for converting images to vectors and write practical guides for designers, crafters and developers. Published November 21, 2026."}
+              </p>
+            </div>
+          </div>
+          {" "}
           <div className="inline-cta">
             <p>
               {"Ready to try it? Convert your image to SVG for free."}
@@ -352,7 +385,7 @@ export default function Page() {
                 {"How to Make SVG Graphics Accessible"}
               </b>
               <p>
-                {"Screen readers handle SVG in different ways depending on how it is embedded. Learn how to label meaningful SVGs, hide decorative ones and ensure good contrast."}
+                {"Screen readers treat SVG differently depending on how it is embedded. Learn to label meaningful SVGs, hide decorative ones and meet contrast rules."}
               </p>
               <span>
                 {"November 21, 2026 · 3 min read"}
@@ -412,7 +445,7 @@ export default function Page() {
         {" "}
       </div>
       {" "}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Responsive SVG: Making Vector Graphics Fit Any Screen\",\"datePublished\":\"2026-11-21\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://pngtosvgfree.com/logo.svg\"}},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-responsive-svg.html\",\"description\":\"Learn how to make SVGs scale smoothly across phones, tablets and desktops using viewBox, CSS sizing, preserveAspectRatio and media queries.\"}" }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"Responsive SVG: Making Vector Graphics Fit Any Screen\",\"description\":\"Learn how to make SVGs scale smoothly across phones, tablets and desktops using the viewBox, CSS sizing, preserveAspectRatio and media queries.\",\"datePublished\":\"2026-11-21\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":630,\"articleSection\":\"Web design\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-responsive-svg\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Responsive SVG: Making Vector Graphics Fit Any Screen\",\"item\":\"https://pngtosvgfree.com/blog-responsive-svg\"}]}]}" }} />
       {" "}
     </>
   );

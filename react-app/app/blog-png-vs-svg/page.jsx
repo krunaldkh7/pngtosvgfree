@@ -1,15 +1,36 @@
 import Link from "next/link";
 
 export const metadata = {
-  "title": "PNG vs SVG: Which Format Should You Use? | PNG TO SVG",
-  "description": "PNG and SVG both support transparency, but they work in completely different ways. Here is a practical comparison to help you choose.",
+  "title": {
+    "absolute": "PNG vs SVG: Which Format Should You Use? | PNG to SVG Free"
+  },
+  "description": "PNG and SVG both support transparency, but one is pixels and one is vectors. A practical comparison of quality, file size and editing to help you choose.",
   "alternates": {
-    "canonical": "https://pngtosvgfree.com/blog-png-vs-svg.html"
+    "canonical": "https://pngtosvgfree.com/blog-png-vs-svg"
   },
   "openGraph": {
-    "title": "PNG vs SVG: Which Format Should You Use? | PNG TO SVG",
-    "description": "PNG and SVG both support transparency, but they work in completely different ways. Here is a practical comparison to help you choose.",
-    "type": "website"
+    "title": "PNG vs SVG: Which Format Should You Use? | PNG to SVG Free",
+    "description": "PNG and SVG both support transparency, but one is pixels and one is vectors. A practical comparison of quality, file size and editing to help you choose.",
+    "type": "article",
+    "url": "https://pngtosvgfree.com/blog-png-vs-svg",
+    "siteName": "PNG to SVG Free",
+    "locale": "en_US",
+    "images": [
+      {
+        "url": "https://pngtosvgfree.com/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "PNG to SVG Free — free online PNG to SVG converter"
+      }
+    ]
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "PNG vs SVG: Which Format Should You Use? | PNG to SVG Free",
+    "description": "PNG and SVG both support transparency, but one is pixels and one is vectors. A practical comparison of quality, file size and editing to help you choose.",
+    "images": [
+      "https://pngtosvgfree.com/og-image.png"
+    ]
   }
 };
 
@@ -48,10 +69,10 @@ export default function Page() {
               {"November 8, 2026"}
             </span>
             <span>
-              {"7 min read"}
+              {"3 min read"}
             </span>
             <span>
-              {"By the PNG TO SVG team"}
+              {"By the PNG to SVG Free team"}
             </span>
           </div>
           {" "}
@@ -240,6 +261,18 @@ export default function Page() {
             {"Neither format is \"better\" — they solve different problems. Keep your master logo and icons as SVG, export PNGs when a platform requires them, and use PNG or WEBP for detailed, photographic content."}
           </p>
           {" "}
+          <div className="author">
+            <img src="logo.svg" alt="" width="44" height="44" />
+            <div>
+              <b>
+                {"Written by the PNG to SVG Free team"}
+              </b>
+              <p>
+                {"We build free, privacy-first tools for converting images to vectors and write practical guides for designers, crafters and developers. Published November 8, 2026."}
+              </p>
+            </div>
+          </div>
+          {" "}
           <div className="inline-cta">
             <p>
               {"Ready to try it? Convert your image to SVG for free."}
@@ -256,74 +289,75 @@ export default function Page() {
         </h2>
         {" "}
         <div className="posts">
-          <Link className="post" href="/blog-what-is-an-svg-file">
-            <div className="th" style={{ "background": "linear-gradient(135deg,#3d4ef5,#8b5cf6)" }}>
-              <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
-                <path d="M14 2v6h6" />
-                <path d="M8 15l2-3 2 2 2-4 2 5" />
-              </svg>
-            </div>
-            {" "}
-            <div className="bd">
-              <small>
-                {"Basics"}
-              </small>
-              <b>
-                {"What Is an SVG File? A Beginner-Friendly Guide"}
-              </b>
-              <p>
-                {"SVG files power logos, icons and illustrations across the web. Learn what they are, how they work and when you should use one."}
-              </p>
-              <span>
-                {"November 10, 2026 · 6 min read"}
-              </span>
-            </div>
-          </Link>
-          <Link className="post" href="/blog-convert-logo-to-svg">
-            <div className="th" style={{ "background": "linear-gradient(135deg,#06b6d4,#3d4ef5)" }}>
+          <Link className="post" href="/blog-logo-file-formats">
+            <div className="th" style={{ "background": "linear-gradient(135deg,#ec4899,#f59e0b)" }}>
               <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="9" cy="9" r="5" />
                 <path d="M14 21l4-8 4 8z" />
+                <rect x="2" y="15" width="6" height="6" rx="1" />
               </svg>
             </div>
             {" "}
             <div className="bd">
               <small>
-                {"Tutorial"}
+                {"Formats"}
               </small>
               <b>
-                {"How to Convert a Logo to SVG (Step-by-Step)"}
+                {"Logo File Formats Every Business Should Have"}
               </b>
               <p>
-                {"Lost the original vector file of your logo? Here is how to turn a PNG or JPG logo into a clean, editable SVG in a few minutes."}
+                {"Printers, web developers, social platforms and sign makers all ask for different logo files. Here is the complete logo kit every business needs and why."}
               </p>
               <span>
-                {"November 5, 2026 · 6 min read"}
+                {"November 21, 2026 · 3 min read"}
               </span>
             </div>
           </Link>
-          <Link className="post" href="/blog-svg-files-for-cricut-and-silhouette">
-            <div className="th" style={{ "background": "linear-gradient(135deg,#16a34a,#06b6d4)" }}>
+          <Link className="post" href="/blog-svg-vs-eps-vs-ai-vs-pdf">
+            <div className="th" style={{ "background": "linear-gradient(135deg,#ec4899,#f59e0b)" }}>
               <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="6" cy="6" r="3" />
-                <circle cx="6" cy="18" r="3" />
-                <path d="M20 4L8.1 15.9M14.5 14.5L20 20M8.1 8.1L12 12" />
+                <rect x="2" y="5" width="8" height="14" rx="2" />
+                <rect x="14" y="5" width="8" height="14" rx="2" />
+                <path d="M10 12h4" />
               </svg>
             </div>
             {" "}
             <div className="bd">
               <small>
-                {"Crafting"}
+                {"Formats"}
               </small>
               <b>
-                {"Preparing SVG Files for Cricut and Silhouette Machines"}
+                {"SVG vs EPS vs AI vs PDF: Which Vector Format Do You Need?"}
               </b>
               <p>
-                {"Cutting machines need clean vector paths. Learn how to turn your artwork into cut-ready SVGs for vinyl, paper and iron-on projects."}
+                {"Designers, printers and websites all ask for \"vector files\" — but which one? A clear comparison of SVG, EPS, AI and PDF and when to use each."}
               </p>
               <span>
-                {"November 1, 2026 · 7 min read"}
+                {"November 21, 2026 · 4 min read"}
+              </span>
+            </div>
+          </Link>
+          <Link className="post" href="/blog-web-image-formats-guide">
+            <div className="th" style={{ "background": "linear-gradient(135deg,#ec4899,#f59e0b)" }}>
+              <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="2" y="5" width="8" height="14" rx="2" />
+                <rect x="14" y="5" width="8" height="14" rx="2" />
+                <path d="M10 12h4" />
+              </svg>
+            </div>
+            {" "}
+            <div className="bd">
+              <small>
+                {"Formats"}
+              </small>
+              <b>
+                {"JPG, PNG, WEBP, AVIF, GIF or SVG? A Guide to Web Image Formats"}
+              </b>
+              <p>
+                {"Choosing the right image format makes sites faster. Compare JPG, PNG, WEBP, AVIF, GIF and SVG and learn which one to use for every kind of image."}
+              </p>
+              <span>
+                {"November 21, 2026 · 3 min read"}
               </span>
             </div>
           </Link>
@@ -331,7 +365,7 @@ export default function Page() {
         {" "}
       </div>
       {" "}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\": \"https://schema.org\", \"@type\": \"BlogPosting\", \"headline\": \"PNG vs SVG: Which Format Should You Use?\", \"datePublished\": \"November 8, 2026\", \"author\": {\"@type\": \"Organization\", \"name\": \"PNG TO SVG\"}, \"description\": \"PNG and SVG both support transparency, but they work in completely different ways. Here is a practical comparison to help you choose.\"}" }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"PNG vs SVG: Which Format Should You Use?\",\"description\":\"PNG and SVG both support transparency, but one is pixels and one is vectors. A practical comparison of quality, file size and editing to help you choose.\",\"datePublished\":\"2026-11-08\",\"dateModified\":\"2026-11-08\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":479,\"articleSection\":\"Formats\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-png-vs-svg\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"PNG vs SVG: Which Format Should You Use?\",\"item\":\"https://pngtosvgfree.com/blog-png-vs-svg\"}]}]}" }} />
       {" "}
     </>
   );

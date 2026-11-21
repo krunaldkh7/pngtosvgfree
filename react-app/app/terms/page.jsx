@@ -1,15 +1,36 @@
 import Link from "next/link";
 
 export const metadata = {
-  "title": "Terms of Use | PNG TO SVG",
-  "description": "The terms and conditions for using PNG TO SVG and its free online tools.",
+  "title": {
+    "absolute": "Terms of Use | PNG to SVG Free"
+  },
+  "description": "The terms and conditions for using PNG to SVG Free and its online tools, including acceptable use, your content, intellectual property and liability.",
   "alternates": {
-    "canonical": "https://pngtosvgfree.com/terms.html"
+    "canonical": "https://pngtosvgfree.com/terms"
   },
   "openGraph": {
-    "title": "Terms of Use | PNG TO SVG",
-    "description": "The terms and conditions for using PNG TO SVG and its free online tools.",
-    "type": "website"
+    "title": "Terms of Use | PNG to SVG Free",
+    "description": "The terms and conditions for using PNG to SVG Free and its online tools, including acceptable use, your content, intellectual property and liability.",
+    "type": "website",
+    "url": "https://pngtosvgfree.com/terms",
+    "siteName": "PNG to SVG Free",
+    "locale": "en_US",
+    "images": [
+      {
+        "url": "https://pngtosvgfree.com/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "PNG to SVG Free — free online PNG to SVG converter"
+      }
+    ]
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "Terms of Use | PNG to SVG Free",
+    "description": "The terms and conditions for using PNG to SVG Free and its online tools, including acceptable use, your content, intellectual property and liability.",
+    "images": [
+      "https://pngtosvgfree.com/og-image.png"
+    ]
   }
 };
 
@@ -37,7 +58,7 @@ export default function Page() {
           </p>
           {" "}
           <p>
-            {"By accessing or using PNG TO SVG at https://pngtosvgfree.com (the “Site”), you agree to these Terms of Use. If you do not agree, please do not use the Site."}
+            {"By accessing or using PNG to SVG Free at https://pngtosvgfree.com (the “Site”), you agree to these Terms of Use. If you do not agree, please do not use the Site."}
           </p>
           {" "}
           <h2>
@@ -45,7 +66,7 @@ export default function Page() {
           </h2>
           {" "}
           <p>
-            {"PNG TO SVG provides free online tools to convert images between raster and vector formats. You may use the tools for personal and commercial purposes, subject to these Terms."}
+            {"PNG to SVG Free provides free online tools to convert images between raster and vector formats. You may use the tools for personal and commercial purposes, subject to these Terms."}
           </p>
           {" "}
           <h2>
@@ -104,7 +125,7 @@ export default function Page() {
           </h2>
           {" "}
           <p>
-            {"To the fullest extent permitted by law, PNG TO SVG is not liable for any indirect, incidental or consequential damages, or for any loss of data, materials or profits arising from your use of the Site."}
+            {"To the fullest extent permitted by law, PNG to SVG Free is not liable for any indirect, incidental or consequential damages, or for any loss of data, materials or profits arising from your use of the Site."}
           </p>
           {" "}
           <h2>

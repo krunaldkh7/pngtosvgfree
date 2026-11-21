@@ -1,15 +1,36 @@
 import Link from "next/link";
 
 export const metadata = {
-  "title": "How Image Tracing Works: From Pixels to Paths | PNG TO SVG",
+  "title": {
+    "absolute": "How Image Tracing Works: From Pixels to Paths"
+  },
   "description": "What actually happens when a converter turns a PNG into an SVG? A plain-English look at colour quantization, region detection and curve fitting.",
   "alternates": {
-    "canonical": "https://pngtosvgfree.com/blog-how-image-tracing-works.html"
+    "canonical": "https://pngtosvgfree.com/blog-how-image-tracing-works"
   },
   "openGraph": {
-    "title": "How Image Tracing Works: From Pixels to Paths | PNG TO SVG",
+    "title": "How Image Tracing Works: From Pixels to Paths",
     "description": "What actually happens when a converter turns a PNG into an SVG? A plain-English look at colour quantization, region detection and curve fitting.",
-    "type": "website"
+    "type": "article",
+    "url": "https://pngtosvgfree.com/blog-how-image-tracing-works",
+    "siteName": "PNG to SVG Free",
+    "locale": "en_US",
+    "images": [
+      {
+        "url": "https://pngtosvgfree.com/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "PNG to SVG Free — free online PNG to SVG converter"
+      }
+    ]
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "How Image Tracing Works: From Pixels to Paths",
+    "description": "What actually happens when a converter turns a PNG into an SVG? A plain-English look at colour quantization, region detection and curve fitting.",
+    "images": [
+      "https://pngtosvgfree.com/og-image.png"
+    ]
   }
 };
 
@@ -34,9 +55,7 @@ export default function Page() {
           {" "}
           <div className="cover" style={{ "background": "linear-gradient(135deg,#0f1020,#4c4f6b)", "color": "#fff" }}>
             <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M3 17c3-8 6 4 9-4s6 2 9-6" />
-              <circle cx="3" cy="17" r="1.5" />
-              <circle cx="21" cy="7" r="1.5" />
+              <path d="M15 4V2M15 16v-2M8 9h2M20 9h2M17.8 11.8L19 13M17.8 6.2L19 5M3 21l9-9M12.2 6.2L11 5" />
             </svg>
           </div>
           {" "}
@@ -48,10 +67,10 @@ export default function Page() {
               {"October 28, 2026"}
             </span>
             <span>
-              {"8 min read"}
+              {"3 min read"}
             </span>
             <span>
-              {"By the PNG TO SVG team"}
+              {"By the PNG to SVG Free team"}
             </span>
           </div>
           {" "}
@@ -194,6 +213,18 @@ export default function Page() {
             {" and watch how each setting changes the traced shapes in real time."}
           </p>
           {" "}
+          <div className="author">
+            <img src="logo.svg" alt="" width="44" height="44" />
+            <div>
+              <b>
+                {"Written by the PNG to SVG Free team"}
+              </b>
+              <p>
+                {"We build free, privacy-first tools for converting images to vectors and write practical guides for designers, crafters and developers. Published October 28, 2026."}
+              </p>
+            </div>
+          </div>
+          {" "}
           <div className="inline-cta">
             <p>
               {"Ready to try it? Convert your image to SVG for free."}
@@ -210,74 +241,76 @@ export default function Page() {
         </h2>
         {" "}
         <div className="posts">
-          <Link className="post" href="/blog-what-is-an-svg-file">
-            <div className="th" style={{ "background": "linear-gradient(135deg,#3d4ef5,#8b5cf6)" }}>
+          <Link className="post" href="/blog-svg-gradients-and-filters">
+            <div className="th" style={{ "background": "linear-gradient(135deg,#0f1020,#4c4f6b)" }}>
               <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
-                <path d="M14 2v6h6" />
-                <path d="M8 15l2-3 2 2 2-4 2 5" />
+                <circle cx="13.5" cy="6.5" r="1.5" />
+                <circle cx="17.5" cy="10.5" r="1.5" />
+                <circle cx="8.5" cy="7.5" r="1.5" />
+                <circle cx="6.5" cy="12.5" r="1.5" />
+                <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 011.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z" />
               </svg>
             </div>
             {" "}
             <div className="bd">
               <small>
-                {"Basics"}
+                {"Technology"}
               </small>
               <b>
-                {"What Is an SVG File? A Beginner-Friendly Guide"}
+                {"SVG Gradients, Patterns and Filters: A Practical Introduction"}
               </b>
               <p>
-                {"SVG files power logos, icons and illustrations across the web. Learn what they are, how they work and when you should use one."}
+                {"SVG can do much more than flat colours. Learn how linear and radial gradients, patterns, drop shadows and blur filters work — with examples you can copy."}
               </p>
               <span>
-                {"November 10, 2026 · 6 min read"}
+                {"November 21, 2026 · 3 min read"}
               </span>
             </div>
           </Link>
-          <Link className="post" href="/blog-png-vs-svg">
-            <div className="th" style={{ "background": "linear-gradient(135deg,#ec4899,#f59e0b)" }}>
+          <Link className="post" href="/blog-svg-path-commands">
+            <div className="th" style={{ "background": "linear-gradient(135deg,#0f1020,#4c4f6b)" }}>
               <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="2" y="5" width="8" height="14" rx="2" />
-                <rect x="14" y="5" width="8" height="14" rx="2" />
-                <path d="M10 12h4" />
+                <path d="M12 19l7-7 3 3-7 7-3-3z" />
+                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+                <path d="M2 2l7.586 7.586" />
+                <circle cx="11" cy="11" r="2" />
               </svg>
             </div>
             {" "}
             <div className="bd">
               <small>
-                {"Formats"}
+                {"Technology"}
               </small>
               <b>
-                {"PNG vs SVG: Which Format Should You Use?"}
+                {"SVG Path Commands: A Beginner's Guide to the d Attribute"}
               </b>
               <p>
-                {"PNG and SVG both support transparency, but they work in completely different ways. Here is a practical comparison to help you choose."}
+                {"M, L, C, Q, A and Z explained: learn what the letters in an SVG path mean, how Bézier curves work, and how to read and tweak path data by hand."}
               </p>
               <span>
-                {"November 8, 2026 · 7 min read"}
+                {"November 21, 2026 · 4 min read"}
               </span>
             </div>
           </Link>
-          <Link className="post" href="/blog-convert-logo-to-svg">
-            <div className="th" style={{ "background": "linear-gradient(135deg,#06b6d4,#3d4ef5)" }}>
+          <Link className="post" href="/blog-svg-security">
+            <div className="th" style={{ "background": "linear-gradient(135deg,#0f1020,#4c4f6b)" }}>
               <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="9" cy="9" r="5" />
-                <path d="M14 21l4-8 4 8z" />
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
               </svg>
             </div>
             {" "}
             <div className="bd">
               <small>
-                {"Tutorial"}
+                {"Technology"}
               </small>
               <b>
-                {"How to Convert a Logo to SVG (Step-by-Step)"}
+                {"Is SVG Safe? Security Risks Explained"}
               </b>
               <p>
-                {"Lost the original vector file of your logo? Here is how to turn a PNG or JPG logo into a clean, editable SVG in a few minutes."}
+                {"SVG files can contain scripts and external references. Learn the real risks, when they matter, and how to handle SVG uploads and downloads safely."}
               </p>
               <span>
-                {"November 5, 2026 · 6 min read"}
+                {"November 21, 2026 · 3 min read"}
               </span>
             </div>
           </Link>
@@ -285,7 +318,7 @@ export default function Page() {
         {" "}
       </div>
       {" "}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\": \"https://schema.org\", \"@type\": \"BlogPosting\", \"headline\": \"How Image Tracing Works: From Pixels to Paths\", \"datePublished\": \"October 28, 2026\", \"author\": {\"@type\": \"Organization\", \"name\": \"PNG TO SVG\"}, \"description\": \"What actually happens when a converter turns a PNG into an SVG? A plain-English look at colour quantization, region detection and curve fitting.\"}" }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"How Image Tracing Works: From Pixels to Paths\",\"description\":\"What actually happens when a converter turns a PNG into an SVG? A plain-English look at colour quantization, region detection and curve fitting.\",\"datePublished\":\"2026-10-28\",\"dateModified\":\"2026-10-28\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":563,\"articleSection\":\"Technology\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-how-image-tracing-works\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"How Image Tracing Works: From Pixels to Paths\",\"item\":\"https://pngtosvgfree.com/blog-how-image-tracing-works\"}]}]}" }} />
       {" "}
     </>
   );

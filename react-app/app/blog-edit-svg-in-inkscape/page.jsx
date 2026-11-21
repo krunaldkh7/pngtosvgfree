@@ -1,15 +1,36 @@
 import Link from "next/link";
 
 export const metadata = {
-  "title": "How to Edit SVG Files in Inkscape (Free) | PNG TO SVG",
+  "title": {
+    "absolute": "How to Edit SVG Files in Inkscape (Free) | PNG to SVG Free"
+  },
   "description": "Inkscape is a free, open-source vector editor that works natively with SVG. Learn the essential tools to recolour, clean up and resize any SVG file.",
   "alternates": {
-    "canonical": "https://pngtosvgfree.com/blog-edit-svg-in-inkscape.html"
+    "canonical": "https://pngtosvgfree.com/blog-edit-svg-in-inkscape"
   },
   "openGraph": {
-    "title": "How to Edit SVG Files in Inkscape (Free) | PNG TO SVG",
+    "title": "How to Edit SVG Files in Inkscape (Free) | PNG to SVG Free",
     "description": "Inkscape is a free, open-source vector editor that works natively with SVG. Learn the essential tools to recolour, clean up and resize any SVG file.",
-    "type": "article"
+    "type": "article",
+    "url": "https://pngtosvgfree.com/blog-edit-svg-in-inkscape",
+    "siteName": "PNG to SVG Free",
+    "locale": "en_US",
+    "images": [
+      {
+        "url": "https://pngtosvgfree.com/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "PNG to SVG Free — free online PNG to SVG converter"
+      }
+    ]
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "How to Edit SVG Files in Inkscape (Free) | PNG to SVG Free",
+    "description": "Inkscape is a free, open-source vector editor that works natively with SVG. Learn the essential tools to recolour, clean up and resize any SVG file.",
+    "images": [
+      "https://pngtosvgfree.com/og-image.png"
+    ]
   }
 };
 
@@ -52,7 +73,7 @@ export default function Page() {
               {"3 min read"}
             </span>
             <span>
-              {"By the PNG TO SVG team"}
+              {"By the PNG to SVG Free team"}
             </span>
           </div>
           {" "}
@@ -353,6 +374,18 @@ export default function Page() {
             {"Inkscape gives you professional SVG editing for free. Learn to select by colour, change fills, delete backgrounds, simplify paths and resize the page, and you can handle the vast majority of real-world SVG edits in minutes."}
           </p>
           {" "}
+          <div className="author">
+            <img src="logo.svg" alt="" width="44" height="44" />
+            <div>
+              <b>
+                {"Written by the PNG to SVG Free team"}
+              </b>
+              <p>
+                {"We build free, privacy-first tools for converting images to vectors and write practical guides for designers, crafters and developers. Published November 21, 2026."}
+              </p>
+            </div>
+          </div>
+          {" "}
           <div className="inline-cta">
             <p>
               {"Ready to try it? Convert your image to SVG for free."}
@@ -411,7 +444,7 @@ export default function Page() {
                 {"How to Turn Your Signature into an SVG"}
               </b>
               <p>
-                {"Create a crisp, transparent vector version of your handwritten signature for documents, email footers, websites, engraving and stamps."}
+                {"Create a crisp, transparent vector version of your handwritten signature for documents, email footers, websites, engraving and custom stamps."}
               </p>
               <span>
                 {"November 21, 2026 · 4 min read"}
@@ -448,7 +481,7 @@ export default function Page() {
         {" "}
       </div>
       {" "}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"How to Edit SVG Files in Inkscape (Free)\",\"datePublished\":\"2026-11-21\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://pngtosvgfree.com/logo.svg\"}},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-edit-svg-in-inkscape.html\",\"description\":\"Inkscape is a free, open-source vector editor that works natively with SVG. Learn the essential tools to recolour, clean up and resize any SVG file.\"}" }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"How to Edit SVG Files in Inkscape (Free)\",\"description\":\"Inkscape is a free, open-source vector editor that works natively with SVG. Learn the essential tools to recolour, clean up and resize any SVG file.\",\"datePublished\":\"2026-11-21\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":651,\"articleSection\":\"Tutorial\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-edit-svg-in-inkscape\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"How to Edit SVG Files in Inkscape (Free)\",\"item\":\"https://pngtosvgfree.com/blog-edit-svg-in-inkscape\"}]}]}" }} />
       {" "}
     </>
   );

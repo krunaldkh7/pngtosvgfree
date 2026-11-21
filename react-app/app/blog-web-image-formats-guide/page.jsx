@@ -1,15 +1,36 @@
 import Link from "next/link";
 
 export const metadata = {
-  "title": "JPG, PNG, WEBP, AVIF, GIF or SVG? A Guide to Web Image Formats | PNG TO SVG",
-  "description": "Choosing the right image format makes websites faster and sharper. Compare JPG, PNG, WEBP, AVIF, GIF and SVG and learn which to use for every kind of image.",
+  "title": {
+    "absolute": "Web Image Formats: JPG, PNG, WEBP, AVIF or SVG?"
+  },
+  "description": "Choosing the right image format makes sites faster. Compare JPG, PNG, WEBP, AVIF, GIF and SVG and learn which one to use for every kind of image.",
   "alternates": {
-    "canonical": "https://pngtosvgfree.com/blog-web-image-formats-guide.html"
+    "canonical": "https://pngtosvgfree.com/blog-web-image-formats-guide"
   },
   "openGraph": {
-    "title": "JPG, PNG, WEBP, AVIF, GIF or SVG? A Guide to Web Image Formats | PNG TO SVG",
-    "description": "Choosing the right image format makes websites faster and sharper. Compare JPG, PNG, WEBP, AVIF, GIF and SVG and learn which to use for every kind of image.",
-    "type": "article"
+    "title": "Web Image Formats: JPG, PNG, WEBP, AVIF or SVG?",
+    "description": "Choosing the right image format makes sites faster. Compare JPG, PNG, WEBP, AVIF, GIF and SVG and learn which one to use for every kind of image.",
+    "type": "article",
+    "url": "https://pngtosvgfree.com/blog-web-image-formats-guide",
+    "siteName": "PNG to SVG Free",
+    "locale": "en_US",
+    "images": [
+      {
+        "url": "https://pngtosvgfree.com/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "PNG to SVG Free — free online PNG to SVG converter"
+      }
+    ]
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "Web Image Formats: JPG, PNG, WEBP, AVIF or SVG?",
+    "description": "Choosing the right image format makes sites faster. Compare JPG, PNG, WEBP, AVIF, GIF and SVG and learn which one to use for every kind of image.",
+    "images": [
+      "https://pngtosvgfree.com/og-image.png"
+    ]
   }
 };
 
@@ -51,7 +72,7 @@ export default function Page() {
               {"3 min read"}
             </span>
             <span>
-              {"By the PNG TO SVG team"}
+              {"By the PNG to SVG Free team"}
             </span>
           </div>
           {" "}
@@ -410,6 +431,18 @@ export default function Page() {
             {"Use SVG for graphics, AVIF or WEBP for photos with JPG as a fallback, PNG for pixel-perfect screenshots, and video instead of GIF. Matching format to content is one of the easiest ways to make a website faster and sharper."}
           </p>
           {" "}
+          <div className="author">
+            <img src="logo.svg" alt="" width="44" height="44" />
+            <div>
+              <b>
+                {"Written by the PNG to SVG Free team"}
+              </b>
+              <p>
+                {"We build free, privacy-first tools for converting images to vectors and write practical guides for designers, crafters and developers. Published November 21, 2026."}
+              </p>
+            </div>
+          </div>
+          {" "}
           <div className="inline-cta">
             <p>
               {"Ready to try it? Convert your image to SVG for free."}
@@ -491,10 +524,10 @@ export default function Page() {
                 {"PNG vs SVG: Which Format Should You Use?"}
               </b>
               <p>
-                {"PNG and SVG both support transparency, but they work in completely different ways. Here is a practical comparison to help you choose."}
+                {"PNG and SVG both support transparency, but one is pixels and one is vectors. A practical comparison of quality, file size and editing to help you choose."}
               </p>
               <span>
-                {"November 8, 2026 · 7 min read"}
+                {"November 8, 2026 · 3 min read"}
               </span>
             </div>
           </Link>
@@ -502,7 +535,7 @@ export default function Page() {
         {" "}
       </div>
       {" "}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"JPG, PNG, WEBP, AVIF, GIF or SVG? A Guide to Web Image Formats\",\"datePublished\":\"2026-11-21\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://pngtosvgfree.com/logo.svg\"}},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-web-image-formats-guide.html\",\"description\":\"Choosing the right image format makes websites faster and sharper. Compare JPG, PNG, WEBP, AVIF, GIF and SVG and learn which to use for every kind of image.\"}" }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"JPG, PNG, WEBP, AVIF, GIF or SVG? A Guide to Web Image Formats\",\"description\":\"Choosing the right image format makes sites faster. Compare JPG, PNG, WEBP, AVIF, GIF and SVG and learn which one to use for every kind of image.\",\"datePublished\":\"2026-11-21\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":521,\"articleSection\":\"Formats\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-web-image-formats-guide\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"JPG, PNG, WEBP, AVIF, GIF or SVG? A Guide to Web Image Formats\",\"item\":\"https://pngtosvgfree.com/blog-web-image-formats-guide\"}]}]}" }} />
       {" "}
     </>
   );

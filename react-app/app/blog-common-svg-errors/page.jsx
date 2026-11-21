@@ -1,15 +1,36 @@
 import Link from "next/link";
 
 export const metadata = {
-  "title": "Common SVG Problems and How to Fix Them | PNG TO SVG",
+  "title": {
+    "absolute": "Common SVG Problems and How to Fix Them | PNG to SVG Free"
+  },
   "description": "SVG will not open, appears blank, imports at the wrong size or cuts strangely? Here are the most common SVG problems and step-by-step fixes.",
   "alternates": {
-    "canonical": "https://pngtosvgfree.com/blog-common-svg-errors.html"
+    "canonical": "https://pngtosvgfree.com/blog-common-svg-errors"
   },
   "openGraph": {
-    "title": "Common SVG Problems and How to Fix Them | PNG TO SVG",
+    "title": "Common SVG Problems and How to Fix Them | PNG to SVG Free",
     "description": "SVG will not open, appears blank, imports at the wrong size or cuts strangely? Here are the most common SVG problems and step-by-step fixes.",
-    "type": "article"
+    "type": "article",
+    "url": "https://pngtosvgfree.com/blog-common-svg-errors",
+    "siteName": "PNG to SVG Free",
+    "locale": "en_US",
+    "images": [
+      {
+        "url": "https://pngtosvgfree.com/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "PNG to SVG Free — free online PNG to SVG converter"
+      }
+    ]
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "Common SVG Problems and How to Fix Them | PNG to SVG Free",
+    "description": "SVG will not open, appears blank, imports at the wrong size or cuts strangely? Here are the most common SVG problems and step-by-step fixes.",
+    "images": [
+      "https://pngtosvgfree.com/og-image.png"
+    ]
   }
 };
 
@@ -49,7 +70,7 @@ export default function Page() {
               {"4 min read"}
             </span>
             <span>
-              {"By the PNG TO SVG team"}
+              {"By the PNG to SVG Free team"}
             </span>
           </div>
           {" "}
@@ -307,6 +328,18 @@ export default function Page() {
             {"Most SVG problems come from missing namespace or viewBox information, unsupported features, unit differences, missing fonts or overly complex traces. Check the file in a browser and a text editor, simplify features for the target app, convert text to paths and verify sizes — and nearly every SVG issue disappears."}
           </p>
           {" "}
+          <div className="author">
+            <img src="logo.svg" alt="" width="44" height="44" />
+            <div>
+              <b>
+                {"Written by the PNG to SVG Free team"}
+              </b>
+              <p>
+                {"We build free, privacy-first tools for converting images to vectors and write practical guides for designers, crafters and developers. Published November 21, 2026."}
+              </p>
+            </div>
+          </div>
+          {" "}
           <div className="inline-cta">
             <p>
               {"Ready to try it? Convert your image to SVG for free."}
@@ -338,7 +371,7 @@ export default function Page() {
                 {"How to Clean Up a Traced SVG for Professional Results"}
               </b>
               <p>
-                {"Automatic tracing gets you most of the way. These clean-up techniques — removing fragments, merging shapes, fixing colours and simplifying nodes — finish the job."}
+                {"Automatic tracing gets you most of the way. Remove fragments, merge shapes, fix colours and simplify nodes to turn a traced SVG into a pro file."}
               </p>
               <span>
                 {"November 21, 2026 · 3 min read"}
@@ -399,7 +432,7 @@ export default function Page() {
         {" "}
       </div>
       {" "}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Common SVG Problems and How to Fix Them\",\"datePublished\":\"2026-11-21\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"PNG TO SVG\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://pngtosvgfree.com/logo.svg\"}},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-common-svg-errors.html\",\"description\":\"SVG will not open, appears blank, imports at the wrong size or cuts strangely? Here are the most common SVG problems and step-by-step fixes.\"}" }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"Common SVG Problems and How to Fix Them\",\"description\":\"SVG will not open, appears blank, imports at the wrong size or cuts strangely? Here are the most common SVG problems and step-by-step fixes.\",\"datePublished\":\"2026-11-21\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":782,\"articleSection\":\"Tips\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-common-svg-errors\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Common SVG Problems and How to Fix Them\",\"item\":\"https://pngtosvgfree.com/blog-common-svg-errors\"}]}]}" }} />
       {" "}
     </>
   );

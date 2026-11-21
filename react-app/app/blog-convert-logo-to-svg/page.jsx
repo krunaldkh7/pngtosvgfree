@@ -1,15 +1,36 @@
 import Link from "next/link";
 
 export const metadata = {
-  "title": "How to Convert a Logo to SVG (Step-by-Step) | PNG TO SVG",
-  "description": "Lost the original vector file of your logo? Here is how to turn a PNG or JPG logo into a clean, editable SVG in a few minutes.",
+  "title": {
+    "absolute": "How to Convert a Logo to SVG (Step-by-Step)"
+  },
+  "description": "Lost the original vector file of your logo? Learn how to turn a PNG or JPG logo into a clean, editable SVG in minutes, free and without Illustrator.",
   "alternates": {
-    "canonical": "https://pngtosvgfree.com/blog-convert-logo-to-svg.html"
+    "canonical": "https://pngtosvgfree.com/blog-convert-logo-to-svg"
   },
   "openGraph": {
-    "title": "How to Convert a Logo to SVG (Step-by-Step) | PNG TO SVG",
-    "description": "Lost the original vector file of your logo? Here is how to turn a PNG or JPG logo into a clean, editable SVG in a few minutes.",
-    "type": "website"
+    "title": "How to Convert a Logo to SVG (Step-by-Step)",
+    "description": "Lost the original vector file of your logo? Learn how to turn a PNG or JPG logo into a clean, editable SVG in minutes, free and without Illustrator.",
+    "type": "article",
+    "url": "https://pngtosvgfree.com/blog-convert-logo-to-svg",
+    "siteName": "PNG to SVG Free",
+    "locale": "en_US",
+    "images": [
+      {
+        "url": "https://pngtosvgfree.com/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "PNG to SVG Free — free online PNG to SVG converter"
+      }
+    ]
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "How to Convert a Logo to SVG (Step-by-Step)",
+    "description": "Lost the original vector file of your logo? Learn how to turn a PNG or JPG logo into a clean, editable SVG in minutes, free and without Illustrator.",
+    "images": [
+      "https://pngtosvgfree.com/og-image.png"
+    ]
   }
 };
 
@@ -36,6 +57,7 @@ export default function Page() {
             <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
               <circle cx="9" cy="9" r="5" />
               <path d="M14 21l4-8 4 8z" />
+              <rect x="2" y="15" width="6" height="6" rx="1" />
             </svg>
           </div>
           {" "}
@@ -47,10 +69,10 @@ export default function Page() {
               {"November 5, 2026"}
             </span>
             <span>
-              {"6 min read"}
+              {"3 min read"}
             </span>
             <span>
-              {"By the PNG TO SVG team"}
+              {"By the PNG to SVG Free team"}
             </span>
           </div>
           {" "}
@@ -217,6 +239,18 @@ export default function Page() {
             {"With a good source and a few tweaks, you will have a scalable, editable logo ready for signs, merchandise and the web."}
           </p>
           {" "}
+          <div className="author">
+            <img src="logo.svg" alt="" width="44" height="44" />
+            <div>
+              <b>
+                {"Written by the PNG to SVG Free team"}
+              </b>
+              <p>
+                {"We build free, privacy-first tools for converting images to vectors and write practical guides for designers, crafters and developers. Published November 5, 2026."}
+              </p>
+            </div>
+          </div>
+          {" "}
           <div className="inline-cta">
             <p>
               {"Ready to try it? Convert your image to SVG for free."}
@@ -233,75 +267,77 @@ export default function Page() {
         </h2>
         {" "}
         <div className="posts">
-          <Link className="post" href="/blog-what-is-an-svg-file">
-            <div className="th" style={{ "background": "linear-gradient(135deg,#3d4ef5,#8b5cf6)" }}>
+          <Link className="post" href="/blog-convert-jpg-to-svg">
+            <div className="th" style={{ "background": "linear-gradient(135deg,#06b6d4,#3d4ef5)" }}>
               <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
-                <path d="M14 2v6h6" />
-                <path d="M8 15l2-3 2 2 2-4 2 5" />
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <circle cx="8.5" cy="8.5" r="1.5" />
+                <path d="M21 15l-5-5L5 21" />
               </svg>
             </div>
             {" "}
             <div className="bd">
               <small>
-                {"Basics"}
+                {"Tutorial"}
               </small>
               <b>
-                {"What Is an SVG File? A Beginner-Friendly Guide"}
+                {"How to Convert JPG to SVG Without Losing Quality"}
               </b>
               <p>
-                {"SVG files power logos, icons and illustrations across the web. Learn what they are, how they work and when you should use one."}
+                {"JPG files are everywhere, but they blur when you scale them. Learn how to turn a JPG into a clean, scalable SVG and avoid the most common mistakes."}
               </p>
               <span>
-                {"November 10, 2026 · 6 min read"}
+                {"November 21, 2026 · 5 min read"}
               </span>
             </div>
           </Link>
-          <Link className="post" href="/blog-png-vs-svg">
-            <div className="th" style={{ "background": "linear-gradient(135deg,#ec4899,#f59e0b)" }}>
+          <Link className="post" href="/blog-convert-signature-to-svg">
+            <div className="th" style={{ "background": "linear-gradient(135deg,#06b6d4,#3d4ef5)" }}>
               <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="2" y="5" width="8" height="14" rx="2" />
-                <rect x="14" y="5" width="8" height="14" rx="2" />
-                <path d="M10 12h4" />
+                <path d="M12 19l7-7 3 3-7 7-3-3z" />
+                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+                <path d="M2 2l7.586 7.586" />
+                <circle cx="11" cy="11" r="2" />
               </svg>
             </div>
             {" "}
             <div className="bd">
               <small>
-                {"Formats"}
+                {"Tutorial"}
               </small>
               <b>
-                {"PNG vs SVG: Which Format Should You Use?"}
+                {"How to Turn Your Signature into an SVG"}
               </b>
               <p>
-                {"PNG and SVG both support transparency, but they work in completely different ways. Here is a practical comparison to help you choose."}
+                {"Create a crisp, transparent vector version of your handwritten signature for documents, email footers, websites, engraving and custom stamps."}
               </p>
               <span>
-                {"November 8, 2026 · 7 min read"}
+                {"November 21, 2026 · 4 min read"}
               </span>
             </div>
           </Link>
-          <Link className="post" href="/blog-svg-files-for-cricut-and-silhouette">
-            <div className="th" style={{ "background": "linear-gradient(135deg,#16a34a,#06b6d4)" }}>
+          <Link className="post" href="/blog-edit-svg-in-inkscape">
+            <div className="th" style={{ "background": "linear-gradient(135deg,#06b6d4,#3d4ef5)" }}>
               <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="6" cy="6" r="3" />
-                <circle cx="6" cy="18" r="3" />
-                <path d="M20 4L8.1 15.9M14.5 14.5L20 20M8.1 8.1L12 12" />
+                <path d="M12 19l7-7 3 3-7 7-3-3z" />
+                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+                <path d="M2 2l7.586 7.586" />
+                <circle cx="11" cy="11" r="2" />
               </svg>
             </div>
             {" "}
             <div className="bd">
               <small>
-                {"Crafting"}
+                {"Tutorial"}
               </small>
               <b>
-                {"Preparing SVG Files for Cricut and Silhouette Machines"}
+                {"How to Edit SVG Files in Inkscape (Free)"}
               </b>
               <p>
-                {"Cutting machines need clean vector paths. Learn how to turn your artwork into cut-ready SVGs for vinyl, paper and iron-on projects."}
+                {"Inkscape is a free, open-source vector editor that works natively with SVG. Learn the essential tools to recolour, clean up and resize any SVG file."}
               </p>
               <span>
-                {"November 1, 2026 · 7 min read"}
+                {"November 21, 2026 · 3 min read"}
               </span>
             </div>
           </Link>
@@ -309,7 +345,7 @@ export default function Page() {
         {" "}
       </div>
       {" "}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\": \"https://schema.org\", \"@type\": \"BlogPosting\", \"headline\": \"How to Convert a Logo to SVG (Step-by-Step)\", \"datePublished\": \"November 5, 2026\", \"author\": {\"@type\": \"Organization\", \"name\": \"PNG TO SVG\"}, \"description\": \"Lost the original vector file of your logo? Here is how to turn a PNG or JPG logo into a clean, editable SVG in a few minutes.\"}" }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"How to Convert a Logo to SVG (Step-by-Step)\",\"description\":\"Lost the original vector file of your logo? Learn how to turn a PNG or JPG logo into a clean, editable SVG in minutes, free and without Illustrator.\",\"datePublished\":\"2026-11-05\",\"dateModified\":\"2026-11-05\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":499,\"articleSection\":\"Tutorial\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-convert-logo-to-svg\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"How to Convert a Logo to SVG (Step-by-Step)\",\"item\":\"https://pngtosvgfree.com/blog-convert-logo-to-svg\"}]}]}" }} />
       {" "}
     </>
   );
