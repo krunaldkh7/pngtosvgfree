@@ -1,0 +1,47 @@
+slug: blog-convert-svg-to-pdf
+title: How to Convert SVG to PDF (Keeping It Vector)
+category: Print
+date: 2026-11-21
+icon: file
+description: Printers and clients often ask for PDF. Learn several free ways to convert SVG to PDF while keeping shapes and text as sharp, scalable vectors.
+---
+<p>PDF is the universal format for sharing and printing documents, and print shops often prefer it. The good news: PDF can store vector graphics, so an SVG converted properly stays sharp at any size. The bad news: some conversion methods quietly turn your vectors into pixels. Here is how to do it right.</p>
+<h2>Method 1: Inkscape (free, best control)</h2>
+<ol>
+<li>Open the SVG in Inkscape.</li>
+<li>Go to <em>File → Document Properties</em> and set the page to the size you need, or use <em>Edit → Resize Page to Selection</em> to fit the artwork.</li>
+<li>Choose <em>File → Save a Copy</em> and select <strong>Portable Document Format (*.pdf)</strong>.</li>
+<li>In the PDF options, choose whether to embed fonts or convert text to paths, and set a bleed if needed.</li>
+</ol>
+<p>Inkscape keeps shapes as vectors. Filters and blur effects may be rasterised at the resolution you choose in the export options.</p>
+<h2>Method 2: Your web browser (quick and free)</h2>
+<ol>
+<li>Open the SVG in Chrome, Edge or Firefox.</li>
+<li>Press Ctrl+P (Cmd+P on Mac).</li>
+<li>Choose <strong>Save as PDF</strong> as the printer.</li>
+<li>Adjust the paper size, margins and scale, then save.</li>
+</ol>
+<p>Browsers generally keep SVG shapes as vectors in the PDF. You have less control over exact size, so this is best for proofs and sharing rather than professional print jobs.</p>
+<h2>Method 3: Adobe Illustrator or Affinity Designer</h2>
+<p>Open the SVG, set the artboard size, then use <em>Save As / Export → PDF</em>. These tools offer print presets (such as PDF/X standards), CMYK conversion, bleed and crop marks — ideal for professional printing.</p>
+<h2>Method 4: Command line (for batches)</h2>
+<p>If you convert many files, Inkscape's command line can do it automatically:</p>
+<pre><code>inkscape input.svg --export-type=pdf --export-filename=output.pdf</code></pre>
+<p>The open-source tool <code>rsvg-convert</code> (from librsvg) is another fast option: <code>rsvg-convert -f pdf -o output.pdf input.svg</code>.</p>
+<h2>Avoid methods that rasterise</h2>
+<p>Some online converters and "print to image" workflows turn the SVG into a PNG first and wrap it in a PDF. The file looks fine at normal zoom but becomes blurry when enlarged or printed large. To check: open the PDF, zoom to 800%. Vector edges stay perfectly smooth; rasterised edges become pixelated.</p>
+<h2>Keep text sharp and correct</h2>
+<p>If your SVG contains live text, either:</p>
+<ul>
+<li><strong>Embed fonts</strong> in the PDF (default in most tools), or</li>
+<li><strong>Convert text to paths</strong> before exporting, which guarantees the appearance but makes the text uneditable and unsearchable.</li>
+</ul>
+<p>For logos, converting to paths is usually best. For documents with paragraphs, embed fonts.</p>
+<h2>Set the right size</h2>
+<p>An SVG's internal size may be in pixels. When you convert, decide the physical size you want — for example A4, Letter or the exact dimensions of a label — and set it in the page or artboard settings before exporting. See <a href="blog-svg-for-print.html">Using SVG for Print</a> for bleed and colour tips.</p>
+<h2>Combining several SVGs in one PDF</h2>
+<p>Place them on separate pages in Inkscape (which supports multiple pages in recent versions), Illustrator (multiple artboards) or Affinity Designer, then export once. Alternatively, convert each to PDF and merge them with a PDF tool.</p>
+<h2>What if you only have a PNG?</h2>
+<p>Wrapping a PNG in a PDF does not make it vector. First convert it with our <a href="index.html">PNG to SVG converter</a>, then follow any method above to produce a true vector PDF.</p>
+<h2>Summary</h2>
+<p>Use Inkscape for free, precise SVG to PDF conversion, your browser's Save as PDF for quick proofs, and professional editors when you need CMYK and bleed. Always check the result at high zoom to confirm it stayed vector, and handle fonts deliberately.</p>

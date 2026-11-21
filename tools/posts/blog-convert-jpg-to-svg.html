@@ -1,0 +1,55 @@
+slug: blog-convert-jpg-to-svg
+title: How to Convert JPG to SVG Without Losing Quality
+category: Tutorial
+date: 2026-11-21
+icon: image
+description: JPG files are everywhere, but they blur when you scale them. Learn how to turn a JPG into a clean, scalable SVG and avoid the most common mistakes.
+---
+<p>JPG is the most common image format in the world. Phones save photos as JPG, websites serve product images as JPG, and most logos people email around end up as JPG at some point. The problem is that a JPG is made of a fixed grid of pixels and uses lossy compression. Enlarge it and you get blur; edit it and you fight with compression noise. Converting it to SVG turns those pixels into mathematical shapes that stay sharp at any size.</p>
+<p>This guide explains what really happens during a JPG to SVG conversion, how to prepare your file, and which settings give the cleanest result.</p>
+<h2>Why JPG is harder to convert than PNG</h2>
+<p>Both JPG and PNG are raster formats, but JPG has two extra challenges for tracing software:</p>
+<ul>
+<li><strong>Compression artefacts.</strong> JPG saves space by discarding detail the eye is unlikely to notice. Around sharp edges this creates faint blocky "noise" and halos. A tracer sees that noise as real detail and may create hundreds of tiny extra shapes.</li>
+<li><strong>No transparency.</strong> JPG cannot store a transparent background, so a logo that looks like it sits on nothing is actually sitting on a white (or slightly off-white) rectangle. That rectangle will be traced too unless you remove it.</li>
+</ul>
+<p>Neither problem is a deal-breaker. You just need to account for them.</p>
+<h2>Step 1: Start with the best JPG you have</h2>
+<p>Tracing cannot invent detail that is not there. Before converting, look for the largest, least-compressed version of the image. If your logo exists on a website, the full-size file is often available by opening the image in a new tab. A JPG that is at least 800–1000 pixels across usually gives far better curves than a 200-pixel thumbnail.</p>
+<p>If the image is a photo of a printed logo or a drawing, make sure it is shot straight on, in even light, without shadows across it. Crop away everything that is not part of the artwork.</p>
+<h2>Step 2: Choose the right image type</h2>
+<p>Different images need very different tracing settings. Our <a href="index.html">PNG to SVG converter</a> accepts JPG files and detects the type automatically, but it helps to know what each type does:</p>
+<ul>
+<li><strong>Logo / clip art</strong> — a small number of flat colours with crisp edges. Best for logos, icons, badges and cartoons.</li>
+<li><strong>Photograph</strong> — many colours and smooth gradients. The result looks like poster art rather than a perfect copy of the photo.</li>
+<li><strong>Sketch / B&amp;W</strong> — line art and two-tone drawings, such as ink sketches and scanned signatures.</li>
+<li><strong>Silhouette</strong> — a single solid colour, ideal for cutting machines and laser engraving.</li>
+</ul>
+<h2>Step 3: Tame the compression noise</h2>
+<p>For a JPG, two settings matter most:</p>
+<ol>
+<li><strong>Number of colours.</strong> A two-colour logo saved as JPG may contain thousands of slightly different shades around its edges. Limiting the palette to the number of colours you can actually see (for example 3 or 4) forces those in-between shades to merge into the real colours.</li>
+<li><strong>Speckle removal.</strong> Raising this value removes tiny islands of colour created by compression. Start around 8–10 pixels for a logo and increase it if you still see dots.</li>
+</ol>
+<p>If the image is grainy, a little <strong>noise smoothing</strong> before tracing also helps. Keep it low for logos with fine text, because heavy smoothing can round off small letters.</p>
+<h2>Step 4: Remove the background</h2>
+<p>Because JPG has no transparency, the background becomes its own coloured shape. After converting, remove it so your SVG has a transparent background. In our converter you can click a colour in the palette to make it transparent. In a vector editor such as Inkscape or Figma, simply select the large background shape and delete it.</p>
+<h2>Step 5: Check the result at large size</h2>
+<p>Zoom in to 400% or more and look for:</p>
+<ul>
+<li>Wobbly lines that should be straight — lower the corner angle setting so corners stay sharp.</li>
+<li>Letters that have merged together — increase the detail level.</li>
+<li>Thousands of tiny shapes — reduce colours and increase speckle removal.</li>
+</ul>
+<p>A good logo conversion usually contains a few dozen paths, not thousands. Fewer, cleaner paths mean a smaller file and easier editing.</p>
+<h2>When a JPG is not a good candidate</h2>
+<p>Some images simply do not translate well into vectors. Detailed photographs of people, landscapes with fine texture or images with soft depth-of-field will either lose their realism or produce a very large SVG. For those, keep the JPG (or use WEBP for the web) and only vectorise elements that are genuinely graphic, such as a logo or a simple illustration.</p>
+<h2>Common questions</h2>
+<h3>Will the SVG be exactly the same as my JPG?</h3>
+<p>Not pixel for pixel. Tracing reinterprets the image as shapes. For flat artwork the result often looks cleaner than the original because compression noise disappears. For photos, expect a stylised look.</p>
+<h3>Is it safe to convert private images online?</h3>
+<p>With our converter, yes — tracing runs entirely inside your browser and the file is never uploaded to a server.</p>
+<h3>Can I edit the SVG afterwards?</h3>
+<p>Yes. Open it in any vector editor to change colours, delete parts or adjust shapes. See our guide to <a href="blog-edit-svg-in-inkscape.html">editing SVG files in Inkscape</a> for a free option.</p>
+<h2>Summary</h2>
+<p>To convert a JPG to SVG cleanly: use the largest original you can find, pick the right image type, limit the colours to what you actually see, remove speckles and delete the background. With those steps, even an old, compressed JPG logo can become a crisp vector you can use anywhere.</p>

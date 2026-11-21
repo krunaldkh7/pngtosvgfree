@@ -1,0 +1,52 @@
+slug: blog-svg-vs-canvas
+title: SVG vs Canvas: Which Should You Use for Web Graphics?
+category: Technology
+date: 2026-11-21
+icon: compare
+description: Both SVG and HTML canvas draw graphics in the browser, but they work very differently. Compare performance, interactivity, accessibility and best use cases.
+---
+<p>When you need to draw graphics in a web browser — charts, diagrams, games, editors — two native technologies are available: SVG and the HTML <code>&lt;canvas&gt;</code> element. They can produce similar-looking results, but they work in fundamentally different ways. Choosing the right one saves a lot of effort.</p>
+<h2>How SVG works: retained mode</h2>
+<p>SVG is a <strong>retained-mode</strong> graphics system. Every shape is an element in the page's DOM, like a paragraph or a button. The browser remembers each element and redraws it automatically when something changes. You can select shapes with CSS, attach event listeners, and inspect them in developer tools.</p>
+<h2>How canvas works: immediate mode</h2>
+<p>Canvas is an <strong>immediate-mode</strong> system. It gives you a bitmap — a grid of pixels — and a JavaScript API to draw on it. Once drawn, shapes are just pixels; the browser does not remember them. To move something, you clear the canvas and redraw everything. Canvas supports a 2D API and, through WebGL and WebGPU, hardware-accelerated 3D.</p>
+<h2>Comparison</h2>
+<table>
+<tr><th></th><th>SVG</th><th>Canvas</th></tr>
+<tr><td>Model</td><td>Elements in the DOM</td><td>Pixels on a bitmap</td></tr>
+<tr><td>Scaling</td><td>Sharp at any size</td><td>Must redraw at new resolution</td></tr>
+<tr><td>Interactivity</td><td>Built-in events per shape</td><td>Manual hit detection</td></tr>
+<tr><td>Styling</td><td>CSS</td><td>JavaScript drawing code</td></tr>
+<tr><td>Accessibility</td><td>Can be labelled and read</td><td>Opaque; needs fallback content</td></tr>
+<tr><td>Performance with few objects</td><td>Excellent</td><td>Excellent</td></tr>
+<tr><td>Performance with many objects (10,000+)</td><td>Slows down</td><td>Handles well</td></tr>
+<tr><td>Export</td><td>Save as SVG file</td><td>Export as PNG/JPG</td></tr>
+</table>
+<h2>When SVG is the better choice</h2>
+<ul>
+<li><strong>Icons, logos and illustrations</strong> — static or lightly animated graphics.</li>
+<li><strong>Charts and dashboards</strong> with up to a few thousand elements, especially when they need tooltips, hover effects and accessibility.</li>
+<li><strong>Diagrams and flowcharts</strong> that users click and explore.</li>
+<li><strong>Maps</strong> with interactive regions.</li>
+<li><strong>Graphics that must be crisp at every zoom level and printable.</strong></li>
+</ul>
+<h2>When canvas is the better choice</h2>
+<ul>
+<li><strong>Games</strong> and fast animations with many moving objects.</li>
+<li><strong>Large data visualisations</strong> such as scatter plots with hundreds of thousands of points.</li>
+<li><strong>Image editing and pixel manipulation</strong> — filters, painting, photo editors.</li>
+<li><strong>Real-time effects</strong> such as particle systems and video processing.</li>
+<li><strong>3D graphics</strong> via WebGL or WebGPU.</li>
+</ul>
+<h2>Using both together</h2>
+<p>Many applications combine them. A mapping app might draw thousands of data points on a canvas and overlay interactive SVG labels and controls. A chart library may render to SVG by default and switch to canvas for very large datasets. Some tools also render SVG into a canvas to export images.</p>
+<p>Interestingly, our own <a href="index.html">PNG to SVG converter</a> uses both: it reads your image's pixels through a canvas, traces them into vector paths, and displays the result as SVG that you can zoom into without any loss of sharpness.</p>
+<h2>Accessibility considerations</h2>
+<p>SVG content can be given roles, titles and descriptions, and text inside SVG can be read by screen readers. Canvas content is invisible to assistive technology, so you must provide alternatives — fallback content inside the canvas element, ARIA labels, or a parallel HTML representation. See <a href="blog-accessible-svg.html">How to Make SVG Graphics Accessible</a>.</p>
+<h2>A simple rule of thumb</h2>
+<ul>
+<li>Fewer than a few thousand objects and need interaction, accessibility or crisp scaling? <strong>SVG.</strong></li>
+<li>Thousands of objects, frequent full redraws or pixel-level work? <strong>Canvas.</strong></li>
+</ul>
+<h2>Summary</h2>
+<p>SVG is a scalable, styleable, accessible graphics model built into the DOM — ideal for icons, charts, diagrams and maps. Canvas is a fast pixel surface — ideal for games, huge datasets and image processing. Pick based on object count, interactivity and accessibility needs, and do not hesitate to combine them.</p>

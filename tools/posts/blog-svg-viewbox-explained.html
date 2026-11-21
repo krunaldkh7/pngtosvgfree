@@ -1,0 +1,50 @@
+slug: blog-svg-viewbox-explained
+title: The SVG viewBox Explained (With Simple Examples)
+category: Technology
+date: 2026-11-21
+icon: code
+description: The viewBox attribute is the key to how SVGs scale, crop and zoom. A clear, visual explanation of its four numbers and how they relate to width and height.
+---
+<p>If you have ever opened an SVG and seen <code>viewBox="0 0 24 24"</code>, you have met the most important — and most misunderstood — attribute in SVG. The viewBox controls how a drawing is scaled, positioned and cropped. Once it clicks, resizing, cropping and fixing "invisible" SVGs becomes easy.</p>
+<h2>Two coordinate systems</h2>
+<p>Every SVG has two sizes:</p>
+<ul>
+<li><strong>The viewport</strong> — how big the SVG appears on the page, set by <code>width</code> and <code>height</code> attributes or CSS.</li>
+<li><strong>The viewBox</strong> — which area of the drawing's internal coordinate space is shown inside that viewport.</li>
+</ul>
+<p>Think of the drawing as a large sheet of paper, the viewBox as a camera frame placed on that paper, and the viewport as the screen showing what the camera sees. The browser stretches whatever is inside the camera frame to fill the screen.</p>
+<h2>The four numbers</h2>
+<pre><code>viewBox="min-x min-y width height"</code></pre>
+<ul>
+<li><strong>min-x, min-y</strong> — the top-left corner of the visible area in drawing coordinates.</li>
+<li><strong>width, height</strong> — how much of the drawing is visible.</li>
+</ul>
+<p>So <code>viewBox="0 0 24 24"</code> means "show the area from (0, 0) to (24, 24)". An icon drawn in that space can be displayed at 16, 24 or 512 pixels and will always fill the viewport exactly.</p>
+<h2>Example 1: Scaling</h2>
+<pre><code>&lt;svg viewBox="0 0 100 100" width="50" height="50"&gt;
+  &lt;circle cx="50" cy="50" r="40" fill="#3d4ef5"/&gt;
+&lt;/svg&gt;</code></pre>
+<p>The drawing space is 100 × 100 but the SVG is displayed at 50 × 50 pixels, so everything is drawn at half size. Change width and height to 400 and the same circle is drawn four times larger, perfectly sharp.</p>
+<h2>Example 2: Zooming in</h2>
+<p>Shrink the viewBox while keeping the viewport the same, and you zoom in:</p>
+<pre><code>viewBox="25 25 50 50"</code></pre>
+<p>Now only the central 50 × 50 area is visible, scaled up to fill the SVG. The circle appears twice as big and its edges are cropped.</p>
+<h2>Example 3: Panning</h2>
+<p>Changing min-x and min-y moves the camera without changing zoom. <code>viewBox="20 0 100 100"</code> shifts the visible area 20 units to the right, so the drawing appears to move left. Interactive maps and zoomable diagrams work by updating these numbers.</p>
+<h2>Example 4: Adding padding</h2>
+<p>If an icon touches the edges of its box, enlarge the viewBox evenly to add breathing room: <code>viewBox="-2 -2 28 28"</code> adds 2 units of space on every side of a 24 × 24 drawing.</p>
+<h2>When the shapes do not match</h2>
+<p>If the viewBox is 200 × 100 (2:1) but the viewport is 300 × 300 (square), the drawing cannot fill the space without distortion. The <code>preserveAspectRatio</code> attribute decides what happens; by default the drawing is scaled to fit and centred, leaving empty space above and below. Learn more in <a href="blog-responsive-svg.html">Responsive SVG</a>.</p>
+<h2>Common viewBox problems</h2>
+<h3>"My SVG is blank"</h3>
+<p>The viewBox may point to an area where there is no artwork — for example after a design tool exported shapes far from the origin. Check the coordinates in the path data and adjust the viewBox to cover them.</p>
+<h3>"My SVG will not scale"</h3>
+<p>It probably has width and height but no viewBox. Add <code>viewBox="0 0 W H"</code> using the original width and height values, then size it with CSS.</p>
+<h3>"There is extra white space around my artwork"</h3>
+<p>The viewBox is larger than the drawing. Many editors can fit it automatically: in Inkscape use <em>Edit → Resize Page to Selection</em>; in Illustrator use <em>Fit to Artwork Bounds</em> on the artboard.</p>
+<h3>"My artwork is cut off"</h3>
+<p>The viewBox is smaller than the drawing or offset from it. Enlarge it, or adjust min-x and min-y.</p>
+<h2>viewBox in traced SVGs</h2>
+<p>When you convert an image with our <a href="index.html">PNG to SVG converter</a>, the viewBox is set to the original image's pixel dimensions — for example <code>viewBox="0 0 800 600"</code> for an 800 × 600 PNG. That keeps the proportions identical and lets you scale the result freely.</p>
+<h2>Summary</h2>
+<p>The viewBox defines which part of the drawing is visible; width and height define how large it appears. Smaller viewBox values zoom in, larger ones zoom out, and min-x and min-y pan around. Add a viewBox to any SVG that will not scale, and you have solved the most common SVG sizing problem.</p>

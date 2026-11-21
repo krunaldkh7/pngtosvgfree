@@ -1,0 +1,66 @@
+slug: blog-svg-animation-basics
+title: SVG Animation Basics: CSS, SMIL and JavaScript
+category: Web design
+date: 2026-11-21
+icon: wand
+description: Make SVG icons and illustrations move. A beginner-friendly introduction to animating SVG with CSS, SMIL and JavaScript, with simple examples.
+---
+<p>Animated SVGs add life to websites: loading spinners, icons that react to clicks, logos that draw themselves on screen. Because SVG is made of real elements, each part can be animated independently, and the result stays sharp at any size while weighing far less than a GIF or video.</p>
+<p>There are three main ways to animate SVG. This guide explains each, with small examples you can adapt.</p>
+<h2>Before you start: use inline SVG</h2>
+<p>To animate parts of an SVG with CSS or JavaScript from your page, the SVG must be inline in the HTML. SVGs loaded through <code>&lt;img&gt;</code> can still run animations defined inside the file itself, but your page's CSS and scripts cannot reach them.</p>
+<h2>1. CSS animation</h2>
+<p>CSS is the easiest and most common choice. Any SVG element can be animated with <code>@keyframes</code>, transitions and transforms.</p>
+<h3>A spinning loader</h3>
+<pre><code>&lt;svg class="spin" viewBox="0 0 50 50" width="40" height="40"&gt;
+  &lt;circle cx="25" cy="25" r="20" fill="none" stroke="#3d4ef5" stroke-width="5" stroke-dasharray="90 150" stroke-linecap="round"/&gt;
+&lt;/svg&gt;
+
+.spin { animation: rotate 1s linear infinite; }
+@keyframes rotate { to { transform: rotate(360deg); } }</code></pre>
+<h3>The "line drawing" effect</h3>
+<p>This popular effect makes an outline appear as if drawn by hand. It uses two stroke properties: <code>stroke-dasharray</code> creates a dash as long as the whole path, and <code>stroke-dashoffset</code> shifts it out of view, then back.</p>
+<pre><code>.draw path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 2s ease forwards;
+}
+@keyframes draw { to { stroke-dashoffset: 0; } }</code></pre>
+<p>Replace 1000 with the actual path length for precise timing; JavaScript's <code>path.getTotalLength()</code> tells you the value. Adding <code>pathLength="1"</code> to the path lets you use 1 instead, avoiding the measurement altogether.</p>
+<h3>Transform origin gotcha</h3>
+<p>By default, SVG elements rotate and scale around the SVG's top-left corner, not their own centre. Add <code>transform-box: fill-box; transform-origin: center;</code> to transform shapes around their own centre.</p>
+<h2>2. SMIL animation</h2>
+<p>SMIL is SVG's built-in animation syntax. Animations are written as elements inside the SVG file:</p>
+<pre><code>&lt;circle cx="20" cy="20" r="8" fill="#ec4899"&gt;
+  &lt;animate attributeName="r" values="8;14;8" dur="1.5s" repeatCount="indefinite"/&gt;
+&lt;/circle&gt;</code></pre>
+<p>SMIL's big advantage is that the animation lives inside the file, so it plays even when the SVG is used in an <code>&lt;img&gt;</code> tag. It can also animate things CSS cannot easily reach, such as moving an object along a path with <code>&lt;animateMotion&gt;</code> or morphing a path's shape. All modern browsers support it.</p>
+<h2>3. JavaScript animation</h2>
+<p>For interactive or complex sequences — animations that respond to scrolling, data or user input — JavaScript gives full control. The browser's Web Animations API works on SVG elements:</p>
+<pre><code>document.querySelector('#star').animate(
+  [{ transform: 'scale(1)' }, { transform: 'scale(1.3)' }, { transform: 'scale(1)' }],
+  { duration: 600, easing: 'ease-out' }
+);</code></pre>
+<p>Libraries such as GSAP, anime.js and Motion make timelines, path morphing and scroll-linked animation easier, and smooth over browser differences.</p>
+<h2>Which method should you use?</h2>
+<table>
+<tr><th>Situation</th><th>Recommended</th></tr>
+<tr><td>Hover effects, loaders, simple loops</td><td>CSS</td></tr>
+<tr><td>Animation must work inside &lt;img&gt; or be self-contained</td><td>SMIL</td></tr>
+<tr><td>Interactive, data-driven or long sequences</td><td>JavaScript</td></tr>
+</table>
+<h2>Performance tips</h2>
+<ul>
+<li>Animate <code>transform</code> and <code>opacity</code> when possible; they are cheaper for the browser than changing shapes or filters.</li>
+<li>Keep path counts low. An animated traced image with thousands of shapes can stutter on phones — optimise first (see <a href="blog-optimize-svg-file-size.html">How to Reduce SVG File Size</a>).</li>
+<li>Avoid animating large blur filters, which are expensive to redraw.</li>
+</ul>
+<h2>Respect reduced-motion preferences</h2>
+<p>Some people experience discomfort from motion on screen. Wrap non-essential animation in a media query:</p>
+<pre><code>@media (prefers-reduced-motion: reduce) {
+  .spin, .draw path { animation: none; }
+}</code></pre>
+<h2>Animating your own artwork</h2>
+<p>Have a logo only as a PNG? Convert it with our <a href="index.html">PNG to SVG converter</a>, open the SVG in a code editor, give the paths you want to move a class or ID, and apply the techniques above. Simple, flat-colour logos with few paths are the easiest to animate.</p>
+<h2>Summary</h2>
+<p>CSS handles most SVG animation needs, SMIL keeps animation inside the file, and JavaScript unlocks interactivity. Start with simple transforms and stroke-drawing effects, keep files lean, and always provide a reduced-motion fallback.</p>

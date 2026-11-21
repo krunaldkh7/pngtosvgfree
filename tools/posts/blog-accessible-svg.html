@@ -1,0 +1,64 @@
+slug: blog-accessible-svg
+title: How to Make SVG Graphics Accessible
+category: Web design
+date: 2026-11-21
+icon: shield
+description: Screen readers handle SVG in different ways depending on how it is embedded. Learn how to label meaningful SVGs, hide decorative ones and ensure good contrast.
+---
+<p>SVGs are everywhere in modern interfaces — logos, icons, charts and illustrations. For people who use screen readers, voice control or high-contrast modes, poorly marked-up SVGs can be silent, confusing or invisible. The good news is that making SVG accessible takes only a few attributes.</p>
+<h2>Step 1: Decide whether the graphic is meaningful or decorative</h2>
+<p>Ask: if this image disappeared, would a user miss any information?</p>
+<ul>
+<li><strong>Meaningful</strong> — conveys information or performs an action: a logo linking home, a chart, an icon-only button, a diagram.</li>
+<li><strong>Decorative</strong> — purely visual: background shapes, ornaments, an icon that sits next to text which already says the same thing.</li>
+</ul>
+<p>Meaningful graphics need a text alternative. Decorative graphics should be hidden from assistive technology so they do not add noise.</p>
+<h2>SVG in an &lt;img&gt; tag</h2>
+<p>Treat it like any other image:</p>
+<pre><code>&lt;img src="logo.svg" alt="PNG TO SVG home"&gt;   &lt;!-- meaningful --&gt;
+&lt;img src="swirl.svg" alt=""&gt;                  &lt;!-- decorative --&gt;</code></pre>
+<p>Some older screen reader and browser combinations did not announce SVG images correctly; adding <code>role="img"</code> to the <code>&lt;img&gt;</code> element is a harmless safeguard.</p>
+<h2>Inline SVG: meaningful</h2>
+<pre><code>&lt;svg role="img" aria-labelledby="chart-title chart-desc" viewBox="0 0 400 200"&gt;
+  &lt;title id="chart-title"&gt;Monthly conversions&lt;/title&gt;
+  &lt;desc id="chart-desc"&gt;Conversions rose from 1,200 in January to 3,400 in June.&lt;/desc&gt;
+  ...
+&lt;/svg&gt;</code></pre>
+<ul>
+<li><code>role="img"</code> tells assistive technology to treat the SVG as a single image rather than a group of shapes.</li>
+<li><code>&lt;title&gt;</code> provides a short name; <code>&lt;desc&gt;</code> adds a longer description.</li>
+<li><code>aria-labelledby</code> pointing to both makes support consistent across browsers.</li>
+</ul>
+<p>For a simple icon, <code>aria-label</code> is enough: <code>&lt;svg role="img" aria-label="Warning"&gt;</code>.</p>
+<h2>Inline SVG: decorative</h2>
+<pre><code>&lt;svg aria-hidden="true" focusable="false" ...&gt;</code></pre>
+<p><code>aria-hidden</code> removes it from the accessibility tree. <code>focusable="false"</code> prevents an old Internet Explorer behaviour where SVGs received keyboard focus; it is harmless in modern browsers.</p>
+<h2>Icon-only buttons and links</h2>
+<p>The most common accessibility bug: a button containing only an SVG icon and no text. Label the button, not the icon:</p>
+<pre><code>&lt;button aria-label="Close dialog"&gt;
+  &lt;svg aria-hidden="true" viewBox="0 0 24 24"&gt;...&lt;/svg&gt;
+&lt;/button&gt;</code></pre>
+<p>Alternatively, include visually hidden text inside the button. Either way, the user hears "Close dialog, button".</p>
+<h2>Charts and complex diagrams</h2>
+<p>A title and one-sentence description cannot convey a detailed chart. Provide the underlying data as an HTML table nearby, or a text summary of key findings. This also helps users with cognitive disabilities and anyone skimming.</p>
+<h2>Colour and contrast</h2>
+<ul>
+<li>Icons and graphical elements that convey meaning should have a contrast ratio of at least 3:1 against their background, as recommended by WCAG.</li>
+<li>Do not rely on colour alone — pair red/green status icons with distinct shapes or labels.</li>
+<li>Support Windows High Contrast / forced-colours mode: icons using <code>fill="currentColor"</code> automatically follow the system text colour, while hard-coded colours may disappear.</li>
+</ul>
+<h2>Text inside SVG</h2>
+<p>Real <code>&lt;text&gt;</code> elements in inline SVG can be read by screen readers and translated by browser tools. Text converted to outlines (as in many logos and traced images) cannot, so always provide an equivalent label.</p>
+<h2>Motion</h2>
+<p>Animated SVGs should respect the <code>prefers-reduced-motion</code> setting, and anything that moves for more than five seconds should be pausable. See <a href="blog-svg-animation-basics.html">SVG Animation Basics</a> for an example.</p>
+<h2>Quick checklist</h2>
+<ol>
+<li>Meaningful SVG has an accessible name (alt, aria-label or title).</li>
+<li>Decorative SVG has <code>alt=""</code> or <code>aria-hidden="true"</code>.</li>
+<li>Icon-only controls are labelled.</li>
+<li>Charts have a text or table alternative.</li>
+<li>Graphics meet 3:1 contrast and do not rely on colour alone.</li>
+<li>Animations respect reduced-motion preferences.</li>
+</ol>
+<h2>Summary</h2>
+<p>Accessible SVG comes down to one question — meaningful or decorative? — and a few attributes. Label what matters, hide what does not, and check contrast. Your graphics will then work for every visitor, including those who never see them.</p>

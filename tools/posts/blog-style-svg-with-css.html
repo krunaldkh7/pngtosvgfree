@@ -1,0 +1,66 @@
+slug: blog-style-svg-with-css
+title: Styling SVG with CSS: Colours, Hover Effects and Themes
+category: Web design
+date: 2026-11-21
+icon: palette
+description: Change SVG colours, strokes and sizes with CSS. Learn fill, stroke, currentColor, CSS variables and dark-mode techniques for icons and illustrations.
+---
+<p>One of the best things about SVG on the web is that it can be styled with the same CSS you use for the rest of your page. You can recolour icons on hover, adapt illustrations to dark mode and keep brand colours consistent from a single stylesheet. This guide covers the essentials.</p>
+<h2>First: the SVG must be inline (or a sprite)</h2>
+<p>CSS from your page can only reach SVG elements that are part of the page's DOM. That means inline <code>&lt;svg&gt;</code> code or <code>&lt;use&gt;</code> references to symbols. An SVG loaded with <code>&lt;img&gt;</code> or as a CSS background is treated as a separate image and cannot be restyled from outside. See <a href="blog-ways-to-use-svg-in-html.html">5 Ways to Add SVG to a Web Page</a> for the trade-offs.</p>
+<h2>The key properties</h2>
+<p>SVG shapes use their own set of CSS properties:</p>
+<ul>
+<li><code>fill</code> — the colour inside a shape</li>
+<li><code>stroke</code> — the colour of a shape's outline</li>
+<li><code>stroke-width</code> — outline thickness</li>
+<li><code>stroke-linecap</code> and <code>stroke-linejoin</code> — the shape of line ends and corners</li>
+<li><code>opacity</code>, <code>fill-opacity</code> and <code>stroke-opacity</code></li>
+</ul>
+<pre><code>.icon path { fill: #3d4ef5; }
+.icon:hover path { fill: #8b5cf6; }</code></pre>
+<h2>Presentation attributes vs CSS</h2>
+<p>SVG files often contain attributes such as <code>fill="#000"</code> directly on elements. These "presentation attributes" have the lowest priority, so any CSS rule targeting the element overrides them. Inline <code>style="fill:#000"</code> attributes, however, have high priority and will beat your stylesheet unless you use <code>!important</code>. When preparing SVGs for styling, removing inline styles makes life much easier.</p>
+<h2>currentColor: the most useful trick</h2>
+<p>Set <code>fill="currentColor"</code> (or <code>stroke="currentColor"</code>) in the SVG, and the shape will use the CSS <code>color</code> of its parent element:</p>
+<pre><code>&lt;button class="btn"&gt;
+  &lt;svg viewBox="0 0 24 24" width="18" height="18"&gt;&lt;path fill="currentColor" d="..."/&gt;&lt;/svg&gt;
+  Download
+&lt;/button&gt;
+
+.btn { color: #3d4ef5; }
+.btn:hover { color: #fff; background: #3d4ef5; }</code></pre>
+<p>The icon now changes colour together with the text, with no extra rules.</p>
+<h2>Multi-colour icons with CSS variables</h2>
+<p>For icons with more than one colour, use custom properties:</p>
+<pre><code>&lt;svg class="duo" viewBox="0 0 24 24"&gt;
+  &lt;circle cx="12" cy="12" r="10" fill="var(--bg, #e3e7ff)"/&gt;
+  &lt;path d="..." fill="var(--fg, #3d4ef5)"/&gt;
+&lt;/svg&gt;
+
+.card:hover .duo { --bg: #3d4ef5; --fg: #fff; }</code></pre>
+<p>The values after the comma are fallbacks, so the icon still looks right if the variables are not set.</p>
+<h2>Dark mode</h2>
+<p>Combine variables with the <code>prefers-color-scheme</code> media query:</p>
+<pre><code>:root { --ink: #0f1020; --paper: #ffffff; }
+@media (prefers-color-scheme: dark) {
+  :root { --ink: #f3f4fb; --paper: #0f1020; }
+}
+.illustration .line { stroke: var(--ink); }
+.illustration .bg { fill: var(--paper); }</code></pre>
+<p>A single inline illustration now adapts to the user's system theme.</p>
+<h2>Sizing</h2>
+<p>An SVG with a <code>viewBox</code> scales to whatever width and height you give it with CSS. To make an icon match the surrounding text size, use em units:</p>
+<pre><code>.inline-icon { width: 1em; height: 1em; vertical-align: -0.125em; }</code></pre>
+<p>Learn more about how scaling works in <a href="blog-svg-viewbox-explained.html">The SVG viewBox Explained</a>.</p>
+<h2>Strokes that do not scale</h2>
+<p>When you scale an SVG, stroke widths scale too. For diagrams or line icons that should keep a constant line thickness at any size, add <code>vector-effect: non-scaling-stroke</code> to the shapes.</p>
+<h2>Transitions and hover effects</h2>
+<p>Most SVG properties can be animated with CSS transitions:</p>
+<pre><code>.icon path { transition: fill .2s ease, transform .2s ease; transform-origin: center; transform-box: fill-box; }
+.icon:hover path { fill: #ec4899; transform: scale(1.1); }</code></pre>
+<p>The <code>transform-box: fill-box</code> line makes transforms use the shape's own bounding box, which is usually what you want.</p>
+<h2>Preparing traced SVGs for styling</h2>
+<p>SVGs created with our <a href="index.html">PNG to SVG converter</a> use plain fill attributes, so they are easy to restyle. Open the file, give the paths you want to control a class (for example <code>class="brand"</code>), and target that class in your CSS.</p>
+<h2>Summary</h2>
+<p>Inline your SVG, use <code>fill</code> and <code>stroke</code>, rely on <code>currentColor</code> for single-colour icons and CSS variables for multi-colour ones, and remove inline styles that block your stylesheet. With those basics you can theme an entire icon set from a few lines of CSS.</p>

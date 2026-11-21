@@ -1,0 +1,52 @@
+slug: blog-svg-laser-cutting-engraving
+title: Using SVG Files for Laser Cutting and Engraving
+category: Crafting
+date: 2026-11-21
+icon: scissors
+description: Laser cutters read vector paths to know where to cut and engrave. Learn how to prepare SVG files for LightBurn, Glowforge, xTool and other laser machines.
+---
+<p>Laser cutters and engravers, whether a desktop diode machine or a large CO₂ cutter, work best with vector files. The laser follows paths the way a pen plotter would: a vector line tells it exactly where to travel. SVG is one of the most widely accepted formats for this, supported by LightBurn, Glowforge's web app, xTool Creative Space, LaserGRBL (for engraving), Inkscape-based workflows and many others.</p>
+<p>This guide covers how lasers interpret SVG files and how to prepare artwork so it cuts and engraves exactly as you expect.</p>
+<h2>Cut, score and engrave: three different operations</h2>
+<ul>
+<li><strong>Cut</strong> — the laser follows a path at high power and low speed, cutting all the way through the material. Requires a vector outline.</li>
+<li><strong>Score</strong> (or line engrave) — the laser follows a path at low power, marking a thin line on the surface without cutting through. Also requires a vector path.</li>
+<li><strong>Engrave</strong> (fill or raster engrave) — the laser sweeps back and forth, burning away a filled area like a printer. Works from filled vector shapes or from raster images.</li>
+</ul>
+<p>Most laser software assigns these operations by colour or layer. For example, you might use red strokes for cuts, blue strokes for scores and black fills for engraving. Check your software's conventions, then colour your SVG accordingly.</p>
+<h2>Preparing artwork for cutting</h2>
+<h3>Use closed paths</h3>
+<p>A shape you want to cut out must be a closed path — the start and end points must meet. Open paths may cut, but they will not form a clean piece, and some software will not fill them for engraving.</p>
+<h3>Remove duplicate and overlapping lines</h3>
+<p>If two identical paths sit on top of each other, the laser will cut the same line twice, which over-burns the edge and wastes time. Traced artwork can contain overlapping shapes; merge or delete duplicates in your vector editor before sending the file.</p>
+<h3>Mind small details and kerf</h3>
+<p>The laser beam has a width, called kerf, typically around 0.1–0.2 mm depending on machine and material. Tiny holes, thin bridges and delicate text may burn away entirely. As a rule of thumb, keep bridges in wood and acrylic at least 1–2 mm wide, and test fragile designs on scrap first.</p>
+<h3>Check the size</h3>
+<p>SVG files can store their size in pixels, millimetres or inches. Different programs assume different pixel-per-inch values (commonly 72 or 96), so an imported design may appear at the wrong scale. Always check dimensions after importing and set the exact size you need.</p>
+<h2>Preparing artwork for engraving</h2>
+<p>For fill engraving, the laser needs filled shapes. A traced logo with solid fills is perfect. Keep in mind:</p>
+<ul>
+<li>Every colour can be mapped to a different power or speed setting, allowing light and dark engraving tones.</li>
+<li>Very fine detail may not survive on wood with strong grain; slate, anodised aluminium and acrylic hold detail better.</li>
+<li>For photographic engraving, raster images with dithering usually give better results than traced vectors.</li>
+</ul>
+<h2>Turning an image into a laser-ready SVG</h2>
+<p>If your design starts as a PNG or JPG, trace it first. In our <a href="index.html">PNG to SVG converter</a>:</p>
+<ol>
+<li>Choose <strong>Silhouette</strong> for a single-colour cut shape, or <strong>Logo</strong> for multi-colour engraving.</li>
+<li>Increase <strong>speckle removal</strong> so tiny specks do not become separate cut paths.</li>
+<li>Lower the <strong>detail</strong> slightly if edges are jagged; smoother paths cut faster and cleaner.</li>
+<li>Make the background transparent and download the SVG.</li>
+</ol>
+<p>Then import it into your laser software, set the size, assign operations and run a test.</p>
+<h2>Common problems and fixes</h2>
+<ul>
+<li><strong>The design imports at the wrong size:</strong> check the document units and DPI settings in the importing software, then rescale to exact dimensions.</li>
+<li><strong>Nothing appears to cut:</strong> some software needs strokes rather than fills for cut lines. Convert fills to outlines or assign the layer to "line" mode.</li>
+<li><strong>Each letter cuts slowly with lots of jumps:</strong> the file contains many tiny path segments. Simplify paths (Inkscape: <em>Path → Simplify</em>) to reduce nodes.</li>
+<li><strong>Inner parts of letters fall out:</strong> letters like O, A and B have counters (holes). For stencils, add bridges so the inner parts stay attached.</li>
+</ul>
+<h2>Safety reminder</h2>
+<p>Never laser-cut PVC or other chlorine-containing plastics, which release corrosive and toxic gas. Use proper ventilation, never leave a running laser unattended, and keep a fire extinguisher nearby.</p>
+<h2>Summary</h2>
+<p>Lasers follow vector paths. Use closed, clean paths without duplicates, colour-code cut, score and engrave operations, respect the beam's kerf, and always verify the size after import. Starting from a well-traced SVG makes every one of those steps easier.</p>

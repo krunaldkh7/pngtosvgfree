@@ -1,0 +1,44 @@
+slug: blog-clean-up-traced-svg
+title: How to Clean Up a Traced SVG for Professional Results
+category: Tips
+date: 2026-11-21
+icon: wand
+description: Automatic tracing gets you most of the way. These clean-up techniques — removing fragments, merging shapes, fixing colours and simplifying nodes — finish the job.
+---
+<p>Automatic tracing is fast and remarkably good, but it is not perfect. A traced logo may have a few stray specks, slightly off colours or shapes with more nodes than necessary. A few minutes of clean-up turns a good trace into a professional, production-ready file.</p>
+<h2>Start with the best possible trace</h2>
+<p>Clean-up is easier when the tracing settings are right. Before downloading from our <a href="index.html">PNG to SVG converter</a>:</p>
+<ul>
+<li>Set the colour count to the number of colours actually in the design.</li>
+<li>Increase speckle removal until isolated dots disappear.</li>
+<li>Adjust the corner angle so corners are sharp where they should be and curves are smooth elsewhere.</li>
+<li>Make the background transparent.</li>
+<li>Use the colour palette to recolour any slightly off shades to exact brand colours.</li>
+</ul>
+<p>Then open the SVG in a vector editor such as <a href="blog-edit-svg-in-inkscape.html">Inkscape</a>, Illustrator, Affinity Designer or Figma.</p>
+<h2>1. Remove leftover fragments</h2>
+<p>Zoom in to 400–800% and pan around the edges of shapes. Tiny slivers sometimes remain where two colours meet. Select and delete them. In Inkscape, you can use <em>Edit → Select Same → Fill Color</em> to see all shapes of one colour together, which makes strays easy to spot.</p>
+<h2>2. Merge shapes of the same colour</h2>
+<p>A single colour may be split into several separate shapes. Merging them (Union in Inkscape, Pathfinder Unite in Illustrator, Union in Figma) makes the file simpler, easier to recolour and better for cutting machines, which would otherwise cut every separate outline.</p>
+<h2>3. Fix colours exactly</h2>
+<p>Tracing calculates average colours, so a brand blue might come out as <code>#3c4ff2</code> instead of <code>#3d4ef5</code>. Select each colour group and enter the exact hex value from your brand guidelines. Converting the colours to named swatches or variables also makes future changes easier.</p>
+<h2>4. Straighten lines and sharpen corners</h2>
+<p>Look for lines that should be perfectly straight — edges of boxes, horizontal bars in letters — and check they are not slightly wavy. With the node tool, select the nodes along the line and use the "make segments lines" option, or delete extra nodes and align the remaining ones. Make corners that should be sharp into cusp nodes.</p>
+<h2>5. Simplify nodes</h2>
+<p>Fewer nodes mean smoother curves, smaller files and easier editing. Use the simplify command (Ctrl+L in Inkscape, <em>Object → Path → Simplify</em> in Illustrator) gently, one step at a time, and compare with the original. Stop as soon as shapes start to drift.</p>
+<h2>6. Replace text with a real font</h2>
+<p>Traced text is never quite as crisp as typeset text. If you can identify the font (tools such as WhatTheFont or Font Squirrel's matcher can help), retype the text with the real font, match the size and spacing, and then convert it to outlines. This gives the cleanest possible lettering.</p>
+<h2>7. Rebuild simple geometric shapes</h2>
+<p>Circles, rectangles and stars are easier to redraw than to fix. Draw a perfect circle over a traced one, match the size and colour, and delete the traced version. Logos made of simple geometry often look dramatically better after this step.</p>
+<h2>8. Check overlaps and gaps</h2>
+<p>Traced colour regions sit edge to edge. At some zoom levels, a hairline gap may appear between them in certain apps. If this happens, enlarge the shape underneath slightly or add a thin stroke of the same colour to close the gap.</p>
+<h2>9. Organise layers and names</h2>
+<p>Group shapes logically (for example "icon", "wordmark", "tagline") and name the groups. This helps anyone who edits the file later and makes exported SVG code easier to work with.</p>
+<h2>10. Export cleanly</h2>
+<ul>
+<li>Resize the canvas or artboard to fit the artwork.</li>
+<li>Save as plain or optimised SVG for the web, and keep a PDF for print.</li>
+<li>Run the final file through an optimiser such as SVGO for websites. See <a href="blog-optimize-svg-file-size.html">How to Reduce SVG File Size</a>.</li>
+</ul>
+<h2>Summary</h2>
+<p>Get the trace as close as possible with good settings, then remove fragments, merge same-coloured shapes, fix exact colours, straighten lines, simplify nodes and rebuild text and geometry where it helps. These steps turn a quick automatic trace into a polished vector you can confidently hand to a printer or developer.</p>

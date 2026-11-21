@@ -1,0 +1,48 @@
+slug: blog-common-svg-errors
+title: Common SVG Problems and How to Fix Them
+category: Tips
+date: 2026-11-21
+icon: wand
+description: SVG will not open, appears blank, imports at the wrong size or cuts strangely? Here are the most common SVG problems and step-by-step fixes.
+---
+<p>SVG is reliable once you know its quirks. Most problems come from a handful of causes: missing information in the file, features an app does not support, or sizing differences between programs. Here are the issues people run into most often, with fixes.</p>
+<h2>1. "The file will not open" or "Invalid SVG"</h2>
+<p><strong>Causes:</strong> the file is damaged, is not really an SVG, or contains invalid XML.</p>
+<p><strong>Fixes:</strong></p>
+<ul>
+<li>Open it in a text editor. A real SVG begins with <code>&lt;svg</code> or <code>&lt;?xml</code>. If you see binary characters or HTML, the file is not an SVG — re-download it.</li>
+<li>Open it in a browser. If the browser shows an XML error, it will often point to the line with the problem (for example an unescaped <code>&amp;</code> character).</li>
+<li>Open and re-save it in Inkscape, which can repair many minor issues.</li>
+</ul>
+<h2>2. The SVG appears blank</h2>
+<ul>
+<li><strong>Missing namespace:</strong> standalone SVG files need <code>xmlns="http://www.w3.org/2000/svg"</code> on the root element. Without it, browsers may show nothing when loading it as an image.</li>
+<li><strong>Artwork outside the viewBox:</strong> the shapes exist but are positioned outside the visible area. See <a href="blog-svg-viewbox-explained.html">The SVG viewBox Explained</a>.</li>
+<li><strong>White on white:</strong> the artwork may be white or transparent. Try viewing it on a dark background.</li>
+<li><strong>Linked images missing:</strong> the SVG references external images that are not available.</li>
+</ul>
+<h2>3. Wrong size after importing</h2>
+<p>Programs interpret SVG units differently — some assume 72 pixels per inch, others 96. A design made at 4 inches may appear at 3 or 5.3 inches.</p>
+<p><strong>Fixes:</strong> set explicit physical units (for example <code>width="100mm"</code>) when saving from your editor, or simply resize after importing using exact measurements. Always check size before cutting or printing.</p>
+<h2>4. Text looks wrong</h2>
+<p>SVG text uses fonts installed on the viewing device. If the font is missing, another is substituted. <strong>Fix:</strong> convert text to paths (outlines) before sharing, or embed fonts by exporting to PDF.</p>
+<h2>5. Colours or effects are missing in an app</h2>
+<p>Gradients, filters, masks, blend modes and CSS styles inside the SVG may not be supported by every app — Office, Canva, cutting software and older tools are common culprits.</p>
+<p><strong>Fixes:</strong> convert CSS styles to attributes (Inkscape's Plain SVG export helps), expand or flatten effects, replace gradients with flat colours for cutting files, and remove masks by applying them.</p>
+<h2>6. Cricut Design Space or Silhouette shows extra layers</h2>
+<p>Traced or exported SVGs may contain many separate shapes of the same colour, invisible elements or a background rectangle.</p>
+<p><strong>Fixes:</strong> delete the background, weld or union shapes of the same colour, and hide or delete anything you do not want to cut. Remember that Silhouette Studio Basic Edition does not import SVG — Designer Edition or higher is required.</p>
+<h2>7. The machine cuts lines inside the design</h2>
+<p>Overlapping shapes that are not welded cut separately, slicing your design. <strong>Fix:</strong> weld or union overlapping shapes of the same colour before cutting.</p>
+<h2>8. The file is huge and slow</h2>
+<p>Usually caused by too many colours or shapes from tracing, embedded raster images or editor metadata. <strong>Fixes:</strong> re-trace with fewer colours and higher speckle removal, simplify paths and run the file through an optimiser. See <a href="blog-optimize-svg-file-size.html">How to Reduce SVG File Size</a>.</p>
+<h2>9. Jagged or wobbly edges</h2>
+<p>The SVG was traced from a low-resolution or noisy image, or with detail set too high. <strong>Fixes:</strong> start from a larger, cleaner image, use noise smoothing, and adjust the detail and corner settings in our <a href="index.html">PNG to SVG converter</a>. Then simplify nodes in a vector editor if needed.</p>
+<h2>10. A thin white line appears between colours</h2>
+<p>Some renderers show hairline gaps where two shapes meet exactly, due to anti-aliasing. <strong>Fixes:</strong> place a slightly larger shape behind the seam, add a thin stroke of the same colour, or merge the shapes if they are the same colour.</p>
+<h2>11. The SVG will not upload to a website or platform</h2>
+<p>Many platforms (social networks, some marketplaces, email services) do not accept SVG for security or compatibility reasons. <strong>Fix:</strong> export a PNG with our <a href="bulk-svg-to-png-converter.html">SVG to PNG converter</a>.</p>
+<h2>12. Website SVG looks different from the design</h2>
+<p>Inline SVGs can be affected by your site's CSS — for example a global <code>svg { fill: currentColor }</code> rule or <code>max-width</code> on images. Inspect the element with browser developer tools to find conflicting styles, and make sure IDs inside different inline SVGs are unique (duplicate gradient IDs are a classic cause of wrong colours).</p>
+<h2>Summary</h2>
+<p>Most SVG problems come from missing namespace or viewBox information, unsupported features, unit differences, missing fonts or overly complex traces. Check the file in a browser and a text editor, simplify features for the target app, convert text to paths and verify sizes — and nearly every SVG issue disappears.</p>

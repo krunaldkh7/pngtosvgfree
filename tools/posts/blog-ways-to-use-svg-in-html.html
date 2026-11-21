@@ -1,0 +1,69 @@
+slug: blog-ways-to-use-svg-in-html
+title: 5 Ways to Add SVG to a Web Page (and When to Use Each)
+category: Web design
+date: 2026-11-21
+icon: code
+description: img tag, inline SVG, CSS background, object or sprite? Compare the ways to put SVG on a website, with pros, cons and code examples.
+---
+<p>SVG is the best format for logos, icons and illustrations on the web, but there is more than one way to put it on a page. Each method affects styling, caching, accessibility and performance differently. Here are the five main options and when to choose each.</p>
+<h2>1. The &lt;img&gt; tag</h2>
+<pre><code>&lt;img src="logo.svg" alt="Company name" width="160" height="40"&gt;</code></pre>
+<p>The simplest approach, and often the right one.</p>
+<ul>
+<li><strong>Pros:</strong> easy, cached by the browser, works with lazy loading, keeps HTML clean.</li>
+<li><strong>Cons:</strong> you cannot change the SVG's colours with your page's CSS, and scripts inside the SVG do not run (which is also a security benefit).</li>
+<li><strong>Use it for:</strong> logos, illustrations and any graphic you do not need to restyle.</li>
+</ul>
+<p>Always include <code>alt</code> text and width and height attributes to prevent layout shift while the page loads.</p>
+<h2>2. Inline SVG</h2>
+<pre><code>&lt;svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"&gt;
+  &lt;path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z" fill="currentColor"/&gt;
+&lt;/svg&gt;</code></pre>
+<p>The SVG code is placed directly in the HTML.</p>
+<ul>
+<li><strong>Pros:</strong> full CSS control (colours, hover effects, animation), no extra HTTP request, can be scripted.</li>
+<li><strong>Cons:</strong> not cached separately, so repeating a large SVG on many pages increases page weight; HTML becomes harder to read.</li>
+<li><strong>Use it for:</strong> icons that change colour on hover or with themes, animated graphics and interactive charts.</li>
+</ul>
+<p>Using <code>fill="currentColor"</code> makes the icon take the text colour of its parent, which is ideal for buttons and links.</p>
+<h2>3. CSS background-image</h2>
+<pre><code>.badge { background: url("badge.svg") no-repeat center / contain; }</code></pre>
+<ul>
+<li><strong>Pros:</strong> keeps decorative images out of the HTML, cached, easy to swap with media queries.</li>
+<li><strong>Cons:</strong> not accessible to screen readers (fine for decoration, bad for meaningful images) and not styleable from the page.</li>
+<li><strong>Use it for:</strong> decorative patterns, backgrounds and ornaments.</li>
+</ul>
+<p>Modern CSS also offers <code>mask-image</code>, which lets you use an SVG as a shape and colour it with <code>background-color</code> — a neat way to recolour icons without inlining them.</p>
+<h2>4. The &lt;object&gt; or &lt;iframe&gt; element</h2>
+<pre><code>&lt;object data="diagram.svg" type="image/svg+xml"&gt;Diagram of the process&lt;/object&gt;</code></pre>
+<ul>
+<li><strong>Pros:</strong> the SVG keeps its own scripts and interactivity, and is cached.</li>
+<li><strong>Cons:</strong> styling from the parent page is not possible, and it behaves more like an embedded document than an image.</li>
+<li><strong>Use it for:</strong> self-contained interactive SVGs, such as some maps and diagrams.</li>
+</ul>
+<h2>5. SVG sprites with &lt;use&gt;</h2>
+<pre><code>&lt;svg width="24" height="24"&gt;&lt;use href="icons.svg#search"&gt;&lt;/use&gt;&lt;/svg&gt;</code></pre>
+<p>Many icons are stored as <code>&lt;symbol&gt;</code> elements in one file and referenced by ID.</p>
+<ul>
+<li><strong>Pros:</strong> one cached file for an entire icon set, while still allowing <code>currentColor</code> styling.</li>
+<li><strong>Cons:</strong> external sprites must be served from the same origin (or with CORS), and setup is a little more involved.</li>
+<li><strong>Use it for:</strong> sites with many icons used across many pages.</li>
+</ul>
+<h2>Which one should you choose?</h2>
+<table>
+<tr><th>Need</th><th>Best method</th></tr>
+<tr><td>Simple logo or illustration</td><td>&lt;img&gt;</td></tr>
+<tr><td>Icon that changes colour</td><td>Inline SVG or sprite</td></tr>
+<tr><td>Large icon set</td><td>Sprite with &lt;use&gt;</td></tr>
+<tr><td>Decorative background</td><td>CSS background or mask</td></tr>
+<tr><td>Interactive standalone graphic</td><td>&lt;object&gt; or inline</td></tr>
+</table>
+<h2>Performance and accessibility tips</h2>
+<ul>
+<li>Optimise SVGs before use — see <a href="blog-optimize-svg-file-size.html">How to Reduce SVG File Size</a>.</li>
+<li>For meaningful inline SVGs, add <code>role="img"</code> and a <code>&lt;title&gt;</code>; for decorative ones, use <code>aria-hidden="true"</code>.</li>
+<li>Avoid inlining very large illustrations on every page; use <code>&lt;img&gt;</code> so the browser can cache them.</li>
+<li>Never inline SVG files uploaded by users without sanitising them, as they can contain scripts.</li>
+</ul>
+<h2>Summary</h2>
+<p>Use <code>&lt;img&gt;</code> by default, inline SVG when you need CSS control, sprites for large icon sets, and CSS backgrounds for decoration. Matching the method to the job gives you sharp graphics, good caching and accessible pages.</p>

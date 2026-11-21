@@ -1,0 +1,55 @@
+slug: blog-svg-icons-vs-icon-fonts
+title: SVG Icons vs Icon Fonts: Which Is Better?
+category: Web design
+date: 2026-11-21
+icon: compare
+description: Icon fonts were once the standard way to add icons to websites. Today most teams choose SVG. Here is why, plus the cases where fonts still make sense.
+---
+<p>A decade ago, icon fonts such as early versions of Font Awesome and Glyphicons were the go-to solution for website icons. You loaded one font file and typed a class name to get a crisp, colourable icon. Today, most design systems — including Material Symbols' SVG option, Heroicons, Lucide and Font Awesome's own SVG framework — recommend SVG instead. Here is a fair comparison.</p>
+<h2>How each approach works</h2>
+<p><strong>Icon fonts</strong> map icons to characters in a font file. CSS inserts the character with a pseudo-element, and the browser draws it like a letter.</p>
+<p><strong>SVG icons</strong> are vector images added inline, through a sprite with <code>&lt;use&gt;</code>, or as <code>&lt;img&gt;</code> files.</p>
+<h2>Sharpness and rendering</h2>
+<p>Fonts are rendered with text anti-aliasing and hinting, which can make icons look slightly blurry or shift by half a pixel, especially on Windows. Icons can also be affected by line-height and baseline alignment. SVGs are rendered as graphics with precise geometry, giving consistently crisp results.</p>
+<p><strong>Winner: SVG</strong></p>
+<h2>Accessibility</h2>
+<p>Screen readers may try to read an icon font's character aloud — sometimes as an unusual Unicode symbol, sometimes as nothing at all. Users who override website fonts (for example, people with dyslexia using a custom font) can see icon fonts break into empty boxes. SVGs can be labelled or hidden explicitly with <code>aria-label</code>, <code>&lt;title&gt;</code> or <code>aria-hidden</code>, and are unaffected by font overrides. See <a href="blog-accessible-svg.html">How to Make SVG Graphics Accessible</a>.</p>
+<p><strong>Winner: SVG</strong></p>
+<h2>Reliability</h2>
+<p>If the font file fails to load, is blocked, or loads slowly, icon fonts show empty squares or random letters — or nothing — until it arrives. Inline SVG is part of the HTML and appears immediately.</p>
+<p><strong>Winner: SVG</strong></p>
+<h2>Colour and styling</h2>
+<p>Icon fonts can only be one colour (the text colour), though they are trivially easy to colour and size with <code>color</code> and <code>font-size</code>. SVGs can do the same using <code>fill="currentColor"</code>, and they also support multiple colours, strokes, gradients and animation of individual parts.</p>
+<p><strong>Winner: SVG</strong> (fonts are slightly easier for single-colour basics)</p>
+<h2>Performance</h2>
+<p>This one is nuanced. An icon font loads every icon in the set, even if you use only five — although subsetting tools can reduce that. Inline SVG adds only the icons you use, but repeats markup on every page. SVG sprites combine the best of both: a single cached file containing only the icons you need.</p>
+<p><strong>Winner: SVG sprites</strong>, with care</p>
+<h2>Ease of use</h2>
+<p>Icon fonts remain wonderfully simple: add a stylesheet, write <code>&lt;i class="icon-search"&gt;&lt;/i&gt;</code>, done. SVG workflows require a bit more setup, though modern frameworks and icon libraries offer components that make it just as easy — for example <code>&lt;SearchIcon /&gt;</code> in React.</p>
+<p><strong>Winner: tie</strong> — fonts for quick prototypes, SVG components in modern projects</p>
+<h2>Summary table</h2>
+<table>
+<tr><th>Criterion</th><th>Icon font</th><th>SVG</th></tr>
+<tr><td>Crisp rendering</td><td>Good</td><td>Excellent</td></tr>
+<tr><td>Accessibility</td><td>Poor by default</td><td>Excellent when labelled</td></tr>
+<tr><td>Multi-colour</td><td>No</td><td>Yes</td></tr>
+<tr><td>Works if fonts are blocked</td><td>No</td><td>Yes</td></tr>
+<tr><td>Animation of parts</td><td>No</td><td>Yes</td></tr>
+<tr><td>Setup effort</td><td>Very low</td><td>Low to medium</td></tr>
+</table>
+<h2>When icon fonts still make sense</h2>
+<ul>
+<li>Legacy projects where replacing hundreds of icons is not worth the effort.</li>
+<li>Environments where only text styling is available, such as some email templates or content management systems.</li>
+<li>Ligature-based fonts (like Material Symbols' font version) when you need to type icon names in plain text.</li>
+</ul>
+<h2>Migrating from an icon font to SVG</h2>
+<ol>
+<li>List the icons actually used across your site.</li>
+<li>Get SVG versions from the same library, or trace custom icons with our <a href="index.html">PNG to SVG converter</a>.</li>
+<li>Optimise them and build a sprite or component set.</li>
+<li>Replace font markup page by page, adding labels for meaningful icons.</li>
+<li>Remove the font file once nothing references it.</li>
+</ol>
+<h2>Summary</h2>
+<p>SVG icons render more precisely, are more accessible, more reliable and more flexible than icon fonts. Fonts are still quick for prototypes and legacy sites, but for new projects SVG is the clear choice.</p>

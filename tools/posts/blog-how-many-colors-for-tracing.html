@@ -1,0 +1,61 @@
+slug: blog-how-many-colors-for-tracing
+title: How Many Colours Should You Use When Tracing an Image?
+category: Tips
+date: 2026-11-21
+icon: palette
+description: The colour count is the most important tracing setting. Learn how to choose the right number for logos, illustrations, photos and cutting files.
+---
+<p>When you convert a PNG or JPG to SVG, one setting affects the result more than any other: the number of colours. Too few and important details merge together. Too many and you get a bloated file full of tiny, noisy shapes. This guide shows how to pick the right number for different types of images.</p>
+<h2>Why the colour count matters so much</h2>
+<p>Tracing software first reduces the image to a limited palette — a process called colour quantization — and then draws a shape around each region of each colour. Every extra colour creates more regions, more edges and more paths. Two effects follow:</p>
+<ul>
+<li><strong>Fidelity</strong> rises with more colours, up to a point.</li>
+<li><strong>File size and complexity</strong> rise with every colour, often steeply.</li>
+</ul>
+<p>The goal is the smallest number of colours that still looks right. Read more about quantization in <a href="blog-how-image-tracing-works.html">How Image Tracing Works</a>.</p>
+<h2>Recommended starting points</h2>
+<table>
+<tr><th>Image type</th><th>Suggested colours</th></tr>
+<tr><td>Silhouette, stencil, single-colour cut</td><td>1–2</td></tr>
+<tr><td>Signature, ink drawing, line art</td><td>2</td></tr>
+<tr><td>Simple logo or icon</td><td>Exactly the colours you can see (often 2–5)</td></tr>
+<tr><td>Detailed logo with shading or gradients</td><td>6–12</td></tr>
+<tr><td>Cartoon or flat illustration</td><td>8–16</td></tr>
+<tr><td>Photograph (stylised poster effect)</td><td>16–32</td></tr>
+</table>
+<h2>Count the colours you actually see</h2>
+<p>For logos, look at the original and count the distinct colours a person would name: "navy, orange and white" is three. Include the background if you plan to remove it afterwards. Set the colour count to that number. The edges of a logo contain hundreds of in-between shades created by anti-aliasing; limiting the palette forces those shades into the real colours, giving clean, sharp edges.</p>
+<h2>Signs you have too few colours</h2>
+<ul>
+<li>Two different brand colours have merged into one.</li>
+<li>Text or thin lines have disappeared into the background.</li>
+<li>Shading on a character or object is gone, making it look flat in a way you do not want.</li>
+</ul>
+<p>Increase the count by one or two and compare.</p>
+<h2>Signs you have too many colours</h2>
+<ul>
+<li>Edges show thin "halo" outlines in slightly different shades.</li>
+<li>Flat areas break into blotchy patches.</li>
+<li>The file contains hundreds or thousands of paths and is much larger than expected.</li>
+</ul>
+<p>Reduce the count, or increase speckle removal to clean up tiny patches.</p>
+<h2>Special cases</h2>
+<h3>Gradients</h3>
+<p>Tracing turns smooth gradients into bands of flat colour. More colours make the bands narrower and the gradient smoother, but files get bigger. Sometimes it is better to trace with fewer colours and then replace the banded area with a real SVG gradient in a vector editor.</p>
+<h3>Photos</h3>
+<p>A photo will never be perfectly reproduced as flat shapes. Between 16 and 32 colours gives a pleasing poster-art look. Beyond that, file size grows quickly with little visual gain. See <a href="blog-photo-to-vector-art.html">Photo to Vector Art: What to Expect</a>.</p>
+<h3>Cutting machines</h3>
+<p>Each colour is a separate material layer, so fewer is better. Most layered vinyl projects use 2–5 colours. For a single cut, use 1.</p>
+<h3>Embroidery and screen printing</h3>
+<p>Each colour means a thread change or a separate screen, which adds cost. Keep it as low as the design allows — commonly 1–6.</p>
+<h2>A quick workflow</h2>
+<ol>
+<li>Let the converter auto-detect the image type and apply its preset.</li>
+<li>Compare the result with the original in split view at 100% and 400% zoom.</li>
+<li>Adjust the colour count up or down by one or two until key details are clear.</li>
+<li>Check the stats: paths, size and colours. Fewer paths for the same look is better.</li>
+<li>Remove or recolour individual colours with the palette controls before downloading.</li>
+</ol>
+<p>Our <a href="index.html">PNG to SVG converter</a> updates the preview instantly when you change the colour count, so it is easy to experiment.</p>
+<h2>Summary</h2>
+<p>Start with the number of colours a person would actually name in the image, then adjust while watching the preview and the path count. Fewer colours give cleaner, smaller, more editable SVGs; add more only when they bring visible detail you need.</p>

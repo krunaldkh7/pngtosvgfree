@@ -1,0 +1,59 @@
+slug: blog-svg-favicon
+title: How to Create and Add an SVG Favicon to Your Website
+category: Web design
+date: 2026-11-21
+icon: image
+description: SVG favicons stay sharp on every screen and can even adapt to dark mode. Learn how to make one, add it to your site and provide fallbacks.
+---
+<p>The favicon is the tiny icon in the browser tab, bookmarks and history. For years it meant juggling a pile of PNG sizes and an old-fashioned .ico file. Modern browsers now support SVG favicons, which means one small file that looks sharp on every screen density — and can even switch colours in dark mode.</p>
+<h2>Why use an SVG favicon?</h2>
+<ul>
+<li><strong>Always sharp</strong> — no blurry icon on high-resolution displays.</li>
+<li><strong>One file</strong> instead of many PNG sizes for desktop tabs.</li>
+<li><strong>Tiny</strong> — a simple icon is often under 1 KB.</li>
+<li><strong>Dark-mode aware</strong> — CSS media queries inside the SVG can change its colours.</li>
+</ul>
+<p>Chrome, Edge, Firefox and Opera support SVG favicons. Safari has historically had limited support, which is why a PNG fallback is still recommended.</p>
+<h2>Step 1: Design for tiny sizes</h2>
+<p>A favicon is usually displayed at 16 × 16 or 32 × 32 pixels. Detail that looks great in your full logo becomes mush at that size.</p>
+<ul>
+<li>Use a simplified mark or a single letter rather than the full logo with text.</li>
+<li>Stick to one to three bold colours.</li>
+<li>Use thick shapes and avoid thin lines.</li>
+<li>Design on a square canvas, for example <code>viewBox="0 0 64 64"</code>.</li>
+<li>Consider a coloured rounded square behind the mark so it stays visible on both light and dark tab bars.</li>
+</ul>
+<p>Only have your logo as PNG? Trace it with our <a href="index.html">PNG to SVG converter</a> using a low colour count, then simplify it in a vector editor.</p>
+<h2>Step 2: Optimise the file</h2>
+<p>Remove metadata and unnecessary precision with a tool such as SVGO. Make sure the root element has a <code>viewBox</code> and an <code>xmlns="http://www.w3.org/2000/svg"</code> attribute — the namespace is required when the SVG is loaded as a standalone file.</p>
+<h2>Step 3: Add it to your HTML</h2>
+<pre><code>&lt;link rel="icon" href="/favicon.svg" type="image/svg+xml"&gt;
+&lt;link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png"&gt;
+&lt;link rel="apple-touch-icon" href="/apple-touch-icon.png"&gt;</code></pre>
+<ul>
+<li>Browsers that support SVG favicons use the first line.</li>
+<li>Others fall back to the 32 × 32 PNG.</li>
+<li>iOS uses the 180 × 180 <code>apple-touch-icon</code> PNG when someone adds your site to their home screen.</li>
+</ul>
+<p>You can create the PNG versions from your SVG with our <a href="bulk-svg-to-png-converter.html">SVG to PNG converter</a> using the Width option.</p>
+<p>Many sites also keep a <code>favicon.ico</code> in the site root, because some tools and older browsers request it automatically.</p>
+<h2>Step 4 (optional): Dark-mode favicon</h2>
+<p>Because an SVG favicon is a real SVG, it can contain a <code>&lt;style&gt;</code> block:</p>
+<pre><code>&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"&gt;
+  &lt;style&gt;
+    path { fill: #0f1020; }
+    @media (prefers-color-scheme: dark) { path { fill: #ffffff; } }
+  &lt;/style&gt;
+  &lt;path d="..."/&gt;
+&lt;/svg&gt;</code></pre>
+<p>A dark icon on a dark browser tab is invisible; this switches it to white when the user's system is in dark mode. Browser support for this behaviour varies, so a mark on a coloured background is the most reliable option.</p>
+<h2>Step 5: Add a web app manifest (for installable sites)</h2>
+<p>If your site can be installed as an app, add larger PNG icons (192 × 192 and 512 × 512) to a <code>manifest.webmanifest</code> file. Android and desktop app launchers use those rather than the favicon.</p>
+<h2>Troubleshooting</h2>
+<ul>
+<li><strong>The old icon still shows:</strong> browsers cache favicons aggressively. Hard-refresh, open a private window, or add a version query such as <code>favicon.svg?v=2</code>.</li>
+<li><strong>The icon is blank:</strong> check the <code>xmlns</code> attribute and that the server sends the <code>image/svg+xml</code> content type.</li>
+<li><strong>It looks blurry or cropped:</strong> make sure the viewBox is square and the artwork fills it with a little padding.</li>
+</ul>
+<h2>Summary</h2>
+<p>Design a bold, simple, square mark, export it as an optimised SVG, link it with <code>rel="icon"</code>, and keep PNG fallbacks for Safari and home-screen icons. You get a crisp tab icon on every display with a file smaller than this paragraph.</p>

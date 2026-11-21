@@ -1,0 +1,45 @@
+slug: blog-image-resolution-for-tracing
+title: Image Resolution and DPI: What Matters for Tracing and Print
+category: Basics
+date: 2026-11-21
+icon: gauge
+description: Pixels, DPI and PPI explained in plain English — and how resolution affects tracing quality, print sharpness and when vectors make resolution irrelevant.
+---
+<p>"Please send a high-resolution file." "The image must be 300 DPI." These requests are common, and often confusing. This guide explains resolution in plain terms and shows how it affects converting images to vectors and printing them.</p>
+<h2>Pixels are what really count</h2>
+<p>A raster image is a grid of pixels. Its <strong>pixel dimensions</strong> — for example 2400 × 1600 — tell you how much detail it contains. That is the number that matters most.</p>
+<h2>What DPI and PPI mean</h2>
+<p><strong>PPI (pixels per inch)</strong> describes how densely pixels are packed when an image is printed or displayed at a physical size. <strong>DPI (dots per inch)</strong> technically refers to the ink dots a printer lays down, but people use the two terms interchangeably.</p>
+<p>The DPI value stored in a file is just a label. A 2400 × 1600 image labelled 72 DPI and the same image labelled 300 DPI contain exactly the same pixels. What changes is the suggested print size:</p>
+<ul>
+<li>2400 pixels ÷ 300 PPI = 8 inches wide</li>
+<li>2400 pixels ÷ 72 PPI = 33.3 inches wide</li>
+</ul>
+<h2>How much resolution do you need for print?</h2>
+<table>
+<tr><th>Use</th><th>Typical PPI at final size</th></tr>
+<tr><td>Photo prints, brochures, magazines</td><td>300</td></tr>
+<tr><td>Posters viewed from a short distance</td><td>150–200</td></tr>
+<tr><td>Large banners viewed from far away</td><td>50–100</td></tr>
+<tr><td>Screen display</td><td>Match the display size (×2 for high-density screens)</td></tr>
+</table>
+<p>To find the pixels needed, multiply the print size by the PPI. A 4 × 6 inch print at 300 PPI needs 1200 × 1800 pixels.</p>
+<h2>Why vectors make resolution irrelevant</h2>
+<p>A vector file has no pixels, so it has no resolution until it is printed or displayed. The printer renders it at its full native resolution every time. That is why print shops ask for vector logos: a single SVG or PDF works for a business card and a billboard alike.</p>
+<p>This is also the main reason to convert a logo from PNG to SVG: you stop worrying about whether the file is "high-res enough".</p>
+<h2>How resolution affects tracing</h2>
+<p>Tracing turns pixels into shapes, so the input resolution still matters — once. The more pixels describe an edge, the more accurately the tracer can place a smooth curve along it.</p>
+<ul>
+<li><strong>Too low</strong> (under ~300 px across for a logo): small text becomes blobs, curves are lumpy and corners round off.</li>
+<li><strong>Good</strong> (800–2000 px across): clean curves and readable small details.</li>
+<li><strong>Very high</strong> (4000+ px): little extra benefit for simple logos, but useful for detailed illustrations. It also takes longer to process.</li>
+</ul>
+<p>Our <a href="index.html">PNG to SVG converter</a> works well with images in the typical 500–3000 pixel range. Once traced, the SVG can be printed at any size.</p>
+<h2>Can you "increase" resolution?</h2>
+<p>Changing the DPI label in an image editor does nothing to quality. Enlarging the pixel dimensions (upsampling) creates new pixels by guessing from existing ones — traditional methods add softness, and AI upscalers can add plausible but invented detail. For logos and graphics, tracing to vector is usually a better solution than upscaling, because it creates genuinely sharp edges.</p>
+<h2>Screen resolution and SVG</h2>
+<p>High-density displays (Retina and similar) use two or three physical pixels per CSS pixel. A 100-pixel PNG logo looks soft on them unless you provide a 200- or 300-pixel version. An SVG logo is automatically sharp at every density — one more reason to use vectors for interface graphics.</p>
+<h2>When you need a PNG from an SVG</h2>
+<p>Some platforms require raster images. Decide the largest size you need, multiply by 2 for high-density screens if it is for display, and export at that size with our <a href="bulk-svg-to-png-converter.html">SVG to PNG converter</a>.</p>
+<h2>Summary</h2>
+<p>Pixel dimensions determine detail; DPI only tells you how big those pixels print. For print, aim for about 300 PPI at final size. For tracing, start with an image at least 800 pixels across for best results. And once you have a vector, resolution stops being a problem altogether.</p>

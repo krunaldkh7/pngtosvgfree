@@ -1,0 +1,52 @@
+slug: blog-responsive-svg
+title: Responsive SVG: Making Vector Graphics Fit Any Screen
+category: Web design
+date: 2026-11-21
+icon: shapes
+description: Learn how to make SVGs scale smoothly across phones, tablets and desktops using viewBox, CSS sizing, preserveAspectRatio and media queries.
+---
+<p>Vectors are resolution-independent, so you might expect every SVG to be responsive automatically. In practice, many SVGs either overflow small screens, sit at a fixed size or leave strange empty space. The fix is understanding a few attributes and CSS rules.</p>
+<h2>Rule 1: Always have a viewBox</h2>
+<p>The <code>viewBox</code> attribute defines the SVG's internal coordinate system — for example <code>viewBox="0 0 400 200"</code> means the drawing is 400 units wide and 200 units tall. With a viewBox, the browser can scale the drawing to any size while keeping proportions. Without one, the SVG cannot scale its contents and is effectively fixed-size.</p>
+<p>If your SVG has <code>width</code> and <code>height</code> but no viewBox, add one using the same numbers: <code>width="400" height="200"</code> becomes <code>viewBox="0 0 400 200"</code>. See <a href="blog-svg-viewbox-explained.html">The SVG viewBox Explained</a> for details.</p>
+<h2>Rule 2: Let CSS control the size</h2>
+<p>For a fluid graphic that fills its container:</p>
+<pre><code>.hero-art { width: 100%; height: auto; }</code></pre>
+<p>This works for both <code>&lt;img src="art.svg"&gt;</code> and inline <code>&lt;svg&gt;</code>. Keep the width and height attributes in the markup too — browsers use their ratio to reserve the right amount of space before the image loads, which prevents layout shift.</p>
+<p>To stop a graphic from becoming huge on wide screens, add a maximum:</p>
+<pre><code>.logo { width: 100%; max-width: 240px; height: auto; }</code></pre>
+<h2>Rule 3: Understand preserveAspectRatio</h2>
+<p>When the space you give an SVG has a different shape from its viewBox, <code>preserveAspectRatio</code> decides what happens. The default, <code>xMidYMid meet</code>, scales the drawing to fit entirely inside the box and centres it, leaving empty space if needed.</p>
+<ul>
+<li><code>xMidYMid slice</code> — fills the whole box and crops the overflow, like <code>object-fit: cover</code>. Good for background illustrations.</li>
+<li><code>xMinYMid meet</code> — fits, but aligns to the left instead of centre.</li>
+<li><code>none</code> — stretches the drawing to fill the box, distorting it. Occasionally useful for decorative waves and dividers that should span the full width.</li>
+</ul>
+<h2>Rule 4: Adjust detail for small screens</h2>
+<p>A detailed illustration that looks great on a desktop can become an unreadable blur of tiny shapes on a phone. Options include:</p>
+<ul>
+<li><strong>Swap files</strong> with the <code>&lt;picture&gt;</code> element, serving a simpler SVG to narrow screens:
+<pre><code>&lt;picture&gt;
+  &lt;source media="(max-width: 600px)" srcset="map-simple.svg"&gt;
+  &lt;img src="map-detailed.svg" alt="Store locations"&gt;
+&lt;/picture&gt;</code></pre></li>
+<li><strong>Hide elements with CSS</strong> in an inline SVG, for example removing labels below a certain width.</li>
+<li><strong>Use media queries inside the SVG.</strong> A standalone SVG file can contain a <code>&lt;style&gt;</code> block with media queries that respond to the SVG's own rendered size — handy for logos that switch to a compact mark when small.</li>
+</ul>
+<h2>Rule 5: Keep text readable</h2>
+<p>Text inside an SVG scales with the graphic. A label that is 14 units tall in a 1200-unit-wide chart becomes tiny on a 360-pixel phone screen. For charts and diagrams, consider placing text in HTML around the SVG, or providing a narrower layout for mobile.</p>
+<h2>Rule 6: Mind stroke widths</h2>
+<p>Strokes scale along with the drawing. A 2-unit outline might be crisp on desktop and nearly invisible on mobile. Use <code>vector-effect: non-scaling-stroke</code> on lines that should keep a constant on-screen thickness.</p>
+<h2>Responsive SVG checklist</h2>
+<ol>
+<li>The SVG has a <code>viewBox</code>.</li>
+<li>Width and height attributes are present for layout stability.</li>
+<li>CSS sets <code>width: 100%</code> (or a fixed size) and <code>height: auto</code>.</li>
+<li><code>preserveAspectRatio</code> matches the desired fit.</li>
+<li>Detail and text are tested at phone width.</li>
+<li>The file is optimised so it loads quickly on mobile networks.</li>
+</ol>
+<h2>Making traced images responsive</h2>
+<p>SVGs created with our <a href="index.html">PNG to SVG converter</a> include a viewBox matching the original image's dimensions, so they scale out of the box. Just apply the CSS from Rule 2.</p>
+<h2>Summary</h2>
+<p>A viewBox plus CSS sizing makes almost any SVG responsive. Add <code>preserveAspectRatio</code> for control over fit and cropping, simplify detail for small screens, and test text and strokes on a real phone before publishing.</p>
