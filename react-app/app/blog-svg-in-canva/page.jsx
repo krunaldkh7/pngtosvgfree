@@ -317,6 +317,30 @@ export default function Page() {
               </span>
             </div>
           </Link>
+          <Link className="post" href="/blog-convert-png-to-svg">
+            <div className="th" style={{ "background": "linear-gradient(135deg,#06b6d4,#3d4ef5)" }}>
+              <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <circle cx="8.5" cy="8.5" r="1.5" />
+                <path d="M21 15l-5-5L5 21" />
+              </svg>
+            </div>
+            {" "}
+            <div className="bd">
+              <small>
+                {"Tutorial"}
+              </small>
+              <b>
+                {"How to Convert PNG to SVG (Free, 3 Methods)"}
+              </b>
+              <p>
+                {"Three free ways to convert PNG to SVG: an online tracer, Inkscape's Trace Bitmap and Illustrator Image Trace. Step-by-step instructions, settings and tips."}
+              </p>
+              <span>
+                {"November 21, 2026 · 6 min read"}
+              </span>
+            </div>
+          </Link>
           <Link className="post" href="/blog-convert-signature-to-svg">
             <div className="th" style={{ "background": "linear-gradient(135deg,#06b6d4,#3d4ef5)" }}>
               <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
@@ -339,31 +363,6 @@ export default function Page() {
               </p>
               <span>
                 {"November 21, 2026 · 4 min read"}
-              </span>
-            </div>
-          </Link>
-          <Link className="post" href="/blog-edit-svg-in-inkscape">
-            <div className="th" style={{ "background": "linear-gradient(135deg,#06b6d4,#3d4ef5)" }}>
-              <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 19l7-7 3 3-7 7-3-3z" />
-                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
-                <path d="M2 2l7.586 7.586" />
-                <circle cx="11" cy="11" r="2" />
-              </svg>
-            </div>
-            {" "}
-            <div className="bd">
-              <small>
-                {"Tutorial"}
-              </small>
-              <b>
-                {"How to Edit SVG Files in Inkscape (Free)"}
-              </b>
-              <p>
-                {"Inkscape is a free, open-source vector editor that works natively with SVG. Learn the essential tools to recolour, clean up and resize any SVG file."}
-              </p>
-              <span>
-                {"November 21, 2026 · 3 min read"}
               </span>
             </div>
           </Link>

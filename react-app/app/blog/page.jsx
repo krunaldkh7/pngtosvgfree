@@ -78,6 +78,29 @@ export default function Page() {
               </span>
             </div>
           </Link>
+          <Link className="post" href="/blog-best-svg-tracing-settings">
+            <div className="th" style={{ "background": "linear-gradient(135deg,#0ea5e9,#22c55e)" }}>
+              <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 14l4-4" />
+                <path d="M3.34 19a10 10 0 1117.32 0" />
+              </svg>
+            </div>
+            {" "}
+            <div className="bd">
+              <small>
+                {"Tips"}
+              </small>
+              <b>
+                {"Best Settings for Clean SVG Tracing (Colours, Detail, Noise)"}
+              </b>
+              <p>
+                {"The tracing settings that matter most: colours, detail, noise smoothing, speckle removal and corner angle, with recommended values for every image type."}
+              </p>
+              <span>
+                {"November 21, 2026 · 6 min read"}
+              </span>
+            </div>
+          </Link>
           <Link className="post" href="/blog-clean-up-traced-svg">
             <div className="th" style={{ "background": "linear-gradient(135deg,#0ea5e9,#22c55e)" }}>
               <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
@@ -143,6 +166,30 @@ export default function Page() {
               </p>
               <span>
                 {"November 21, 2026 · 5 min read"}
+              </span>
+            </div>
+          </Link>
+          <Link className="post" href="/blog-convert-png-to-svg">
+            <div className="th" style={{ "background": "linear-gradient(135deg,#06b6d4,#3d4ef5)" }}>
+              <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <circle cx="8.5" cy="8.5" r="1.5" />
+                <path d="M21 15l-5-5L5 21" />
+              </svg>
+            </div>
+            {" "}
+            <div className="bd">
+              <small>
+                {"Tutorial"}
+              </small>
+              <b>
+                {"How to Convert PNG to SVG (Free, 3 Methods)"}
+              </b>
+              <p>
+                {"Three free ways to convert PNG to SVG: an online tracer, Inkscape's Trace Bitmap and Illustrator Image Trace. Step-by-step instructions, settings and tips."}
+              </p>
+              <span>
+                {"November 21, 2026 · 6 min read"}
               </span>
             </div>
           </Link>
@@ -341,6 +388,30 @@ export default function Page() {
               </span>
             </div>
           </Link>
+          <Link className="post" href="/blog-make-svg-for-cricut">
+            <div className="th" style={{ "background": "linear-gradient(135deg,#16a34a,#06b6d4)" }}>
+              <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="6" cy="6" r="3" />
+                <circle cx="6" cy="18" r="3" />
+                <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12" />
+              </svg>
+            </div>
+            {" "}
+            <div className="bd">
+              <small>
+                {"Crafting"}
+              </small>
+              <b>
+                {"How to Make SVG Files for Cricut from Any Image"}
+              </b>
+              <p>
+                {"To make a Cricut SVG from any image: trace it into layers, remove the background, upload to Design Space, then resize, weld and weed. Step-by-step guide."}
+              </p>
+              <span>
+                {"November 21, 2026 · 6 min read"}
+              </span>
+            </div>
+          </Link>
           <Link className="post" href="/blog-optimize-svg-file-size">
             <div className="th" style={{ "background": "linear-gradient(135deg,#8b5cf6,#ec4899)" }}>
               <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
@@ -450,13 +521,13 @@ export default function Page() {
                 {"Basics"}
               </small>
               <b>
-                {"Raster vs Vector Graphics: The Complete Guide"}
+                {"Raster vs Vector Images Explained: The Complete Guide"}
               </b>
               <p>
                 {"Raster and vector are the two ways computers store images. Understand the difference once and you will always know which file format to use."}
               </p>
               <span>
-                {"November 21, 2026 · 4 min read"}
+                {"November 21, 2026 · 6 min read"}
               </span>
             </div>
           </Link>
@@ -1052,13 +1123,13 @@ export default function Page() {
                 {"Formats"}
               </small>
               <b>
-                {"PNG vs SVG: Which Format Should You Use?"}
+                {"PNG vs SVG: Differences and When to Use Each"}
               </b>
               <p>
                 {"PNG and SVG both support transparency, but one is pixels and one is vectors. A practical comparison of quality, file size and editing to help you choose."}
               </p>
               <span>
-                {"November 8, 2026 · 3 min read"}
+                {"November 8, 2026 · 6 min read"}
               </span>
             </div>
           </Link>
@@ -1076,13 +1147,13 @@ export default function Page() {
                 {"Tutorial"}
               </small>
               <b>
-                {"How to Convert a Logo to SVG (Step-by-Step)"}
+                {"How to Vectorize a Logo Without Illustrator"}
               </b>
               <p>
                 {"Lost the original vector file of your logo? Learn how to turn a PNG or JPG logo into a clean, editable SVG in minutes, free and without Illustrator."}
               </p>
               <span>
-                {"November 5, 2026 · 3 min read"}
+                {"November 5, 2026 · 6 min read"}
               </span>
             </div>
           </Link>

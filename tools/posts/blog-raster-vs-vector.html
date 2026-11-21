@@ -1,5 +1,8 @@
 slug: blog-raster-vs-vector
-title: Raster vs Vector Graphics: The Complete Guide
+title: Raster vs Vector Images Explained: The Complete Guide
+seo_title: Raster vs Vector Images Explained | PNG to SVG Free
+updated: 2026-11-21
+tldr: Raster images (JPG, PNG, WEBP) store a grid of pixels and lose quality when enlarged; vector images (SVG, EPS, AI, PDF) store shapes and stay sharp at any size. Use raster for photos and vector for logos, icons, illustrations, print and cutting machines. Raster can be turned into vector by tracing, and vector into raster by rendering.
 category: Basics
 date: 2026-11-21
 icon: shapes
@@ -58,5 +61,31 @@ description: Raster and vector are the two ways computers store images. Understa
 <li>Need a sharp logo but only have a JPG? <strong>Trace it to vector</strong>.</li>
 <li>Sending artwork to a printer, sign maker or cutting machine? <strong>Vector</strong> whenever possible.</li>
 </ul>
+<h2>How does a computer draw a vector image?</h2>
+<p><strong>A computer draws a vector image by reading its instructions — move here, draw a curve to there, fill with this colour — and calculating which screen pixels each shape covers at the current size.</strong> This step is called rasterization, and it happens every time a vector is displayed. Because it is recalculated for the exact output size, curves are always as smooth as the screen or printer allows. Raster images skip this step: their pixels are simply copied, stretched or shrunk to fit, which is why they blur when enlarged.</p>
+<h2>What is the difference in file structure?</h2>
+<p><strong>A raster file is mostly a block of compressed pixel data, while a vector file is a list of drawing commands.</strong> Open an SVG in a text editor and you will see readable code such as <code>&lt;path d="M10 10 L90 10 ..."/&gt;</code>. Open a PNG and you will see binary data. That difference explains many practical advantages of vectors: they can be searched, edited with code, styled with CSS and compressed very efficiently on web servers. Learn to read path data in <a href="blog-svg-path-commands.html">SVG Path Commands</a>.</p>
+<h2>Real-world examples</h2>
+<table>
+<tr><th>Item</th><th>Usually stored as</th><th>Why</th></tr>
+<tr><td>Phone photo</td><td>Raster (JPG/HEIC)</td><td>Captured by a pixel sensor</td></tr>
+<tr><td>Company logo</td><td>Vector (SVG/AI/PDF)</td><td>Used at every size</td></tr>
+<tr><td>App icons</td><td>Vector, exported to raster sizes</td><td>Sharp on all screens</td></tr>
+<tr><td>Fonts</td><td>Vector outlines</td><td>Text scales smoothly</td></tr>
+<tr><td>Screenshot</td><td>Raster (PNG)</td><td>Exact pixels</td></tr>
+<tr><td>Cricut or laser design</td><td>Vector (SVG/DXF)</td><td>Machines follow paths</td></tr>
+<tr><td>Maps and charts</td><td>Vector</td><td>Zoomable, interactive</td></tr>
+</table>
+<h2>Frequently asked questions</h2>
+<h3>Is SVG raster or vector?</h3>
+<p>SVG is a vector format. It can technically embed raster images inside it, but SVGs created by tracing or in design tools normally contain only vector shapes.</p>
+<h3>Is PDF raster or vector?</h3>
+<p>PDF can contain both. A PDF exported from a vector editor keeps shapes as vectors; a scanned document saved as PDF contains raster images.</p>
+<h3>Can I make a raster image into a vector for free?</h3>
+<p>Yes. Our free <a href="image-to-svg.html">image to SVG converter</a> traces PNG, JPG, WEBP, GIF, BMP and AVIF files into SVG in your browser. Free desktop software such as Inkscape also has a Trace Bitmap tool.</p>
+<h3>Why do printers ask for vector files?</h3>
+<p>Because a vector prints sharply at any size, including large banners and signs, and its colours and shapes can be adjusted for the printing process. A small raster logo would print blurry when enlarged.</p>
+<h3>Is a higher DPI raster image as good as a vector?</h3>
+<p>Only at the size it was made for. A 300 DPI raster looks sharp at its intended print size but still blurs if enlarged further, while a vector never does. Read <a href="blog-image-resolution-for-tracing.html">Image Resolution and DPI</a> for details.</p>
 <h2>Summary</h2>
 <p>Raster images are grids of pixels, ideal for photos but limited by resolution. Vector images are drawing instructions, ideal for graphics and endlessly scalable. Most real-world projects use both: vector masters for brand assets and raster exports for photos and platforms that require them.</p>

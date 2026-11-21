@@ -307,6 +307,30 @@ export default function Page() {
         </h2>
         {" "}
         <div className="posts">
+          <Link className="post" href="/blog-make-svg-for-cricut">
+            <div className="th" style={{ "background": "linear-gradient(135deg,#16a34a,#06b6d4)" }}>
+              <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="6" cy="6" r="3" />
+                <circle cx="6" cy="18" r="3" />
+                <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12" />
+              </svg>
+            </div>
+            {" "}
+            <div className="bd">
+              <small>
+                {"Crafting"}
+              </small>
+              <b>
+                {"How to Make SVG Files for Cricut from Any Image"}
+              </b>
+              <p>
+                {"To make a Cricut SVG from any image: trace it into layers, remove the background, upload to Design Space, then resize, weld and weed. Step-by-step guide."}
+              </p>
+              <span>
+                {"November 21, 2026 · 6 min read"}
+              </span>
+            </div>
+          </Link>
           <Link className="post" href="/blog-print-then-cut-stickers">
             <div className="th" style={{ "background": "linear-gradient(135deg,#16a34a,#06b6d4)" }}>
               <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
@@ -352,30 +376,6 @@ export default function Page() {
               </p>
               <span>
                 {"November 21, 2026 · 3 min read"}
-              </span>
-            </div>
-          </Link>
-          <Link className="post" href="/blog-svg-laser-cutting-engraving">
-            <div className="th" style={{ "background": "linear-gradient(135deg,#16a34a,#06b6d4)" }}>
-              <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="6" cy="6" r="3" />
-                <circle cx="6" cy="18" r="3" />
-                <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12" />
-              </svg>
-            </div>
-            {" "}
-            <div className="bd">
-              <small>
-                {"Crafting"}
-              </small>
-              <b>
-                {"Using SVG Files for Laser Cutting and Engraving"}
-              </b>
-              <p>
-                {"Laser cutters read vector paths to know where to cut and engrave. Learn how to prepare SVG files for LightBurn, Glowforge, xTool and other laser machines."}
-              </p>
-              <span>
-                {"November 21, 2026 · 4 min read"}
               </span>
             </div>
           </Link>

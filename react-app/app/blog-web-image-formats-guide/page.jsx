@@ -521,13 +521,13 @@ export default function Page() {
                 {"Formats"}
               </small>
               <b>
-                {"PNG vs SVG: Which Format Should You Use?"}
+                {"PNG vs SVG: Differences and When to Use Each"}
               </b>
               <p>
                 {"PNG and SVG both support transparency, but one is pixels and one is vectors. A practical comparison of quality, file size and editing to help you choose."}
               </p>
               <span>
-                {"November 8, 2026 · 3 min read"}
+                {"November 8, 2026 · 6 min read"}
               </span>
             </div>
           </Link>

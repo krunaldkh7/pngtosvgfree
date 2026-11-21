@@ -244,6 +244,30 @@ export default function Page() {
         </h2>
         {" "}
         <div className="posts">
+          <Link className="post" href="/blog-make-svg-for-cricut">
+            <div className="th" style={{ "background": "linear-gradient(135deg,#16a34a,#06b6d4)" }}>
+              <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="6" cy="6" r="3" />
+                <circle cx="6" cy="18" r="3" />
+                <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12" />
+              </svg>
+            </div>
+            {" "}
+            <div className="bd">
+              <small>
+                {"Crafting"}
+              </small>
+              <b>
+                {"How to Make SVG Files for Cricut from Any Image"}
+              </b>
+              <p>
+                {"To make a Cricut SVG from any image: trace it into layers, remove the background, upload to Design Space, then resize, weld and weed. Step-by-step guide."}
+              </p>
+              <span>
+                {"November 21, 2026 · 6 min read"}
+              </span>
+            </div>
+          </Link>
           <Link className="post" href="/blog-print-then-cut-stickers">
             <div className="th" style={{ "background": "linear-gradient(135deg,#16a34a,#06b6d4)" }}>
               <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
@@ -286,30 +310,6 @@ export default function Page() {
               </b>
               <p>
                 {"Should your cut file be one colour or many layers? Understand single-layer and layered SVGs for Cricut and Silhouette and how to convert them."}
-              </p>
-              <span>
-                {"November 21, 2026 · 3 min read"}
-              </span>
-            </div>
-          </Link>
-          <Link className="post" href="/blog-svg-for-embroidery">
-            <div className="th" style={{ "background": "linear-gradient(135deg,#16a34a,#06b6d4)" }}>
-              <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="6" cy="6" r="3" />
-                <circle cx="6" cy="18" r="3" />
-                <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12" />
-              </svg>
-            </div>
-            {" "}
-            <div className="bd">
-              <small>
-                {"Crafting"}
-              </small>
-              <b>
-                {"Can You Use SVG Files for Machine Embroidery?"}
-              </b>
-              <p>
-                {"Embroidery machines do not read SVG directly, but SVG artwork is a great starting point for digitizing. Here is how SVG and stitch files fit together."}
               </p>
               <span>
                 {"November 21, 2026 · 3 min read"}

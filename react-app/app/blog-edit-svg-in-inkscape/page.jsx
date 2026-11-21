@@ -426,6 +426,30 @@ export default function Page() {
               </span>
             </div>
           </Link>
+          <Link className="post" href="/blog-convert-png-to-svg">
+            <div className="th" style={{ "background": "linear-gradient(135deg,#06b6d4,#3d4ef5)" }}>
+              <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <circle cx="8.5" cy="8.5" r="1.5" />
+                <path d="M21 15l-5-5L5 21" />
+              </svg>
+            </div>
+            {" "}
+            <div className="bd">
+              <small>
+                {"Tutorial"}
+              </small>
+              <b>
+                {"How to Convert PNG to SVG (Free, 3 Methods)"}
+              </b>
+              <p>
+                {"Three free ways to convert PNG to SVG: an online tracer, Inkscape's Trace Bitmap and Illustrator Image Trace. Step-by-step instructions, settings and tips."}
+              </p>
+              <span>
+                {"November 21, 2026 · 6 min read"}
+              </span>
+            </div>
+          </Link>
           <Link className="post" href="/blog-convert-signature-to-svg">
             <div className="th" style={{ "background": "linear-gradient(135deg,#06b6d4,#3d4ef5)" }}>
               <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
@@ -448,32 +472,6 @@ export default function Page() {
               </p>
               <span>
                 {"November 21, 2026 · 4 min read"}
-              </span>
-            </div>
-          </Link>
-          <Link className="post" href="/blog-svg-in-canva">
-            <div className="th" style={{ "background": "linear-gradient(135deg,#06b6d4,#3d4ef5)" }}>
-              <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="13.5" cy="6.5" r="1.5" />
-                <circle cx="17.5" cy="10.5" r="1.5" />
-                <circle cx="8.5" cy="7.5" r="1.5" />
-                <circle cx="6.5" cy="12.5" r="1.5" />
-                <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 011.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z" />
-              </svg>
-            </div>
-            {" "}
-            <div className="bd">
-              <small>
-                {"Tutorial"}
-              </small>
-              <b>
-                {"How to Use SVG Files in Canva"}
-              </b>
-              <p>
-                {"Canva can import SVGs and let you recolour them. Learn how to upload SVG files, change their colours, avoid common problems and export your designs."}
-              </p>
-              <span>
-                {"November 21, 2026 · 3 min read"}
               </span>
             </div>
           </Link>

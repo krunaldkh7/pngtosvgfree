@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best Settings for Clean SVG Tracing</title>
+<link rel="icon" type="image/svg+xml" href="logo.svg">
+<meta name="description" content="The tracing settings that matter most: colours, detail, noise smoothing, speckle removal and corner angle, with recommended values for every image type.">
+<link rel="canonical" href="https://pngtosvgfree.com/blog-best-svg-tracing-settings">
+<meta property="og:title" content="Best Settings for Clean SVG Tracing"><meta property="og:description" content="The tracing settings that matter most: colours, detail, noise smoothing, speckle removal and corner angle, with recommended values for every image type."><meta property="og:type" content="article">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- Google AdSense: after approval, paste your AdSense code here, e.g.
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+<style>:root{--bg:#f3f4fb;--card:#fff;--line:#e6e7f2;--txt:#0f1020;--mut:#6a6d85;--blue:#3d4ef5;--blue2:#2f3fe0;--vio:#8b5cf6;--vio2:#a78bfa;--lav:#ece9fe}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--txt);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(900px 500px at 50% -10%,#e4e0ff,transparent 70%),radial-gradient(500px 400px at 0% 60%,#efe9ff,transparent 70%),radial-gradient(500px 400px at 100% 80%,#e7ecff,transparent 70%);background-color:var(--bg)}
+a{color:inherit;text-decoration:none}
+nav.top{max-width:1180px;margin:18px auto 0;display:flex;justify-content:space-between;align-items:center;padding:0 4vw;position:relative;z-index:10;gap:12px}
+.logo{font-weight:800;font-size:22px;display:flex;gap:9px;align-items:center;letter-spacing:-.03em}
+
+.navpill{display:flex;background:#fff;border:1px solid var(--line);border-radius:12px;padding:4px;box-shadow:0 2px 10px #3d4ef50d}
+.navpill a{padding:8px 15px;border-radius:9px;font-size:14px;font-weight:600;color:var(--mut);transition:.2s;white-space:nowrap}
+.navpill a:hover{color:var(--txt)}.navpill a.on{background:var(--bg);color:var(--txt)}
+.cta{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;padding:11px 18px;border-radius:11px;font-weight:600;font-size:14px;box-shadow:0 6px 18px #3d4ef54d;transition:.2s;border:0;cursor:pointer;font-family:inherit}
+.cta:hover{background:var(--blue2);transform:translateY(-1px)}
+.btn2{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--txt);border:1px solid var(--line);padding:11px 18px;border-radius:11px;font-weight:600;font-size:14px;cursor:pointer;font-family:inherit;transition:.2s}
+.btn2:hover{border-color:#c9cbe0}
+.menu{display:none;background:#fff;border:1px solid var(--line);border-radius:10px;width:42px;height:42px;cursor:pointer;place-items:center}
+.wrap{max-width:1180px;margin:0 auto;padding:0 4vw}
+.phead{text-align:center;padding:64px 5vw 34px;max-width:780px;margin:0 auto}
+.tag{display:inline-block;font-size:12px;font-weight:700;color:var(--vio);background:var(--lav);padding:5px 12px;border-radius:99px;margin-bottom:14px}
+.phead h1{font-size:clamp(34px,5vw,56px);font-weight:800;letter-spacing:-.04em;line-height:1.05}
+.phead h1 em{font-style:normal;background:linear-gradient(90deg,var(--blue),var(--vio));-webkit-background-clip:text;background-clip:text;color:transparent}
+.phead p{color:var(--mut);margin-top:14px;line-height:1.6;font-size:17px}
+.crumbs{font-size:13px;color:var(--mut);margin-bottom:16px}.crumbs a{color:var(--blue)}
+.box{background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:0 30px 70px -30px #3d4ef533}
+/* article / legal prose */
+.prose{max-width:760px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:22px;padding:clamp(24px,5vw,56px);box-shadow:0 30px 70px -30px #3d4ef522}
+.prose h2{font-size:24px;letter-spacing:-.02em;margin:34px 0 12px}
+.prose h3{font-size:18px;margin:24px 0 8px}.prose code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;background:#eef0fb;border-radius:5px;padding:.12em .38em}.prose pre{background:#0f1020;color:#e6e7f2;border-radius:12px;padding:16px 18px;overflow-x:auto;margin:14px 0;line-height:1.55}.prose pre code{background:none;padding:0;color:inherit;font-size:13px}.tldr{background:linear-gradient(135deg,#eef0ff,#f5f0ff);border:1px solid #dcdcfb;border-radius:14px;padding:16px 20px;margin:18px 0 8px}.tldr b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:4px}.tldr p{margin:0}.author{display:flex;gap:14px;align-items:flex-start;border-top:1px solid var(--line);margin-top:34px;padding-top:22px}.author img{border-radius:10px;flex:none}.author b{display:block;margin-bottom:2px}.author p{margin:0;font-size:14px;color:var(--mut)}
+.prose p,.prose li{color:#3a3d55;line-height:1.8;font-size:16px}
+.prose p{margin:12px 0}
+.prose ul,.prose ol{padding-left:22px;margin:12px 0}.prose li{margin:6px 0}
+.prose a{color:var(--blue);text-decoration:underline}
+.prose .meta{color:var(--mut);font-size:14px;display:flex;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+.prose .note{background:var(--lav);border-radius:14px;padding:16px 18px;color:#4c1d95;margin:20px 0;line-height:1.7}
+.prose table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14.5px}
+.prose th,.prose td{border:1px solid var(--line);padding:10px 12px;text-align:left}.prose th{background:var(--bg)}
+.prose .cover{height:220px;border-radius:16px;margin-bottom:26px;display:grid;place-items:center;overflow:hidden}
+.prose .cover svg{width:120px;height:120px}
+.prose .inline-cta{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;background:linear-gradient(135deg,#3d4ef5,#8b5cf6);color:#fff;border-radius:16px;padding:20px 22px;margin:30px 0 6px}
+.prose .inline-cta p{color:#fff;margin:0;font-weight:600}.prose .inline-cta a{background:#fff;color:var(--blue);text-decoration:none;padding:10px 16px;border-radius:10px;font-weight:700;font-size:14px}
+/* blog cards */
+.posts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.post{background:#fff;border:1px solid var(--line);border-radius:18px;padding:10px;transition:.25s;display:flex;flex-direction:column}
+.post:hover{transform:translateY(-5px);box-shadow:0 24px 50px -10px #3d4ef533}
+.post .th{height:160px;border-radius:12px;display:grid;place-items:center;color:#fff}
+.post .th svg{width:70px;height:70px}
+.post .bd{padding:14px 8px 8px;display:flex;flex-direction:column;flex:1}
+.post .bd small{color:var(--vio);font-weight:700;font-size:12px}
+.post .bd b{font-size:17px;letter-spacing:-.01em;margin-top:6px;line-height:1.35}
+.post .bd p{color:var(--mut);font-size:14px;line-height:1.55;margin-top:8px;flex:1}
+.post .bd span{font-size:12.5px;color:var(--mut);margin-top:12px}
+/* footer */
+footer.site{max-width:1180px;margin:100px auto 0;padding:46px 4vw 30px;border-top:1px solid var(--line)}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1.3fr 1fr 1fr;gap:30px}
+.fgrid p{color:var(--mut);font-size:14px;line-height:1.6;margin-top:12px;max-width:300px}
+.fgrid h6{font-size:13px;font-weight:700;margin-bottom:12px}
+.fgrid a.logo{display:flex;color:var(--txt)}.fgrid a:not(.logo){display:block;color:var(--mut);font-size:14px;margin:8px 0;transition:.15s}.fgrid a:hover{color:var(--blue)}
+.fbot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:34px;padding-top:20px;border-top:1px solid var(--line);color:var(--mut);font-size:13px}
+.ad-slot{display:none}
+.cookie{position:fixed;left:16px;right:16px;bottom:16px;max-width:520px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px;box-shadow:0 20px 50px -10px #0f102033;z-index:60;display:none;gap:14px;align-items:center;font-size:13.5px;color:#3a3d55;line-height:1.5}
+.cookie.on{display:flex}.cookie a{color:var(--blue);text-decoration:underline}
+.cookie button{flex-shrink:0}
+.reveal{opacity:0;transform:translateY(26px);transition:.7s cubic-bezier(.2,.7,.2,1)}.reveal.in{opacity:1;transform:none}
+@media(max-width:960px){.navpill{display:none;position:absolute;top:56px;left:4vw;right:4vw;flex-direction:column;z-index:30}.navpill.open{display:flex}.menu{display:grid}nav.top .cta{display:none}.posts{grid-template-columns:1fr 1fr}.fgrid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.posts{grid-template-columns:1fr}.fgrid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav class="top">
+  <a class="logo" href="index.html"><img src="logo.svg" alt="" width="28" height="28" style="border-radius:7px">PNG to SVG Free</a>
+  <div class="navpill" id="navpill"><a href="index.html">PNG to SVG</a><a href="bulk-svg-to-png-converter.html">SVG to PNG</a><a href="gallery.html">Gallery</a><a href="blog.html" class=on>Blog</a><a href="about.html">About</a></div>
+  <a class="cta" href="index.html#tool">Convert image</a>
+  <button class="menu" aria-label="Menu" onclick="document.getElementById('navpill').classList.toggle('open')"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+</nav>
+<div class="wrap" style="padding-top:44px">
+<article class="prose">
+<div class="crumbs"><a href="index.html">Home</a> / <a href="blog.html">Blog</a> / Tips</div>
+<div class="cover" style="background:linear-gradient(135deg,#0ea5e9,#22c55e);color:#fff"><svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14l4-4"/><path d="M3.34 19a10 10 0 1117.32 0"/></svg></div>
+<div class="meta"><span>Tips</span><span>November 21, 2026</span><span>6 min read</span><span>By the PNG to SVG Free team</span></div>
+<h1 style="font-size:clamp(28px,4vw,40px);letter-spacing:-.03em;line-height:1.15;margin-top:6px">Best Settings for Clean SVG Tracing (Colours, Detail, Noise)</h1>
+<div class="tldr"><b>TL;DR</b><p>For clean SVG tracing, set colours to what you can actually see (2 for line art, 2–6 for logos, 12–24 for photos), use High quality for small text, raise speckle removal for JPGs and scans, keep noise smoothing at 0–1 for sharp graphics, and lower the corner angle for text and geometric shapes. Compare at 400% zoom and aim for the fewest paths that still look right.</p></div>
+
+<p>Automatic tracing gets most images close to perfect, but the last ten percent comes down to a handful of settings. Understanding what each one does — and which to change first — turns a blotchy, oversized SVG into a clean, compact vector. This guide explains every setting in our <a href="index.html">PNG to SVG converter</a>, gives recommended values for common image types and shows a quick workflow for tuning.</p>
+<h2>Which setting matters most?</h2>
+<p><strong>The number of colours matters most, because every extra colour adds more regions, more edges and more paths to the SVG.</strong> Get the colour count right first, then adjust speckle removal, detail, smoothing and corners. Most problems — halos, blotches, huge files — are fixed by the colour count alone.</p>
+<h2>Recommended settings by image type</h2>
+<table>
+<tr><th>Image</th><th>Type</th><th>Colours</th><th>Quality</th><th>Smoothing</th><th>Speckle</th><th>Corner</th></tr>
+<tr><td>Flat logo (PNG)</td><td>Logo</td><td>Exact count</td><td>High</td><td>0</td><td>4–10 px</td><td>Low</td></tr>
+<tr><td>Logo (JPG)</td><td>Logo</td><td>Exact count</td><td>High</td><td>0–1</td><td>8–16 px</td><td>Low</td></tr>
+<tr><td>Cartoon / clip art</td><td>Logo</td><td>8–16</td><td>High</td><td>0</td><td>6–12 px</td><td>Medium</td></tr>
+<tr><td>Line art / signature</td><td>Sketch</td><td>2</td><td>High</td><td>0</td><td>4–8 px</td><td>Medium</td></tr>
+<tr><td>Photo (poster style)</td><td>Photograph</td><td>12–24</td><td>Medium–High</td><td>1–2</td><td>4–8 px</td><td>High</td></tr>
+<tr><td>Cut file / stencil</td><td>Silhouette</td><td>1</td><td>Medium</td><td>1</td><td>10–20 px</td><td>Medium</td></tr>
+</table>
+<h2>Colours: how many should you use?</h2>
+<p><strong>Use the number of colours a person would name when looking at the image — and no more.</strong> A navy-and-orange logo on white is three colours. Limiting the palette forces anti-aliased edge pixels into the real colours, which removes halos and keeps the file small. The converter suggests simplified palettes from 2 to 16 colours; click one to compare. For photos, 12–24 colours give a pleasing poster effect, and beyond about 32 the file grows quickly with little visible gain. Read more in <a href="blog-how-many-colors-for-tracing.html">How Many Colours Should You Use When Tracing?</a></p>
+<h2>Quality and detail: how much is enough?</h2>
+<p><strong>Use High quality and higher detail for small text and thin lines, and lower values for simple shapes, icons and smaller files.</strong> The quality preset controls the working resolution (up to 1,700 pixels on the longest edge at High) and nudges detail and speckle values. The detail slider controls how closely curves follow the pixel edges: higher keeps more fine features but adds nodes; lower produces smoother, simpler curves.</p>
+<h2>Noise smoothing: when should you use it?</h2>
+<p><strong>Turn noise smoothing on for grainy photos, phone pictures and blurry scans, and leave it at 0 for clean digital graphics.</strong> Smoothing blends neighbouring pixels before tracing, merging grain into flat areas. On crisp logos it can soften small text, so use it only when you see noise.</p>
+<h2>Speckle removal: how big?</h2>
+<p><strong>Set speckle removal just high enough that stray dots disappear but small real details, such as the dot on an "i", remain.</strong> The value is the minimum size, in pixels, of a shape that is kept. JPGs and scans need higher values (8–16 px) because of compression noise and paper texture; clean PNGs need less (4–8 px). Cut files benefit from high values because every speck becomes a piece to weed.</p>
+<h2>Corner angle: sharp or smooth?</h2>
+<p><strong>Lower corner angles keep corners sharp, which suits text and geometric logos; higher angles round corners into smooth curves, which suits organic shapes and photos.</strong> If a square logo comes out with slightly rounded corners, lower the angle. If a hand-drawn shape looks jagged, raise it.</p>
+<h2>A five-minute tuning workflow</h2>
+<ol>
+<li>Upload and let auto-detect choose the type and preset.</li>
+<li>Set the colour count (try a suggested palette first).</li>
+<li>Zoom to 400% on the trickiest area — small text, thin lines or fine detail.</li>
+<li>Adjust speckle removal until stray dots are gone.</li>
+<li>Adjust detail and corner angle until edges look right.</li>
+<li>Check the stats: fewer paths for the same look is better.</li>
+<li>Remove or recolour colours, then download.</li>
+</ol>
+<h2>How do you know the result is good?</h2>
+<p><strong>A good trace looks right at 100% and 400% zoom, has no halos or specks, and uses as few paths as possible.</strong> As rough guides, a simple logo often needs a few dozen paths and a few kilobytes; a detailed illustration may need hundreds; a traced photo can reach thousands. If a photo SVG ends up larger than a quality JPG and you only need it on screen, keep the JPG.</p>
+<h2>Fixing common problems</h2>
+<table>
+<tr><th>Symptom</th><th>Change</th></tr>
+<tr><td>Halos around shapes</td><td>Fewer colours</td></tr>
+<tr><td>Blotchy flat areas</td><td>Fewer colours, more smoothing</td></tr>
+<tr><td>Tiny specks</td><td>More speckle removal</td></tr>
+<tr><td>Missing thin lines or dots</td><td>Less speckle removal, more detail</td></tr>
+<tr><td>Rounded corners on text</td><td>Lower corner angle</td></tr>
+<tr><td>Jagged organic edges</td><td>Higher corner angle, lower detail</td></tr>
+<tr><td>File too large</td><td>Fewer colours, lower quality preset</td></tr>
+</table>
+<p>For finishing touches in a vector editor, see <a href="blog-clean-up-traced-svg.html">How to Clean Up a Traced SVG</a>.</p>
+<h2>How do settings differ for different sources?</h2>
+<p><strong>The source of an image matters as much as its content: clean digital files need gentle settings, while scans, phone photos and screenshots need more clean-up.</strong></p>
+<ul>
+<li><strong>Digital exports (PNG from a design app):</strong> sharp edges and exact colours — use the exact colour count, smoothing 0 and low speckle removal.</li>
+<li><strong>Website images (often JPG or WEBP):</strong> compression noise around edges — fewer colours and higher speckle removal.</li>
+<li><strong>Scans of printed material:</strong> paper texture and halftone dots — smoothing 1, higher speckle removal, and boost contrast before uploading.</li>
+<li><strong>Phone photos of artwork:</strong> uneven lighting and perspective — crop, straighten and increase contrast first, then use smoothing 1–2.</li>
+<li><strong>Screenshots:</strong> crisp but often small — use High quality so small text gets enough working resolution.</li>
+</ul>
+<h2>Do the settings change for cutting machines and print?</h2>
+<p><strong>Yes — cut files favour fewer colours, larger speckle removal and smoother curves, while print artwork can keep more detail.</strong> Every separate shape in a cut file is a piece someone has to weed, and every node is a direction change for the blade or laser, so simplicity pays off. For print, the SVG is rendered by the printer at full resolution, so extra detail is visible and worth keeping. For websites, balance detail with file size, since every path adds bytes to download.</p>
+<h2>Frequently asked questions</h2>
+<h3>What are the best settings for a logo?</h3>
+<p>Logo type, the exact number of colours, High quality, smoothing 0, speckle 4–10 px and a low corner angle.</p>
+<h3>Why does my SVG have so many paths?</h3>
+<p>Too many colours or too little speckle removal. Reduce the colour count first.</p>
+<h3>Should I use High quality for everything?</h3>
+<p>Use High when small details matter. Medium or Low produce simpler, smaller files for bold shapes, icons and cut files.</p>
+<h3>Do these settings apply to other tracing tools?</h3>
+<p>Yes. Inkscape and Illustrator use similar concepts — colours or scans, detail or paths, noise or speckles, and corners — under slightly different names.</p>
+<h2>Summary</h2>
+<p>Start with the colour count, then tune speckle removal, detail, smoothing and corners while comparing at high zoom. Aim for the fewest paths that still look right, and your SVGs will be clean, compact and easy to edit.</p>
+
+<div class="author"><img src="logo.svg" alt="" width="44" height="44"><div><b>Written by the PNG to SVG Free team</b><p>We build free, privacy-first tools for converting images to vectors and write practical guides for designers, crafters and developers. Published November 21, 2026.</p></div></div>
+
+<div class="inline-cta"><p>Ready to try it? Convert your image to SVG for free.</p><a href="index.html#tool">Open the converter</a></div>
+</article>
+<h2 style="text-align:center;font-size:28px;letter-spacing:-.03em;margin:80px 0 26px">Keep reading</h2>
+<div class="posts"><a class="post" href="blog-clean-up-traced-svg.html"><div class="th" style="background:linear-gradient(135deg,#0ea5e9,#22c55e)"><svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 4V2M15 16v-2M8 9h2M20 9h2M17.8 11.8L19 13M17.8 6.2L19 5M3 21l9-9M12.2 6.2L11 5"/></svg></div>
+<div class="bd"><small>Tips</small><b>How to Clean Up a Traced SVG for Professional Results</b><p>Automatic tracing gets you most of the way. Remove fragments, merge shapes, fix colours and simplify nodes to turn a traced SVG into a pro file.</p><span>November 21, 2026 · 3 min read</span></div></a><a class="post" href="blog-common-svg-errors.html"><div class="th" style="background:linear-gradient(135deg,#0ea5e9,#22c55e)"><svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 4V2M15 16v-2M8 9h2M20 9h2M17.8 11.8L19 13M17.8 6.2L19 5M3 21l9-9M12.2 6.2L11 5"/></svg></div>
+<div class="bd"><small>Tips</small><b>Common SVG Problems and How to Fix Them</b><p>SVG will not open, appears blank, imports at the wrong size or cuts strangely? Here are the most common SVG problems and step-by-step fixes.</p><span>November 21, 2026 · 4 min read</span></div></a><a class="post" href="blog-how-many-colors-for-tracing.html"><div class="th" style="background:linear-gradient(135deg,#0ea5e9,#22c55e)"><svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="1.5"/><circle cx="17.5" cy="10.5" r="1.5"/><circle cx="8.5" cy="7.5" r="1.5"/><circle cx="6.5" cy="12.5" r="1.5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 011.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg></div>
+<div class="bd"><small>Tips</small><b>How Many Colours Should You Use When Tracing an Image?</b><p>The colour count is the most important tracing setting. Learn how to choose the right number for logos, illustrations, photos and cutting files.</p><span>November 21, 2026 · 3 min read</span></div></a></div>
+</div>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","headline":"Best Settings for Clean SVG Tracing (Colours, Detail, Noise)","description":"The tracing settings that matter most: colours, detail, noise smoothing, speckle removal and corner angle, with recommended values for every image type.","datePublished":"2026-11-21","dateModified":"2026-11-21","image":"https://pngtosvgfree.com/og-image.png","wordCount":1144,"articleSection":"Tips","inLanguage":"en","author":{"@type":"Organization","name":"PNG to SVG Free","url":"https://pngtosvgfree.com"},"publisher":{"@id":"https://pngtosvgfree.com/#organization"},"mainEntityOfPage":"https://pngtosvgfree.com/blog-best-svg-tracing-settings"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://pngtosvgfree.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://pngtosvgfree.com/blog"},{"@type":"ListItem","position":3,"name":"Best Settings for Clean SVG Tracing (Colours, Detail, Noise)","item":"https://pngtosvgfree.com/blog-best-svg-tracing-settings"}]}]}</script>
+<footer class="site">
+  <div class="fgrid">
+    <div><a class="logo" href="index.html" style="font-size:19px"><img src="logo.svg" alt="" width="28" height="28" style="border-radius:7px">PNG to SVG Free</a><p>Free online tools to convert PNG, JPG and WEBP images into crisp, scalable SVG vectors — right in your browser.</p></div>
+    <div><h6>Tools</h6><a href="index.html">PNG to SVG Converter</a><a href="bulk-svg-to-png-converter.html">Bulk SVG to PNG</a><a href="gallery.html">Free SVG Gallery</a></div>
+    <div><h6>Learn</h6><a href="blog.html">Blog</a><a href="index.html#flow">How it works</a><a href="index.html#faq">FAQs</a></div>
+    <div><h6>Company</h6><a href="about.html">About us</a><a href="contact.html">Contact us</a><a href="privacy-policy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="disclaimer.html">Disclaimer</a></div>
+  </div>
+  <div class="fbot"><span>© 2026 PNG to SVG Free. All rights reserved.</span><span>contact@pngtosvgfree.com</span></div>
+</footer>
+<div class="cookie" id="cookie"><span>We use cookies to analyse traffic and show ads. See our <a href="privacy-policy.html">Privacy Policy</a>.</span><button class="cta" style="padding:9px 14px" onclick="try{localStorage.setItem('ck','1')}catch(e){};this.parentNode.classList.remove('on')">Got it</button></div>
+<script>
+try{if(!localStorage.getItem('ck'))document.getElementById('cookie').classList.add('on')}catch(e){document.getElementById('cookie').classList.add('on')}
+(function(){const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('in')),{threshold:.1});document.querySelectorAll('.reveal').forEach(e=>io.observe(e))})();
+</script>
+
+</body>
+</html>

@@ -274,6 +274,29 @@ export default function Page() {
         </h2>
         {" "}
         <div className="posts">
+          <Link className="post" href="/blog-best-svg-tracing-settings">
+            <div className="th" style={{ "background": "linear-gradient(135deg,#0ea5e9,#22c55e)" }}>
+              <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 14l4-4" />
+                <path d="M3.34 19a10 10 0 1117.32 0" />
+              </svg>
+            </div>
+            {" "}
+            <div className="bd">
+              <small>
+                {"Tips"}
+              </small>
+              <b>
+                {"Best Settings for Clean SVG Tracing (Colours, Detail, Noise)"}
+              </b>
+              <p>
+                {"The tracing settings that matter most: colours, detail, noise smoothing, speckle removal and corner angle, with recommended values for every image type."}
+              </p>
+              <span>
+                {"November 21, 2026 · 6 min read"}
+              </span>
+            </div>
+          </Link>
           <Link className="post" href="/blog-common-svg-errors">
             <div className="th" style={{ "background": "linear-gradient(135deg,#0ea5e9,#22c55e)" }}>
               <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
@@ -316,30 +339,6 @@ export default function Page() {
               </b>
               <p>
                 {"The colour count is the most important tracing setting. Learn how to choose the right number for logos, illustrations, photos and cutting files."}
-              </p>
-              <span>
-                {"November 21, 2026 · 3 min read"}
-              </span>
-            </div>
-          </Link>
-          <Link className="post" href="/blog-photo-to-vector-art">
-            <div className="th" style={{ "background": "linear-gradient(135deg,#0ea5e9,#22c55e)" }}>
-              <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="3" y="3" width="18" height="18" rx="2" />
-                <circle cx="8.5" cy="8.5" r="1.5" />
-                <path d="M21 15l-5-5L5 21" />
-              </svg>
-            </div>
-            {" "}
-            <div className="bd">
-              <small>
-                {"Tips"}
-              </small>
-              <b>
-                {"Photo to Vector Art: What to Expect and How to Get Great Results"}
-              </b>
-              <p>
-                {"Converting a photo to SVG creates stylised vector art, not a perfect copy. Learn what works, what does not and how to get a striking result."}
               </p>
               <span>
                 {"November 21, 2026 · 3 min read"}

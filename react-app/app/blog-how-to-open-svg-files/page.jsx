@@ -433,13 +433,13 @@ export default function Page() {
                 {"Basics"}
               </small>
               <b>
-                {"Raster vs Vector Graphics: The Complete Guide"}
+                {"Raster vs Vector Images Explained: The Complete Guide"}
               </b>
               <p>
                 {"Raster and vector are the two ways computers store images. Understand the difference once and you will always know which file format to use."}
               </p>
               <span>
-                {"November 21, 2026 · 4 min read"}
+                {"November 21, 2026 · 6 min read"}
               </span>
             </div>
           </Link>

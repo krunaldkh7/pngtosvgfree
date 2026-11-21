@@ -60,6 +60,11 @@
   "priority": 0.7
  },
  {
+  "route": "/blog-best-svg-tracing-settings",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
   "route": "/blog-clean-up-traced-svg",
   "lastmod": "2026-11-21",
   "priority": 0.7
@@ -77,6 +82,11 @@
  {
   "route": "/blog-convert-logo-to-svg",
   "lastmod": "2026-11-05",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-convert-png-to-svg",
+  "lastmod": "2026-11-21",
   "priority": 0.7
  },
  {
@@ -121,6 +131,11 @@
  },
  {
   "route": "/blog-logo-file-formats",
+  "lastmod": "2026-11-21",
+  "priority": 0.7
+ },
+ {
+  "route": "/blog-make-svg-for-cricut",
   "lastmod": "2026-11-21",
   "priority": 0.7
  },
