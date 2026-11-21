@@ -4,6 +4,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Cookie from "@/components/Cookie";
 import Reveal from "@/components/Reveal";
+import ScrollToTop from "@/components/ScrollToTop";
 import { ADSENSE_CLIENT, BRAND, CONTACT_EMAIL, SITE_URL, SOCIAL_LINKS, TAGLINE } from "@/lib/site";
 
 // Self-hosted at build time: no render-blocking request to Google Fonts.
@@ -69,6 +70,7 @@ export default function RootLayout({ children }) {
         <Footer />
         <Cookie />
         <Reveal />
+        <ScrollToTop />
       </body>
     </html>
   );
