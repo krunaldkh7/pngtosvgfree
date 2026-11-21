@@ -1,3 +1,4 @@
+import Link from "next/link";
 import PageScript from "@/components/PageScript";
 
 export const metadata = {
@@ -37,7 +38,7 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <style dangerouslySetInnerHTML={{ __html: "\n:root{--bg:#f3f4fb;--card:#fff;--line:#e6e7f2;--txt:#0f1020;--mut:#6a6d85;--blue:#3d4ef5;--blue2:#2f3fe0;--vio:#8b5cf6;--vio2:#a78bfa;--lav:#ece9fe;--r:18px}\n*{box-sizing:border-box;margin:0;padding:0}\nhtml{scroll-behavior:smooth}\nbody{font-family:var(--font-inter),system-ui,sans-serif;background:var(--bg);color:var(--txt);-webkit-font-smoothing:antialiased;overflow-x:hidden}\nbody:before{content:\"\";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(900px 500px at 50% -10%,#e4e0ff,transparent 70%),radial-gradient(500px 400px at 0% 60%,#efe9ff,transparent 70%),radial-gradient(500px 400px at 100% 80%,#e7ecff,transparent 70%);background-color:var(--bg)}\nbody:after{content:\"\";position:fixed;inset:0;z-index:-1;pointer-events:none;background-image:linear-gradient(#0f10200a 1px,transparent 1px),linear-gradient(90deg,#0f10200a 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse at 50% 20%,#000 20%,transparent 65%)}\na{color:inherit;text-decoration:none}\n\n/* nav */\nnav{max-width:1180px;margin:18px auto 0;display:flex;justify-content:space-between;align-items:center;padding:0 4vw;position:relative;z-index:10}\n.logo{font-weight:800;font-size:22px;display:flex;gap:9px;align-items:center;letter-spacing:-.03em}\n\n.navpill{display:flex;background:#fff;border:1px solid var(--line);border-radius:12px;padding:4px;box-shadow:0 2px 10px #3d4ef50d}\n.navpill a{padding:8px 16px;border-radius:9px;font-size:14px;font-weight:600;color:var(--mut);transition:.2s}\n.navpill a:hover{color:var(--txt)}.navpill a.on{background:var(--bg);color:var(--txt)}\n.cta{background:var(--blue);color:#fff;padding:11px 18px;border-radius:11px;font-weight:600;font-size:14px;box-shadow:0 6px 18px #3d4ef54d;transition:.2s;border:0;cursor:pointer;font-family:inherit}\n.cta:hover{background:var(--blue2);transform:translateY(-1px)}\n\n/* hero */\n.hero{position:relative;text-align:center;padding:76px 5vw 40px;max-width:1180px;margin:0 auto}\n.avail{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:#3a3d55;margin-bottom:20px}\n.avail b{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px #22c55e26;animation:pu 2s infinite}\n@keyframes pu{50%{box-shadow:0 0 0 7px #22c55e10}}\nh1{font-size:clamp(40px,6.4vw,76px);font-weight:800;letter-spacing:-.045em;line-height:1.02}\nh1 em{font-style:normal;background:linear-gradient(90deg,var(--blue),var(--vio));-webkit-background-clip:text;background-clip:text;color:transparent}\n.hero p{max-width:520px;margin:18px auto 0;color:var(--mut);font-size:17px;line-height:1.6}\n.trust{display:inline-flex;align-items:center;gap:10px;margin-top:24px;background:#ffffffb3;border:1px solid var(--line);padding:7px 16px 7px 8px;border-radius:99px;font-size:13px;font-weight:600;color:#3a3d55;backdrop-filter:blur(6px)}\n.av{display:flex}.av span{width:24px;height:24px;border-radius:50%;border:2px solid #fff;margin-left:-7px;display:grid;place-items:center;font-size:10px;font-weight:800;color:#fff}.av span:first-child{margin-left:0}\n.hbtns{display:flex;gap:10px;justify-content:center;margin-top:24px;flex-wrap:wrap}\n.btn2{background:#fff;color:var(--txt);border:1px solid var(--line);padding:11px 18px;border-radius:11px;font-weight:600;font-size:14px;cursor:pointer;font-family:inherit;transition:.2s}\n.btn2:hover{border-color:#c9cbe0;transform:translateY(-1px)}\n.fl{position:absolute;width:42px;height:42px;border-radius:12px;background:#fff;border:1px solid var(--line);box-shadow:0 10px 24px #3d4ef514;display:grid;place-items:center;font-size:11px;font-weight:800;animation:fy 7s ease-in-out infinite}\n@keyframes fy{50%{translate:0 -12px}}\n.fl.s{width:30px;height:30px;border-radius:9px;font-size:13px}\n.sq{position:absolute;width:20px;height:20px;border-radius:4px;background:#e2e3f3;opacity:.7}\n\n/* app window */\n.wrap{max-width:1180px;margin:0 auto;padding:0 4vw}\n.win{background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:0 40px 80px -20px #3d4ef52e,0 0 0 8px #ffffff80;overflow:hidden;position:relative;z-index:2}\n.wbar{display:flex;align-items:center;gap:8px;padding:13px 16px;border-bottom:1px solid var(--line);background:#fafbff}\n.wbar i{width:11px;height:11px;border-radius:50%}.wbar i:nth-child(1){background:#ff5f57}.wbar i:nth-child(2){background:#febc2e}.wbar i:nth-child(3){background:#28c840}\n.wbar .tt{flex:1;text-align:center;font-size:12.5px;color:var(--mut);font-weight:600}\n.wbar .tt span{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:4px 14px}\n.wbody{padding:22px}\n#start{display:grid;grid-template-columns:220px 1fr;gap:20px}\n.side{border-right:1px solid var(--line);padding-right:18px}\n.side h5{font-size:12px;color:var(--mut);font-weight:700;margin:4px 0 10px}\n.side div{cursor:pointer;transition:.15s;display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:10px;font-size:13.5px;font-weight:600;margin-bottom:3px}\n.side div:hover{background:#f6f5ff}.side div.on{background:var(--lav);color:#4c1d95;box-shadow:inset 0 0 0 1px #d4d0fb}\n.side div i{width:24px;height:24px;border-radius:7px;display:grid;place-items:center;font-style:normal;font-size:12px}\n.side div em{margin-left:auto;width:8px;height:8px;border-radius:50%;font-style:normal}\n.drop{border:2px dashed #d4d0fb;border-radius:16px;background:linear-gradient(180deg,#fbfaff,#f5f3ff);padding:56px 20px;text-align:center;cursor:pointer;transition:.25s;position:relative;overflow:hidden}\n.drop:hover,.drop.on{border-color:var(--vio);transform:translateY(-2px);box-shadow:0 18px 40px #8b5cf622}\n.drop .ic{width:64px;height:64px;margin:0 auto 16px;border-radius:18px;background:linear-gradient(135deg,var(--blue),var(--vio));color:#fff;display:grid;place-items:center;font-size:26px;box-shadow:0 12px 28px #6d5dfc55;animation:bob 3s ease-in-out infinite}\n@keyframes bob{50%{transform:translateY(-7px)}}\n.drop h3{font-size:21px;letter-spacing:-.02em;margin-bottom:6px}.drop small{color:var(--mut);line-height:1.7;font-size:13px}\n.drop .chips{display:flex;gap:6px;justify-content:center;margin-top:14px;flex-wrap:wrap}\n.drop .chips span{background:#fff;border:1px solid var(--line);font-size:11px;font-weight:700;padding:4px 9px;border-radius:7px;color:#4c4f6b}\n.err{background:#fef2f2;border:1px solid #fecaca;color:#b91c1c;padding:12px 16px;border-radius:12px;margin-top:12px;display:none;grid-column:2}\n\n/* editor */\n#editor{display:none}\n.ed{display:grid;grid-template-columns:1fr 320px;gap:18px}\n.panel{min-width:0}\n.ed>.panel:last-child{border-left:1px solid var(--line);padding-left:18px}\n.viewbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;gap:10px;flex-wrap:wrap}\n.seg{display:inline-flex;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:3px}\n.seg button{display:inline-flex;align-items:center;justify-content:center;gap:6px;background:none;border:0;color:var(--mut);font-weight:600;font-size:13px;font-family:inherit;padding:7px 13px;border-radius:7px;cursor:pointer}\n.seg button.on{background:#fff;color:var(--blue);box-shadow:0 1px 4px #0f102014}\n.stage{position:relative;border-radius:14px;overflow:hidden;background:repeating-conic-gradient(#f0f0f8 0 25%,#fff 0 50%) 0 0/20px 20px;height:min(60vh,540px);user-select:none;border:1px solid var(--line);touch-action:none;cursor:grab}\n.stage.pan{cursor:grabbing}.stage.white{background:#fff}\n.layer{position:absolute;inset:14px;transform-origin:0 0;will-change:transform}\n.layer img,.layer svg{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block}\n.clipO{position:absolute;inset:0;clip-path:inset(0 50% 0 0)}\n.split{position:absolute;top:0;bottom:0;left:50%;width:2px;background:linear-gradient(var(--blue),var(--vio));cursor:ew-resize;z-index:3;transform:translateX(-1px)}\n.split:after{content:\"⟷\";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:34px;height:34px;border-radius:50%;background:#fff;color:var(--blue);border:2px solid var(--blue);display:grid;place-items:center;font-weight:800;font-size:14px;box-shadow:0 6px 16px #3d4ef533}\n.lbl{position:absolute;top:12px;font-size:10.5px;font-weight:700;background:#fff;border:1px solid var(--line);color:var(--mut);padding:4px 10px;border-radius:99px;z-index:4;letter-spacing:.06em}\n.zoom{position:absolute;right:12px;bottom:12px;z-index:4;display:flex;gap:2px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:3px;box-shadow:0 4px 12px #0f102010}\n.zoom button{display:grid;place-items:center;background:none;border:0;color:var(--txt);font-weight:700;font-size:14px;font-family:inherit;width:30px;height:28px;border-radius:7px;cursor:pointer}.zoom button:hover{background:var(--lav);color:var(--blue)}\n.zoom span{color:var(--mut);font-size:12px;align-self:center;min-width:44px;text-align:center}\n.busy{position:absolute;inset:0;background:#ffffffd9;display:none;place-items:center;z-index:5}.busy.on{display:grid}\n.bar{width:200px;height:5px;border-radius:9px;background:var(--line);overflow:hidden;margin-top:10px}\n.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--vio));transition:width .2s}\n.sts{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:12px}\n.sts div{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:9px 11px}\n.sts b{display:block;font-size:15px;color:var(--txt)}.sts small{color:var(--mut);font-size:11px}\n.acts{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}\n.btn{background:var(--blue);color:#fff;border:0;padding:12px 20px;border-radius:11px;font-weight:600;font-size:14px;font-family:inherit;cursor:pointer;transition:.2s;display:inline-flex;gap:8px;align-items:center;box-shadow:0 6px 18px #3d4ef544}\n.btn:hover{background:var(--blue2);transform:translateY(-1px)}\n.btn.g{background:#fff;color:var(--txt);border:1px solid var(--line);box-shadow:none}.btn.g:hover{border-color:#c9cbe0}\n.btn.big{flex:1;justify-content:center}\nh4{font-size:12px;color:var(--mut);margin:2px 0 10px;font-weight:700}\n.sec{padding-bottom:16px;margin-bottom:16px;border-bottom:1px solid var(--line)}.sec:last-child{border:0;margin:0;padding:0}\n.tgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}\n.tbtn{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;text-align:left;cursor:pointer;color:var(--txt);font-family:inherit;transition:.15s;position:relative}\n.tbtn:hover{border-color:var(--vio2)}\n.tbtn b{font-size:13px;display:block}.tbtn small{color:var(--mut);font-size:11px;line-height:1.35;display:block;margin-top:2px}\n.tbtn.on{border-color:var(--vio);background:#faf8ff;box-shadow:inset 0 0 0 1px var(--vio)}\n.tbtn .auto{position:absolute;top:7px;right:8px;font-size:9px;font-weight:800;color:#fff;background:var(--vio);padding:2px 6px;border-radius:99px;display:none}\n.tbtn.det .auto{display:block}\n.seg.full{display:flex}.seg.full button{flex:1}\n.pal{display:flex;flex-wrap:wrap;gap:8px}\n.chip{position:relative;width:36px;height:36px;border-radius:10px;border:1px solid #0f10201f;cursor:pointer;transition:.15s}.chip:hover{transform:scale(1.08)}\n.chip input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}\n.chip .x{position:absolute;top:-6px;right:-6px;width:17px;height:17px;border-radius:50%;background:#fff;border:1px solid var(--line);color:var(--txt);font-size:10px;display:grid;place-items:center;cursor:pointer;z-index:2;box-shadow:0 1px 3px #0002}\n.chip.off{background:repeating-conic-gradient(#ddd 0 25%,#fff 0 50%) 0 0/8px 8px!important}\n.chip.off .x{background:#22c55e;color:#fff;border-color:#22c55e}\n.sugg{display:flex;flex-direction:column;gap:6px}\n.sg{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:10px;padding:6px 8px;cursor:pointer;transition:.15s}\n.sg:hover,.sg.on{border-color:var(--vio)}\n.sg span{font-size:11px;color:var(--mut);width:22px}\n.sg div{display:flex;flex:1;height:14px;border-radius:5px;overflow:hidden}.sg div i{flex:1}\ndetails.adv summary{cursor:pointer;font-weight:700;font-size:13px;list-style:none;display:flex;justify-content:space-between}\ndetails.adv summary:after{content:\"▾\";color:var(--mut)}\n.rng{margin-top:14px}\n.rng label{display:flex;justify-content:space-between;font-size:13px;font-weight:600}\n.rng label b{background:var(--lav);color:#5b21b6;padding:1px 8px;border-radius:6px;font-size:12px}\n.rng small{display:block;color:var(--mut);font-size:11px;margin-top:3px;line-height:1.4}\ninput[type=range],.chk input{accent-color:var(--vio)}\ninput[type=range]{width:100%;margin-top:6px}\n.chk{display:flex;gap:10px;align-items:flex-start;margin-top:14px;font-size:13px;cursor:pointer}.chk input{margin-top:3px}\n.link{background:none;border:0;color:var(--blue);font-weight:600;font-size:12px;font-family:inherit;cursor:pointer;margin-top:10px}\n\n/* sections */\n.sh{text-align:center;margin:110px auto 0;max-width:640px}\n.tag{display:inline-block;font-size:12px;font-weight:700;color:var(--vio);background:var(--lav);padding:5px 12px;border-radius:99px;margin-bottom:14px}\nh2{font-size:clamp(30px,4vw,46px);font-weight:800;letter-spacing:-.04em;line-height:1.08}\n.sh p{color:var(--mut);margin-top:12px;line-height:1.6;font-size:16px}\n.flow{margin-top:30px}\n.flow svg{width:100%;height:auto;display:block}\n.flow .dash{stroke-dasharray:6 8;animation:da 1.4s linear infinite}@keyframes da{to{stroke-dashoffset:-28}}\n.flow .hex{animation:hx 4s ease-in-out infinite;transform-origin:600px 190px}@keyframes hx{50%{transform:scale(1.04)}}\n.flow .nd{animation:fy 5s ease-in-out infinite}\n.feat{display:flex;justify-content:center;gap:42px;flex-wrap:wrap;margin-top:28px;color:#5a5d78;font-weight:700;font-size:17px}\n.feat span{display:flex;align-items:center;gap:8px;opacity:.85;transition:.2s}.feat span:hover{opacity:1;color:var(--txt)}\n.feat span i{font-style:normal;width:26px;height:26px;border-radius:8px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;font-size:13px}\n.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:34px}\n.cd{background:#fff;border:1px solid var(--line);border-radius:18px;padding:10px;transition:.25s}\n.cd:hover{transform:translateY(-5px);box-shadow:0 24px 50px -10px #3d4ef533}\n.th{height:150px;border-radius:12px;position:relative;overflow:hidden;display:grid;place-items:center;color:#fff}\n.th b{position:absolute;left:14px;top:12px;font-size:17px;font-weight:800;letter-spacing:-.02em;line-height:1.1;max-width:60%;text-align:left}\n.th svg{position:absolute;right:12px;bottom:10px;width:76px;height:76px}\n.cd .bd{padding:12px 6px 6px}.cd .bd b{font-size:15px}.cd .bd p{color:var(--mut);font-size:13px;line-height:1.5;margin-top:4px}\n.cd .bd small{display:inline-block;margin-top:10px;font-size:11px;font-weight:700;color:var(--vio);background:var(--lav);padding:3px 8px;border-radius:6px}\n.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}\n.st{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px;position:relative;transition:.25s}\n.st:hover{transform:translateY(-4px);box-shadow:0 20px 40px -12px #3d4ef52a}\n.st .n{width:38px;height:38px;border-radius:11px;background:var(--lav);color:var(--vio);display:grid;place-items:center;font-weight:800;margin-bottom:16px}\n.st:nth-child(2) .n{background:#e3e7ff;color:var(--blue)}.st:nth-child(3) .n{background:#dcfce7;color:#16a34a}\n.st b{font-size:17px}.st p{color:var(--mut);font-size:14px;line-height:1.6;margin-top:6px}\n.faq{max-width:780px;margin:34px auto 0}\n.faq details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-top:10px;transition:.2s}\n.faq details[open]{border-color:#d4d0fb;box-shadow:0 10px 24px -10px #8b5cf633}\n.faq summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:10px}\n.faq summary:after{content:\"+\";color:var(--vio);font-size:20px;line-height:1}.faq details[open] summary:after{content:\"−\"}\n.faq p{color:var(--mut);margin-top:10px;font-size:14px;line-height:1.65}\n.band{margin:110px auto 0;background:linear-gradient(135deg,#3d4ef5,#7c5cf6 60%,#a78bfa);border-radius:26px;padding:56px 30px;text-align:center;color:#fff;position:relative;overflow:hidden}\n.band:before,.band:after{content:\"\";position:absolute;width:260px;height:260px;border-radius:50%;background:#ffffff14}\n.band:before{left:-80px;top:-100px}.band:after{right:-60px;bottom:-120px}\n.band h2{color:#fff}.band p{opacity:.85;margin-top:10px}\n.band .cta{background:#fff;color:var(--blue);margin-top:24px;box-shadow:0 10px 24px #0f102033;padding:13px 22px;position:relative;z-index:1}\nfooter{display:flex;justify-content:space-between;align-items:center;max-width:1180px;margin:40px auto 0;padding:26px 4vw 40px;color:var(--mut);font-size:13px;flex-wrap:wrap;gap:10px}\n.toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,120px);background:var(--txt);color:#fff;padding:11px 18px;border-radius:11px;font-weight:600;font-size:14px;transition:.3s;z-index:50}\n.toast.s{transform:translate(-50%,0)}\n.reveal{opacity:0;transform:translateY(26px);transition:.7s cubic-bezier(.2,.7,.2,1)}.reveal.in{opacity:1;transform:none}\n@media(max-width:960px){.ed{grid-template-columns:1fr}.ed>.panel:last-child{border:0;padding:0}#start{grid-template-columns:1fr}.side{display:none}.err{grid-column:1}.cards{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr}.navpill{display:none}.sts{grid-template-columns:repeat(3,1fr)}.fl,.sq{display:none}}\n@media(max-width:560px){.cards{grid-template-columns:1fr}}\n\n/* shared */\n:root{--bg:#f3f4fb;--card:#fff;--line:#e6e7f2;--txt:#0f1020;--mut:#6a6d85;--blue:#3d4ef5;--blue2:#2f3fe0;--vio:#8b5cf6;--vio2:#a78bfa;--lav:#ece9fe}\n*{box-sizing:border-box;margin:0;padding:0}\nhtml{scroll-behavior:smooth}\nbody{font-family:var(--font-inter),system-ui,sans-serif;background:var(--bg);color:var(--txt);-webkit-font-smoothing:antialiased;overflow-x:hidden}\nbody:before{content:\"\";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(900px 500px at 50% -10%,#e4e0ff,transparent 70%),radial-gradient(500px 400px at 0% 60%,#efe9ff,transparent 70%),radial-gradient(500px 400px at 100% 80%,#e7ecff,transparent 70%);background-color:var(--bg)}\na{color:inherit;text-decoration:none}\nnav.top{max-width:1180px;margin:18px auto 0;display:flex;justify-content:space-between;align-items:center;padding:0 4vw;position:relative;z-index:10;gap:12px}\n.logo{font-weight:800;font-size:22px;display:flex;gap:9px;align-items:center;letter-spacing:-.03em}\n\n.navpill{display:flex;background:#fff;border:1px solid var(--line);border-radius:12px;padding:4px;box-shadow:0 2px 10px #3d4ef50d}\n.navpill a{padding:8px 15px;border-radius:9px;font-size:14px;font-weight:600;color:var(--mut);transition:.2s;white-space:nowrap}\n.navpill a:hover{color:var(--txt)}.navpill a.on{background:var(--bg);color:var(--txt)}\n.cta{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;padding:11px 18px;border-radius:11px;font-weight:600;font-size:14px;box-shadow:0 6px 18px #3d4ef54d;transition:.2s;border:0;cursor:pointer;font-family:inherit}\n.cta:hover{background:var(--blue2);transform:translateY(-1px)}\n.btn2{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--txt);border:1px solid var(--line);padding:11px 18px;border-radius:11px;font-weight:600;font-size:14px;cursor:pointer;font-family:inherit;transition:.2s}\n.btn2:hover{border-color:#c9cbe0}\n.menu{display:none;background:#fff;border:1px solid var(--line);border-radius:10px;width:42px;height:42px;cursor:pointer;place-items:center}\n.wrap{max-width:1180px;margin:0 auto;padding:0 4vw}\n.phead{text-align:center;padding:64px 5vw 34px;max-width:780px;margin:0 auto}\n.tag{display:inline-block;font-size:12px;font-weight:700;color:var(--vio);background:var(--lav);padding:5px 12px;border-radius:99px;margin-bottom:14px}\n.phead h1{font-size:clamp(34px,5vw,56px);font-weight:800;letter-spacing:-.04em;line-height:1.05}\n.phead h1 em{font-style:normal;background:linear-gradient(90deg,var(--blue),var(--vio));-webkit-background-clip:text;background-clip:text;color:transparent}\n.phead p{color:var(--mut);margin-top:14px;line-height:1.6;font-size:17px}\n.crumbs{font-size:13px;color:var(--mut);margin-bottom:16px}.crumbs a{color:var(--blue)}\n.box{background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:0 30px 70px -30px #3d4ef533}\n/* article / legal prose */\n.prose{max-width:760px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:22px;padding:clamp(24px,5vw,56px);box-shadow:0 30px 70px -30px #3d4ef522}\n.prose h2{font-size:24px;letter-spacing:-.02em;margin:34px 0 12px}\n.prose h3{font-size:18px;margin:24px 0 8px}.prose code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;background:#eef0fb;border-radius:5px;padding:.12em .38em}.prose pre{background:#0f1020;color:#e6e7f2;border-radius:12px;padding:16px 18px;overflow-x:auto;margin:14px 0;line-height:1.55}.prose pre code{background:none;padding:0;color:inherit;font-size:13px}.tldr{background:linear-gradient(135deg,#eef0ff,#f5f0ff);border:1px solid #dcdcfb;border-radius:14px;padding:16px 20px;margin:18px 0 8px}.tldr b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:4px}.tldr p{margin:0}.author{display:flex;gap:14px;align-items:flex-start;border-top:1px solid var(--line);margin-top:34px;padding-top:22px}.author img{border-radius:10px;flex:none}.author b{display:block;margin-bottom:2px}.author p{margin:0;font-size:14px;color:var(--mut)}\n.prose p,.prose li{color:#3a3d55;line-height:1.8;font-size:16px}\n.prose p{margin:12px 0}\n.prose ul,.prose ol{padding-left:22px;margin:12px 0}.prose li{margin:6px 0}\n.prose a{color:var(--blue);text-decoration:underline}\n.prose .meta{color:var(--mut);font-size:14px;display:flex;gap:14px;flex-wrap:wrap;margin-bottom:6px}\n.prose .note{background:var(--lav);border-radius:14px;padding:16px 18px;color:#4c1d95;margin:20px 0;line-height:1.7}\n.prose table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14.5px}\n.prose th,.prose td{border:1px solid var(--line);padding:10px 12px;text-align:left}.prose th{background:var(--bg)}\n.prose .cover{height:220px;border-radius:16px;margin-bottom:26px;display:grid;place-items:center;overflow:hidden}\n.prose .cover svg{width:120px;height:120px}\n.prose .inline-cta{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;background:linear-gradient(135deg,#3d4ef5,#8b5cf6);color:#fff;border-radius:16px;padding:20px 22px;margin:30px 0 6px}\n.prose .inline-cta p{color:#fff;margin:0;font-weight:600}.prose .inline-cta a{background:#fff;color:var(--blue);text-decoration:none;padding:10px 16px;border-radius:10px;font-weight:700;font-size:14px}\n/* blog cards */\n.posts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}\n.post{background:#fff;border:1px solid var(--line);border-radius:18px;padding:10px;transition:.25s;display:flex;flex-direction:column}\n.post:hover{transform:translateY(-5px);box-shadow:0 24px 50px -10px #3d4ef533}\n.post .th{height:160px;border-radius:12px;display:grid;place-items:center;color:#fff}\n.post .th svg{width:70px;height:70px}\n.post .bd{padding:14px 8px 8px;display:flex;flex-direction:column;flex:1}\n.post .bd small{color:var(--vio);font-weight:700;font-size:12px}\n.post .bd b{font-size:17px;letter-spacing:-.01em;margin-top:6px;line-height:1.35}\n.post .bd p{color:var(--mut);font-size:14px;line-height:1.55;margin-top:8px;flex:1}\n.post .bd span{font-size:12.5px;color:var(--mut);margin-top:12px}\n/* footer */\nfooter.site{max-width:1180px;margin:100px auto 0;padding:46px 4vw 30px;border-top:1px solid var(--line)}\n.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px}\n.fgrid p{color:var(--mut);font-size:14px;line-height:1.6;margin-top:12px;max-width:300px}\n.fgrid h6{font-size:13px;font-weight:700;margin-bottom:12px}\n.fgrid a.logo{display:flex;color:var(--txt)}.fgrid a:not(.logo){display:block;color:var(--mut);font-size:14px;margin:8px 0;transition:.15s}.fgrid a:hover{color:var(--blue)}\n.fbot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:34px;padding-top:20px;border-top:1px solid var(--line);color:var(--mut);font-size:13px}\n.ad-slot{display:none}\n.cookie{position:fixed;left:16px;right:16px;bottom:16px;max-width:520px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px;box-shadow:0 20px 50px -10px #0f102033;z-index:60;display:none;gap:14px;align-items:center;font-size:13.5px;color:#3a3d55;line-height:1.5}\n.cookie.on{display:flex}.cookie a{color:var(--blue);text-decoration:underline}\n.cookie button{flex-shrink:0}\n.reveal{opacity:0;transform:translateY(26px);transition:.7s cubic-bezier(.2,.7,.2,1)}.reveal.in{opacity:1;transform:none}\n@media(max-width:960px){.navpill{display:none;position:absolute;top:56px;left:4vw;right:4vw;flex-direction:column;z-index:30}.navpill.open{display:flex}.menu{display:grid}nav.top .cta{display:none}.posts{grid-template-columns:1fr 1fr}.fgrid{grid-template-columns:1fr 1fr}}\n@media(max-width:600px){.posts{grid-template-columns:1fr}.fgrid{grid-template-columns:1fr}}\n\nbody:after{display:none}\nfooter.site{display:block}\n" }} />
+      <style dangerouslySetInnerHTML={{ __html: "\n:root{--bg:#f3f4fb;--card:#fff;--line:#e6e7f2;--txt:#0f1020;--mut:#6a6d85;--blue:#3d4ef5;--blue2:#2f3fe0;--vio:#8b5cf6;--vio2:#a78bfa;--lav:#ece9fe;--r:18px}\n*{box-sizing:border-box;margin:0;padding:0}\nhtml{scroll-behavior:smooth}\nbody{font-family:var(--font-inter),system-ui,sans-serif;background:var(--bg);color:var(--txt);-webkit-font-smoothing:antialiased;overflow-x:hidden}\nbody:before{content:\"\";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(900px 500px at 50% -10%,#e4e0ff,transparent 70%),radial-gradient(500px 400px at 0% 60%,#efe9ff,transparent 70%),radial-gradient(500px 400px at 100% 80%,#e7ecff,transparent 70%);background-color:var(--bg)}\nbody:after{content:\"\";position:fixed;inset:0;z-index:-1;pointer-events:none;background-image:linear-gradient(#0f10200a 1px,transparent 1px),linear-gradient(90deg,#0f10200a 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse at 50% 20%,#000 20%,transparent 65%)}\na{color:inherit;text-decoration:none}\n\n/* nav */\nnav{max-width:1180px;margin:18px auto 0;display:flex;justify-content:space-between;align-items:center;padding:0 4vw;position:relative;z-index:10}\n.logo{font-weight:800;font-size:22px;display:flex;gap:9px;align-items:center;letter-spacing:-.03em}\n\n.navpill{display:flex;background:#fff;border:1px solid var(--line);border-radius:12px;padding:4px;box-shadow:0 2px 10px #3d4ef50d}\n.navpill a{padding:8px 16px;border-radius:9px;font-size:14px;font-weight:600;color:var(--mut);transition:.2s}\n.navpill a:hover{color:var(--txt)}.navpill a.on{background:var(--bg);color:var(--txt)}\n.cta{background:var(--blue);color:#fff;padding:11px 18px;border-radius:11px;font-weight:600;font-size:14px;box-shadow:0 6px 18px #3d4ef54d;transition:.2s;border:0;cursor:pointer;font-family:inherit}\n.cta:hover{background:var(--blue2);transform:translateY(-1px)}\n\n/* hero */\n.hero{position:relative;text-align:center;padding:76px 5vw 40px;max-width:1180px;margin:0 auto}\n.avail{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:#3a3d55;margin-bottom:20px}\n.avail b{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px #22c55e26;animation:pu 2s infinite}\n@keyframes pu{50%{box-shadow:0 0 0 7px #22c55e10}}\nh1{font-size:clamp(40px,6.4vw,76px);font-weight:800;letter-spacing:-.045em;line-height:1.02}\nh1 em{font-style:normal;background:linear-gradient(90deg,var(--blue),var(--vio));-webkit-background-clip:text;background-clip:text;color:transparent}\n.hero p{max-width:520px;margin:18px auto 0;color:var(--mut);font-size:17px;line-height:1.6}\n.trust{display:inline-flex;align-items:center;gap:10px;margin-top:24px;background:#ffffffb3;border:1px solid var(--line);padding:7px 16px 7px 8px;border-radius:99px;font-size:13px;font-weight:600;color:#3a3d55;backdrop-filter:blur(6px)}\n.av{display:flex}.av span{width:24px;height:24px;border-radius:50%;border:2px solid #fff;margin-left:-7px;display:grid;place-items:center;font-size:10px;font-weight:800;color:#fff}.av span:first-child{margin-left:0}\n.hbtns{display:flex;gap:10px;justify-content:center;margin-top:24px;flex-wrap:wrap}\n.btn2{background:#fff;color:var(--txt);border:1px solid var(--line);padding:11px 18px;border-radius:11px;font-weight:600;font-size:14px;cursor:pointer;font-family:inherit;transition:.2s}\n.btn2:hover{border-color:#c9cbe0;transform:translateY(-1px)}\n.fl{position:absolute;width:42px;height:42px;border-radius:12px;background:#fff;border:1px solid var(--line);box-shadow:0 10px 24px #3d4ef514;display:grid;place-items:center;font-size:11px;font-weight:800;animation:fy 7s ease-in-out infinite}\n@keyframes fy{50%{translate:0 -12px}}\n.fl.s{width:30px;height:30px;border-radius:9px;font-size:13px}\n.sq{position:absolute;width:20px;height:20px;border-radius:4px;background:#e2e3f3;opacity:.7}\n\n/* app window */\n.wrap{max-width:1180px;margin:0 auto;padding:0 4vw}\n.win{background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:0 40px 80px -20px #3d4ef52e,0 0 0 8px #ffffff80;overflow:hidden;position:relative;z-index:2}\n.wbar{display:flex;align-items:center;gap:8px;padding:13px 16px;border-bottom:1px solid var(--line);background:#fafbff}\n.wbar i{width:11px;height:11px;border-radius:50%}.wbar i:nth-child(1){background:#ff5f57}.wbar i:nth-child(2){background:#febc2e}.wbar i:nth-child(3){background:#28c840}\n.wbar .tt{flex:1;text-align:center;font-size:12.5px;color:var(--mut);font-weight:600}\n.wbar .tt span{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:4px 14px}\n.wbody{padding:22px}\n#start{display:grid;grid-template-columns:220px 1fr;gap:20px}\n.side{border-right:1px solid var(--line);padding-right:18px}\n.side h5{font-size:12px;color:var(--mut);font-weight:700;margin:4px 0 10px}\n.side div{cursor:pointer;transition:.15s;display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:10px;font-size:13.5px;font-weight:600;margin-bottom:3px}\n.side div:hover{background:#f6f5ff}.side div.on{background:var(--lav);color:#4c1d95;box-shadow:inset 0 0 0 1px #d4d0fb}\n.side div i{width:24px;height:24px;border-radius:7px;display:grid;place-items:center;font-style:normal;font-size:12px}\n.side div em{margin-left:auto;width:8px;height:8px;border-radius:50%;font-style:normal}\n.drop{border:2px dashed #d4d0fb;border-radius:16px;background:linear-gradient(180deg,#fbfaff,#f5f3ff);padding:56px 20px;text-align:center;cursor:pointer;transition:.25s;position:relative;overflow:hidden}\n.drop:hover,.drop.on{border-color:var(--vio);transform:translateY(-2px);box-shadow:0 18px 40px #8b5cf622}\n.drop .ic{width:64px;height:64px;margin:0 auto 16px;border-radius:18px;background:linear-gradient(135deg,var(--blue),var(--vio));color:#fff;display:grid;place-items:center;font-size:26px;box-shadow:0 12px 28px #6d5dfc55;animation:bob 3s ease-in-out infinite}\n@keyframes bob{50%{transform:translateY(-7px)}}\n.drop h3{font-size:21px;letter-spacing:-.02em;margin-bottom:6px}.drop small{color:var(--mut);line-height:1.7;font-size:13px}\n.drop .chips{display:flex;gap:6px;justify-content:center;margin-top:14px;flex-wrap:wrap}\n.drop .chips span{background:#fff;border:1px solid var(--line);font-size:11px;font-weight:700;padding:4px 9px;border-radius:7px;color:#4c4f6b}\n.err{background:#fef2f2;border:1px solid #fecaca;color:#b91c1c;padding:12px 16px;border-radius:12px;margin-top:12px;display:none;grid-column:2}\n\n/* editor */\n#editor{display:none}\n.ed{display:grid;grid-template-columns:1fr 320px;gap:18px}\n.panel{min-width:0}\n.ed>.panel:last-child{border-left:1px solid var(--line);padding-left:18px}\n.viewbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;gap:10px;flex-wrap:wrap}\n.seg{display:inline-flex;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:3px}\n.seg button{display:inline-flex;align-items:center;justify-content:center;gap:6px;background:none;border:0;color:var(--mut);font-weight:600;font-size:13px;font-family:inherit;padding:7px 13px;border-radius:7px;cursor:pointer}\n.seg button.on{background:#fff;color:var(--blue);box-shadow:0 1px 4px #0f102014}\n.stage{position:relative;border-radius:14px;overflow:hidden;background:repeating-conic-gradient(#f0f0f8 0 25%,#fff 0 50%) 0 0/20px 20px;height:min(60vh,540px);user-select:none;border:1px solid var(--line);touch-action:none;cursor:grab}\n.stage.pan{cursor:grabbing}.stage.white{background:#fff}\n.layer{position:absolute;inset:14px;transform-origin:0 0;will-change:transform}\n.layer img,.layer svg{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block}\n.clipO{position:absolute;inset:0;clip-path:inset(0 50% 0 0)}\n.split{position:absolute;top:0;bottom:0;left:50%;width:2px;background:linear-gradient(var(--blue),var(--vio));cursor:ew-resize;z-index:3;transform:translateX(-1px)}\n.split:after{content:\"⟷\";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:34px;height:34px;border-radius:50%;background:#fff;color:var(--blue);border:2px solid var(--blue);display:grid;place-items:center;font-weight:800;font-size:14px;box-shadow:0 6px 16px #3d4ef533}\n.lbl{position:absolute;top:12px;font-size:10.5px;font-weight:700;background:#fff;border:1px solid var(--line);color:var(--mut);padding:4px 10px;border-radius:99px;z-index:4;letter-spacing:.06em}\n.zoom{position:absolute;right:12px;bottom:12px;z-index:4;display:flex;gap:2px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:3px;box-shadow:0 4px 12px #0f102010}\n.zoom button{display:grid;place-items:center;background:none;border:0;color:var(--txt);font-weight:700;font-size:14px;font-family:inherit;width:30px;height:28px;border-radius:7px;cursor:pointer}.zoom button:hover{background:var(--lav);color:var(--blue)}\n.zoom span{color:var(--mut);font-size:12px;align-self:center;min-width:44px;text-align:center}\n.busy{position:absolute;inset:0;background:#ffffffd9;display:none;place-items:center;z-index:5}.busy.on{display:grid}\n.bar{width:200px;height:5px;border-radius:9px;background:var(--line);overflow:hidden;margin-top:10px}\n.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--vio));transition:width .2s}\n.sts{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:12px}\n.sts div{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:9px 11px}\n.sts b{display:block;font-size:15px;color:var(--txt)}.sts small{color:var(--mut);font-size:11px}\n.acts{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}\n.btn{background:var(--blue);color:#fff;border:0;padding:12px 20px;border-radius:11px;font-weight:600;font-size:14px;font-family:inherit;cursor:pointer;transition:.2s;display:inline-flex;gap:8px;align-items:center;box-shadow:0 6px 18px #3d4ef544}\n.btn:hover{background:var(--blue2);transform:translateY(-1px)}\n.btn.g{background:#fff;color:var(--txt);border:1px solid var(--line);box-shadow:none}.btn.g:hover{border-color:#c9cbe0}\n.btn.big{flex:1;justify-content:center}\nh4{font-size:12px;color:var(--mut);margin:2px 0 10px;font-weight:700}\n.sec{padding-bottom:16px;margin-bottom:16px;border-bottom:1px solid var(--line)}.sec:last-child{border:0;margin:0;padding:0}\n.tgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}\n.tbtn{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;text-align:left;cursor:pointer;color:var(--txt);font-family:inherit;transition:.15s;position:relative}\n.tbtn:hover{border-color:var(--vio2)}\n.tbtn b{font-size:13px;display:block}.tbtn small{color:var(--mut);font-size:11px;line-height:1.35;display:block;margin-top:2px}\n.tbtn.on{border-color:var(--vio);background:#faf8ff;box-shadow:inset 0 0 0 1px var(--vio)}\n.tbtn .auto{position:absolute;top:7px;right:8px;font-size:9px;font-weight:800;color:#fff;background:var(--vio);padding:2px 6px;border-radius:99px;display:none}\n.tbtn.det .auto{display:block}\n.seg.full{display:flex}.seg.full button{flex:1}\n.pal{display:flex;flex-wrap:wrap;gap:8px}\n.chip{position:relative;width:36px;height:36px;border-radius:10px;border:1px solid #0f10201f;cursor:pointer;transition:.15s}.chip:hover{transform:scale(1.08)}\n.chip input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}\n.chip .x{position:absolute;top:-6px;right:-6px;width:17px;height:17px;border-radius:50%;background:#fff;border:1px solid var(--line);color:var(--txt);font-size:10px;display:grid;place-items:center;cursor:pointer;z-index:2;box-shadow:0 1px 3px #0002}\n.chip.off{background:repeating-conic-gradient(#ddd 0 25%,#fff 0 50%) 0 0/8px 8px!important}\n.chip.off .x{background:#22c55e;color:#fff;border-color:#22c55e}\n.sugg{display:flex;flex-direction:column;gap:6px}\n.sg{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:10px;padding:6px 8px;cursor:pointer;transition:.15s}\n.sg:hover,.sg.on{border-color:var(--vio)}\n.sg span{font-size:11px;color:var(--mut);width:22px}\n.sg div{display:flex;flex:1;height:14px;border-radius:5px;overflow:hidden}.sg div i{flex:1}\ndetails.adv summary{cursor:pointer;font-weight:700;font-size:13px;list-style:none;display:flex;justify-content:space-between}\ndetails.adv summary:after{content:\"▾\";color:var(--mut)}\n.rng{margin-top:14px}\n.rng label{display:flex;justify-content:space-between;font-size:13px;font-weight:600}\n.rng label b{background:var(--lav);color:#5b21b6;padding:1px 8px;border-radius:6px;font-size:12px}\n.rng small{display:block;color:var(--mut);font-size:11px;margin-top:3px;line-height:1.4}\ninput[type=range],.chk input{accent-color:var(--vio)}\ninput[type=range]{width:100%;margin-top:6px}\n.chk{display:flex;gap:10px;align-items:flex-start;margin-top:14px;font-size:13px;cursor:pointer}.chk input{margin-top:3px}\n.link{background:none;border:0;color:var(--blue);font-weight:600;font-size:12px;font-family:inherit;cursor:pointer;margin-top:10px}\n\n/* sections */\n.sh{text-align:center;margin:110px auto 0;max-width:640px}\n.tag{display:inline-block;font-size:12px;font-weight:700;color:var(--vio);background:var(--lav);padding:5px 12px;border-radius:99px;margin-bottom:14px}\nh2{font-size:clamp(30px,4vw,46px);font-weight:800;letter-spacing:-.04em;line-height:1.08}\n.sh p{color:var(--mut);margin-top:12px;line-height:1.6;font-size:16px}\n.flow{margin-top:30px}\n.flow svg{width:100%;height:auto;display:block}\n.flow .dash{stroke-dasharray:6 8;animation:da 1.4s linear infinite}@keyframes da{to{stroke-dashoffset:-28}}\n.flow .hex{animation:hx 4s ease-in-out infinite;transform-origin:600px 190px}@keyframes hx{50%{transform:scale(1.04)}}\n.flow .nd{animation:fy 5s ease-in-out infinite}\n.feat{display:flex;justify-content:center;gap:42px;flex-wrap:wrap;margin-top:28px;color:#5a5d78;font-weight:700;font-size:17px}\n.feat span{display:flex;align-items:center;gap:8px;opacity:.85;transition:.2s}.feat span:hover{opacity:1;color:var(--txt)}\n.feat span i{font-style:normal;width:26px;height:26px;border-radius:8px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;font-size:13px}\n.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:34px}\n.cd{background:#fff;border:1px solid var(--line);border-radius:18px;padding:10px;transition:.25s}\n.cd:hover{transform:translateY(-5px);box-shadow:0 24px 50px -10px #3d4ef533}\n.th{height:150px;border-radius:12px;position:relative;overflow:hidden;display:grid;place-items:center;color:#fff}\n.th b{position:absolute;left:14px;top:12px;font-size:17px;font-weight:800;letter-spacing:-.02em;line-height:1.1;max-width:60%;text-align:left}\n.th svg{position:absolute;right:12px;bottom:10px;width:76px;height:76px}\n.cd .bd{padding:12px 6px 6px}.cd .bd b{font-size:15px}.cd .bd p{color:var(--mut);font-size:13px;line-height:1.5;margin-top:4px}\n.cd .bd small{display:inline-block;margin-top:10px;font-size:11px;font-weight:700;color:var(--vio);background:var(--lav);padding:3px 8px;border-radius:6px}\n.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}\n.st{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px;position:relative;transition:.25s}\n.st:hover{transform:translateY(-4px);box-shadow:0 20px 40px -12px #3d4ef52a}\n.st .n{width:38px;height:38px;border-radius:11px;background:var(--lav);color:var(--vio);display:grid;place-items:center;font-weight:800;margin-bottom:16px}\n.st:nth-child(2) .n{background:#e3e7ff;color:var(--blue)}.st:nth-child(3) .n{background:#dcfce7;color:#16a34a}\n.st b{font-size:17px}.st p{color:var(--mut);font-size:14px;line-height:1.6;margin-top:6px}\n.faq{max-width:780px;margin:34px auto 0}\n.faq details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-top:10px;transition:.2s}\n.faq details[open]{border-color:#d4d0fb;box-shadow:0 10px 24px -10px #8b5cf633}\n.faq summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:10px}\n.faq summary:after{content:\"+\";color:var(--vio);font-size:20px;line-height:1}.faq details[open] summary:after{content:\"−\"}\n.faq p{color:var(--mut);margin-top:10px;font-size:14px;line-height:1.65}\n.band{margin:110px auto 0;background:linear-gradient(135deg,#3d4ef5,#7c5cf6 60%,#a78bfa);border-radius:26px;padding:56px 30px;text-align:center;color:#fff;position:relative;overflow:hidden}\n.band:before,.band:after{content:\"\";position:absolute;width:260px;height:260px;border-radius:50%;background:#ffffff14}\n.band:before{left:-80px;top:-100px}.band:after{right:-60px;bottom:-120px}\n.band h2{color:#fff}.band p{opacity:.85;margin-top:10px}\n.band .cta{background:#fff;color:var(--blue);margin-top:24px;box-shadow:0 10px 24px #0f102033;padding:13px 22px;position:relative;z-index:1}\nfooter{display:flex;justify-content:space-between;align-items:center;max-width:1180px;margin:40px auto 0;padding:26px 4vw 40px;color:var(--mut);font-size:13px;flex-wrap:wrap;gap:10px}\n.toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,120px);background:var(--txt);color:#fff;padding:11px 18px;border-radius:11px;font-weight:600;font-size:14px;transition:.3s;z-index:50}\n.toast.s{transform:translate(-50%,0)}\n.reveal{opacity:0;transform:translateY(26px);transition:.7s cubic-bezier(.2,.7,.2,1)}.reveal.in{opacity:1;transform:none}\n@media(max-width:960px){.ed{grid-template-columns:1fr}.ed>.panel:last-child{border:0;padding:0}#start{grid-template-columns:1fr}.side{display:none}.err{grid-column:1}.cards{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr}.navpill{display:none}.sts{grid-template-columns:repeat(3,1fr)}.fl,.sq{display:none}}\n@media(max-width:560px){.cards{grid-template-columns:1fr}}\n\n/* shared */\n:root{--bg:#f3f4fb;--card:#fff;--line:#e6e7f2;--txt:#0f1020;--mut:#6a6d85;--blue:#3d4ef5;--blue2:#2f3fe0;--vio:#8b5cf6;--vio2:#a78bfa;--lav:#ece9fe}\n*{box-sizing:border-box;margin:0;padding:0}\nhtml{scroll-behavior:smooth}\nbody{font-family:var(--font-inter),system-ui,sans-serif;background:var(--bg);color:var(--txt);-webkit-font-smoothing:antialiased;overflow-x:hidden}\nbody:before{content:\"\";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(900px 500px at 50% -10%,#e4e0ff,transparent 70%),radial-gradient(500px 400px at 0% 60%,#efe9ff,transparent 70%),radial-gradient(500px 400px at 100% 80%,#e7ecff,transparent 70%);background-color:var(--bg)}\na{color:inherit;text-decoration:none}\nnav.top{max-width:1180px;margin:18px auto 0;display:flex;justify-content:space-between;align-items:center;padding:0 4vw;position:relative;z-index:10;gap:12px}\n.logo{font-weight:800;font-size:22px;display:flex;gap:9px;align-items:center;letter-spacing:-.03em}\n\n.navpill{display:flex;background:#fff;border:1px solid var(--line);border-radius:12px;padding:4px;box-shadow:0 2px 10px #3d4ef50d}\n.navpill a{padding:8px 15px;border-radius:9px;font-size:14px;font-weight:600;color:var(--mut);transition:.2s;white-space:nowrap}\n.navpill a:hover{color:var(--txt)}.navpill a.on{background:var(--bg);color:var(--txt)}\n.cta{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;padding:11px 18px;border-radius:11px;font-weight:600;font-size:14px;box-shadow:0 6px 18px #3d4ef54d;transition:.2s;border:0;cursor:pointer;font-family:inherit}\n.cta:hover{background:var(--blue2);transform:translateY(-1px)}\n.btn2{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--txt);border:1px solid var(--line);padding:11px 18px;border-radius:11px;font-weight:600;font-size:14px;cursor:pointer;font-family:inherit;transition:.2s}\n.btn2:hover{border-color:#c9cbe0}\n.menu{display:none;background:#fff;border:1px solid var(--line);border-radius:10px;width:42px;height:42px;cursor:pointer;place-items:center}\n.wrap{max-width:1180px;margin:0 auto;padding:0 4vw}\n.phead{text-align:center;padding:64px 5vw 34px;max-width:780px;margin:0 auto}\n.tag{display:inline-block;font-size:12px;font-weight:700;color:var(--vio);background:var(--lav);padding:5px 12px;border-radius:99px;margin-bottom:14px}\n.phead h1{font-size:clamp(34px,5vw,56px);font-weight:800;letter-spacing:-.04em;line-height:1.05}\n.phead h1 em{font-style:normal;background:linear-gradient(90deg,var(--blue),var(--vio));-webkit-background-clip:text;background-clip:text;color:transparent}\n.phead p{color:var(--mut);margin-top:14px;line-height:1.6;font-size:17px}\n.crumbs{font-size:13px;color:var(--mut);margin-bottom:16px}.crumbs a{color:var(--blue)}\n.box{background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:0 30px 70px -30px #3d4ef533}\n/* article / legal prose */\n.prose{max-width:760px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:22px;padding:clamp(24px,5vw,56px);box-shadow:0 30px 70px -30px #3d4ef522}\n.prose h2{font-size:24px;letter-spacing:-.02em;margin:34px 0 12px}\n.prose h3{font-size:18px;margin:24px 0 8px}.prose code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;background:#eef0fb;border-radius:5px;padding:.12em .38em}.prose pre{background:#0f1020;color:#e6e7f2;border-radius:12px;padding:16px 18px;overflow-x:auto;margin:14px 0;line-height:1.55}.prose pre code{background:none;padding:0;color:inherit;font-size:13px}.tldr{background:linear-gradient(135deg,#eef0ff,#f5f0ff);border:1px solid #dcdcfb;border-radius:14px;padding:16px 20px;margin:18px 0 8px}.tldr b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:4px}.tldr p{margin:0}.author{display:flex;gap:14px;align-items:flex-start;border-top:1px solid var(--line);margin-top:34px;padding-top:22px}.author img{border-radius:10px;flex:none}.author b{display:block;margin-bottom:2px}.author p{margin:0;font-size:14px;color:var(--mut)}\n.prose p,.prose li{color:#3a3d55;line-height:1.8;font-size:16px}\n.prose p{margin:12px 0}\n.prose ul,.prose ol{padding-left:22px;margin:12px 0}.prose li{margin:6px 0}\n.prose a{color:var(--blue);text-decoration:underline}\n.prose .meta{color:var(--mut);font-size:14px;display:flex;gap:14px;flex-wrap:wrap;margin-bottom:6px}\n.prose .note{background:var(--lav);border-radius:14px;padding:16px 18px;color:#4c1d95;margin:20px 0;line-height:1.7}\n.prose table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14.5px}\n.prose th,.prose td{border:1px solid var(--line);padding:10px 12px;text-align:left}.prose th{background:var(--bg)}\n.prose .cover{height:220px;border-radius:16px;margin-bottom:26px;display:grid;place-items:center;overflow:hidden}\n.prose .cover svg{width:120px;height:120px}\n.prose .inline-cta{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;background:linear-gradient(135deg,#3d4ef5,#8b5cf6);color:#fff;border-radius:16px;padding:20px 22px;margin:30px 0 6px}\n.prose .inline-cta p{color:#fff;margin:0;font-weight:600}.prose .inline-cta a{background:#fff;color:var(--blue);text-decoration:none;padding:10px 16px;border-radius:10px;font-weight:700;font-size:14px}\n/* blog cards */\n.posts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}\n.post{background:#fff;border:1px solid var(--line);border-radius:18px;padding:10px;transition:.25s;display:flex;flex-direction:column}\n.post:hover{transform:translateY(-5px);box-shadow:0 24px 50px -10px #3d4ef533}\n.post .th{height:160px;border-radius:12px;display:grid;place-items:center;color:#fff}\n.post .th svg{width:70px;height:70px}\n.post .bd{padding:14px 8px 8px;display:flex;flex-direction:column;flex:1}\n.post .bd small{color:var(--vio);font-weight:700;font-size:12px}\n.post .bd b{font-size:17px;letter-spacing:-.01em;margin-top:6px;line-height:1.35}\n.post .bd p{color:var(--mut);font-size:14px;line-height:1.55;margin-top:8px;flex:1}\n.post .bd span{font-size:12.5px;color:var(--mut);margin-top:12px}\n/* footer */\nfooter.site{max-width:1180px;margin:100px auto 0;padding:46px 4vw 30px;border-top:1px solid var(--line)}\n.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px}\n.fgrid p{color:var(--mut);font-size:14px;line-height:1.6;margin-top:12px;max-width:300px}\n.fgrid h6{font-size:13px;font-weight:700;margin-bottom:12px}\n.fgrid a.logo{display:flex;color:var(--txt)}.fgrid a:not(.logo){display:block;color:var(--mut);font-size:14px;margin:8px 0;transition:.15s}.fgrid a:hover{color:var(--blue)}\n.fbot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:34px;padding-top:20px;border-top:1px solid var(--line);color:var(--mut);font-size:13px}\n.ad-slot{display:none}\n.cookie{position:fixed;left:16px;right:16px;bottom:16px;max-width:520px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px;box-shadow:0 20px 50px -10px #0f102033;z-index:60;display:none;gap:14px;align-items:center;font-size:13.5px;color:#3a3d55;line-height:1.5}\n.cookie.on{display:flex}.cookie a{color:var(--blue);text-decoration:underline}\n.cookie button{flex-shrink:0}\n.reveal{opacity:0;transform:translateY(26px);transition:.7s cubic-bezier(.2,.7,.2,1)}.reveal.in{opacity:1;transform:none}\n@media(max-width:960px){.navpill{display:none;position:absolute;top:56px;left:4vw;right:4vw;flex-direction:column;z-index:30}.navpill.open{display:flex}.menu{display:grid}nav.top .cta{display:none}.posts{grid-template-columns:1fr 1fr}.fgrid{grid-template-columns:1fr 1fr}}\n@media(max-width:600px){.posts{grid-template-columns:1fr}.fgrid{grid-template-columns:1fr}}\n\nbody:after{display:none}\nfooter.site{display:block}\n\n/* SEO homepage sections */\n.hero h1{font-size:clamp(34px,5.2vw,60px)!important;max-width:900px;margin-left:auto;margin-right:auto}\n.hero p.answer{max-width:660px}\n.trust{padding:7px 16px}\nol.steps{list-style:none;padding:0}\n.steps4{grid-template-columns:repeat(4,1fr)}\n.fx{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}\n.fx>div{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px}\n.fx b{font-size:15.5px}\n.fx p{color:var(--mut);font-size:14px;line-height:1.55;margin-top:6px}\n.fx a{color:var(--blue);font-weight:600}\n.updated{font-size:14px;color:var(--mut)}\n@media(max-width:960px){.steps4,.fx{grid-template-columns:1fr 1fr}}\n@media(max-width:600px){.steps4,.fx{grid-template-columns:1fr}}\n" }} />
       {" "}
       <section className="hero">
         {" "}
@@ -85,34 +86,23 @@ export default function Page() {
         </div>
         {" "}
         <h1>
-          {"Pixels in."}
-          <br />
+          {"Free PNG to SVG Converter — "}
           <em>
-            {"Perfect vectors"}
+            {"Convert Images to Vector"}
           </em>
-          {" out."}
+          {" Online"}
         </h1>
         {" "}
-        <p>
-          {"PNG to SVG Free turns PNG, JPG and WEBP into crisp, infinitely scalable SVGs — traced right in your browser, in seconds."}
+        <p className="answer">
+          {"PNG to SVG Free converts PNG, JPG, WEBP, GIF, BMP and AVIF images into clean, scalable SVG vector files in seconds. It is completely free, needs no signup and adds no watermark. Tracing runs entirely in your browser, so your images are never uploaded to a server."}
         </p>
         {" "}
         <div className="trust">
-          <div className="av">
-            <span style={{ "background": "#3d4ef5" }}>
-              {"A"}
-            </span>
-            <span style={{ "background": "#8b5cf6" }}>
-              {"K"}
-            </span>
-            <span style={{ "background": "#ec4899" }}>
-              {"R"}
-            </span>
-            <span style={{ "background": "#f59e0b" }}>
-              {"M"}
-            </span>
-          </div>
-          {"Trusted by designers, makers & print shops"}
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            <path d="M9 12l2 2 4-4" />
+          </svg>
+          {"Runs 100% in your browser · Files never uploaded"}
         </div>
         {" "}
         <div className="hbtns">
@@ -127,6 +117,21 @@ export default function Page() {
       </section>
       {" "}
       <div className="wrap" id="tool">
+        {" "}
+        <noscript>
+          <div className="prose" style={{ "margin": "0 auto 24px", "maxWidth": "760px" }}>
+            <h2 style={{ "marginTop": "0" }}>
+              {"The converter needs JavaScript"}
+            </h2>
+            <p>
+              {"PNG to SVG Free traces your image into vector paths inside your own browser, which requires JavaScript. Please enable it to use the converter. Everything else on this page — how to convert PNG to SVG, supported formats, tips and answers to common questions — is available below, and our "}
+              <Link href="/blog">
+                {"guides"}
+              </Link>
+              {" work without JavaScript too."}
+            </p>
+          </div>
+        </noscript>
         {" "}
         <div className="win">
           {" "}
@@ -528,12 +533,10 @@ export default function Page() {
             {"The engine"}
           </span>
           <h2>
-            {"From pixels to paths,"}
-            <br />
-            {"automatically"}
+            {"How does PNG to SVG conversion work?"}
           </h2>
           <p>
-            {"Every image is analysed, cleaned and traced into true curves with sharp-corner detection — then layered by color, ready for any tool."}
+            {"PNG to SVG conversion, also called vectorization or image tracing, groups the pixels of an image into regions of colour and replaces each region with smooth mathematical curves. Our tracer detects sharp corners and layers the result by colour, ready for any tool."}
           </p>
         </div>
         {" "}
@@ -649,8 +652,11 @@ export default function Page() {
         {" "}
         <div className="sh reveal" style={{ "marginTop": "80px" }}>
           <h2 style={{ "fontSize": "clamp(24px,3vw,32px)" }}>
-            {"Works with your favourite tools"}
+            {"Which apps can open the SVG?"}
           </h2>
+          <p>
+            {"Every SVG we create is a standard file that opens in all major design, cutting and web tools."}
+          </p>
         </div>
         {" "}
         <div className="feat reveal">
@@ -713,17 +719,667 @@ export default function Page() {
         {" "}
       </div>
       {" "}
+      <div className="wrap" id="how">
+        {" "}
+        <div className="sh reveal">
+          <span className="tag">
+            {"How it works"}
+          </span>
+          <h2>
+            {"How to Convert PNG to SVG"}
+          </h2>
+          <p>
+            {"To convert a PNG to SVG, upload the image, let the converter pick the image type, adjust colours and detail if needed, then download the SVG — it takes about four clicks."}
+          </p>
+        </div>
+        {" "}
+        <ol className="steps steps4 howto reveal">
+          {" "}
+          <li className="st">
+            <div className="n">
+              {"1"}
+            </div>
+            <b>
+              {"Upload your image"}
+            </b>
+            <p>
+              {"Drop a PNG, JPG, WEBP, GIF, BMP or AVIF file into the converter, click to browse, or paste an image from your clipboard with Ctrl+V."}
+            </p>
+          </li>
+          {" "}
+          <li className="st">
+            <div className="n">
+              {"2"}
+            </div>
+            <b>
+              {"Check the image type"}
+            </b>
+            <p>
+              {"The converter detects whether it is a logo, photograph, sketch or silhouette and chooses matching settings. Switch type with one click if you prefer."}
+            </p>
+          </li>
+          {" "}
+          <li className="st">
+            <div className="n">
+              {"3"}
+            </div>
+            <b>
+              {"Fine-tune colours and detail"}
+            </b>
+            <p>
+              {"Pick a suggested palette, change the number of colours, recolour or remove any colour, and adjust detail, smoothing and speckle removal while comparing side by side."}
+            </p>
+          </li>
+          {" "}
+          <li className="st">
+            <div className="n">
+              {"4"}
+            </div>
+            <b>
+              {"Download the SVG"}
+            </b>
+            <p>
+              {"Click Download SVG to save the file, or Copy SVG to paste the code straight into your website, Figma or a code editor."}
+            </p>
+          </li>
+          {" "}
+        </ol>
+        {" "}
+      </div>
+      {" "}
+      <div className="wrap" id="features">
+        {" "}
+        <div className="sh reveal">
+          <span className="tag">
+            {"Features"}
+          </span>
+          <h2>
+            {"What can this PNG to SVG converter do?"}
+          </h2>
+          <p>
+            {"It traces raster images into layered, editable SVG vectors with full control over colours and detail — for free, with no signup, no watermark and no upload."}
+          </p>
+        </div>
+        {" "}
+        <div className="fx reveal">
+          {" "}
+          <div>
+            <b>
+              {"Automatic tracing"}
+            </b>
+            <p>
+              {"Images are analysed and traced into smooth Bézier curves with sharp-corner detection. No manual drawing needed."}
+            </p>
+          </div>
+          {" "}
+          <div>
+            <b>
+              {"Smart colour detection"}
+            </b>
+            <p>
+              {"An optimal palette is detected automatically, and simplified palettes from 2 to 16 colours are suggested. Choose anywhere from 1 to 32 colours."}
+            </p>
+          </div>
+          {" "}
+          <div>
+            <b>
+              {"Adjustable detail"}
+            </b>
+            <p>
+              {"Quality presets (High, Medium, Low) plus sliders for detail, noise smoothing, speckle removal (1–64 px) and corner angle (20–120°)."}
+            </p>
+          </div>
+          {" "}
+          <div>
+            <b>
+              {"Recolour and remove colours"}
+            </b>
+            <p>
+              {"Click any palette colour to change it, or mark it transparent to delete its paths — the easiest way to remove a background."}
+            </p>
+          </div>
+          {" "}
+          <div>
+            <b>
+              {"Keeps transparency"}
+            </b>
+            <p>
+              {"Transparent areas in a PNG stay transparent in the SVG, perfect for logos, stickers and cut files."}
+            </p>
+          </div>
+          {" "}
+          <div>
+            <b>
+              {"Compare and zoom"}
+            </b>
+            <p>
+              {"A split view shows the original and the SVG side by side, with zoom and pan to inspect fine detail before you download."}
+            </p>
+          </div>
+          {" "}
+          <div>
+            <b>
+              {"Cutting-machine ready"}
+            </b>
+            <p>
+              {"Paths are layered by colour. A one-colour Silhouette mode and optional registration marks help with vinyl and layered cuts."}
+            </p>
+          </div>
+          {" "}
+          <div>
+            <b>
+              {"Private by design"}
+            </b>
+            <p>
+              {"Conversion runs entirely in your browser using WebAssembly. Your images are never uploaded, stored or shared."}
+            </p>
+          </div>
+          {" "}
+          <div>
+            <b>
+              {"Free and unlimited"}
+            </b>
+            <p>
+              {"No account, no watermark, no daily limits and no paywalled features. Convert as many images as you like."}
+            </p>
+          </div>
+          {" "}
+        </div>
+        {" "}
+      </div>
+      {" "}
+      <div className="wrap" id="formats">
+        {" "}
+        <article className="prose reveal" style={{ "marginTop": "110px" }}>
+          {" "}
+          <h2 style={{ "marginTop": "0" }}>
+            {"Which image formats are supported?"}
+          </h2>
+          {" "}
+          <p>
+            <strong>
+              {"PNG to SVG Free accepts six input formats — PNG, JPG (JPEG), WEBP, GIF, BMP and AVIF — and always outputs a standard SVG file."}
+            </strong>
+            {" AVIF works in browsers that can display it, which includes current versions of Chrome, Edge, Firefox and Safari."}
+          </p>
+          {" "}
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  {"Input format"}
+                </th>
+                <th>
+                  {"Typical use"}
+                </th>
+                <th>
+                  {"Notes"}
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  {"PNG"}
+                </td>
+                <td>
+                  {"Logos, icons, screenshots"}
+                </td>
+                <td>
+                  {"Best input; transparency is preserved"}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  {"JPG / JPEG"}
+                </td>
+                <td>
+                  {"Photos, scanned artwork"}
+                </td>
+                <td>
+                  {"Reduce colours to remove compression noise — see "}
+                  <Link href="/jpg-to-svg">
+                    {"JPG to SVG"}
+                  </Link>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  {"WEBP"}
+                </td>
+                <td>
+                  {"Web images"}
+                </td>
+                <td>
+                  {"Transparency is preserved — see "}
+                  <Link href="/webp-to-svg">
+                    {"WEBP to SVG"}
+                  </Link>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  {"GIF"}
+                </td>
+                <td>
+                  {"Simple graphics"}
+                </td>
+                <td>
+                  {"The first frame is converted"}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  {"BMP"}
+                </td>
+                <td>
+                  {"Older software exports"}
+                </td>
+                <td>
+                  {"Converted like PNG"}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  {"AVIF"}
+                </td>
+                <td>
+                  {"Modern web images"}
+                </td>
+                <td>
+                  {"Needs a browser with AVIF support"}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          {" "}
+          <p>
+            {"There is no file-size limit. Large images are traced at up to 1,700 pixels on the longest edge in High quality, which keeps conversion fast while preserving detail; the resulting SVG can then be scaled to any size."}
+          </p>
+          {" "}
+        </article>
+        {" "}
+      </div>
+      {" "}
+      <div className="wrap" id="who">
+        {" "}
+        <div className="sh reveal">
+          <span className="tag">
+            {"Who uses it"}
+          </span>
+          <h2>
+            {"Who uses a PNG to SVG converter?"}
+          </h2>
+          <p>
+            {"Anyone who needs a sharp, scalable or cuttable version of a raster image — most often crafters, makers, designers and developers."}
+          </p>
+        </div>
+        {" "}
+        <div className="fx reveal">
+          {" "}
+          <div>
+            <b>
+              {"Cricut and Silhouette crafters"}
+            </b>
+            <p>
+              {"Turn clip art and drawings into cut files for vinyl, iron-on and paper. "}
+              <Link href="/png-to-svg-cricut">
+                {"PNG to SVG for Cricut →"}
+              </Link>
+            </p>
+          </div>
+          {" "}
+          <div>
+            <b>
+              {"Laser cutting and CNC"}
+            </b>
+            <p>
+              {"Create vector paths for LightBurn, Glowforge, xTool and CNC routers. "}
+              <Link href="/png-to-svg-laser-cutting">
+                {"PNG to SVG for laser cutting →"}
+              </Link>
+            </p>
+          </div>
+          {" "}
+          <div>
+            <b>
+              {"Logo and brand designers"}
+            </b>
+            <p>
+              {"Rebuild lost vector logos from PNG or JPG files and recolour them exactly. "}
+              <Link href="/logo-to-svg">
+                {"Logo to SVG →"}
+              </Link>
+            </p>
+          </div>
+          {" "}
+          <div>
+            <b>
+              {"Web developers"}
+            </b>
+            <p>
+              {"Replace blurry PNG icons with lightweight SVGs that stay crisp on every screen and can be styled with CSS."}
+            </p>
+          </div>
+          {" "}
+          <div>
+            <b>
+              {"Print and embroidery"}
+            </b>
+            <p>
+              {"Prepare scalable artwork for T-shirts, signs, stickers and embroidery digitizing."}
+            </p>
+          </div>
+          {" "}
+          <div>
+            <b>
+              {"Teachers and students"}
+            </b>
+            <p>
+              {"Vectorize diagrams, sketches and handwriting for presentations and print without installing software."}
+            </p>
+          </div>
+          {" "}
+        </div>
+        {" "}
+      </div>
+      {" "}
+      <div className="wrap" id="compare">
+        {" "}
+        <article className="prose reveal" style={{ "marginTop": "110px" }}>
+          {" "}
+          <h2 style={{ "marginTop": "0" }}>
+            {"PNG vs SVG: what is the difference?"}
+          </h2>
+          {" "}
+          <p>
+            <strong>
+              {"PNG is a raster format made of pixels, while SVG is a vector format made of shapes and paths, so SVG stays sharp at any size and PNG does not."}
+            </strong>
+            {" Use PNG for photos and screenshots, and SVG for logos, icons, illustrations and anything you will cut or print at different sizes."}
+          </p>
+          {" "}
+          <table>
+            <tbody>
+              <tr>
+                <th />
+                <th>
+                  {"PNG (raster)"}
+                </th>
+                <th>
+                  {"SVG (vector)"}
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  {"Made of"}
+                </td>
+                <td>
+                  {"A fixed grid of pixels"}
+                </td>
+                <td>
+                  {"Mathematical paths and shapes"}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  {"Scaling"}
+                </td>
+                <td>
+                  {"Blurs and pixelates when enlarged"}
+                </td>
+                <td>
+                  {"Perfectly sharp at any size"}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  {"File size"}
+                </td>
+                <td>
+                  {"Grows with resolution"}
+                </td>
+                <td>
+                  {"Grows with complexity; tiny for logos"}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  {"Editing"}
+                </td>
+                <td>
+                  {"Pixel editors; colour changes are hard"}
+                </td>
+                <td>
+                  {"Change colours and shapes in seconds"}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  {"Transparency"}
+                </td>
+                <td>
+                  {"Yes"}
+                </td>
+                <td>
+                  {"Yes"}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  {"Cutting machines"}
+                </td>
+                <td>
+                  {"Must be traced first"}
+                </td>
+                <td>
+                  {"Works directly"}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  {"Best for"}
+                </td>
+                <td>
+                  {"Photos, screenshots, detailed textures"}
+                </td>
+                <td>
+                  {"Logos, icons, illustrations, cut files"}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          {" "}
+          <p>
+            {"Read the full comparison in "}
+            <Link href="/blog-png-vs-svg">
+              {"PNG vs SVG: Which Format Should You Use?"}
+            </Link>
+          </p>
+          {" "}
+          <h2 id="tips">
+            {"How do I get the best SVG result?"}
+          </h2>
+          {" "}
+          <p>
+            <strong>
+              {"The best SVG results come from a large, sharp source image with few colours and a plain or transparent background."}
+            </strong>
+            {" These tips make the biggest difference:"}
+          </p>
+          {" "}
+          <ul>
+            {" "}
+            <li>
+              <strong>
+                {"Use the largest original you have."}
+              </strong>
+              {" 800–2,000 pixels across gives clean curves; tiny thumbnails produce lumpy edges."}
+            </li>
+            {" "}
+            <li>
+              <strong>
+                {"Set colours to what you actually see."}
+              </strong>
+              {" A three-colour logo should use about three colours, which removes anti-aliasing halos and keeps the file small."}
+            </li>
+            {" "}
+            <li>
+              <strong>
+                {"Raise speckle removal for JPGs and scans"}
+              </strong>
+              {" to delete compression noise and paper texture."}
+            </li>
+            {" "}
+            <li>
+              <strong>
+                {"Lower the corner angle for text and geometric logos"}
+              </strong>
+              {" so corners stay sharp; raise it for organic shapes."}
+            </li>
+            {" "}
+            <li>
+              <strong>
+                {"Remove the background"}
+              </strong>
+              {" by marking its colour transparent before downloading."}
+            </li>
+            {" "}
+            <li>
+              <strong>
+                {"Prefer PNG over JPG"}
+              </strong>
+              {" when you have the choice, because JPG compression adds artefacts."}
+            </li>
+            {" "}
+          </ul>
+          {" "}
+          <p>
+            {"More detail: "}
+            <Link href="/blog-prepare-image-for-tracing">
+              {"How to prepare an image for tracing"}
+            </Link>
+            {" and "}
+            <Link href="/blog-how-many-colors-for-tracing">
+              {"how many colours to use"}
+            </Link>
+            {"."}
+          </p>
+          {" "}
+          <h2 id="why">
+            {"Why choose PNG to SVG Free?"}
+          </h2>
+          {" "}
+          <p>
+            <strong>
+              {"PNG to SVG Free gives you full control over colours and detail with no upload, no account and no watermark — features many online converters limit or charge for."}
+            </strong>
+          </p>
+          {" "}
+          <table>
+            <tbody>
+              <tr>
+                <th />
+                <th>
+                  {"PNG to SVG Free"}
+                </th>
+                <th>
+                  {"Typical online converters"}
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  {"Price"}
+                </td>
+                <td>
+                  {"Free, no limits"}
+                </td>
+                <td>
+                  {"Often free with daily limits or paid upgrades"}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  {"Signup"}
+                </td>
+                <td>
+                  {"Never required"}
+                </td>
+                <td>
+                  {"Sometimes required to download"}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  {"Watermark"}
+                </td>
+                <td>
+                  {"None"}
+                </td>
+                <td>
+                  {"Sometimes added on free plans"}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  {"Privacy"}
+                </td>
+                <td>
+                  {"Images never leave your browser"}
+                </td>
+                <td>
+                  {"Images usually uploaded to a server"}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  {"Colour control"}
+                </td>
+                <td>
+                  {"1–32 colours, palette suggestions, recolour, remove colours"}
+                </td>
+                <td>
+                  {"Often a single colour-count option"}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  {"Fine-tuning"}
+                </td>
+                <td>
+                  {"Detail, smoothing, speckle and corner sliders with live comparison"}
+                </td>
+                <td>
+                  {"Few or no settings"}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  {"Guides"}
+                </td>
+                <td>
+                  {"45+ free tutorials on SVG, cutting, print and web"}
+                </td>
+                <td>
+                  {"Rarely included"}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          {" "}
+        </article>
+        {" "}
+      </div>
+      {" "}
       <div className="wrap" id="uses">
         {" "}
         <div className="sh reveal">
           <span className="tag">
-            {"Use cases"}
+            {"Image types"}
           </span>
           <h2>
-            {"Made for every kind of image"}
+            {"Can it convert logos, photos and sketches?"}
           </h2>
           <p>
-            {"Automatic type detection picks the best settings — you can fine-tune everything after."}
+            {"Yes — the converter automatically detects whether your image is a logo, photograph, sketch or silhouette and applies the best tracing settings, which you can fine-tune afterwards."}
           </p>
         </div>
         {" "}
@@ -823,59 +1479,6 @@ export default function Page() {
         {" "}
       </div>
       {" "}
-      <div className="wrap">
-        {" "}
-        <div className="sh reveal">
-          <span className="tag">
-            {"How it works"}
-          </span>
-          <h2>
-            {"Three steps. Zero hassle."}
-          </h2>
-        </div>
-        {" "}
-        <div className="steps reveal">
-          {" "}
-          <div className="st">
-            <div className="n">
-              {"1"}
-            </div>
-            <b>
-              {"Upload"}
-            </b>
-            <p>
-              {"Drop a PNG, JPG, GIF, BMP, WEBP or AVIF, browse your device, or paste from the clipboard. The right settings are picked automatically."}
-            </p>
-          </div>
-          {" "}
-          <div className="st">
-            <div className="n">
-              {"2"}
-            </div>
-            <b>
-              {"Review & edit"}
-            </b>
-            <p>
-              {"Compare side by side, zoom in, and fine-tune colors, detail and smoothing — or knock out any color with one click."}
-            </p>
-          </div>
-          {" "}
-          <div className="st">
-            <div className="n">
-              {"3"}
-            </div>
-            <b>
-              {"Download"}
-            </b>
-            <p>
-              {"Get a clean, compact SVG for the web, print, cutting machines or tools like Illustrator, Figma and Inkscape."}
-            </p>
-          </div>
-          {" "}
-        </div>
-        {" "}
-      </div>
-      {" "}
       <div className="wrap" id="faq">
         {" "}
         <div className="sh reveal">
@@ -883,27 +1486,102 @@ export default function Page() {
             {"FAQ"}
           </span>
           <h2>
-            {"Questions, answered"}
+            {"Frequently asked questions"}
           </h2>
+          <p>
+            {"Quick answers about converting PNG and other images to SVG with PNG to SVG Free."}
+          </p>
         </div>
         {" "}
         <div className="faq">
           {" "}
           <details>
             <summary>
-              {"Is this PNG to SVG converter free?"}
+              {"Is this PNG to SVG converter really free?"}
             </summary>
             <p>
-              {"Yes. Converting images to SVG here is completely free, with no signup, watermarks or file limits."}
+              {"Yes, it is completely free. There is no signup, no watermark, no daily limit and no paid tier — every feature is available to everyone."}
             </p>
           </details>
           {" "}
           <details>
             <summary>
-              {"Is it safe to convert my images here?"}
+              {"Is it safe and private to convert my images here?"}
             </summary>
             <p>
-              {"Yes. Conversion runs entirely in your browser — your images are never uploaded, stored or shared."}
+              {"Yes, your images never leave your device. Tracing runs inside your web browser using WebAssembly, so nothing is uploaded, stored or shared with us or anyone else."}
+            </p>
+          </details>
+          {" "}
+          <details>
+            <summary>
+              {"Does it keep transparent backgrounds?"}
+            </summary>
+            <p>
+              {"Yes, transparency is preserved. Transparent areas of a PNG or WEBP stay transparent in the SVG, and you can also make any colour transparent to remove a solid background."}
+            </p>
+          </details>
+          {" "}
+          <details>
+            <summary>
+              {"Can I convert JPG to SVG?"}
+            </summary>
+            <p>
+              {"Yes, JPG and JPEG files convert just like PNG. Because JPG has no transparency and adds compression noise, reduce the number of colours and raise speckle removal for the cleanest result."}
+            </p>
+          </details>
+          {" "}
+          <details>
+            <summary>
+              {"Does the SVG work with Cricut and Silhouette?"}
+            </summary>
+            <p>
+              {"Yes, the SVG uploads to Cricut Design Space and Silhouette Studio. Paths are layered by colour; use the Silhouette image type for single-colour cuts and registration marks for layered vinyl. Note that Silhouette Studio Basic Edition cannot import SVG."}
+            </p>
+          </details>
+          {" "}
+          <details>
+            <summary>
+              {"Is there a file size limit?"}
+            </summary>
+            <p>
+              {"No, there is no file-size limit. Very large images are traced at up to 1,700 pixels on the longest edge to stay fast, and the SVG output can be scaled to any size without losing quality."}
+            </p>
+          </details>
+          {" "}
+          <details>
+            <summary>
+              {"Does it work on mobile phones?"}
+            </summary>
+            <p>
+              {"Yes, it works in modern mobile browsers on iPhone, iPad and Android. Tap the upload area to choose a photo, then download or copy the SVG as on a computer."}
+            </p>
+          </details>
+          {" "}
+          <details>
+            <summary>
+              {"Can I edit the SVG afterwards?"}
+            </summary>
+            <p>
+              {"Yes, the SVG is a standard editable vector file. Open it in Inkscape, Illustrator, Figma, Affinity Designer or Canva to change colours, delete shapes or resize it."}
+            </p>
+          </details>
+          {" "}
+          <details>
+            <summary>
+              {"Why does my SVG look different from the original image?"}
+            </summary>
+            <p>
+              {"Tracing converts pixels into flat-coloured shapes, so gradients become colour bands and fine textures are simplified. Increase the number of colours or the detail level for a closer match, or start from a larger, sharper image."}
+            </p>
+          </details>
+          {" "}
+          <details>
+            <summary>
+              {"Is there a watermark on the SVG?"}
+            </summary>
+            <p>
+              {"No, there is never a watermark. The SVG you download contains only your traced artwork."}
             </p>
           </details>
           {" "}
@@ -912,47 +1590,54 @@ export default function Page() {
               {"Which image formats can I convert to SVG?"}
             </summary>
             <p>
-              {"PNG, JPG, GIF, BMP, WEBP and AVIF. Logos, icons, clip art, sketches and photographs are supported, with automatic detection of the image type."}
+              {"You can convert PNG, JPG (JPEG), WEBP, GIF, BMP and AVIF images. Logos, icons, clip art, sketches and photographs are all supported, with automatic detection of the image type."}
             </p>
           </details>
           {" "}
           <details>
             <summary>
-              {"Can I control the colors in the SVG?"}
+              {"Can I convert an SVG back to PNG?"}
             </summary>
             <p>
-              {"Yes. An optimal palette is detected automatically, simplified palettes from 2 to 16 colors are suggested, and you can edit any color before downloading."}
-            </p>
-          </details>
-          {" "}
-          <details>
-            <summary>
-              {"Does the converter keep transparent backgrounds?"}
-            </summary>
-            <p>
-              {"Yes. Transparent areas of your PNG stay transparent in the SVG — ideal for logos and stickers."}
-            </p>
-          </details>
-          {" "}
-          <details>
-            <summary>
-              {"Can I remove the background or a color?"}
-            </summary>
-            <p>
-              {"Yes. Click the × on any palette color and its paths are removed from the SVG completely."}
-            </p>
-          </details>
-          {" "}
-          <details>
-            <summary>
-              {"Does it work with Cricut, Silhouette and other cutting machines?"}
-            </summary>
-            <p>
-              {"Yes. The SVG is cleanly layered by color. Use the Silhouette type for single-colour cuts, and turn on registration marks for layered vinyl."}
+              {"Yes, use our free Bulk SVG to PNG converter. It exports one or many SVG files as PNG at 1×, 2×, 4× or an exact width, with a transparent or white background."}
             </p>
           </details>
           {" "}
         </div>
+        {" "}
+      </div>
+      {" "}
+      <div className="wrap" id="about-tool">
+        {" "}
+        <article className="prose reveal" style={{ "marginTop": "90px" }}>
+          {" "}
+          <h2 style={{ "marginTop": "0" }}>
+            {"About this tool"}
+          </h2>
+          {" "}
+          <p>
+            {"PNG to SVG Free is built and maintained by the PNG to SVG Free team, who make free, privacy-first tools for working with vector graphics. The converter combines automatic image-type detection, k-means colour quantization and a WebAssembly build of the open-source VTracer tracing engine, all running locally in your browser. Learn more "}
+            <Link href="/about">
+              {"about us"}
+            </Link>
+            {" or read our "}
+            <Link href="/blog">
+              {"guides"}
+            </Link>
+            {"."}
+          </p>
+          {" "}
+          <p className="updated">
+            <strong>
+              {"Last updated:"}
+            </strong>
+            {" "}
+            <time dateTime="2026-11-21">
+              {"November 21, 2026"}
+            </time>
+          </p>
+          {" "}
+        </article>
         {" "}
       </div>
       {" "}
