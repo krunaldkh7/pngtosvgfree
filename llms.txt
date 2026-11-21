@@ -1,1 +1,92 @@
 # PNG to SVG Free
+
+> PNG to SVG Free (pngtosvgfree.com) is a free online PNG to SVG converter that turns PNG, JPG and WEBP images into clean, scalable vectors right in your browser. No signup, no watermark, no upload — images are traced locally with WebAssembly.
+
+## Key facts
+
+- Price: free, no account, no watermark, no daily limits.
+- Input formats (6): PNG, JPG/JPEG, WEBP, GIF, BMP, AVIF. Output: standard SVG.
+- Privacy: conversion runs entirely in the browser; files are never uploaded or stored.
+- File size: no limit; images are traced at up to 1,700 px on the longest edge (High quality).
+- Image types with tuned presets: Logo / Clip art, Photograph, Sketch / B&W, Silhouette (single colour for cutting).
+- Controls: 1–32 colours, suggested palettes (2–16), recolour or remove any colour, detail, noise smoothing, speckle removal (1–64 px), corner angle (20–120°), quality presets, registration marks for layered cuts.
+- Output works with Cricut Design Space, Silhouette Studio (Designer Edition+), LightBurn, Glowforge, Figma, Illustrator, Inkscape and Canva.
+- One image is converted at a time. A separate free tool converts SVG to PNG in bulk.
+- Tracing engine: WebAssembly build of the open-source VTracer engine with automatic image-type detection and k-means colour quantization.
+
+## Tools
+
+- [PNG to SVG Converter](https://pngtosvgfree.com/): Convert PNG, JPG and WEBP images to SVG vectors free online. Auto tracing, colour control, no signup, no watermark and files never leave your browser.
+- [JPG to SVG Converter — Free & Online](https://pngtosvgfree.com/jpg-to-svg): Convert JPG images to clean SVG vectors free online. Removes JPEG compression noise, lets you remove the background and runs privately in your browser.
+- [JPEG to SVG Converter Online, Free](https://pngtosvgfree.com/jpeg-to-svg): Turn JPEG files into editable SVG vectors free. Smart colour detection, adjustable detail and background removal — processed privately in your browser.
+- [WEBP to SVG Converter — Free Online](https://pngtosvgfree.com/webp-to-svg): Convert WEBP images to SVG vectors for free. Keeps transparency, auto-detects colours and traces logos and graphics privately in your browser, no signup.
+- [Image to SVG Converter — Vectorize Images Free](https://pngtosvgfree.com/image-to-svg): Vectorize any image online: convert PNG, JPG, WEBP, GIF, BMP or AVIF to SVG free. Automatic tracing, colour control, no signup and no upload to a server.
+- [Logo to SVG Converter — Free Vector Logo Online](https://pngtosvgfree.com/logo-to-svg): Convert a PNG or JPG logo to a clean SVG vector free. Sharp corners, exact brand colours, transparent background — no Illustrator, no signup, no upload.
+- [PNG to SVG for Cricut — Free Cut File Converter](https://pngtosvgfree.com/png-to-svg-cricut): Convert PNG images into Cricut-ready SVG cut files free. Layered by colour, single-colour Silhouette mode, transparent background and no upload or signup.
+- [PNG to SVG for Laser Cutting & Engraving — Free](https://pngtosvgfree.com/png-to-svg-laser-cutting): Convert PNG images to laser-ready SVG paths for LightBurn, Glowforge and xTool. Single-colour silhouettes, clean closed shapes and speckle removal, free.
+- [Transparent PNG to SVG — Keep the Background Clear](https://pngtosvgfree.com/transparent-png-to-svg): Convert transparent PNG images to SVG while keeping the background clear. Remove any solid background colour — free, no signup, private in your browser.
+- [Black and White PNG to SVG — Line Art Converter](https://pngtosvgfree.com/black-and-white-png-to-svg): Convert black and white PNG images, line art, sketches and signatures to crisp two-tone SVG vectors. Free, no signup, private — processed in your browser.
+- [Bulk SVG to PNG Converter](https://pngtosvgfree.com/bulk-svg-to-png-converter): Convert many SVG files to high-resolution PNG at once. Choose 1x, 2x, 4x or an exact width, keep transparency and download all as ZIP. Free, private.
+- [Free SVG Gallery](https://pngtosvgfree.com/gallery): Download free SVG illustrations for Cricut, Silhouette, web and print. Copy the code or save the file, recolour easily, and use in commercial projects.
+
+## Key guides
+
+- [How to Convert PNG to SVG (Free, 3 Methods)](https://pngtosvgfree.com/blog-convert-png-to-svg): Three free ways to convert PNG to SVG: an online tracer, Inkscape's Trace Bitmap and Illustrator Image Trace. Step-by-step instructions, settings and tips.
+- [PNG vs SVG: Differences and When to Use Each](https://pngtosvgfree.com/blog-png-vs-svg): PNG and SVG both support transparency, but one is pixels and one is vectors. A practical comparison of quality, file size and editing to help you choose.
+- [How to Make SVG Files for Cricut from Any Image](https://pngtosvgfree.com/blog-make-svg-for-cricut): To make a Cricut SVG from any image: trace it into layers, remove the background, upload to Design Space, then resize, weld and weed. Step-by-step guide.
+- [How to Vectorize a Logo Without Illustrator](https://pngtosvgfree.com/blog-convert-logo-to-svg): Lost the original vector file of your logo? Learn how to turn a PNG or JPG logo into a clean, editable SVG in minutes, free and without Illustrator.
+- [Raster vs Vector Images Explained](https://pngtosvgfree.com/blog-raster-vs-vector): Raster and vector are the two ways computers store images. Understand the difference once and you will always know which file format to use.
+- [Best Settings for Clean SVG Tracing](https://pngtosvgfree.com/blog-best-svg-tracing-settings): The tracing settings that matter most: colours, detail, noise smoothing, speckle removal and corner angle, with recommended values for every image type.
+
+## All guides
+
+- [How to Make SVG Graphics Accessible](https://pngtosvgfree.com/blog-accessible-svg)
+- [How to Clean Up a Traced SVG for Professional Results](https://pngtosvgfree.com/blog-clean-up-traced-svg)
+- [Common SVG Problems and How to Fix Them](https://pngtosvgfree.com/blog-common-svg-errors)
+- [How to Convert JPG to SVG Without Losing Quality](https://pngtosvgfree.com/blog-convert-jpg-to-svg)
+- [How to Turn Your Signature into an SVG](https://pngtosvgfree.com/blog-convert-signature-to-svg)
+- [How to Convert SVG to PDF (Keeping It Vector)](https://pngtosvgfree.com/blog-convert-svg-to-pdf)
+- [How to Edit SVG Files in Inkscape (Free)](https://pngtosvgfree.com/blog-edit-svg-in-inkscape)
+- [A Short History of SVG: From 1999 to Today](https://pngtosvgfree.com/blog-history-of-svg)
+- [How Image Tracing Works: From Pixels to Paths](https://pngtosvgfree.com/blog-how-image-tracing-works)
+- [How Many Colours Should You Use When Tracing an Image?](https://pngtosvgfree.com/blog-how-many-colors-for-tracing)
+- [How to Open SVG Files on Windows, Mac, iPhone and Android](https://pngtosvgfree.com/blog-how-to-open-svg-files)
+- [Image Resolution and DPI: What Matters for Tracing and Print](https://pngtosvgfree.com/blog-image-resolution-for-tracing)
+- [Logo File Formats Every Business Should Have](https://pngtosvgfree.com/blog-logo-file-formats)
+- [How to Reduce SVG File Size: 9 Practical Techniques](https://pngtosvgfree.com/blog-optimize-svg-file-size)
+- [Photo to Vector Art: What to Expect](https://pngtosvgfree.com/blog-photo-to-vector-art)
+- [How to Prepare an Image for the Best Vector Tracing Results](https://pngtosvgfree.com/blog-prepare-image-for-tracing)
+- [How to Make Print-Then-Cut Stickers from Your Images](https://pngtosvgfree.com/blog-print-then-cut-stickers)
+- [Responsive SVG: Making Vector Graphics Fit Any Screen](https://pngtosvgfree.com/blog-responsive-svg)
+- [Single-Layer vs Multi-Layer SVGs for Cutting Machines](https://pngtosvgfree.com/blog-single-vs-multi-layer-svg)
+- [Styling SVG with CSS: Colours, Hover Effects and Themes](https://pngtosvgfree.com/blog-style-svg-with-css)
+- [SVG Animation Basics: CSS, SMIL and JavaScript](https://pngtosvgfree.com/blog-svg-animation-basics)
+- [How to Create and Add an SVG Favicon to Your Website](https://pngtosvgfree.com/blog-svg-favicon)
+- [Preparing SVG Files for Cricut and Silhouette Machines](https://pngtosvgfree.com/blog-svg-files-for-cricut-and-silhouette)
+- [Can You Use SVG Files for Machine Embroidery?](https://pngtosvgfree.com/blog-svg-for-embroidery)
+- [Using SVG for Print: Colours, Sizes and Print-Ready Files](https://pngtosvgfree.com/blog-svg-for-print)
+- [Preparing SVG Artwork for T-Shirt Printing](https://pngtosvgfree.com/blog-svg-for-tshirt-printing)
+- [SVG Gradients, Patterns and Filters Explained](https://pngtosvgfree.com/blog-svg-gradients-and-filters)
+- [SVG Icons vs Icon Fonts: Which Is Better?](https://pngtosvgfree.com/blog-svg-icons-vs-icon-fonts)
+- [How to Use SVG Files in Canva](https://pngtosvgfree.com/blog-svg-in-canva)
+- [Working with SVG in Figma: Import, Edit and Export](https://pngtosvgfree.com/blog-svg-in-figma)
+- [Using SVG Files for Laser Cutting and Engraving](https://pngtosvgfree.com/blog-svg-laser-cutting-engraving)
+- [SVG Path Commands: A Beginner's Guide to the d Attribute](https://pngtosvgfree.com/blog-svg-path-commands)
+- [Is SVG Safe? Security Risks Explained](https://pngtosvgfree.com/blog-svg-security)
+- [Exporting SVG to PNG for Social Media: Sizes and Tips](https://pngtosvgfree.com/blog-svg-to-png-social-media-sizes)
+- [The SVG viewBox Explained (With Simple Examples)](https://pngtosvgfree.com/blog-svg-viewbox-explained)
+- [SVG vs Canvas: Which Should You Use for Web Graphics?](https://pngtosvgfree.com/blog-svg-vs-canvas)
+- [SVG vs EPS vs AI vs PDF: Which Vector Format Do You Need?](https://pngtosvgfree.com/blog-svg-vs-eps-vs-ai-vs-pdf)
+- [How to Vectorize a Hand Drawing or Sketch](https://pngtosvgfree.com/blog-vectorize-hand-drawing)
+- [10 Design Tips for Clean Vinyl Decals](https://pngtosvgfree.com/blog-vinyl-decal-design-tips)
+- [5 Ways to Add SVG to a Web Page (and When to Use Each)](https://pngtosvgfree.com/blog-ways-to-use-svg-in-html)
+- [Web Image Formats: JPG, PNG, WEBP, AVIF or SVG?](https://pngtosvgfree.com/blog-web-image-formats-guide)
+- [What Is an SVG File? A Beginner-Friendly Guide](https://pngtosvgfree.com/blog-what-is-an-svg-file)
+
+## About
+
+- [About PNG to SVG Free](https://pngtosvgfree.com/about)
+- [Contact](https://pngtosvgfree.com/contact) — contact@pngtosvgfree.com
+- [Privacy Policy](https://pngtosvgfree.com/privacy-policy)
+- [Terms of Use](https://pngtosvgfree.com/terms)
+- [Sitemap](https://pngtosvgfree.com/sitemap.xml)
