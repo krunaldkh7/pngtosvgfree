@@ -109,6 +109,43 @@ function jsx(node, file, depth, parentNoWs) {
   return `${pad}<${tag}${str}>\n${kids}${pad}</${tag}>\n`;
 }
 
+
+// ---------- Structured data generated from the visible page content ----------
+const strip = h => decode(h.replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
+const PAGE_NAMES = { about: 'About Us', blog: 'Blog', contact: 'Contact Us', disclaimer: 'Disclaimer', gallery: 'Free SVG Gallery', 'privacy-policy': 'Privacy Policy', terms: 'Terms of Use', 'bulk-svg-to-png-converter': 'Bulk SVG to PNG Converter' };
+const FEATURES = ['Automatic image tracing', 'Automatic image type detection', 'Smart colour palette detection (1–32 colours)', 'Adjustable detail, smoothing, speckle removal and corner angle', 'Recolour or remove any colour', 'Keeps transparent backgrounds', 'Side-by-side comparison with zoom', 'Registration marks for layered cutting', 'Download SVG or copy SVG code', 'Runs entirely in the browser — no upload', 'No signup, no watermark, no limits'];
+function schemaFor(slug, html, content, title, desc, url) {
+  const graph = [];
+  const h1 = strip((content.match(/<h1[^>]*>([\s\S]*?)<\/h1>/) || [])[1] || title);
+  if (slug === 'index' || LANDING.has(slug) || slug === 'bulk-svg-to-png-converter') {
+    graph.push({ '@type': 'WebApplication', name: slug === 'index' ? BRAND : h1, url, description: desc,
+      applicationCategory: 'MultimediaApplication', operatingSystem: 'Any (runs in a web browser)', browserRequirements: 'Requires JavaScript and a modern browser',
+      isAccessibleForFree: true, offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+      featureList: slug === 'bulk-svg-to-png-converter' ? ['Convert many SVG files to PNG at once', '1×, 2×, 4× or exact width output', 'Transparent or white background', 'Download individually or as a ZIP', 'Runs entirely in the browser'] : FEATURES,
+      publisher: { '@id': SITE + '/#organization' } });
+  }
+  const faq = content.match(/<div class="faq">([\s\S]*?)<\/div>/);
+  if (faq) {
+    const qs = [...faq[1].matchAll(/<details><summary>([\s\S]*?)<\/summary>([\s\S]*?)<\/details>/g)];
+    if (qs.length) graph.push({ '@type': 'FAQPage', mainEntity: qs.map(m => ({ '@type': 'Question', name: strip(m[1]), acceptedAnswer: { '@type': 'Answer', text: strip(m[2]) } })) });
+  }
+  const how = content.match(/<ol class="[^"]*\bhowto\b[^"]*">([\s\S]*?)<\/ol>/);
+  if (how) {
+    const sec = content.slice(0, content.indexOf(how[0]));
+    const name = strip([...sec.matchAll(/<h2[^>]*>([\s\S]*?)<\/h2>/g)].pop()?.[1] || 'How to convert an image to SVG');
+    const steps = [...how[1].matchAll(/<li[^>]*>[\s\S]*?<b>([\s\S]*?)<\/b>\s*<p>([\s\S]*?)<\/p>[\s\S]*?<\/li>/g)];
+    graph.push({ '@type': 'HowTo', name, totalTime: 'PT1M', tool: [{ '@type': 'HowToTool', name: 'A web browser' }],
+      supply: [{ '@type': 'HowToSupply', name: 'An image file (PNG, JPG, WEBP, GIF, BMP or AVIF)' }],
+      step: steps.map((m, i) => ({ '@type': 'HowToStep', position: i + 1, name: strip(m[1]), text: strip(m[2]), url: url + '#how' })) });
+  }
+  if (slug !== 'index' && !slug.startsWith('blog-')) {
+    graph.push({ '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE + '/' },
+      { '@type': 'ListItem', position: 2, name: PAGE_NAMES[slug] || h1, item: url } ] });
+  }
+  return graph.length ? { '@context': 'https://schema.org', '@graph': graph } : null;
+}
+
 function meta(html, re) { const m = html.match(re); return m ? m[1] : null; }
 const decode = s => s && parseDocument(s).children.map(c => c.data).join('');
 
@@ -137,6 +174,9 @@ for (const file of PAGES) {
   content = content.replace(/<table>\s*(<tr>[\s\S]*?)<\/table>/g, "<table><tbody>$1</tbody></table>");
   const doc = parseDocument(content, { decodeEntities: true });
   const body = doc.children.map(c => jsx(c, file, 3, false)).join('');
+  const route0 = slug === 'index' ? '/' : '/' + slug;
+  const schema = slug === '404' ? null : schemaFor(slug, html, content, decode(meta(html, /<title>([\s\S]*?)<\/title>/)), decode(meta(html, /<meta name="description" content="([^"]*)"/)), SITE + route0);
+  const schemaJsx = schema ? `      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: ${js(JSON.stringify(schema))} }} />\n` : '';
   const pageCss = css.trim() === SHARED.trim() ? '' : css.replace(/'Inter'/g, 'var(--font-inter)');
   const script = SCRIPTED[file] || (LANDING.has(slug) ? 'home' : null);
 
@@ -168,7 +208,7 @@ for (const file of PAGES) {
 export default function ${fn}() {
   return (
     <>
-${pageCss ? `      <style dangerouslySetInnerHTML={{ __html: ${js(pageCss)} }} />\n` : ''}${body}${script ? `      <PageScript name=${js(script)} />\n` : ''}    </>
+${pageCss ? `      <style dangerouslySetInnerHTML={{ __html: ${js(pageCss)} }} />\n` : ''}${schemaJsx}${body}${script ? `      <PageScript name=${js(script)} />\n` : ''}    </>
   );
 }
 `;
