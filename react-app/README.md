@@ -12,3 +12,17 @@ npm run build   # static site in out/ (deploy this folder, e.g. GitHub Pages)
 - `components/` — shared Nav, Footer, Logo, cookie banner, scroll reveal.
 - `lib/scripts/` — interactive page logic (PNG→SVG converter with WASM tracer, bulk SVG→PNG, gallery, contact form).
 - `public/` — logo, ads.txt, robots.txt, sitemap.xml, CNAME.
+
+## Deploying
+
+Every push to `main` runs `.github/workflows/deploy.yml`, which builds this app and publishes `out/` to GitHub Pages
+(repo Settings → Pages → Source must be **GitHub Actions**).
+
+## Keeping it in sync with the HTML pages
+
+The pages in `app/` are generated from the `.html` files in the repo root:
+
+```bash
+node tools/build-blog.js          # only if you changed blog posts in tools/posts/
+node tools/react/convert.js        # regenerate app/ from the HTML pages
+```
