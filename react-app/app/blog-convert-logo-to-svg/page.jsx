@@ -246,6 +246,13 @@ export default function Page() {
             {"Click Download SVG. Open the file in Figma, Inkscape or any vector editor and check that each colour sits on its own layer and that there are no leftover fragments around the edges."}
           </p>
           {" "}
+          <figure>
+            <img src="images/blog/logo-to-svg-before-after.png" alt="A small 120-pixel fox logo PNG enlarged 5 times next to the vectorized SVG version" width="1200" height="620" loading="lazy" decoding="async" />
+            <figcaption>
+              {"A 120 px fox logo traced with automatic settings. Edges and eyes come out clean, but the white chin merged into the near-white background because the two colours are almost identical. Fix this by raising the colour count or recolouring the region in a vector editor — exactly the kind of check Step 5 is for."}
+            </figcaption>
+          </figure>
+          {" "}
           <h2>
             {"Step 6: Perfect the lettering (optional)"}
           </h2>
@@ -558,7 +565,7 @@ export default function Page() {
         {" "}
       </div>
       {" "}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"How to Vectorize a Logo Without Illustrator\",\"description\":\"Lost the original vector file of your logo? Learn how to turn a PNG or JPG logo into a clean, editable SVG in minutes, free and without Illustrator.\",\"datePublished\":\"2026-11-05\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":1178,\"articleSection\":\"Tutorial\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-convert-logo-to-svg\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"How to Vectorize a Logo Without Illustrator\",\"item\":\"https://pngtosvgfree.com/blog-convert-logo-to-svg\"}]}]}" }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"How to Vectorize a Logo Without Illustrator\",\"description\":\"Lost the original vector file of your logo? Learn how to turn a PNG or JPG logo into a clean, editable SVG in minutes, free and without Illustrator.\",\"datePublished\":\"2026-11-05\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":1234,\"articleSection\":\"Tutorial\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-convert-logo-to-svg\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"How to Vectorize a Logo Without Illustrator\",\"item\":\"https://pngtosvgfree.com/blog-convert-logo-to-svg\"}]}]}" }} />
       {" "}
     </>
   );

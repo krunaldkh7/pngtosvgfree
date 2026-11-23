@@ -291,6 +291,13 @@ export default function Page() {
             </Link>
           </p>
           {" "}
+          <figure>
+            <img src="images/blog/tracing-3-vs-12-colours.png" alt="The same mountain illustration traced with 3 colours and with 12 colours" width="1200" height="620" loading="lazy" decoding="async" />
+            <figcaption>
+              {"The same illustration traced with 3 colours (left) and 12 colours (right). With 3, the two mountain shades merge into one; 12 keeps them separate — at the cost of a larger file."}
+            </figcaption>
+          </figure>
+          {" "}
           <h2>
             {"Quality and detail: how much is enough?"}
           </h2>
@@ -669,7 +676,7 @@ export default function Page() {
         {" "}
       </div>
       {" "}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"Best Settings for Clean SVG Tracing (Colours, Detail, Noise)\",\"description\":\"The tracing settings that matter most: colours, detail, noise smoothing, speckle removal and corner angle, with recommended values for every image type.\",\"datePublished\":\"2026-11-21\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":1144,\"articleSection\":\"Tips\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-best-svg-tracing-settings\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Best Settings for Clean SVG Tracing (Colours, Detail, Noise)\",\"item\":\"https://pngtosvgfree.com/blog-best-svg-tracing-settings\"}]}]}" }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"Best Settings for Clean SVG Tracing (Colours, Detail, Noise)\",\"description\":\"The tracing settings that matter most: colours, detail, noise smoothing, speckle removal and corner angle, with recommended values for every image type.\",\"datePublished\":\"2026-11-21\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":1177,\"articleSection\":\"Tips\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-best-svg-tracing-settings\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Best Settings for Clean SVG Tracing (Colours, Detail, Noise)\",\"item\":\"https://pngtosvgfree.com/blog-best-svg-tracing-settings\"}]}]}" }} />
       {" "}
     </>
   );

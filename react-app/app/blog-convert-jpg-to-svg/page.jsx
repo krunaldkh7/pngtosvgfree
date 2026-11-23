@@ -208,6 +208,13 @@ export default function Page() {
             {" before tracing also helps. Keep it low for logos with fine text, because heavy smoothing can round off small letters."}
           </p>
           {" "}
+          <figure>
+            <img src="images/blog/jpg-to-svg-compression.png" alt="A low-quality JPG of a coffee cup with visible compression noise next to the clean traced SVG" width="1200" height="620" loading="lazy" decoding="async" />
+            <figcaption>
+              {"A heavily compressed JPG (left) has blotchy noise around every edge. Tracing it with 3 colours merges that noise into clean, flat shapes (right)."}
+            </figcaption>
+          </figure>
+          {" "}
           <h2>
             {"Step 4: Remove the background"}
           </h2>
@@ -398,7 +405,7 @@ export default function Page() {
         {" "}
       </div>
       {" "}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"How to Convert JPG to SVG Without Losing Quality\",\"description\":\"JPG files are everywhere, but they blur when you scale them. Learn how to turn a JPG into a clean, scalable SVG and avoid the most common mistakes.\",\"datePublished\":\"2026-11-21\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":909,\"articleSection\":\"Tutorial\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-convert-jpg-to-svg\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"How to Convert JPG to SVG Without Losing Quality\",\"item\":\"https://pngtosvgfree.com/blog-convert-jpg-to-svg\"}]}]}" }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"How to Convert JPG to SVG Without Losing Quality\",\"description\":\"JPG files are everywhere, but they blur when you scale them. Learn how to turn a JPG into a clean, scalable SVG and avoid the most common mistakes.\",\"datePublished\":\"2026-11-21\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":933,\"articleSection\":\"Tutorial\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-convert-jpg-to-svg\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"How to Convert JPG to SVG Without Losing Quality\",\"item\":\"https://pngtosvgfree.com/blog-convert-jpg-to-svg\"}]}]}" }} />
       {" "}
     </>
   );

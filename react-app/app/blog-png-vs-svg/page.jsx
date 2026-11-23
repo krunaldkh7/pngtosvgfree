@@ -271,6 +271,13 @@ export default function Page() {
             {" If your logo is 500 pixels wide as a PNG and you display it at 2,000 pixels on a large screen or banner, every pixel must be stretched four times and edges become soft. An SVG is recalculated for every size, so edges stay perfectly smooth on high-density screens and in print. But a photo of a sunset contains millions of subtle colour changes that SVG could only approximate with thousands of shapes — PNG (or better, JPG, WEBP or AVIF) reproduces it faithfully."}
           </p>
           {" "}
+          <figure>
+            <img src="images/blog/png-vs-svg-zoom.png" alt="A heart icon as a 160-pixel PNG enlarged 6 times looks pixelated, while the SVG version stays sharp" width="1200" height="620" loading="lazy" decoding="async" />
+            <figcaption>
+              {"The same heart icon enlarged six times: the 160 px PNG (left) becomes blocky, while the SVG traced from it (right) stays crisp."}
+            </figcaption>
+          </figure>
+          {" "}
           <h2>
             {"Which has a smaller file size?"}
           </h2>
@@ -581,7 +588,7 @@ export default function Page() {
         {" "}
       </div>
       {" "}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"PNG vs SVG: Differences and When to Use Each\",\"description\":\"PNG and SVG both support transparency, but one is pixels and one is vectors. A practical comparison of quality, file size and editing to help you choose.\",\"datePublished\":\"2026-11-08\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":1136,\"articleSection\":\"Formats\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-png-vs-svg\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"PNG vs SVG: Differences and When to Use Each\",\"item\":\"https://pngtosvgfree.com/blog-png-vs-svg\"}]}]}" }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"PNG vs SVG: Differences and When to Use Each\",\"description\":\"PNG and SVG both support transparency, but one is pixels and one is vectors. A practical comparison of quality, file size and editing to help you choose.\",\"datePublished\":\"2026-11-08\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":1159,\"articleSection\":\"Formats\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-png-vs-svg\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"PNG vs SVG: Differences and When to Use Each\",\"item\":\"https://pngtosvgfree.com/blog-png-vs-svg\"}]}]}" }} />
       {" "}
     </>
   );

@@ -292,6 +292,13 @@ export default function Page() {
             {"."}
           </p>
           {" "}
+          <figure>
+            <img src="images/blog/png-to-svg-before-after.png" alt="A 160-pixel PNG of a cat face zoomed to 400% showing jagged pixels, next to the traced SVG with smooth edges" width="1200" height="620" loading="lazy" decoding="async" />
+            <figcaption>
+              {"Real result from our converter: a 160 px PNG (left) and the traced SVG (right), both zoomed to 400%. The PNG shows pixel steps; the SVG edges stay smooth at any zoom."}
+            </figcaption>
+          </figure>
+          {" "}
           <h2>
             {"Method 2: Convert PNG to SVG in Inkscape (free)"}
           </h2>
@@ -760,7 +767,7 @@ export default function Page() {
         {" "}
       </div>
       {" "}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"How to Convert PNG to SVG (Free, 3 Methods)\",\"description\":\"Three free ways to convert PNG to SVG: an online tracer, Inkscape's Trace Bitmap and Illustrator Image Trace. Step-by-step instructions, settings and tips.\",\"datePublished\":\"2026-11-21\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":1173,\"articleSection\":\"Tutorial\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-convert-png-to-svg\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"How to Convert PNG to SVG (Free, 3 Methods)\",\"item\":\"https://pngtosvgfree.com/blog-convert-png-to-svg\"}]}]}" }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"How to Convert PNG to SVG (Free, 3 Methods)\",\"description\":\"Three free ways to convert PNG to SVG: an online tracer, Inkscape's Trace Bitmap and Illustrator Image Trace. Step-by-step instructions, settings and tips.\",\"datePublished\":\"2026-11-21\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":1205,\"articleSection\":\"Tutorial\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-convert-png-to-svg\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"How to Convert PNG to SVG (Free, 3 Methods)\",\"item\":\"https://pngtosvgfree.com/blog-convert-png-to-svg\"}]}]}" }} />
       {" "}
     </>
   );

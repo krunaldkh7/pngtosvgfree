@@ -230,6 +230,13 @@ export default function Page() {
             {" "}
           </ol>
           {" "}
+          <figure>
+            <img src="images/blog/cricut-silhouette-cut-file.png" alt="A colour cat face PNG and the single-colour silhouette SVG produced for cutting" width="1200" height="620" loading="lazy" decoding="async" />
+            <figcaption>
+              {"Silhouette mode turns a colour image (left) into a one-colour cut file (right). Light areas such as the eyes become holes in the shape — ideal for a single vinyl layer."}
+            </figcaption>
+          </figure>
+          {" "}
           <h2>
             {"Step 4: Upload the SVG to Cricut Design Space"}
           </h2>
@@ -719,7 +726,7 @@ export default function Page() {
         {" "}
       </div>
       {" "}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"How to Make SVG Files for Cricut from Any Image\",\"description\":\"To make a Cricut SVG from any image: trace it into layers, remove the background, upload to Design Space, then resize, weld and weed. Step-by-step guide.\",\"datePublished\":\"2026-11-21\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":1151,\"articleSection\":\"Crafting\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-make-svg-for-cricut\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"How to Make SVG Files for Cricut from Any Image\",\"item\":\"https://pngtosvgfree.com/blog-make-svg-for-cricut\"}]}]}" }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"BlogPosting\",\"headline\":\"How to Make SVG Files for Cricut from Any Image\",\"description\":\"To make a Cricut SVG from any image: trace it into layers, remove the background, upload to Design Space, then resize, weld and weed. Step-by-step guide.\",\"datePublished\":\"2026-11-21\",\"dateModified\":\"2026-11-21\",\"image\":\"https://pngtosvgfree.com/og-image.png\",\"wordCount\":1182,\"articleSection\":\"Crafting\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Organization\",\"name\":\"PNG to SVG Free\",\"url\":\"https://pngtosvgfree.com\"},\"publisher\":{\"@id\":\"https://pngtosvgfree.com/#organization\"},\"mainEntityOfPage\":\"https://pngtosvgfree.com/blog-make-svg-for-cricut\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://pngtosvgfree.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://pngtosvgfree.com/blog\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"How to Make SVG Files for Cricut from Any Image\",\"item\":\"https://pngtosvgfree.com/blog-make-svg-for-cricut\"}]}]}" }} />
       {" "}
     </>
   );

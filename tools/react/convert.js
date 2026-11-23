@@ -9,7 +9,7 @@ const OUT = path.join(SRC, 'react-app');
 const SHARED = fs.readFileSync(path.join(__dirname, 'shared.css'), 'utf8')
   .replace(/^<style>/, '').replace(/<\/style>\s*$/, '');
 
-const PAGES = fs.readdirSync(SRC).filter(f => f.endsWith('.html'));
+const PAGES = fs.readdirSync(SRC).filter(f => f.endsWith('.html') && !/^google[0-9a-f]+\.html$/.test(f)); // skip Search Console verification files
 const SCRIPTED = { 'index.html': 'home', 'bulk-svg-to-png-converter.html': 'bulk', 'gallery.html': 'gallery', 'contact.html': 'contact' };
 const VOID = new Set(['area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'source', 'track', 'wbr']);
 const NO_WS = new Set(['table', 'thead', 'tbody', 'tfoot', 'tr', 'colgroup', 'select']);
@@ -228,5 +228,6 @@ fs.writeFileSync(nf, fs.readFileSync(nf, 'utf8')
 const home = path.join(OUT, 'app/page.jsx');
 fs.writeFileSync(home, fs.readFileSync(home, 'utf8').replace('<image href="logo.svg"', '<image href="/logo.svg"'));
 for (const f of ['robots.txt', 'ads.txt', 'logo.svg', 'llms.txt']) fs.copyFileSync(path.join(SRC, f), path.join(OUT, 'public', f));
+fs.cpSync(path.join(SRC, 'images'), path.join(OUT, 'public', 'images'), { recursive: true });
 console.log(routes.join('\n'));
 console.log(warn.length ? 'WARN:\n' + [...new Set(warn)].join('\n') : 'no warnings');

@@ -32,6 +32,7 @@ description: JPG files are everywhere, but they blur when you scale them. Learn 
 <li><strong>Speckle removal.</strong> Raising this value removes tiny islands of colour created by compression. Start around 8–10 pixels for a logo and increase it if you still see dots.</li>
 </ol>
 <p>If the image is grainy, a little <strong>noise smoothing</strong> before tracing also helps. Keep it low for logos with fine text, because heavy smoothing can round off small letters.</p>
+<figure><img src="images/blog/jpg-to-svg-compression.png" alt="A low-quality JPG of a coffee cup with visible compression noise next to the clean traced SVG" width="1200" height="620" loading="lazy" decoding="async"><figcaption>A heavily compressed JPG (left) has blotchy noise around every edge. Tracing it with 3 colours merges that noise into clean, flat shapes (right).</figcaption></figure>
 <h2>Step 4: Remove the background</h2>
 <p>Because JPG has no transparency, the background becomes its own coloured shape. After converting, remove it so your SVG has a transparent background. In our converter you can click a colour in the palette to make it transparent. In a vector editor such as Inkscape or Figma, simply select the large background shape and delete it.</p>
 <h2>Step 5: Check the result at large size</h2>

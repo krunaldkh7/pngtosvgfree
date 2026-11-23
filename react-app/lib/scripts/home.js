@@ -645,8 +645,7 @@ async function run(){
   }
   prog('Tracing boundaries',.5);await tick();if(my!==job)return;
   const detailF=set.detail/100;
-  let hasT=false;for(let i=0;i<n;i++)if(!opaque[i]){hasT=true;break}
-  const cfg={binary:set.colors<=1,mode:'spline',hierarchical:hasT?'cutout':'stacked',cornerThreshold:set.corner*Math.PI/180,
+  const cfg={binary:set.colors<=1,mode:'spline',hierarchical:'cutout',cornerThreshold:set.corner*Math.PI/180,
    lengthThreshold:+(8-detailF*5.5).toFixed(2),maxIterations:10,spliceThreshold:45*Math.PI/180,filterSpeckle:set.speckle,
    colorPrecision:1,layerDifference:1,pathPrecision:detailF>.7?2:1};
   const raw=to_svg(out,w,h,cfg);
