@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import Cookie from "@/components/Cookie";
 import Reveal from "@/components/Reveal";
 import ScrollToTop from "@/components/ScrollToTop";
-import { ADSENSE_CLIENT, BRAND, CONTACT_EMAIL, SITE_URL, SOCIAL_LINKS, TAGLINE } from "@/lib/site";
+import { ADSENSE_CLIENT, GA_ID, BRAND, CONTACT_EMAIL, SITE_URL, SOCIAL_LINKS, TAGLINE } from "@/lib/site";
 
 // Self-hosted at build time: no render-blocking request to Google Fonts.
 const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"], display: "swap", variable: "--font-inter" });
@@ -64,6 +64,16 @@ export default function RootLayout({ children }) {
     <html lang="en" className={inter.variable}>
       <head>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }} />
+        {GA_ID && (
+          <>
+            <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${GA_ID}');`,
+              }}
+            />
+          </>
+        )}
         {ADSENSE_CLIENT && (
           <script
             async
