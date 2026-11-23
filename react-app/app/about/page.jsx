@@ -59,6 +59,22 @@ export default function Page() {
           </p>
           {" "}
           <h2>
+            {"Who we are"}
+          </h2>
+          {" "}
+          <p>
+            {"PNG to SVG Free is built and run by "}
+            <strong>
+              {"Ziven Infotech"}
+            </strong>
+            {", an IT solutions company based in "}
+            <strong>
+              {"Surat, India"}
+            </strong>
+            {". We work with designers every day, and we kept seeing the same problem: designers needed vector files fast, and the usual options meant expensive software, slow manual tracing or uploading files to unknown servers. So we built a free tool that does it in seconds, right in the browser."}
+          </p>
+          {" "}
+          <h2>
             {"What we do"}
           </h2>
           {" "}

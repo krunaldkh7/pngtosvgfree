@@ -37,6 +37,11 @@ const siteSchema = {
       logo: { "@type": "ImageObject", url: `${SITE_URL}/icon-512.png`, width: 512, height: 512 },
       email: CONTACT_EMAIL,
       description: TAGLINE,
+      parentOrganization: {
+        "@type": "Organization",
+        name: "Ziven Infotech",
+        address: { "@type": "PostalAddress", addressLocality: "Surat", addressRegion: "Gujarat", addressCountry: "IN" },
+      },
       ...(SOCIAL_LINKS.length && { sameAs: SOCIAL_LINKS }),
     },
     {
