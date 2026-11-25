@@ -122,6 +122,7 @@ function schemaFor(slug, html, content, title, desc, url) {
       applicationCategory: 'MultimediaApplication', operatingSystem: 'Any (runs in a web browser)', browserRequirements: 'Requires JavaScript and a modern browser',
       isAccessibleForFree: true, offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
       featureList: slug === 'bulk-svg-to-png-converter' ? ['Convert many SVG files to PNG at once', '1×, 2×, 4× or exact width output', 'Transparent or white background', 'Download individually or as a ZIP', 'Runs entirely in the browser'] : FEATURES,
+      inLanguage: 'en', screenshot: SITE + '/images/blog/png-to-svg-before-after.png',
       publisher: { '@id': SITE + '/#organization' } });
   }
   const faq = content.match(/<div class="faq">([\s\S]*?)<\/div>/);
