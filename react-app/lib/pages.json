@@ -1,57 +1,82 @@
 [
  {
   "route": "/",
-  "lastmod": "2026-11-23",
+  "lastmod": "2026-11-25",
   "priority": 1
  },
  {
+  "route": "/avif-to-svg",
+  "lastmod": "2026-11-25",
+  "priority": 0.9
+ },
+ {
   "route": "/black-and-white-png-to-svg",
-  "lastmod": "2026-11-23",
+  "lastmod": "2026-11-25",
+  "priority": 0.9
+ },
+ {
+  "route": "/bmp-to-svg",
+  "lastmod": "2026-11-25",
+  "priority": 0.9
+ },
+ {
+  "route": "/drawing-to-svg",
+  "lastmod": "2026-11-25",
+  "priority": 0.9
+ },
+ {
+  "route": "/gif-to-svg",
+  "lastmod": "2026-11-25",
   "priority": 0.9
  },
  {
   "route": "/image-to-svg",
-  "lastmod": "2026-11-23",
+  "lastmod": "2026-11-25",
   "priority": 0.9
  },
  {
   "route": "/jpeg-to-svg",
-  "lastmod": "2026-11-23",
+  "lastmod": "2026-11-25",
   "priority": 0.9
  },
  {
   "route": "/jpg-to-svg",
-  "lastmod": "2026-11-23",
+  "lastmod": "2026-11-25",
   "priority": 0.9
  },
  {
   "route": "/logo-to-svg",
-  "lastmod": "2026-11-23",
+  "lastmod": "2026-11-25",
+  "priority": 0.9
+ },
+ {
+  "route": "/photo-to-svg",
+  "lastmod": "2026-11-25",
   "priority": 0.9
  },
  {
   "route": "/png-to-svg-cricut",
-  "lastmod": "2026-11-23",
+  "lastmod": "2026-11-25",
   "priority": 0.9
  },
  {
   "route": "/png-to-svg-laser-cutting",
-  "lastmod": "2026-11-23",
+  "lastmod": "2026-11-25",
   "priority": 0.9
  },
  {
   "route": "/transparent-png-to-svg",
-  "lastmod": "2026-11-23",
+  "lastmod": "2026-11-25",
   "priority": 0.9
  },
  {
   "route": "/webp-to-svg",
-  "lastmod": "2026-11-23",
+  "lastmod": "2026-11-25",
   "priority": 0.9
  },
  {
   "route": "/blog",
-  "lastmod": "2026-11-23",
+  "lastmod": "2026-11-25",
   "priority": 0.7
  },
  {
@@ -296,37 +321,37 @@
  },
  {
   "route": "/about",
-  "lastmod": "2026-11-23",
+  "lastmod": "2026-11-25",
   "priority": 0.5
  },
  {
   "route": "/bulk-svg-to-png-converter",
-  "lastmod": "2026-11-23",
+  "lastmod": "2026-11-25",
   "priority": 0.5
  },
  {
   "route": "/contact",
-  "lastmod": "2026-11-23",
+  "lastmod": "2026-11-25",
   "priority": 0.5
  },
  {
   "route": "/disclaimer",
-  "lastmod": "2026-11-23",
+  "lastmod": "2026-11-25",
   "priority": 0.5
  },
  {
   "route": "/gallery",
-  "lastmod": "2026-11-23",
+  "lastmod": "2026-11-25",
   "priority": 0.5
  },
  {
   "route": "/privacy-policy",
-  "lastmod": "2026-11-23",
+  "lastmod": "2026-11-25",
   "priority": 0.5
  },
  {
   "route": "/terms",
-  "lastmod": "2026-11-23",
+  "lastmod": "2026-11-25",
   "priority": 0.5
  }
 ]

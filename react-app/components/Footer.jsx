@@ -25,6 +25,8 @@ export default function Footer() {
           <Link href="/png-to-svg-laser-cutting">PNG to SVG for Laser</Link>
           <Link href="/transparent-png-to-svg">Transparent PNG to SVG</Link>
           <Link href="/black-and-white-png-to-svg">Black &amp; White PNG to SVG</Link>
+          <Link href="/photo-to-svg">Photo to SVG</Link>
+          <Link href="/drawing-to-svg">Drawing to SVG</Link>
         </div>
         <div>
           <p className="fh">Learn</p>

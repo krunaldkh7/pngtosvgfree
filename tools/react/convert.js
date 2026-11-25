@@ -156,7 +156,7 @@ const BRAND = 'PNG to SVG Free';
 const SITE_UPDATED = new Date().toISOString().slice(0, 10);
 const OG_IMAGE = { url: SITE + '/og-image.png', width: 1200, height: 630, alt: 'PNG to SVG Free — free online PNG to SVG converter' };
 // Tool landing pages that embed the converter.
-const LANDING = new Set(['jpg-to-svg', 'jpeg-to-svg', 'webp-to-svg', 'image-to-svg', 'logo-to-svg', 'png-to-svg-cricut', 'png-to-svg-laser-cutting', 'transparent-png-to-svg', 'black-and-white-png-to-svg']);
+const LANDING = new Set(fs.readdirSync(path.join(__dirname, '..', 'landing')).filter(f => f.endsWith('.html')).map(f => f.slice(0, -5)));
 for (const file of PAGES) {
   const html = fs.readFileSync(path.join(SRC, file), 'utf8');
   const slug = file.replace(/\.html$/, '');

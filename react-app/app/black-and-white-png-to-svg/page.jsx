@@ -767,6 +767,18 @@ export default function Page() {
           <Link href="/">
             {"PNG to SVG Converter"}
           </Link>
+          <Link href="/avif-to-svg">
+            {"AVIF to SVG Converter"}
+          </Link>
+          <Link href="/bmp-to-svg">
+            {"BMP to SVG Converter"}
+          </Link>
+          <Link href="/drawing-to-svg">
+            {"Drawing to SVG Converter"}
+          </Link>
+          <Link href="/gif-to-svg">
+            {"GIF to SVG Converter"}
+          </Link>
           <Link href="/image-to-svg">
             {"Image to SVG Converter"}
           </Link>
@@ -778,6 +790,9 @@ export default function Page() {
           </Link>
           <Link href="/logo-to-svg">
             {"Logo to SVG Converter"}
+          </Link>
+          <Link href="/photo-to-svg">
+            {"Photo to SVG Converter"}
           </Link>
           <Link href="/png-to-svg-cricut">
             {"PNG to SVG for Cricut"}
